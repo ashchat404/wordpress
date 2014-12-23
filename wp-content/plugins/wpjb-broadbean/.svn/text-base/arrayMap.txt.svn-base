@@ -1,0 +1,9 @@
+job_title;job_title
+job_type;tag__job_type
+job_industry;tag__job_category
+job_description;job_description
+job_location;job_city
+contact_name;company_name
+contact_email;company_email
+contact_url;company_url
+salary;af__field_2    

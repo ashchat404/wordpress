@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Twitter API plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Mon, 29 Jul 2013 10:55:29 +0100\n"
+"PO-Revision-Date: Fri, 21 Mar 2014 14:49:33 +0000\n"
+"Last-Translator: Tim Whitlock\n"
+"Language-Team: Wordpress\n"
+"Language: German\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: en_GB\n"
+"X-Loco-Target-Locale: de_DE\n"
+"X-Loco-Tagged: \n"
+"X-Poedit-SourceCharset: UTF-8"
+
+#: about-an-hour-ago
+msgid "About an hour ago"
+msgid_plural "About %u hours ago"
+msgstr[0] "Vor ungefähr 1 Stunde"
+msgstr[1] "Vor ungefähr %u Stunden"
+
+#: accepted
+msgid "Accepted"
+msgstr "Akzeptiert"
+
+#: authenticated-as-x
+msgid "Authenticated as @%s"
+msgstr "Authentifiziert als @%s"
+
+#: authorization-required
+msgid "Authorization Required"
+msgstr ""
+
+#: bad-request
+msgid "Bad Request"
+msgstr ""
+
+#: cannot-enable-twitter-api-cache-without-apc-extens
+msgid "Cannot enable Twitter API cache without APC extension"
+msgstr "Der Twitter API Cache kann ohne APC Erweiterung nicht aktiviert werden"
+
+#: conflict
+msgid "Conflict"
+msgstr ""
+
+#: continue
+msgid "Continue"
+msgstr "Weiter"
+
+#: created
+msgid "Created"
+msgstr "Erstellt"
+
+#: expectation-failed
+msgid "Expectation Failed"
+msgstr ""
+
+#: forbidden
+msgid "Forbidden"
+msgstr ""
+
+#: found
+msgid "Found"
+msgstr "Gefunden"
+
+#: gateway-time-out
+msgid "Gateway Time-out"
+msgstr ""
+
+#: gone
+msgid "Gone"
+msgstr ""
+
+#: http-version-not-supported
+msgid "HTTP Version not supported"
+msgstr "HTTP Version wird nicht unterstützt"
+
+#: invalid-oauth-token
+msgid "Invalid OAuth token"
+msgstr "Ungültiger OAuth token"
+
+#: invalid-twitter-parameter
+msgid "Invalid Twitter parameter"
+msgstr "Ungültiger Twitter Parameter"
+
+#: just-now
+msgid "Just now"
+msgstr "Gerade eben"
+
+#: key-required-even-if-secret-is-empty
+msgid "Key required even if secret is empty"
+msgstr ""
+
+#: latest-tweets
+msgid "Latest Tweets"
+msgstr "Neueste Tweets"
+
+#: length-required
+msgid "Length Required"
+msgstr ""
+
+#: malformed-response-from-twitter
+msgid "Malformed response from Twitter"
+msgstr ""
+
+#: method-not-allowed
+msgid "Method Not Allowed"
+msgstr ""
+
+#: moved-permanently
+msgid "Moved Permanently"
+msgstr ""
+
+#: multiple-choices
+msgid "Multiple Choices"
+msgstr ""
+
+#: no-content
+msgid "No Content"
+msgstr "Kein Inhalt"
+
+#: non-authoritative-information
+msgid "Non-Authoritative Information"
+msgstr ""
+
+#: not-acceptable
+msgid "Not Acceptable"
+msgstr ""
+
+#: not-found
+msgid "Not Found"
+msgstr ""
+
+#: not-implemented
+msgid "Not Implemented"
+msgstr "Nicht implementiert"
+
+#: not-modified
+msgid "Not Modified"
+msgstr "Nicht modifiziert"
+
+#: number-of-tweets
+msgid "Number of tweets"
+msgstr "Anzahl an Tweets"
+
+#: ok
+msgid "OK"
+msgstr "OK"
+
+#: partial-content
+msgid "Partial Content"
+msgstr ""
+
+#: payment-required
+msgid "Payment Required"
+msgstr ""
+
+#: plugin-not-yet-authenticated-with-twitter
+msgid "Plugin not yet authenticated with Twitter"
+msgstr "Das Plugin wurde noch nicht bei Twitter authentifiziert"
+
+#: precondition-failed
+msgid "Precondition Failed"
+msgstr ""
+
+#: proxy-authentication-required
+msgid "Proxy Authentication Required"
+msgstr ""
+
+#: request-entity-too-large
+msgid "Request Entity Too Large"
+msgstr ""
+
+#: request-time-out
+msgid "Request Time-out"
+msgstr ""
+
+#: request-uri-too-large
+msgid "Request-URI Too Large"
+msgstr ""
+
+#: requested-range-not-satisfiable
+msgid "Requested range not satisfiable"
+msgstr ""
+
+#: reset-content
+msgid "Reset Content"
+msgstr ""
+
+#: save-settings
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+#: see-other
+msgid "See Other"
+msgstr ""
+
+#: show-replies
+msgid "Show Replies"
+msgstr "Antworten anzeigen"
+
+#: show-retweets
+msgid "Show Retweets"
+msgstr "Retweets anzeigen"
+
+#: switching-protocols
+msgid "Switching Protocols"
+msgstr "Protokoll wird gewechselt"
+
+#: temporary-redirect
+msgid "Temporary Redirect"
+msgstr ""
+
+#: these-details-are-available-in
+msgid "These details are available in"
+msgstr "Diese Informationen findest du in"
+
+#: twitter-api
+msgid "Twitter API"
+msgstr "Twitter API"
+
+#: twitter-api-authentication-settings
+msgid "Twitter API Authentication Settings"
+msgstr "Einstellungen zur Twitter API Authentifizierung"
+
+#: twitter-api-rate-limit-exceeded
+msgid "Twitter API rate limit exceeded"
+msgstr ""
+
+#: twitter-application-is-not-fully-configured
+msgid "Twitter application is not fully configured"
+msgstr "Die Twitter Anwendung ist nicht vollständig konfiguriert"
+
+#: twitter-application-not-fully-configured
+msgid "Twitter application not fully configured"
+msgstr "Die Twitter Anwendung ist nicht vollständig konfiguriert"
+
+#: twitter-client-not-authenticated
+msgid "Twitter client not authenticated"
+msgstr "Twitter Client nicht authentifiziert"
+
+#: twitter-error-x
+msgid "Twitter error #%d"
+msgstr "Twitter Fehler #%d"
+
+#: twitter-handle
+msgid "Twitter handle"
+msgstr "Twitter Handle"
+
+#: twitter-is-not-responding
+msgid "Twitter is not responding"
+msgstr "Twitter antwortet nicht"
+
+#: twitter-is-too-busy-to-respond
+msgid "Twitter is too busy to respond"
+msgstr ""
+
+#: twitter-server-error
+msgid "Twitter server error"
+msgstr "Twitter Server Fehler"
+
+#: unsupported-media-type
+msgid "Unsupported Media Type"
+msgstr ""
+
+#: use-proxy
+msgid "Use Proxy"
+msgstr ""
+
+#: widget-title
+msgid "Widget title"
+msgstr "Titel"
+
+#: wordpress-http-request-failure
+msgid "Wordpress HTTP request failure"
+msgstr "Wordpress HTTP Request Fehler"
+
+#: x-minute-ago
+msgid "%u minute ago"
+msgid_plural "%u minutes ago"
+msgstr[0] "Vor 1 Minute"
+msgstr[1] "Vor %u Minuten"
+
+#: yesterday-at
+msgid "Yesterday at"
+msgstr "Gestern um"
+
+#: you-dont-have-permission-to-manage-twitter-api-set
+msgid "You don't have permission to manage Twitter API settings"
+msgstr "Dir fehlen die Rechte, um die Twitter API Einstellungen zu verwalten"
+
+#: your-twitter-dashboard
+msgid "your Twitter dashboard"
+msgstr "deinem Twitter Dashboard"
