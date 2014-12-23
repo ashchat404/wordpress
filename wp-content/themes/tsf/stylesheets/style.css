@@ -4111,7 +4111,7 @@ header {
   color: #01ca48;
 }
 
-/* line 134, ../sass/custom.scss */
+/* line 135, ../sass/custom.scss */
 .btn_orange {
   background: orange;
   color: white;
@@ -4120,7 +4120,7 @@ header {
   text-transform: uppercase;
 }
 
-/* line 138, ../sass/custom.scss */
+/* line 139, ../sass/custom.scss */
 .btn_green {
   background: #01ca48;
   color: white;
@@ -4129,12 +4129,12 @@ header {
   text-transform: uppercase;
 }
 
-/* line 143, ../sass/custom.scss */
+/* line 144, ../sass/custom.scss */
 #banner {
   max-width: 100%;
 }
 
-/* line 147, ../sass/custom.scss */
+/* line 148, ../sass/custom.scss */
 .right {
   background-image: url(../wpjobboard/images/interview.jpg);
   background-repeat: no-repeat;
@@ -4143,7 +4143,7 @@ header {
   position: relative;
   box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 150, ../sass/custom.scss */
+/* line 151, ../sass/custom.scss */
 .right .panel {
   padding: 10px;
   background: rgba(1, 202, 72, 0.9);
@@ -4158,24 +4158,24 @@ header {
 .right .panel h1 {
   font-size: 26px;
 }
-/* line 153, ../sass/custom.scss */
+/* line 154, ../sass/custom.scss */
 .right .panel a {
   background: orange;
   padding: 10px;
   color: white;
 }
-/* line 158, ../sass/custom.scss */
+/* line 159, ../sass/custom.scss */
 .right .panel h1 {
   font-weight: 500;
   text-align: left;
   color: white;
 }
-/* line 163, ../sass/custom.scss */
+/* line 164, ../sass/custom.scss */
 .right .panel .button {
   display: inline-block;
 }
 
-/* line 169, ../sass/custom.scss */
+/* line 170, ../sass/custom.scss */
 .left {
   background-image: url(../wpjobboard/images/candidate.jpg);
   background-repeat: no-repeat;
@@ -4184,7 +4184,7 @@ header {
   position: relative;
   box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 173, ../sass/custom.scss */
+/* line 174, ../sass/custom.scss */
 .left .panel {
   background: rgba(1, 202, 72, 0.9);
   position: absolute;
@@ -4200,53 +4200,54 @@ header {
 .left .panel h1 {
   font-size: 26px;
 }
-/* line 178, ../sass/custom.scss */
+/* line 179, ../sass/custom.scss */
 .left .panel a {
   background: #FFF;
   padding: 10px;
   color: black;
 }
-/* line 183, ../sass/custom.scss */
+/* line 184, ../sass/custom.scss */
 .left .panel h1 {
   font-weight: 500;
   text-align: right;
   color: white;
 }
-/* line 188, ../sass/custom.scss */
+/* line 189, ../sass/custom.scss */
 .left .panel .button {
   display: inline-block;
 }
 
-/* line 196, ../sass/custom.scss */
+/* line 197, ../sass/custom.scss */
 .btn {
   border-radius: 0px !important;
 }
 
-/* line 200, ../sass/custom.scss */
+/* line 201, ../sass/custom.scss */
 #srch {
   background: #ECF0F1;
   padding: 20px;
 }
-/* line 203, ../sass/custom.scss */
+/* line 204, ../sass/custom.scss */
 #srch input {
   width: 100%;
 }
-/* line 206, ../sass/custom.scss */
+/* line 207, ../sass/custom.scss */
 #srch span.customSelect {
   width: 100%;
 }
-/* line 209, ../sass/custom.scss */
+/* line 210, ../sass/custom.scss */
 #srch .btn {
   width: 100px;
   margin: 15px auto;
   display: block;
 }
 
-/* line 216, ../sass/custom.scss */
+/* line 217, ../sass/custom.scss */
 #testmonials {
   max-width: 100%;
   min-height: 400px;
   text-align: center;
+  padding: 20px;
 }
 /* line 121, ../sass/custom.scss */
 #testmonials h2.text-center {
@@ -4254,25 +4255,26 @@ header {
   border: none;
   padding: 0px;
   font-size: 36px;
-  margin: 30px;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 #testmonials .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 224, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #testmonials .message p {
   font-size: 20px;
   font-style: italic;
   color: #808080;
 }
-/* line 228, ../sass/custom.scss */
+/* line 229, ../sass/custom.scss */
 #testmonials .message p span {
   font-size: 18px;
 }
 
-/* line 236, ../sass/custom.scss */
+/* line 237, ../sass/custom.scss */
 .full_testimonial {
   display: none;
   position: absolute;
@@ -4282,7 +4284,7 @@ header {
   padding: 20px;
   box-shadow: 0px 2px 14px -2px #000;
 }
-/* line 244, ../sass/custom.scss */
+/* line 245, ../sass/custom.scss */
 .full_testimonial img.cl_logo {
   display: block;
   margin-left: auto;
@@ -4291,8 +4293,9 @@ header {
   height: auto;
 }
 
-/* line 253, ../sass/custom.scss */
+/* line 254, ../sass/custom.scss */
 #discovered {
+  padding: 20px;
   background: #ECF0F1;
 }
 /* line 121, ../sass/custom.scss */
@@ -4301,25 +4304,26 @@ header {
   border: none;
   padding: 0px;
   font-size: 36px;
-  margin: 30px;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 #discovered .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 256, ../sass/custom.scss */
+/* line 258, ../sass/custom.scss */
 #discovered .columns img {
   margin-bottom: 40px;
 }
-/* line 260, ../sass/custom.scss */
+/* line 262, ../sass/custom.scss */
 #discovered a img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 268, ../sass/custom.scss */
+/* line 270, ../sass/custom.scss */
 .dis_img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+ */
@@ -4330,7 +4334,7 @@ header {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 277, ../sass/custom.scss */
+/* line 279, ../sass/custom.scss */
 .dis_img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4339,12 +4343,12 @@ header {
   filter: none;
 }
 
-/* line 285, ../sass/custom.scss */
+/* line 287, ../sass/custom.scss */
 .widget_recent_entries {
   max-width: 100%;
 }
 
-/* line 288, ../sass/custom.scss */
+/* line 290, ../sass/custom.scss */
 #featured_themes {
   padding: 0px !important;
 }
@@ -4354,30 +4358,35 @@ header {
   border: none;
   padding: 0px;
   font-size: 36px;
-  margin: 30px;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 #featured_themes .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 291, ../sass/custom.scss */
+/* line 293, ../sass/custom.scss */
+#featured_themes section {
+  padding: 20px;
+}
+/* line 296, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs {
   margin: 0 auto;
   position: relative;
 }
-/* line 295, ../sass/custom.scss */
+/* line 300, ../sass/custom.scss */
 #featured_themes li {
   list-style: none;
 }
-/* line 298, ../sass/custom.scss */
+/* line 303, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a {
   border: 1px solid #E3E3E3;
   border-radius: 0px;
   margin: 0px 5px 0px 5px;
   padding: 0px;
 }
-/* line 304, ../sass/custom.scss */
+/* line 309, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo {
   height: 110px;
   text-align: center;
@@ -4386,12 +4395,12 @@ header {
   display: table;
   width: 100%;
 }
-/* line 312, ../sass/custom.scss */
+/* line 317, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo .chld {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 316, ../sass/custom.scss */
+/* line 321, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo img {
   max-height: 100px;
   max-width: 100%;
@@ -4399,59 +4408,59 @@ header {
   margin: 0 auto;
   padding: 10px;
 }
-/* line 325, ../sass/custom.scss */
+/* line 330, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_content {
   padding: 20px;
 }
-/* line 327, ../sass/custom.scss */
+/* line 332, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_content i {
   color: #01ca48;
 }
-/* line 332, ../sass/custom.scss */
+/* line 337, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra {
   height: 47px;
   border-top: 1px solid #E3E3E3;
   text-align: center;
 }
-/* line 336, ../sass/custom.scss */
+/* line 341, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra i {
   margin-right: 10px;
 }
-/* line 339, ../sass/custom.scss */
+/* line 344, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra .location {
   background-color: #F0F0F0;
 }
-/* line 342, ../sass/custom.scss */
+/* line 347, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra .salary {
   background: #FAFAFA;
   height: 100%;
   padding: 13px 0px;
 }
-/* line 349, ../sass/custom.scss */
+/* line 354, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .job-title {
   font-size: 14px;
   color: #565656;
 }
-/* line 354, ../sass/custom.scss */
+/* line 359, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a p {
   margin: 0px;
   color: #929191;
 }
-/* line 361, ../sass/custom.scss */
+/* line 366, ../sass/custom.scss */
 #featured_themes .widget_recent_entries {
   background: #ECF0F1;
   width: 100%;
   margin: 0px;
 }
 
-/* line 373, ../sass/custom.scss */
+/* line 378, ../sass/custom.scss */
 .close {
   position: absolute;
   right: 0px;
   top: 0px;
 }
 
-/* line 378, ../sass/custom.scss */
+/* line 383, ../sass/custom.scss */
 #help {
   max-width: 100%;
 }
@@ -4461,96 +4470,97 @@ header {
   border: none;
   padding: 0px;
   font-size: 36px;
-  margin: 30px;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 #help .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 382, ../sass/custom.scss */
+/* line 387, ../sass/custom.scss */
 #help i {
   font-size: 40px;
 }
-/* line 386, ../sass/custom.scss */
+/* line 391, ../sass/custom.scss */
 #help div {
   text-align: center;
 }
 
-/* line 393, ../sass/custom.scss */
+/* line 398, ../sass/custom.scss */
 footer#foot {
   position: relative;
   width: 100%;
   background: #343434;
   clear: both;
 }
-/* line 400, ../sass/custom.scss */
+/* line 405, ../sass/custom.scss */
 footer#foot .latest-tweets a {
   color: #01ca48;
 }
-/* line 404, ../sass/custom.scss */
+/* line 409, ../sass/custom.scss */
 footer#foot #footer_wrapper {
   max-width: 90%;
 }
-/* line 407, ../sass/custom.scss */
+/* line 412, ../sass/custom.scss */
 footer#foot #footer_wrapper h2 {
   color: white;
 }
-/* line 410, ../sass/custom.scss */
+/* line 415, ../sass/custom.scss */
 footer#foot #footer_wrapper ul {
   padding: 0px;
   list-style: none;
 }
-/* line 415, ../sass/custom.scss */
+/* line 420, ../sass/custom.scss */
 footer#foot #footer_wrapper #wpjb-widget-alerts-2 label {
   display: block;
 }
-/* line 418, ../sass/custom.scss */
+/* line 423, ../sass/custom.scss */
 footer#foot #footer_wrapper #wpjb-widget-alerts-2 input {
   margin: 10px 0px 10px 0px;
   width: 100%;
 }
-/* line 424, ../sass/custom.scss */
+/* line 429, ../sass/custom.scss */
 footer#foot .columns {
   min-height: 355px;
 }
-/* line 427, ../sass/custom.scss */
+/* line 432, ../sass/custom.scss */
 footer#foot .columns:nth-child(2), footer#foot .columns:nth-child(3), footer#foot .columns:nth-child(4) {
   border-left: 1px solid #414141;
 }
-/* line 430, ../sass/custom.scss */
+/* line 435, ../sass/custom.scss */
 footer#foot h3 {
   color: white;
 }
-/* line 433, ../sass/custom.scss */
+/* line 438, ../sass/custom.scss */
 footer#foot p {
   color: #868686;
 }
-/* line 436, ../sass/custom.scss */
+/* line 441, ../sass/custom.scss */
 footer#foot a {
   color: #868686;
   text-transform: uppercase;
 }
-/* line 439, ../sass/custom.scss */
+/* line 444, ../sass/custom.scss */
 footer#foot a:hover {
   color: #01ca48;
 }
-/* line 443, ../sass/custom.scss */
+/* line 448, ../sass/custom.scss */
 footer#foot i {
   font-size: 20px;
   padding: 10px;
 }
-/* line 449, ../sass/custom.scss */
+/* line 454, ../sass/custom.scss */
 footer#foot .widget input {
   border-radius: 0px !important;
 }
 
-/* line 456, ../sass/custom.scss */
+/* line 461, ../sass/custom.scss */
 .menu-footer-menu-container {
   line-height: 3em;
 }
 
-/* line 459, ../sass/custom.scss */
+/* line 464, ../sass/custom.scss */
 #common_banner {
   background: url(../wpjobboard/images/city.jpg);
   background-size: cover;
@@ -4560,17 +4570,17 @@ footer#foot .widget input {
   max-width: 100%;
   padding-top: 80px;
 }
-/* line 470, ../sass/custom.scss */
+/* line 475, ../sass/custom.scss */
 #common_banner input, #common_banner .customSelect {
   width: 100%;
 }
-/* line 473, ../sass/custom.scss */
+/* line 478, ../sass/custom.scss */
 #common_banner .search_wrapper {
   background: rgba(1, 202, 72, 0.9);
   min-height: 120px;
   padding: 20px;
 }
-/* line 478, ../sass/custom.scss */
+/* line 483, ../sass/custom.scss */
 #common_banner .btn {
   width: 100px;
   margin: 15px auto 0px auto;
@@ -4578,36 +4588,36 @@ footer#foot .widget input {
   background: orange;
 }
 
-/* line 486, ../sass/custom.scss */
+/* line 491, ../sass/custom.scss */
 #apply_scroll {
   display: block;
   text-align: center;
 }
 
-/* line 492, ../sass/custom.scss */
+/* line 497, ../sass/custom.scss */
 #side .widget.widget_wpjb-search {
   height: 520px;
   margin-top: 20px;
 }
-/* line 493, ../sass/custom.scss */
+/* line 498, ../sass/custom.scss */
 #side .widget.widget_wpjb-search #adv {
   padding: 0px 6px;
 }
 
-/* line 502, ../sass/custom.scss */
+/* line 507, ../sass/custom.scss */
 #side .widget {
   height: 300px;
   overflow: hidden;
   margin: 0px;
   background: #EDFCF2;
 }
-/* line 507, ../sass/custom.scss */
+/* line 512, ../sass/custom.scss */
 #side .widget .wpjb-submit {
   background: #FFA500 !important;
   width: 110px;
   margin: 0 auto !important;
 }
-/* line 512, ../sass/custom.scss */
+/* line 517, ../sass/custom.scss */
 #side .widget .expnd {
   display: block;
   background: #01ca48;
@@ -4616,103 +4626,103 @@ footer#foot .widget input {
   border: none;
   font-weight: normal;
 }
-/* line 520, ../sass/custom.scss */
+/* line 525, ../sass/custom.scss */
 #side .widget .wpjb-label {
   position: relative;
   left: 0px;
   line-height: 1em;
   width: 40%;
 }
-/* line 526, ../sass/custom.scss */
+/* line 531, ../sass/custom.scss */
 #side .widget .wpjb-field {
   width: 60%;
 }
-/* line 528, ../sass/custom.scss */
+/* line 533, ../sass/custom.scss */
 #side .widget .wpjb-field input {
   width: 100%;
 }
-/* line 533, ../sass/custom.scss */
+/* line 538, ../sass/custom.scss */
 #side .widget fieldset {
   border: none;
 }
-/* line 536, ../sass/custom.scss */
+/* line 541, ../sass/custom.scss */
 #side .widget h2 {
   border-bottom: none !important;
   background: #01ca48;
   padding: 10px;
   margin: 0px;
 }
-/* line 541, ../sass/custom.scss */
+/* line 546, ../sass/custom.scss */
 #side .widget h2 a {
   color: white;
 }
 
-/* line 550, ../sass/custom.scss */
+/* line 555, ../sass/custom.scss */
 .wpjr-page-resume .wpjb-info tr {
   text-align: left;
   width: 100%;
 }
-/* line 554, ../sass/custom.scss */
+/* line 559, ../sass/custom.scss */
 .wpjr-page-resume .wpjb-info tr td:first-child {
   width: 20%;
 }
 
-/* line 562, ../sass/custom.scss */
+/* line 567, ../sass/custom.scss */
 #content_wrapper {
   max-width: 100%;
 }
 
-/* line 567, ../sass/custom.scss */
+/* line 572, ../sass/custom.scss */
 #content_wrapper.home .row .row {
   max-width: 960px !important;
   margin: 0 auto;
 }
 
-/* line 574, ../sass/custom.scss */
+/* line 579, ../sass/custom.scss */
 #recent_post img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 579, ../sass/custom.scss */
+/* line 584, ../sass/custom.scss */
 .company_logo {
   height: 130px;
   display: table;
 }
-/* line 582, ../sass/custom.scss */
+/* line 587, ../sass/custom.scss */
 .company_logo .mid {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 586, ../sass/custom.scss */
+/* line 591, ../sass/custom.scss */
 .company_logo img {
   max-height: 100%;
   max-width: 100%;
 }
 
-/* line 591, ../sass/custom.scss */
+/* line 596, ../sass/custom.scss */
 .clear {
   clear: both;
 }
 
-/* line 596, ../sass/custom.scss */
+/* line 601, ../sass/custom.scss */
 #job-info .columns {
   height: 130px;
   display: table;
 }
-/* line 599, ../sass/custom.scss */
+/* line 604, ../sass/custom.scss */
 #job-info .columns .extra {
   display: table-cell;
   height: 130px;
   vertical-align: middle;
 }
 
-/* line 608, ../sass/custom.scss */
+/* line 613, ../sass/custom.scss */
 #employer-packages {
   padding: 20px 0px;
 }
 
-/* line 614, ../sass/custom.scss */
+/* line 619, ../sass/custom.scss */
 .tabs .packages, .tabs .single_sus, .tabs .sus {
   background: #F9FAFA;
   border-right: 1px solid #E5E5E5;
@@ -4720,41 +4730,41 @@ footer#foot .widget input {
   border-bottom: 1px solid #E5E5E5;
   text-align: center;
 }
-/* line 620, ../sass/custom.scss */
+/* line 625, ../sass/custom.scss */
 .tabs .packages img, .tabs .single_sus img, .tabs .sus img {
   width: 50px;
 }
-/* line 624, ../sass/custom.scss */
+/* line 629, ../sass/custom.scss */
 .tabs .packages p, .tabs .single_sus p, .tabs .sus p {
   color: #929292;
 }
-/* line 628, ../sass/custom.scss */
+/* line 633, ../sass/custom.scss */
 .tabs .packages:first-child, .tabs .single_sus:first-child, .tabs .sus:first-child {
   border-left: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
 }
-/* line 634, ../sass/custom.scss */
+/* line 639, ../sass/custom.scss */
 .tabs .active {
   background: white;
 }
-/* line 636, ../sass/custom.scss */
+/* line 641, ../sass/custom.scss */
 .tabs .active p {
   color: orange;
 }
 
-/* line 643, ../sass/custom.scss */
+/* line 648, ../sass/custom.scss */
 .intro {
   width: 72%;
   text-align: center;
   margin: 10px auto;
 }
 
-/* line 649, ../sass/custom.scss */
+/* line 654, ../sass/custom.scss */
 .all_packages {
   max-width: 960px !important;
   margin: 20px auto !important;
 }
-/* line 652, ../sass/custom.scss */
+/* line 657, ../sass/custom.scss */
 .all_packages .panel {
   background: #F9FAFA;
   width: 100%;
@@ -4764,58 +4774,58 @@ footer#foot .widget input {
   border: 1px solid #E5E5E5;
   padding: 10px;
 }
-/* line 661, ../sass/custom.scss */
+/* line 666, ../sass/custom.scss */
 .all_packages .panel .price {
   font-size: 30px;
   font-weight: 200;
 }
-/* line 666, ../sass/custom.scss */
+/* line 671, ../sass/custom.scss */
 .all_packages .panel hr {
   margin-top: -13px;
 }
-/* line 669, ../sass/custom.scss */
+/* line 674, ../sass/custom.scss */
 .all_packages .panel .popular {
   margin: -10px;
   height: 30px;
   background: white;
   border-bottom: 1px solid #E5E5E5;
 }
-/* line 674, ../sass/custom.scss */
+/* line 679, ../sass/custom.scss */
 .all_packages .panel .popular p {
   color: orange;
   padding: 5px;
   margin: 0px;
 }
-/* line 682, ../sass/custom.scss */
+/* line 687, ../sass/custom.scss */
 .all_packages .panel p {
   font-size: 12px;
 }
-/* line 686, ../sass/custom.scss */
+/* line 691, ../sass/custom.scss */
 .all_packages .panel.gold, .all_packages .panel.bronze {
   margin-top: 40px;
   min-height: 590px;
 }
-/* line 691, ../sass/custom.scss */
+/* line 696, ../sass/custom.scss */
 .all_packages .details {
   text-align: left;
   margin-top: 30px;
 }
-/* line 694, ../sass/custom.scss */
+/* line 699, ../sass/custom.scss */
 .all_packages .details .underline {
   text-decoration: line-through;
 }
 
-/* line 700, ../sass/custom.scss */
+/* line 705, ../sass/custom.scss */
 #sng {
   display: block;
 }
 
-/* line 704, ../sass/custom.scss */
+/* line 709, ../sass/custom.scss */
 #susc, #pk {
   display: none;
 }
 
-/* line 708, ../sass/custom.scss */
+/* line 713, ../sass/custom.scss */
 .quotes {
   background: url(../wpjobboard/images/image004.jpg);
   height: 300px;
@@ -4823,7 +4833,7 @@ footer#foot .widget input {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 714, ../sass/custom.scss */
+/* line 719, ../sass/custom.scss */
 .quotes .qt {
   position: absolute;
   color: white;
@@ -4834,7 +4844,7 @@ footer#foot .widget input {
   width: 250px;
   text-shadow: 2px 2px 2px #000;
 }
-/* line 724, ../sass/custom.scss */
+/* line 729, ../sass/custom.scss */
 .quotes .qt i {
   font-family: sans-serif;
   font-size: 130px;
@@ -4842,59 +4852,59 @@ footer#foot .widget input {
   color: #01ca48;
   height: 0px;
 }
-/* line 732, ../sass/custom.scss */
+/* line 737, ../sass/custom.scss */
 .quotes .qt i.start {
   left: -50px;
 }
-/* line 736, ../sass/custom.scss */
+/* line 741, ../sass/custom.scss */
 .quotes .qt i.end {
   right: 40px;
   bottom: 0px;
 }
-/* line 740, ../sass/custom.scss */
+/* line 745, ../sass/custom.scss */
 .quotes .qt span {
   font-size: 20px;
   color: #01ca48;
 }
-/* line 746, ../sass/custom.scss */
+/* line 751, ../sass/custom.scss */
 .quotes .one {
   top: 110px;
   left: 140px;
 }
-/* line 747, ../sass/custom.scss */
+/* line 752, ../sass/custom.scss */
 .quotes .two {
   bottom: 20px;
   left: 50px;
 }
-/* line 748, ../sass/custom.scss */
+/* line 753, ../sass/custom.scss */
 .quotes .three {
   top: 20px;
   right: 30px;
 }
-/* line 749, ../sass/custom.scss */
+/* line 754, ../sass/custom.scss */
 .quotes .four {
   bottom: 12px;
   right: 40px;
 }
-/* line 750, ../sass/custom.scss */
+/* line 755, ../sass/custom.scss */
 .quotes .five {
   left: 40px;
   bottom: 10px;
 }
 
-/* line 753, ../sass/custom.scss */
+/* line 758, ../sass/custom.scss */
 .solutions {
   background: #ECF0F1;
   max-width: 100%;
   height: auto;
   text-align: center;
 }
-/* line 758, ../sass/custom.scss */
+/* line 763, ../sass/custom.scss */
 .solutions .wrap {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 762, ../sass/custom.scss */
+/* line 767, ../sass/custom.scss */
 .solutions a img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+ */
@@ -4905,7 +4915,7 @@ footer#foot .widget input {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 771, ../sass/custom.scss */
+/* line 776, ../sass/custom.scss */
 .solutions a img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4917,21 +4927,21 @@ footer#foot .widget input {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 783, ../sass/custom.scss */
+/* line 788, ../sass/custom.scss */
 .solutions .columns {
   height: 100px;
   padding-top: 10px;
 }
-/* line 786, ../sass/custom.scss */
+/* line 791, ../sass/custom.scss */
 .solutions .columns img {
   padding-bottom: 20px;
 }
 
-/* line 793, ../sass/custom.scss */
+/* line 798, ../sass/custom.scss */
 a.active .arrow_box {
   display: block;
 }
-/* line 796, ../sass/custom.scss */
+/* line 801, ../sass/custom.scss */
 a.active img {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4940,24 +4950,24 @@ a.active img {
   filter: none;
 }
 
-/* line 805, ../sass/custom.scss */
+/* line 810, ../sass/custom.scss */
 .show {
   display: block;
 }
 
-/* line 809, ../sass/custom.scss */
+/* line 814, ../sass/custom.scss */
 .hide {
   display: none;
 }
 
-/* line 813, ../sass/custom.scss */
+/* line 818, ../sass/custom.scss */
 .arrow_box {
   position: relative;
   background: #ffffff;
   display: none;
 }
 
-/* line 818, ../sass/custom.scss */
+/* line 823, ../sass/custom.scss */
 .arrow_box:after {
   bottom: 100%;
   left: 50%;
@@ -4973,10 +4983,11 @@ a.active img {
   margin-left: -10px;
 }
 
-/* line 834, ../sass/custom.scss */
+/* line 839, ../sass/custom.scss */
 #recruiters #pk {
   display: block;
   background: #ECF0F1;
+  padding: 20px;
 }
 /* line 121, ../sass/custom.scss */
 #recruiters #pk h2.text-center {
@@ -4984,15 +4995,16 @@ a.active img {
   border: none;
   padding: 0px;
   font-size: 36px;
-  margin: 30px;
+  margin: 0px;
+  padding-bottom: 10px;
 }
-/* line 128, ../sass/custom.scss */
+/* line 129, ../sass/custom.scss */
 #recruiters #pk .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
 
-/* line 841, ../sass/custom.scss */
+/* line 847, ../sass/custom.scss */
 .content {
   max-width: 960px;
   margin: 0 auto;
@@ -5003,7 +5015,7 @@ a.active img {
   transition: All 0.5s ease;
 }
 
-/* line 851, ../sass/custom.scss */
+/* line 857, ../sass/custom.scss */
 .emp_bannerblock {
   position: absolute;
   color: white;
@@ -5013,27 +5025,27 @@ a.active img {
   padding: 20px;
   background: rgba(1, 202, 72, 0.9);
 }
-/* line 860, ../sass/custom.scss */
+/* line 866, ../sass/custom.scss */
 .emp_bannerblock .btn {
   display: inline-block;
   background: orange;
 }
 
-/* line 866, ../sass/custom.scss */
+/* line 872, ../sass/custom.scss */
 .reviews {
   max-width: 960px;
   margin: 0 auto;
   min-height: 200px;
 }
-/* line 870, ../sass/custom.scss */
+/* line 876, ../sass/custom.scss */
 .reviews a {
   color: black;
 }
-/* line 872, ../sass/custom.scss */
+/* line 878, ../sass/custom.scss */
 .reviews a:hover {
   color: black;
 }
-/* line 877, ../sass/custom.scss */
+/* line 883, ../sass/custom.scss */
 .reviews img {
   display: block;
   margin-left: auto;
@@ -5041,63 +5053,63 @@ a.active img {
   max-height: 100px;
 }
 
-/* line 885, ../sass/custom.scss */
+/* line 891, ../sass/custom.scss */
 .main-testimonials {
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 889, ../sass/custom.scss */
+/* line 895, ../sass/custom.scss */
 .main-testimonials a {
   display: block;
 }
-/* line 893, ../sass/custom.scss */
+/* line 899, ../sass/custom.scss */
 .main-testimonials li {
   margin-bottom: 20px;
 }
 
-/* line 897, ../sass/custom.scss */
+/* line 903, ../sass/custom.scss */
 .clients_imgs {
   transition: all 0.5s ease;
 }
-/* line 899, ../sass/custom.scss */
+/* line 905, ../sass/custom.scss */
 .clients_imgs img {
   margin-bottom: 20px !important;
 }
 
-/* line 904, ../sass/custom.scss */
+/* line 910, ../sass/custom.scss */
 .filters {
   height: 40px;
   width: 135px;
 }
 
-/* line 909, ../sass/custom.scss */
+/* line 915, ../sass/custom.scss */
 .cl_logo {
   height: 100px;
 }
 
-/* line 912, ../sass/custom.scss */
+/* line 918, ../sass/custom.scss */
 .more_clients {
   max-width: 90%;
   margin: 0 auto;
   float: none;
 }
-/* line 916, ../sass/custom.scss */
+/* line 922, ../sass/custom.scss */
 .more_clients .clients_imgs {
   padding: 20px 0px;
   min-height: 400px;
 }
-/* line 919, ../sass/custom.scss */
+/* line 925, ../sass/custom.scss */
 .more_clients .clients_imgs img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   filter: gray;
   -webkit-filter: grayscale(100%);
 }
-/* line 924, ../sass/custom.scss */
+/* line 930, ../sass/custom.scss */
 .more_clients .clients_imgs img:last-child {
   float: left;
 }
-/* line 928, ../sass/custom.scss */
+/* line 934, ../sass/custom.scss */
 .more_clients .clients_imgs img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -5106,12 +5118,12 @@ a.active img {
   filter: none;
 }
 
-/* line 940, ../sass/custom.scss */
+/* line 946, ../sass/custom.scss */
 .wpjb-form-slider {
   width: 100%;
 }
 
-/* line 944, ../sass/custom.scss */
+/* line 950, ../sass/custom.scss */
 .one-submit {
   display: block;
   margin-left: auto;
@@ -5123,55 +5135,55 @@ a.active img {
   font-weight: 700;
 }
 
-/* line 956, ../sass/custom.scss */
+/* line 962, ../sass/custom.scss */
 .error p {
   color: red;
 }
 
-/* line 961, ../sass/custom.scss */
+/* line 967, ../sass/custom.scss */
 .success p {
   color: #01ca48;
 }
 
 @media only screen and (max-width: 64em) {
-  /* line 966, ../sass/custom.scss */
+  /* line 972, ../sass/custom.scss */
   #common_banner {
     background: #01ca48;
     padding: 0px;
   }
-  /* line 969, ../sass/custom.scss */
+  /* line 975, ../sass/custom.scss */
   #common_banner .search_wrapper {
     padding-top: 20px;
   }
-  /* line 971, ../sass/custom.scss */
+  /* line 977, ../sass/custom.scss */
   #common_banner .search_wrapper input {
     margin-bottom: 5px !important;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 982, ../sass/custom.scss */
+  /* line 988, ../sass/custom.scss */
   .menu-main-nav-container ul {
     margin: 0px;
     padding: 10px;
   }
-  /* line 985, ../sass/custom.scss */
+  /* line 991, ../sass/custom.scss */
   .menu-main-nav-container ul li {
     width: 100% !important;
   }
 
-  /* line 992, ../sass/custom.scss */
+  /* line 998, ../sass/custom.scss */
   #job-info .columns {
     height: auto;
     display: block;
   }
-  /* line 995, ../sass/custom.scss */
+  /* line 1001, ../sass/custom.scss */
   #job-info .columns div {
     display: block;
     height: auto;
     vertical-align: middle;
   }
 
-  /* line 1005, ../sass/custom.scss */
+  /* line 1011, ../sass/custom.scss */
   .wpjb-page-single .wpjb-info tr,
   .wpjr-page-resume .wpjb-info tr {
     background: none;
@@ -5181,17 +5193,17 @@ a.active img {
     border-top: 1px solid #E3E3E3;
     border-bottom: none;
   }
-  /* line 1012, ../sass/custom.scss */
+  /* line 1018, ../sass/custom.scss */
   .wpjb-page-single .wpjb-info tr td,
   .wpjr-page-resume .wpjb-info tr td {
     border: none;
   }
 
-  /* line 1018, ../sass/custom.scss */
+  /* line 1024, ../sass/custom.scss */
   #banner {
     height: 230px;
   }
-  /* line 1020, ../sass/custom.scss */
+  /* line 1026, ../sass/custom.scss */
   #banner .left, #banner .right {
     background: none;
     box-shadow: none;
@@ -5199,12 +5211,12 @@ a.active img {
     padding: 0px;
     height: 120px;
   }
-  /* line 1026, ../sass/custom.scss */
+  /* line 1032, ../sass/custom.scss */
   #banner .left h1, #banner .right h1 {
     text-align: center;
     font-size: 20px;
   }
-  /* line 1030, ../sass/custom.scss */
+  /* line 1036, ../sass/custom.scss */
   #banner .left .panel, #banner .right .panel {
     position: relative;
     width: 100%;
@@ -5213,22 +5225,22 @@ a.active img {
     height: 100%;
   }
 
-  /* line 1041, ../sass/custom.scss */
+  /* line 1047, ../sass/custom.scss */
   #featured_themes li {
     margin: 20px auto;
   }
 
-  /* line 1046, ../sass/custom.scss */
+  /* line 1052, ../sass/custom.scss */
   #help {
     display: none;
   }
 
-  /* line 1050, ../sass/custom.scss */
+  /* line 1056, ../sass/custom.scss */
   .quotes {
     display: none;
   }
 
-  /* line 1053, ../sass/custom.scss */
+  /* line 1059, ../sass/custom.scss */
   .emp_bannerblock {
     position: relative;
   }

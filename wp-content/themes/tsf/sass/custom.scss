@@ -120,10 +120,11 @@ header{
 @mixin subheader{
 	h2.text-center{
 		font-weight: 500;
-		border:none;
-		padding:0px;
+		border: none;
+		padding: 0px;
 		font-size: 36px;
-		margin: 30px;
+		margin: 0px;
+		padding-bottom: 10px;
 	}
 	.sub-title{
 		color:grey;
@@ -218,7 +219,7 @@ header{
 	min-height: 400px;
 	@include subheader;
 	text-align: center;
-
+	padding:20px;
 
 	.message{
 		p{
@@ -251,6 +252,7 @@ header{
 }
 
 #discovered{
+	padding:20px;
 	@include subheader;	
 	background:#ECF0F1;
 	.columns img{
@@ -288,6 +290,9 @@ header{
 #featured_themes{
 	padding:0px!important;
 	@include subheader;
+	section{
+		padding:20px;
+	}
 	.widget_wpjb-featured-jobs{
 		margin: 0 auto;
 		position: relative;
@@ -835,6 +840,7 @@ a.active{
 		display: block;
 		background:#ECF0F1;
 		@include subheader;
+		padding:20px;
 	}
 }
 
