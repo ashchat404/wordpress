@@ -36,7 +36,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                 </div>
                 <div class="extra large-8 medium-6 columns">
                     <div class="extra">
-                        <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?> - Salary: £<?php esc_html_e($job->meta->salary->value()) ?></h1>
+                        <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?> <br><br>Salary: <?php esc_html_e($job->meta->salary->value()) ?></h1>
                     </div>
                 </div>
                 <div class="extra large-2 medium-4 columns">
@@ -121,12 +121,40 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                     </td>
                 </tr>
             <?php endif; ?>
-
             <?php do_action("wpjb_template_job_meta_text", $job) ?>
         </tbody>
     </table>
+    <div class="row">
+        <h3 style="padding-left:25px"><?php _e("More Details", "jobeleon") ?></h3>
+        <?php foreach($job->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type_exclude"=>"ui-input-textarea")) as $k => $value): ?>
+        
+            <div class="large-12 columns">
+                <?php if ($value->conf("type") == "ui-input-file"): ?>
+                    <?php foreach ($job->file->{$value->name} as $file): ?>
+                        <div class="large-4 medium-4 columns">
+                            <?php esc_html_e($value->conf("title")); ?><span> - </span>
+                        </div>
+                        <div class="large-8 medium-8 columns">
+                            <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
+                        </div>
+                        
+                        <?php echo wpjb_format_bytes($file->size) ?><br/>
+                    <?php endforeach ?>
+                <?php else: ?>
+                        <div class="large-2 medium-3 small-3 columns">
+                            <?php esc_html_e($value->conf("title")); ?><span> - </span>
+                        </div>
+                        <div class="large-10 medium-9 small-9 columns">
+                            <?php esc_html_e(join(", ", (array) $value->values())) ?>
+                        </div>
 
-    <div class="wpjb-job-content">
+                        
+                <?php endif; ?>
+            </div>
+        
+        <?php endforeach; ?>
+    </div>
+    <div class="wpjb-job-content large-12 columns">
 
         <h3><?php _e("Description", "jobeleon") ?></h3>
         <div itemprop="description" class="wpjb-job-text">

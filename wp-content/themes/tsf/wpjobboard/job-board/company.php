@@ -16,15 +16,23 @@ $suffix = 'green'; // color scheme
 $color_scheme = get_theme_mod('wpjobboard_theme_color_scheme');
 $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 ?>
-<div class="where-am-i">
-    <h2><?php _e('Company', 'jobeleon'); ?></h2>
-</div><!-- .where-am-i -->
 
 <div id="wpjb-main" class="wpjb-page-company" >
 
     <?php wpjb_flash() ?>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?></h1>
+    <header class="entry-header" id="job-info">
+        <div class="large-2 medium-2 columns">
+            <?php if ($company->getLogoUrl()): ?>
+                <div><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
+            <?php endif; ?>
+        </div>
+        <div class="large-10 medium-10 columns">
+            <div class="extra">
+                <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?></h1>
+            </div>
+
+        </div>
+        
     </header>
 
     <?php if($company->isVisible() || (Wpjb_Model_Company::current() && Wpjb_Model_Company::current()->id == $company->id)): ?>
@@ -77,10 +85,6 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
         <div class="wpjb-job-content">
 
             <div class="wpjb-job-text">
-
-                <?php if ($company->getLogoUrl()): ?>
-                    <div><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
-                <?php endif; ?>
 
                 <?php wpjb_rich_text($company->company_info, $company->meta->company_info_format->value()) ?>
 

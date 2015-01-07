@@ -37,6 +37,18 @@ class Wpjb_Widget_JobBoardMenu extends Daq_Widget_Abstract
             $isAdmin = false;
         }
 
+        if(current_user_can("manage_jobs")) {
+            $this->view->is_employer = true;
+        } else {
+            $this->view->is_employer = false;
+        }
+
+        if($info->ID>0) {
+            $this->view->is_loggedin = true;
+        } else {
+            $this->view->is_loggedin = false;
+        }
+
         if(!$isAdmin && $this->_context->conf("posting_allow")==3) {
             $this->view->can_post = false;
         } else {

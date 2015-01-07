@@ -11,22 +11,21 @@
  * 
  */
 ?>
+<?php if ($is_employee && $is_loggedin): ?>
+    <?php echo $theme->before_widget ?>
+    <?php if ($title) echo $theme->before_title . $title . $theme->after_title ?>
 
-<?php echo $theme->before_widget ?>
-<?php if ($title) echo $theme->before_title . $title . $theme->after_title ?>
-
-<ul id="wpjb_widget_resumesmenu" class="wpjb_widget">
-    <li>
-        <a href="<?php echo wpjr_url() ?>">
-            <?php _e("Browse Resumes", "jobeleon") ?>
-        </a>
-    </li>
-    <li>
-        <a href="<?php echo wpjr_link_to("advsearch") ?>">
-            <?php _e("Search Resumes", "jobeleon") ?>
-        </a>
-    </li>
-    <?php if ($is_employee && $is_loggedin): ?>
+    <ul id="wpjb_widget_resumesmenu" class="wpjb_widget">
+        <li>
+            <a href="<?php echo wpjr_url() ?>">
+                <?php _e("Browse Resumes", "jobeleon") ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo wpjr_link_to("advsearch") ?>">
+                <?php _e("Search Resumes", "jobeleon") ?>
+            </a>
+        </li>
         <li>
             <a href="<?php echo wpjr_link_to("myresume") ?>">
                 <?php _e("My Resume", "jobeleon") ?>
@@ -49,7 +48,28 @@
                 <?php _e("Logout", "jobeleon") ?>
             </a>
         </li>
-    <?php elseif (get_option('users_can_register')): ?>
+
+    </ul>
+
+    <?php echo $theme->after_widget ?>
+<?php endif; ?>
+
+<?php if (!$is_employee && !$is_loggedin): ?>
+<?php echo $theme->before_widget ?>
+    <?php if ($title) echo $theme->before_title . $title . $theme->after_title ?>
+
+    <ul id="wpjb_widget_resumesmenu" class="wpjb_widget">
+        <li>
+            <a href="<?php echo wpjr_url() ?>">
+                <?php _e("Browse Resumes", "jobeleon") ?>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo wpjr_link_to("advsearch") ?>">
+                <?php _e("Search Resumes", "jobeleon") ?>
+            </a>
+        </li>
+
         <li>
             <a href="<?php echo wpjr_link_to("login") ?>">
                 <?php _e("Candidate Login", "jobeleon") ?>
@@ -60,7 +80,7 @@
                 <?php _e("Candidate Registration", "jobeleon") ?>
             </a>
         </li>
-    <?php endif; ?>
-</ul>
+    </ul>
 
-<?php echo $theme->after_widget ?>
+    <?php echo $theme->after_widget ?>
+<?php endif; ?>

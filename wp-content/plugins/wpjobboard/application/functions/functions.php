@@ -274,7 +274,8 @@ function wpjb_job_company(Wpjb_Model_Job $job = null)
     $company = esc_html($job->company_name);
     if(strlen($job->company_url) > 0) {
         $url = esc_html($job->company_url);
-        echo '<a href="'.$url.'" class="wpjb-job-company">'.$company.'</a>';
+        /*echo '<a href="'.$url.'" class="wpjb-job-company">'.$company.'</a>';*/
+        echo $company;
     } else {
         echo $company;
     }
@@ -298,7 +299,7 @@ function wpjb_job_company_profile($company, $text = null)
         $text = __("view profile", "wpjobboard");
     }
 
-    echo " (<a href=\"".esc_attr($link)."\">".esc_html($text)."</a>)";
+    echo " - <a href=\"".esc_attr($link)."\">".esc_html($text)."</a>";
 
 }
 

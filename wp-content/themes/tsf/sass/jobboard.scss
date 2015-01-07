@@ -5,9 +5,7 @@
 .wpjb-none {
     display: none;
 }
-.wpjb-form div {
-    overflow:hidden; // some very weird hack
-}
+
 
 .wpjb-button {
         @include button;
@@ -147,7 +145,7 @@
                 padding: 10px 0;
                 margin: 10px 0;
                 &:after {
-                        @include bottom-line;
+                        
                 }
                 legend {
                         @include adjust-font-size-to( 16px );
@@ -186,6 +184,7 @@
         }
         .wpjb-field {
                 width: 70%;
+                height: auto;
                 @include adjust-font-size-to( 13px );
                 input,
                 select {

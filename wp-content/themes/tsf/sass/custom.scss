@@ -33,6 +33,100 @@ h1,h2,h3,h4{
 	font-weight:normal;
 }
 
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    background:none;
+    /*fix for FF unable to apply focus style bug */
+    border: none;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $green;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $green;
+}
+.range{
+	label{
+		padding-left:10px;
+	}
+}
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
 header{
 	min-height: 100px;
 	width: 100%;
@@ -118,7 +212,9 @@ header{
 }
 
 @mixin subheader{
+
 	h2.text-center{
+		@include adjust-font-size-to( 14px );
 		font-weight: 500;
 		border: none;
 		padding: 0px;
@@ -201,7 +297,7 @@ header{
 #srch{
 	background:#ECF0F1;
 	padding:20px;
-	input{
+	input[type="text"]{
 		width: 100%;
 	}
 	span.customSelect{
@@ -288,7 +384,7 @@ header{
 	max-width:100%;
 }
 #featured_themes{
-	padding:0px!important;
+	padding:0px;
 	@include subheader;
 	section{
 		padding:20px;
@@ -494,12 +590,12 @@ footer#foot{
 }
 
 #side{
+	padding-top:20px;
 	.widget.widget_wpjb-search{
 		#adv{
 			padding:0px 6px;
 		}
 		height:520px;
-		margin-top:20px;
 	}
 }
 
@@ -563,9 +659,11 @@ footer#foot{
 		}
 	} 
 } 
-
+.wpjb-field{
+	position: relative;
+}
 #content_wrapper{
-	max-width:100%;
+	max-width:2000px;
 }
 #content_wrapper.home{
 	.row{
@@ -889,9 +987,10 @@ a.active{
 }
 
 .main-testimonials{
-	padding:20px;
+	padding:20px!important;
 	max-width:960px;
 	margin:0 auto;
+
 	a{
 		display: block;
 
@@ -967,6 +1066,58 @@ a.active{
 	p{
 		color:$green;
 	}
+}
+
+.create-ad{
+	.widget_wpjb-search{
+		display: none;
+	}
+}
+.daq-multiselect-input{
+	border: 1px solid #FFF;
+}
+.daq-multiselect-options{
+	overflow:auto!important;
+	display:none;
+	background:white;
+	position:absolute;
+	z-index:110;
+	height:200px;
+	overflow: hidden;
+	border:1px solid #EAEBEB;
+
+	label{
+		display: block;
+	}
+	input{
+		width: 10%!important;
+	}
+}
+.daq-multiselect{
+		position: absolute!important;
+		top: 0px;
+		pointer-events: none;
+		background:none!important;
+	
+}
+
+.wpjb-info tr{
+	background: none!important;
+  	width: 25%;
+  	float: left;
+  	text-align: center;
+  	td{
+		padding: 15px 3.4%;
+		position: relative;
+		border-right: 1px solid #E3E3E3;
+		&:first-child{
+			width: 30%;
+		}
+  	}
+
+  	.type{
+  		border-right: none;
+  	}
 }
 @media only screen and (max-width: 64em) { 
 	#common_banner{

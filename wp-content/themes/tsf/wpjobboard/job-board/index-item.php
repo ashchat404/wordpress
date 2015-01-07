@@ -21,7 +21,7 @@ $random_logo_colors = array('#dbc0e0', '#d7d7d7', '#cde0c0');
     <td class="wpjb-column-logo">
         <?php if ($job->getLogoUrl()): ?>
             <a href="<?php echo wpjb_link_to("job", $job) ?>">
-                <img src="<?php echo $job->getLogoUrl("64x64") ?>" id="wpjb-logo" alt="" />
+                <img src="<?php echo $job->getLogoUrl() ?>" id="wpjb-logo" alt="" />
             </a>
         <?php else : ?>
             <a href="<?php echo wpjb_link_to("job", $job) ?>">
@@ -31,9 +31,9 @@ $random_logo_colors = array('#dbc0e0', '#d7d7d7', '#cde0c0');
     </td>
     <td class="wpjb-column-title">
         <a href="<?php echo wpjb_link_to("job", $job) ?>"><?php esc_html_e($job->job_title) ?></a>
-        <small class="wpjb-sub"><?php esc_html_e($job->company_name) ?></small>
+        <small class="wpjb-sub"><?php esc_html_e($job->company_name) ?> <?php wpjb_job_company_profile($job->getCompany(true)) ?></small>
         <?php if ($job->meta->salary->value()):?>
-            <span>£<?php esc_html_e($job->meta->salary->value()) ?></span>
+            <span><?php esc_html_e($job->meta->salary->value()) ?></span>
         <?php endif; ?>
     </td>
     <td class="wpjb-column-description">

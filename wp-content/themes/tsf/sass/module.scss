@@ -419,7 +419,7 @@ body.blog .hentry {
 
 span.customSelect {
 	@include adjust-font-size-to( 12px );
-	background-color: #fff;
+	background: #fff;
 	color: $form_color;
 	height: 45px;
 	padding: 0 5px;

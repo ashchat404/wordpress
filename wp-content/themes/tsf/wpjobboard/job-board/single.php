@@ -35,7 +35,7 @@
                 </div>
             </div>
         <?php elseif($can_apply): ?>
-            <div class="wpjb-job-apply scroll_target" id="wpjb-scroll">
+            <div class="wpjb-job-apply scroll_target large-12 columns" id="wpjb-scroll">
                 <div>
                     <?php if ($application_url): ?>
                         <a class="wpjb-button btn" href="<?php esc_attr_e($application_url) ?>"><?php _e("Apply", "jobeleon") ?></a>
@@ -89,6 +89,8 @@
                             <input type="submit" class="wpjb-submit" id="wpjb_submit" value="<?php _e("Send Application", "jobeleon") ?>" />
                         </fieldset> -->
                     </form>
+
+                    <?php if(!$is_loggedin): ?>
 
                     <form id="wjp_register" action="" class="wpjb-form large-6 medium-6 columns" method="post">
                         <fieldset class="wpjb-fieldset-x">
@@ -165,7 +167,7 @@
                     </div>
 
                     <input type="button" value="Register and apply" class="one-submit" onclick="sub()" />
-
+                <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>

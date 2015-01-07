@@ -1793,7 +1793,7 @@ body.blog .hentry:after {
 span.customSelect {
   font-size: 0.85714em;
   line-height: 2em;
-  background-color: #fff;
+  background: #fff;
   color: #686868;
   height: 45px;
   padding: 0 5px;
@@ -1986,12 +1986,7 @@ body {
   display: none;
 }
 
-/* line 8, ../sass/jobboard.scss */
-.wpjb-form div {
-  overflow: hidden;
-}
-
-/* line 12, ../sass/jobboard.scss */
+/* line 10, ../sass/jobboard.scss */
 .wpjb-button {
   background: #01ca48;
   font-weight: 700;
@@ -2008,30 +2003,30 @@ body {
   color: #fff;
 }
 
-/* line 16, ../sass/jobboard.scss */
+/* line 14, ../sass/jobboard.scss */
 .wpjb-required {
   color: #cd3131;
 }
 
-/* line 20, ../sass/jobboard.scss */
+/* line 18, ../sass/jobboard.scss */
 .wpjb-new-btn:hover {
   background: #01ca48;
 }
 
 /* on wpjb we set up different content style because of 'where-am-i' box */
-/* line 25, ../sass/jobboard.scss */
+/* line 23, ../sass/jobboard.scss */
 .wpjb #content {
   background: white;
   width: 100%;
   padding: 0;
 }
-/* line 29, ../sass/jobboard.scss */
+/* line 27, ../sass/jobboard.scss */
 .wpjb #content .hentry {
   margin: 0;
   padding: 0;
 }
 
-/* line 34, ../sass/jobboard.scss */
+/* line 32, ../sass/jobboard.scss */
 .wpjb #wpjb-main {
   background: #f8f9f9;
   padding: 1em 3%;
@@ -2044,14 +2039,14 @@ body {
   border-radius: 5px;
 }
 @media screen and (max-width: 600px) {
-  /* line 34, ../sass/jobboard.scss */
+  /* line 32, ../sass/jobboard.scss */
   .wpjb #wpjb-main {
     width: auto;
   }
 }
 
 /* = ADD NEW JOB */
-/* line 46, ../sass/jobboard.scss */
+/* line 44, ../sass/jobboard.scss */
 #wpjb-step {
   overflow: hidden;
   list-style-type: none;
@@ -2061,7 +2056,7 @@ body {
   padding-bottom: 20px;
   padding-left: 0 !important;
 }
-/* line 55, ../sass/jobboard.scss */
+/* line 53, ../sass/jobboard.scss */
 #wpjb-step:before, #wpjb-step:after {
   content: '';
   display: block;
@@ -2073,13 +2068,13 @@ body {
   border-radius: 5px;
   position: relative;
 }
-/* line 62, ../sass/jobboard.scss */
+/* line 60, ../sass/jobboard.scss */
 #wpjb-step:before {
   width: 100%;
   background: #e5e6ea;
   top: 21px;
 }
-/* line 67, ../sass/jobboard.scss */
+/* line 65, ../sass/jobboard.scss */
 #wpjb-step li {
   display: block;
   float: left;
@@ -2089,7 +2084,7 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 75, ../sass/jobboard.scss */
+/* line 73, ../sass/jobboard.scss */
 #wpjb-step li:before {
   display: block;
   width: 35px;
@@ -2109,12 +2104,12 @@ body {
   z-index: 10;
   text-align: center;
 }
-/* line 90, ../sass/jobboard.scss */
+/* line 88, ../sass/jobboard.scss */
 #wpjb-step .wpjb-current-step,
 #wpjb-step .wpjb-begone-step {
   color: #4e4e4e;
 }
-/* line 92, ../sass/jobboard.scss */
+/* line 90, ../sass/jobboard.scss */
 #wpjb-step .wpjb-current-step:before,
 #wpjb-step .wpjb-begone-step:before {
   -webkit-border-radius: 35px;
@@ -2127,25 +2122,25 @@ body {
   color: #fff;
   border: none;
 }
-/* line 100, ../sass/jobboard.scss */
+/* line 98, ../sass/jobboard.scss */
 #wpjb-step li:nth-child(1):before {
   content: '1';
 }
-/* line 103, ../sass/jobboard.scss */
+/* line 101, ../sass/jobboard.scss */
 #wpjb-step li:nth-child(2):before {
   content: '2';
 }
-/* line 106, ../sass/jobboard.scss */
+/* line 104, ../sass/jobboard.scss */
 #wpjb-step li:nth-child(3):before {
   content: '3';
 }
 
-/* line 110, ../sass/jobboard.scss */
+/* line 108, ../sass/jobboard.scss */
 #wpjb-step:after {
   background: #01ca48;
 }
 
-/* line 116, ../sass/jobboard.scss */
+/* line 114, ../sass/jobboard.scss */
 #wpjb-step.wpjb-step-1:after,
 #wpjb-step.wpjb-step-2:after,
 #wpjb-step.wpjb-step-3:after {
@@ -2154,21 +2149,21 @@ body {
   z-index: 1;
 }
 
-/* line 123, ../sass/jobboard.scss */
+/* line 121, ../sass/jobboard.scss */
 #wpjb-step.wpjb-step-2:after {
   width: 50%;
 }
 
-/* line 128, ../sass/jobboard.scss */
+/* line 126, ../sass/jobboard.scss */
 #wpjb-step.wpjb-step-3:after {
   width: 100%;
 }
 
-/* line 132, ../sass/jobboard.scss */
+/* line 130, ../sass/jobboard.scss */
 .wpjb-step-container {
   margin-bottom: 30px;
 }
-/* line 134, ../sass/jobboard.scss */
+/* line 132, ../sass/jobboard.scss */
 .wpjb-step-container:after {
   content: '';
   height: 1px;
@@ -2179,42 +2174,32 @@ body {
   right: 0;
 }
 
-/* line 145, ../sass/jobboard.scss */
+/* line 143, ../sass/jobboard.scss */
 #wpjb-main fieldset {
   color: #686868;
   padding: 10px 0;
   margin: 10px 0;
 }
-/* line 149, ../sass/jobboard.scss */
-#wpjb-main fieldset:after {
-  content: '';
-  height: 1px;
-  position: absolute;
-  display: block;
-  background: white;
-  left: 0;
-  right: 0;
-}
-/* line 152, ../sass/jobboard.scss */
+/* line 150, ../sass/jobboard.scss */
 #wpjb-main fieldset legend {
   font-size: 1.14286em;
   line-height: 1.5em;
   font-weight: 600;
   padding: 0 5px 0 5px;
 }
-/* line 158, ../sass/jobboard.scss */
+/* line 156, ../sass/jobboard.scss */
 #wpjb-main fieldset:last-of-type:after {
   display: none;
 }
 
-/* line 162, ../sass/jobboard.scss */
+/* line 160, ../sass/jobboard.scss */
 .wpjb-element-input-textarea {
   width: 100%;
   padding: 11px 5px;
   margin: 10px 0;
 }
 
-/* line 172, ../sass/jobboard.scss */
+/* line 170, ../sass/jobboard.scss */
 .wpjb-element-input-text,
 .wpjb-element-input-select,
 .wpjb-element-input-file,
@@ -2225,7 +2210,7 @@ body {
   padding: 6px 5px;
   margin: 5px 0;
 }
-/* line 177, ../sass/jobboard.scss */
+/* line 175, ../sass/jobboard.scss */
 .wpjb-element-input-text .wpjb-label,
 .wpjb-element-input-text .wpjb-field,
 .wpjb-element-input-select .wpjb-label,
@@ -2241,7 +2226,7 @@ body {
   display: block;
   float: left;
 }
-/* line 181, ../sass/jobboard.scss */
+/* line 179, ../sass/jobboard.scss */
 .wpjb-element-input-text .wpjb-label,
 .wpjb-element-input-select .wpjb-label,
 .wpjb-element-input-file .wpjb-label,
@@ -2254,7 +2239,7 @@ body {
   line-height: 1.84615em;
   line-height: 40px;
 }
-/* line 187, ../sass/jobboard.scss */
+/* line 185, ../sass/jobboard.scss */
 .wpjb-element-input-text .wpjb-field,
 .wpjb-element-input-select .wpjb-field,
 .wpjb-element-input-file .wpjb-field,
@@ -2262,10 +2247,11 @@ body {
 .wpjb-element-input-password .wpjb-field,
 .wpjb-element-input-checkbox .wpjb-field {
   width: 70%;
+  height: auto;
   font-size: 0.92857em;
   line-height: 1.84615em;
 }
-/* line 191, ../sass/jobboard.scss */
+/* line 190, ../sass/jobboard.scss */
 .wpjb-element-input-text .wpjb-field input,
 .wpjb-element-input-text .wpjb-field select,
 .wpjb-element-input-select .wpjb-field input,
@@ -2280,7 +2266,7 @@ body {
 .wpjb-element-input-checkbox .wpjb-field select {
   width: 70%;
 }
-/* line 195, ../sass/jobboard.scss */
+/* line 194, ../sass/jobboard.scss */
 .wpjb-element-input-text:after,
 .wpjb-element-input-select:after,
 .wpjb-element-input-file:after,
@@ -2292,7 +2278,7 @@ body {
   clear: both;
 }
 @media screen and (max-width: 750px) {
-  /* line 202, ../sass/jobboard.scss */
+  /* line 201, ../sass/jobboard.scss */
   .wpjb-element-input-text .wpjb-field,
   .wpjb-element-input-text .wpjb-label,
   .wpjb-element-input-select .wpjb-field,
@@ -2308,7 +2294,7 @@ body {
     float: none;
     width: 100%;
   }
-  /* line 205, ../sass/jobboard.scss */
+  /* line 204, ../sass/jobboard.scss */
   .wpjb-element-input-text .wpjb-field input, .wpjb-element-input-text .wpjb-field select,
   .wpjb-element-input-text .wpjb-label input,
   .wpjb-element-input-text .wpjb-label select,
@@ -2336,12 +2322,12 @@ body {
   }
 }
 
-/* line 213, ../sass/jobboard.scss */
+/* line 212, ../sass/jobboard.scss */
 .wpjb-element-input-radio .wpjb-field,
 .wpjb-element-input-checkbox .wpjb-field {
   margin-top: 0.5em;
 }
-/* line 215, ../sass/jobboard.scss */
+/* line 214, ../sass/jobboard.scss */
 .wpjb-element-input-radio .wpjb-field input,
 .wpjb-element-input-checkbox .wpjb-field input {
   background: none;
@@ -2352,26 +2338,26 @@ body {
   -o-border-radius: 30px;
   border-radius: 30px;
 }
-/* line 224, ../sass/jobboard.scss */
+/* line 223, ../sass/jobboard.scss */
 .wpjb-element-input-radio .wpjb-field input[type=checkbox],
 .wpjb-element-input-radio .wpjb-field input[type=radio],
 .wpjb-element-input-checkbox .wpjb-field input[type=checkbox],
 .wpjb-element-input-checkbox .wpjb-field input[type=radio] {
   border: 1px solid gray;
 }
-/* line 227, ../sass/jobboard.scss */
+/* line 226, ../sass/jobboard.scss */
 .wpjb-element-input-radio .wpjb-field input:checked,
 .wpjb-element-input-checkbox .wpjb-field input:checked {
   border-color: #01ca48;
 }
-/* line 230, ../sass/jobboard.scss */
+/* line 229, ../sass/jobboard.scss */
 .wpjb-element-input-radio .wpjb-field .wpjb-listing-type-item,
 .wpjb-element-input-checkbox .wpjb-field .wpjb-listing-type-item {
   display: block;
   margin-bottom: .5em;
 }
 
-/* line 236, ../sass/jobboard.scss */
+/* line 235, ../sass/jobboard.scss */
 .wpjb-hint {
   display: block;
   font-style: italic;
@@ -2380,7 +2366,7 @@ body {
   line-height: 1.84615em;
 }
 
-/* line 242, ../sass/jobboard.scss */
+/* line 241, ../sass/jobboard.scss */
 #wpjb-main .wpjb-upload-actions a {
   background: #01ca48;
   font-weight: 700;
@@ -2395,7 +2381,7 @@ body {
   width: 33%;
   background: #32a8cf;
 }
-/* line 243, ../sass/jobboard.scss */
+/* line 242, ../sass/jobboard.scss */
 #wpjb-main .wpjb-upload-actions a img {
   display: none;
 }
@@ -2404,18 +2390,18 @@ body {
   background: #01b641;
   color: #fff;
 }
-/* line 251, ../sass/jobboard.scss */
+/* line 250, ../sass/jobboard.scss */
 #wpjb-main .wpjb-upload-actions a:hover {
   background: #47b1d4;
 }
 @media screen and (max-width: 940px) {
-  /* line 242, ../sass/jobboard.scss */
+  /* line 241, ../sass/jobboard.scss */
   #wpjb-main .wpjb-upload-actions a {
     width: auto;
   }
 }
 
-/* line 259, ../sass/jobboard.scss */
+/* line 258, ../sass/jobboard.scss */
 .wpjb-flash-error,
 .wpjb-flash-info {
   text-align: center;
@@ -2431,13 +2417,13 @@ body {
   border-radius: 5px;
 }
 
-/* line 268, ../sass/jobboard.scss */
+/* line 267, ../sass/jobboard.scss */
 .wpjb-flash-info {
   background-color: #d6e8f4;
   color: #637785;
 }
 
-/* line 272, ../sass/jobboard.scss */
+/* line 271, ../sass/jobboard.scss */
 .wpjb-error {
   background: #f6ecc0;
   padding: 10px 5px;
@@ -2447,13 +2433,13 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 278, ../sass/jobboard.scss */
+/* line 277, ../sass/jobboard.scss */
 .wpjb-error input,
 .wpjb-error select,
 .wpjb-error textarea {
   border-color: #ff230c;
 }
-/* line 281, ../sass/jobboard.scss */
+/* line 280, ../sass/jobboard.scss */
 .wpjb-error .wpjb-errors {
   list-style-type: none;
   color: #ff230c;
@@ -2462,7 +2448,7 @@ body {
   line-height: 1.84615em;
 }
 
-/* line 288, ../sass/jobboard.scss */
+/* line 287, ../sass/jobboard.scss */
 #wpjb_pricing {
   width: 100%;
   margin-top: 1em;
@@ -2470,7 +2456,7 @@ body {
   font-size: 0.92857em;
   line-height: 1.84615em;
 }
-/* line 293, ../sass/jobboard.scss */
+/* line 292, ../sass/jobboard.scss */
 #wpjb_pricing:after {
   content: '';
   height: 1px;
@@ -2480,27 +2466,27 @@ body {
   left: 0;
   right: 0;
 }
-/* line 296, ../sass/jobboard.scss */
+/* line 295, ../sass/jobboard.scss */
 #wpjb_pricing tr {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: white;
 }
-/* line 301, ../sass/jobboard.scss */
+/* line 300, ../sass/jobboard.scss */
 #wpjb_pricing td {
   padding: 8px;
 }
-/* line 303, ../sass/jobboard.scss */
+/* line 302, ../sass/jobboard.scss */
 #wpjb_pricing td:first-child {
   width: 50%;
 }
 
-/* line 308, ../sass/jobboard.scss */
+/* line 307, ../sass/jobboard.scss */
 .wpjb-submit {
   width: 150px;
 }
 
-/* line 311, ../sass/jobboard.scss */
+/* line 310, ../sass/jobboard.scss */
 .wpjb-submit-info {
   color: #686868;
   font-size: 0.92857em;
@@ -2509,23 +2495,23 @@ body {
 }
 
 /* map tooltip */
-/* line 317, ../sass/jobboard.scss */
+/* line 316, ../sass/jobboard.scss */
 .wpjb-tooltip:hover {
   z-index: 48;
 }
 
-/* line 321, ../sass/jobboard.scss */
+/* line 320, ../sass/jobboard.scss */
 .wpjb-tooltip:hover span,
 .wpjb-tooltip:hover span img {
   z-index: 2000;
 }
 
-/* line 324, ../sass/jobboard.scss */
+/* line 323, ../sass/jobboard.scss */
 .wpjb-tooltip:hover span img {
   position: relative;
 }
 
-/* line 327, ../sass/jobboard.scss */
+/* line 326, ../sass/jobboard.scss */
 .wpjb-tooltip span {
   z-index: 1111;
   display: block;
@@ -2542,30 +2528,30 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 338, ../sass/jobboard.scss */
+/* line 337, ../sass/jobboard.scss */
 .wpjb-tooltip span img {
   vertical-align: bottom;
 }
 
-/* line 342, ../sass/jobboard.scss */
+/* line 341, ../sass/jobboard.scss */
 .wpjb-tooltip:hover {
   border: 0;
   /* IE6 fix */
 }
 
-/* line 345, ../sass/jobboard.scss */
+/* line 344, ../sass/jobboard.scss */
 .wpjb-tooltip:hover span {
   visibility: visible;
 }
 
 /* job preview */
-/* line 349, ../sass/jobboard.scss */
+/* line 348, ../sass/jobboard.scss */
 .wpjb-job-title {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* line 353, ../sass/jobboard.scss */
+/* line 352, ../sass/jobboard.scss */
 .wpjb-company-name {
   color: darkgrey;
   font-size: 0.92857em;
@@ -2574,13 +2560,13 @@ body {
   padding-bottom: 2em !important;
 }
 
-/* line 359, ../sass/jobboard.scss */
+/* line 358, ../sass/jobboard.scss */
 .wpjb-go-back {
   font-weight: 600;
   margin-right: 2em;
 }
 
-/* line 363, ../sass/jobboard.scss */
+/* line 362, ../sass/jobboard.scss */
 .wpjb-go-publish {
   background: #01ca48;
   font-weight: 700;
@@ -2599,14 +2585,14 @@ body {
   color: #fff;
 }
 
-/* line 374, ../sass/jobboard.scss */
+/* line 373, ../sass/jobboard.scss */
 .wpjb-page-index .wpjb-tooltip,
 .wpjr-page-resumes .wpjb-tooltip,
 .wpjr-page-resume .wpjb-tooltip,
 .wpjb-page-single .wpjb-tooltip {
   cursor: default;
 }
-/* line 377, ../sass/jobboard.scss */
+/* line 376, ../sass/jobboard.scss */
 .wpjb-page-index .wpjb-tooltip:hover span,
 .wpjr-page-resumes .wpjb-tooltip:hover span,
 .wpjr-page-resume .wpjb-tooltip:hover span,
@@ -2614,7 +2600,7 @@ body {
   visibility: hidden;
 }
 
-/* line 383, ../sass/jobboard.scss */
+/* line 382, ../sass/jobboard.scss */
 .wpjb-page-single .wpjb-tooltip,
 .wpjb-page-index .wpjb-tooltip {
   padding: 0;
@@ -2623,16 +2609,16 @@ body {
 }
 
 /* job details single */
-/* line 390, ../sass/jobboard.scss */
+/* line 389, ../sass/jobboard.scss */
 .wpjb-page-single {
   padding-bottom: 1em !important;
 }
-/* line 392, ../sass/jobboard.scss */
+/* line 391, ../sass/jobboard.scss */
 .wpjb-page-single .entry-header {
   padding-top: 2em;
 }
 
-/* line 397, ../sass/jobboard.scss */
+/* line 396, ../sass/jobboard.scss */
 .wpjb-related-jobs:before {
   content: '';
   height: 1px;
@@ -2642,29 +2628,29 @@ body {
   left: 0;
   right: 0;
 }
-/* line 400, ../sass/jobboard.scss */
+/* line 399, ../sass/jobboard.scss */
 .wpjb-related-jobs ul {
   list-style-type: none;
   margin: 0 !important;
   padding: 0 !important;
 }
-/* line 405, ../sass/jobboard.scss */
+/* line 404, ../sass/jobboard.scss */
 .wpjb-related-jobs li {
   padding: 1em 0;
   border-bottom: 1px solid white;
 }
-/* line 408, ../sass/jobboard.scss */
+/* line 407, ../sass/jobboard.scss */
 .wpjb-related-jobs li:first-child {
   border-top: 1px solid white;
 }
-/* line 412, ../sass/jobboard.scss */
+/* line 411, ../sass/jobboard.scss */
 .wpjb-related-jobs .wpjb-new-related {
   padding: 2px 8px;
   margin-right: 2em;
   font-size: 0.78571em;
   line-height: 2.18182em;
 }
-/* line 417, ../sass/jobboard.scss */
+/* line 416, ../sass/jobboard.scss */
 .wpjb-related-jobs .wpjb-related-posted {
   font-size: 0.92857em;
   line-height: 1.84615em;
@@ -2673,7 +2659,7 @@ body {
   margin-left: 1em;
 }
 
-/* line 424, ../sass/jobboard.scss */
+/* line 423, ../sass/jobboard.scss */
 .wpjb-info {
   width: 100%;
   /* dont' ask, it's crazy but works */
@@ -2684,21 +2670,21 @@ body {
   line-height: 1.84615em;
   border-collapse: separate;
 }
-/* line 431, ../sass/jobboard.scss */
+/* line 430, ../sass/jobboard.scss */
 .wpjb-info img {
   vertical-align: middle;
 }
-/* line 434, ../sass/jobboard.scss */
+/* line 433, ../sass/jobboard.scss */
 .wpjb-info td {
   padding: 15px 3.4%;
   position: relative;
   border-right: 1px solid #E3E3E3;
 }
-/* line 438, ../sass/jobboard.scss */
+/* line 437, ../sass/jobboard.scss */
 .wpjb-info td:first-child {
   width: 30%;
 }
-/* line 443, ../sass/jobboard.scss */
+/* line 442, ../sass/jobboard.scss */
 .wpjb-info tr {
   border-bottom: 1px solid #E3E3E3;
   border-top: 1px solid #E3E3E3;
@@ -2706,49 +2692,49 @@ body {
   width: 100%;
   padding: 1px 0;
 }
-/* line 449, ../sass/jobboard.scss */
+/* line 448, ../sass/jobboard.scss */
 .wpjb-info tr:nth-child(2) {
   border-width: 1px 0;
 }
-/* line 452, ../sass/jobboard.scss */
+/* line 451, ../sass/jobboard.scss */
 .wpjb-info tr:nth-child(2n+3) {
   background: #f5f6f6;
 }
-/* line 455, ../sass/jobboard.scss */
+/* line 454, ../sass/jobboard.scss */
 .wpjb-info tr .type {
   border-right: none;
 }
 
-/* line 462, ../sass/jobboard.scss */
+/* line 461, ../sass/jobboard.scss */
 .wpjr-page-resume tr:first-child {
   border-top: 1px solid #f7f7f7;
 }
-/* line 465, ../sass/jobboard.scss */
+/* line 464, ../sass/jobboard.scss */
 .wpjr-page-resume tr:nth-child(2n + 3) {
   background: transparent;
 }
-/* line 468, ../sass/jobboard.scss */
+/* line 467, ../sass/jobboard.scss */
 .wpjr-page-resume tr:nth-child(2n + 2) {
   background: #f5f6f6;
 }
-/* line 473, ../sass/jobboard.scss */
+/* line 472, ../sass/jobboard.scss */
 .wpjr-page-resume strong,
 .wpjr-page-resume h3 {
   font-weight: 600;
 }
-/* line 476, ../sass/jobboard.scss */
+/* line 475, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-inline-img {
   padding-right: 1em;
 }
 
 /* apply for job */
-/* line 481, ../sass/jobboard.scss */
+/* line 480, ../sass/jobboard.scss */
 .wpjb-job-apply {
   margin-top: 20px;
   padding-top: 50px;
   padding-bottom: 30px;
 }
-/* line 485, ../sass/jobboard.scss */
+/* line 484, ../sass/jobboard.scss */
 .wpjb-job-apply:before {
   content: '';
   height: 1px;
@@ -2760,18 +2746,18 @@ body {
   margin-top: -35px;
 }
 
-/* line 490, ../sass/jobboard.scss */
+/* line 489, ../sass/jobboard.scss */
 .wpjb-form-job-apply {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 496, ../sass/jobboard.scss */
+/* line 495, ../sass/jobboard.scss */
 .wpjb-arrow-down {
   padding: 0 0.2em;
 }
 
-/* line 501, ../sass/jobboard.scss */
+/* line 500, ../sass/jobboard.scss */
 .wpjb-form-slider {
   margin-top: 2em;
   padding: 1em 2em;
@@ -2784,61 +2770,61 @@ body {
   width: 70%;
 }
 @media screen and (max-width: 750px) {
-  /* line 501, ../sass/jobboard.scss */
+  /* line 500, ../sass/jobboard.scss */
   .wpjb-form-slider {
     width: 100%;
     padding: 0;
   }
 }
-/* line 512, ../sass/jobboard.scss */
+/* line 511, ../sass/jobboard.scss */
 .wpjb-form-slider form input[type=text] {
   width: 100%;
 }
-/* line 515, ../sass/jobboard.scss */
+/* line 514, ../sass/jobboard.scss */
 .wpjb-form-slider form fieldset:after {
   display: none !important;
 }
-/* line 519, ../sass/jobboard.scss */
+/* line 518, ../sass/jobboard.scss */
 .wpjb-form-slider form .wpjb-element-input-textarea .wpjb-label {
   font-size: 0.92857em;
   line-height: 1.84615em;
 }
-/* line 522, ../sass/jobboard.scss */
+/* line 521, ../sass/jobboard.scss */
 .wpjb-form-slider form .wpjb-element-input-textarea .wpjb-field {
   margin-top: 1em;
 }
-/* line 524, ../sass/jobboard.scss */
+/* line 523, ../sass/jobboard.scss */
 .wpjb-form-slider form .wpjb-element-input-textarea .wpjb-field textarea {
   height: 200px;
 }
 @media screen and (max-width: 940px) {
-  /* line 511, ../sass/jobboard.scss */
+  /* line 510, ../sass/jobboard.scss */
   .wpjb-form-slider form {
     width: 95%;
   }
-  /* line 531, ../sass/jobboard.scss */
+  /* line 530, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-label {
     width: 40%;
   }
-  /* line 534, ../sass/jobboard.scss */
+  /* line 533, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-field {
     width: 60%;
   }
-  /* line 538, ../sass/jobboard.scss */
+  /* line 537, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-element-input-textarea .wpjb-field {
     width: 100%;
   }
-  /* line 543, ../sass/jobboard.scss */
+  /* line 542, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-element-name-file .wpjb-label {
     width: 30%;
   }
-  /* line 546, ../sass/jobboard.scss */
+  /* line 545, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-element-name-file .wpjb-field {
     width: 70%;
   }
 }
 @media screen and (max-width: 750px) {
-  /* line 553, ../sass/jobboard.scss */
+  /* line 552, ../sass/jobboard.scss */
   .wpjb-form-slider form .wpjb-label,
   .wpjb-form-slider form .wpjb-field {
     width: 100%;
@@ -2847,22 +2833,22 @@ body {
 }
 
 /* upload file */
-/* line 562, ../sass/jobboard.scss */
+/* line 561, ../sass/jobboard.scss */
 .wpjb-upload-item {
   line-height: 32px;
   padding: 1em 0;
 }
-/* line 565, ../sass/jobboard.scss */
+/* line 564, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-file-type {
   float: left;
 }
-/* line 568, ../sass/jobboard.scss */
+/* line 567, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-item-actions {
   width: auto;
   float: left;
   margin-left: 1em;
 }
-/* line 573, ../sass/jobboard.scss */
+/* line 572, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-preview,
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-delete {
   display: block;
@@ -2872,28 +2858,28 @@ body {
   padding: 0 1em;
   border-left: 1px solid #e5e6ea;
 }
-/* line 580, ../sass/jobboard.scss */
+/* line 579, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-preview img,
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-delete img {
   display: none;
 }
-/* line 584, ../sass/jobboard.scss */
+/* line 583, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-preview {
   background: url("img/eye-view.png") no-repeat center center;
 }
-/* line 587, ../sass/jobboard.scss */
+/* line 586, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-item-actions .wpjb-item-delete {
   background: url("img/trash.png") no-repeat center center;
   border-right: 1px solid #e5e6ea;
   margin-right: 1em;
 }
-/* line 593, ../sass/jobboard.scss */
+/* line 592, ../sass/jobboard.scss */
 .wpjb-upload-item .wpjb-file-info {
   margin-left: 1em;
 }
 
 @media screen and (max-width: 750px) {
-  /* line 598, ../sass/jobboard.scss */
+  /* line 597, ../sass/jobboard.scss */
   img#wpjb-logo {
     display: block;
     float: none;
@@ -2901,31 +2887,31 @@ body {
   }
 }
 @media screen and (max-width: 300px) {
-  /* line 598, ../sass/jobboard.scss */
+  /* line 597, ../sass/jobboard.scss */
   img#wpjb-logo {
     max-width: 100%;
   }
 }
 
-/* line 609, ../sass/jobboard.scss */
+/* line 608, ../sass/jobboard.scss */
 .wpjb-job-text #wpjb-log {
   max-width: 100%;
 }
 
 /* job listing index table */
-/* line 615, ../sass/jobboard.scss */
+/* line 614, ../sass/jobboard.scss */
 .wpjb-filters {
   position: absolute;
   font-size: 0.92857em;
   line-height: 1.84615em;
   width: 210px;
 }
-/* line 619, ../sass/jobboard.scss */
+/* line 618, ../sass/jobboard.scss */
 .wpjb-filters a {
   color: #fff;
   display: block;
 }
-/* line 624, ../sass/jobboard.scss */
+/* line 623, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-filter-list,
 .wpjb-filters .wpjb-sub-filters {
   list-style-type: none;
@@ -2935,7 +2921,7 @@ body {
   box-sizing: border-box;
   padding: 0 !important;
 }
-/* line 629, ../sass/jobboard.scss */
+/* line 628, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-filter-list li a,
 .wpjb-filters .wpjb-sub-filters li a {
   padding-left: 2em;
@@ -2944,7 +2930,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 635, ../sass/jobboard.scss */
+/* line 634, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-sub-filters {
   display: none;
   background: #01ca48;
@@ -2959,32 +2945,32 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 644, ../sass/jobboard.scss */
+/* line 643, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-sub-filters li {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.3);
 }
-/* line 649, ../sass/jobboard.scss */
+/* line 648, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-sub-filters li a {
   line-height: 36px;
   border-width: 1px 0;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0);
 }
-/* line 654, ../sass/jobboard.scss */
+/* line 653, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-sub-filters li a:hover {
   background: rgba(0, 0, 0, 0.05);
   border-width: 1px 0;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.07);
 }
-/* line 662, ../sass/jobboard.scss */
+/* line 661, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter {
   line-height: 34px;
   width: 100px;
 }
-/* line 665, ../sass/jobboard.scss */
+/* line 664, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter > a {
   width: 110px;
   background: #01ca48;
@@ -2995,7 +2981,7 @@ body {
   z-index: 18;
   text-transform: uppercase;
 }
-/* line 672, ../sass/jobboard.scss */
+/* line 671, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter > a:after {
   content: '';
   display: block;
@@ -3009,7 +2995,7 @@ body {
   border-left: 17px solid #01ca48;
   z-index: 18;
 }
-/* line 686, ../sass/jobboard.scss */
+/* line 685, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter > a:before {
   content: '';
   display: block;
@@ -3023,26 +3009,26 @@ body {
   border-left: 17px solid #e0ede9;
   z-index: 11;
 }
-/* line 702, ../sass/jobboard.scss */
+/* line 701, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter:hover .wpjb-sub-filters {
   display: block;
 }
-/* line 705, ../sass/jobboard.scss */
+/* line 704, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter:hover > a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 708, ../sass/jobboard.scss */
+/* line 707, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter:hover > a:before {
   display: none;
 }
-/* line 711, ../sass/jobboard.scss */
+/* line 710, ../sass/jobboard.scss */
 .wpjb-filters .wpjb-top-filter:hover {
   width: 200px;
 }
 
-/* line 715, ../sass/jobboard.scss */
+/* line 714, ../sass/jobboard.scss */
 .wpjb-over-job-table {
   text-align: right;
   overflow: hidden;
@@ -3050,47 +3036,47 @@ body {
   line-height: 1.84615em;
   color: #a9a9a9;
 }
-/* line 721, ../sass/jobboard.scss */
+/* line 720, ../sass/jobboard.scss */
 .wpjb-over-job-table .wpjb-breadcrumb,
 .wpjb-over-job-table .wpjb-subscribe {
   line-height: 25px;
   display: inline-block;
 }
-/* line 724, ../sass/jobboard.scss */
+/* line 723, ../sass/jobboard.scss */
 .wpjb-over-job-table .wpjb-breadcrumb img,
 .wpjb-over-job-table .wpjb-subscribe img {
   vertical-align: center;
   padding: 0 0 0 1em;
 }
-/* line 728, ../sass/jobboard.scss */
+/* line 727, ../sass/jobboard.scss */
 .wpjb-over-job-table .wpjb-breadcrumb p,
 .wpjb-over-job-table .wpjb-subscribe p {
   padding: 0;
   margin: 0;
   line-height: 25px;
 }
-/* line 734, ../sass/jobboard.scss */
+/* line 733, ../sass/jobboard.scss */
 .wpjb-over-job-table .wpjb-subscribe {
   margin-left: 1em;
   float: right;
 }
 
-/* line 739, ../sass/jobboard.scss */
+/* line 738, ../sass/jobboard.scss */
 .index-where-am-i {
   width: 97%;
   padding: 50px 0;
   min-height: 0;
 }
-/* line 743, ../sass/jobboard.scss */
+/* line 742, ../sass/jobboard.scss */
 .index-where-am-i #search {
   overflow: hidden;
 }
-/* line 746, ../sass/jobboard.scss */
+/* line 745, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-query {
   width: 60%;
   float: left;
 }
-/* line 749, ../sass/jobboard.scss */
+/* line 748, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-query input[type=text] {
   height: 45px;
   line-height: 45px;
@@ -3101,7 +3087,7 @@ body {
   font-size: 0.85714em;
   line-height: 2em;
 }
-/* line 756, ../sass/jobboard.scss */
+/* line 755, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-query .btn {
   text-indent: -9999px;
   background-image: url("img/magnifying-glass-icon.png");
@@ -3111,38 +3097,38 @@ body {
   height: 33px;
   margin-top: 1px;
 }
-/* line 766, ../sass/jobboard.scss */
+/* line 765, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-category {
   float: right;
   width: 35%;
 }
-/* line 769, ../sass/jobboard.scss */
+/* line 768, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-category input {
   width: 100%;
 }
-/* line 772, ../sass/jobboard.scss */
+/* line 771, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-category span.customSelect {
   width: 100%;
 }
-/* line 775, ../sass/jobboard.scss */
+/* line 774, ../sass/jobboard.scss */
 .index-where-am-i .wpjb-search-category span.customSelectInner {
   width: 100% !important;
   background-position: right 5px;
 }
 @media screen and (max-width: 750px) {
-  /* line 782, ../sass/jobboard.scss */
+  /* line 781, ../sass/jobboard.scss */
   .index-where-am-i .wpjb-search-query,
   .index-where-am-i .wpjb-search-category {
     float: none;
     width: 100%;
   }
-  /* line 786, ../sass/jobboard.scss */
+  /* line 785, ../sass/jobboard.scss */
   .index-where-am-i .wpjb-search-category {
     margin-top: 1em;
   }
 }
 
-/* line 791, ../sass/jobboard.scss */
+/* line 790, ../sass/jobboard.scss */
 #wpjb-job-list {
   position: relative;
   font-size: 1em;
@@ -3150,11 +3136,11 @@ body {
   border-collapse: separate;
   border-spacing: 0 10px;
 }
-/* line 796, ../sass/jobboard.scss */
+/* line 795, ../sass/jobboard.scss */
 #wpjb-job-list td {
   padding: 9px 0;
 }
-/* line 798, ../sass/jobboard.scss */
+/* line 797, ../sass/jobboard.scss */
 #wpjb-job-list td:first-child {
   padding-left: 10px;
   -webkit-border-radius: 5px 0 0 5px;
@@ -3163,7 +3149,7 @@ body {
   -o-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
-/* line 802, ../sass/jobboard.scss */
+/* line 801, ../sass/jobboard.scss */
 #wpjb-job-list td:last-child {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
@@ -3172,7 +3158,7 @@ body {
   border-radius: 0 5px 5px 0;
   padding-right: 10px;
 }
-/* line 807, ../sass/jobboard.scss */
+/* line 806, ../sass/jobboard.scss */
 #wpjb-job-list tr {
   border-bottom: 1px solid white;
   display: table;
@@ -3182,34 +3168,34 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 815, ../sass/jobboard.scss */
+/* line 814, ../sass/jobboard.scss */
 #wpjb-job-list tr:first-child {
   border-top: 1px solid white;
 }
-/* line 819, ../sass/jobboard.scss */
+/* line 818, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-featured {
   background: #edfcf2 url(../wpjobboard/images/featured.png) no-repeat right top;
   background-size: 30px;
 }
-/* line 823, ../sass/jobboard.scss */
+/* line 822, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-sub {
   display: block;
   font-size: 0.85714em;
   line-height: 2em;
 }
-/* line 829, ../sass/jobboard.scss */
+/* line 828, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-title,
 #wpjb-job-list .wpjb-column-location,
 #wpjb-job-list .wpjb-column-date {
   font-weight: 600;
 }
-/* line 832, ../sass/jobboard.scss */
+/* line 831, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-logo {
   width: 100px;
   max-width: 100px;
   text-align: left;
 }
-/* line 836, ../sass/jobboard.scss */
+/* line 835, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-logo #wpjb-logo {
   max-width: 64px;
   max-height: 64px;
@@ -3217,12 +3203,12 @@ body {
   float: none;
 }
 @media screen and (max-width: 750px) {
-  /* line 832, ../sass/jobboard.scss */
+  /* line 831, ../sass/jobboard.scss */
   #wpjb-job-list .wpjb-column-logo {
     display: none;
   }
 }
-/* line 845, ../sass/jobboard.scss */
+/* line 844, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-logo .wpjb-logo-placeholder {
   width: 64px;
   height: 64px;
@@ -3233,43 +3219,43 @@ body {
   border-radius: 5px;
   background: pink;
 }
-/* line 852, ../sass/jobboard.scss */
+/* line 851, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-title {
   padding-right: 20px;
   width: 30%;
 }
-/* line 855, ../sass/jobboard.scss */
+/* line 854, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-title a {
   color: #000;
   display: block;
   margin-right: 15px;
 }
-/* line 859, ../sass/jobboard.scss */
+/* line 858, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-title a:hover {
   color: #686868;
 }
-/* line 863, ../sass/jobboard.scss */
+/* line 862, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-title .wpjb-sub {
   color: #9b9b9b;
 }
-/* line 867, ../sass/jobboard.scss */
+/* line 866, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-sub {
   font-weight: normal;
 }
-/* line 870, ../sass/jobboard.scss */
+/* line 869, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-location {
   width: 80%;
 }
-/* line 873, ../sass/jobboard.scss */
+/* line 872, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-description {
   width: 40%;
 }
-/* line 876, ../sass/jobboard.scss */
+/* line 875, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-date {
   width: 10%;
   text-align: right;
 }
-/* line 879, ../sass/jobboard.scss */
+/* line 878, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-column-date .btn {
   padding: 0 13px;
   display: inline-block;
@@ -3277,17 +3263,17 @@ body {
   line-height: 2.4em;
   text-align: center;
 }
-/* line 886, ../sass/jobboard.scss */
+/* line 885, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-filled td.wpjb-column-title a {
   text-decoration: line-through;
 }
-/* line 890, ../sass/jobboard.scss */
+/* line 889, ../sass/jobboard.scss */
 #wpjb-job-list .wpjb-ls-load-more td {
   text-align: center;
 }
 
 /* just an overlay (subscription) */
-/* line 898, ../sass/jobboard.scss */
+/* line 897, ../sass/jobboard.scss */
 #wpjb-overlay {
   display: none;
   position: absolute;
@@ -3299,7 +3285,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 915, ../sass/jobboard.scss */
+/* line 914, ../sass/jobboard.scss */
 #wpjb-overlay > div {
   font-size: 0.92857em;
   line-height: 1.84615em;
@@ -3322,22 +3308,22 @@ body {
   -moz-box-shadow: 2px 2px 0 #9c9d9d;
   box-shadow: 2px 2px 0 #9c9d9d;
 }
-/* line 927, ../sass/jobboard.scss */
+/* line 926, ../sass/jobboard.scss */
 #wpjb-overlay > div .btn {
   text-shadow: none;
 }
 @media screen and (max-width: 750px) {
-  /* line 915, ../sass/jobboard.scss */
+  /* line 914, ../sass/jobboard.scss */
   #wpjb-overlay > div {
     width: 85%;
   }
 }
-/* line 934, ../sass/jobboard.scss */
+/* line 933, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-head,
 #wpjb-overlay > div .wpjb-subscribe-content {
   padding: 2em 7.5%;
 }
-/* line 937, ../sass/jobboard.scss */
+/* line 936, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-head {
   background: #eff0f2;
   -webkit-border-radius: 5px 5px 0 0;
@@ -3346,7 +3332,7 @@ body {
   -o-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-/* line 941, ../sass/jobboard.scss */
+/* line 940, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-content {
   background: #e7eaea;
   -webkit-border-radius: 5px;
@@ -3355,56 +3341,56 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 944, ../sass/jobboard.scss */
+/* line 943, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-content strong {
   margin: 0 0 1em 0;
   display: inline-block;
   line-height: 30px;
 }
-/* line 948, ../sass/jobboard.scss */
+/* line 947, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-content strong img {
   vertical-align: center;
   padding-right: 1em;
 }
-/* line 954, ../sass/jobboard.scss */
+/* line 953, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-email {
   border-bottom: 1px solid #d2d5d5;
 }
-/* line 957, ../sass/jobboard.scss */
+/* line 956, ../sass/jobboard.scss */
 #wpjb-overlay > div h2 {
   font-size: 1.21429em;
   line-height: 1.41176em;
   padding: 0;
   margin: 0 0 0.3em 0;
 }
-/* line 962, ../sass/jobboard.scss */
+/* line 961, ../sass/jobboard.scss */
 #wpjb-overlay > div p {
   padding: 0;
   margin: 0;
 }
-/* line 965, ../sass/jobboard.scss */
+/* line 964, ../sass/jobboard.scss */
 #wpjb-overlay > div p input[type=text] {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 970, ../sass/jobboard.scss */
+/* line 969, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-subscribe-close {
   float: right;
 }
-/* line 973, ../sass/jobboard.scss */
+/* line 972, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-btn-with-input {
   width: 100%;
   margin-top: 1em;
   position: relative;
 }
-/* line 977, ../sass/jobboard.scss */
+/* line 976, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-btn-with-input input {
   width: 100%;
   padding-right: 108px;
 }
-/* line 981, ../sass/jobboard.scss */
+/* line 980, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-btn-with-input .btn {
   position: absolute;
   width: 100px;
@@ -3415,7 +3401,7 @@ body {
   bottom: 5px;
   right: 5px;
 }
-/* line 992, ../sass/jobboard.scss */
+/* line 991, ../sass/jobboard.scss */
 #wpjb-overlay > div .wpjb-mail-frequency {
   background: #dcdee0;
   padding: 10px 20px;
@@ -3427,14 +3413,14 @@ body {
   margin-left: 1em;
 }
 
-/* line 1000, ../sass/jobboard.scss */
+/* line 999, ../sass/jobboard.scss */
 #wpjb-overlay > div img {
   border-radius: 0px;
   box-shadow: 0 0px 0px black;
   vertical-align: middle;
 }
 
-/* line 1006, ../sass/jobboard.scss */
+/* line 1005, ../sass/jobboard.scss */
 .wpjb-subscribe-result {
   display: none;
   margin: 4px 0 4px 0;
@@ -3449,12 +3435,12 @@ body {
   font-weight: 700;
 }
 
-/* line 1016, ../sass/jobboard.scss */
+/* line 1015, ../sass/jobboard.scss */
 .wpjb-subscribe-result.wpjb-subscribe-fail {
   background-color: lightpink;
 }
 
-/* line 1020, ../sass/jobboard.scss */
+/* line 1019, ../sass/jobboard.scss */
 .wpjb-subscribe-result.wpjb-subscribe-success {
   border: 1px solid #e8f9c1;
   color: #fff;
@@ -3462,7 +3448,7 @@ body {
 }
 
 /* search advanced search.php */
-/* line 1028, ../sass/jobboard.scss */
+/* line 1027, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-search fieldset,
 #wpjb-main.wpjb-page-company-login fieldset {
   padding-top: 0;
@@ -3470,85 +3456,85 @@ body {
 }
 
 /* menu bar (e.g. edit employer button) */
-/* line 1034, ../sass/jobboard.scss */
+/* line 1033, ../sass/jobboard.scss */
 .wpjb-menu-bar {
   line-height: 50px;
 }
 
 /* resume detail */
-/* line 1039, ../sass/jobboard.scss */
+/* line 1038, ../sass/jobboard.scss */
 .wpjb-experience {
   padding: 1em 5px;
 }
 
-/* line 1042, ../sass/jobboard.scss */
+/* line 1041, ../sass/jobboard.scss */
 .wpjb-education {
   padding: 1em 5px;
 }
 
-/* line 1045, ../sass/jobboard.scss */
+/* line 1044, ../sass/jobboard.scss */
 .wpjb-detail-description {
   padding-top: 1em;
 }
 
 /* RESUMES */
 /* login */
-/* line 1053, ../sass/jobboard.scss */
+/* line 1052, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-login #wpjb_submit,
 #wpjb-main.wpjr-page-register #wpjb_submit {
   margin-right: 1em;
 }
-/* line 1056, ../sass/jobboard.scss */
+/* line 1055, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-login .hentry,
 #wpjb-main.wpjr-page-register .hentry {
   margin: 0;
   padding: 0;
 }
-/* line 1060, ../sass/jobboard.scss */
+/* line 1059, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-login fieldset,
 #wpjb-main.wpjr-page-register fieldset {
   margin-top: 0;
   padding-top: 0;
 }
 
-/* line 1065, ../sass/jobboard.scss */
+/* line 1064, ../sass/jobboard.scss */
 .wpjb-button[name=wpjb_savenclose] {
   margin-right: 2em;
 }
 
-/* line 1071, ../sass/jobboard.scss */
+/* line 1070, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume .wpjb-label,
 #wpjb-main.wpjr-page-my-resume .wpjb-field,
 #wpjb-main.wpjr-page-resume .wpjb-label,
 #wpjb-main.wpjr-page-resume .wpjb-field {
   line-height: 40px;
 }
-/* line 1074, ../sass/jobboard.scss */
+/* line 1073, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume .wpjb-element-name-image img,
 #wpjb-main.wpjr-page-resume .wpjb-element-name-image img {
   max-height: 100px;
 }
-/* line 1077, ../sass/jobboard.scss */
+/* line 1076, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume fieldset,
 #wpjb-main.wpjr-page-resume fieldset {
   margin: 0;
 }
-/* line 1079, ../sass/jobboard.scss */
+/* line 1078, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume fieldset > div,
 #wpjb-main.wpjr-page-resume fieldset > div {
   border-bottom: 1px solid white;
 }
-/* line 1081, ../sass/jobboard.scss */
+/* line 1080, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume fieldset > div:last-child,
 #wpjb-main.wpjr-page-resume fieldset > div:last-child {
   border-bottom: none;
 }
-/* line 1085, ../sass/jobboard.scss */
+/* line 1084, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume fieldset:first-of-type > div,
 #wpjb-main.wpjr-page-resume fieldset:first-of-type > div {
   border-bottom: none;
 }
-/* line 1090, ../sass/jobboard.scss */
+/* line 1089, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume legend,
 #wpjb-main.wpjr-page-my-resume .wpjb-job-content h3,
 #wpjb-main.wpjr-page-resume legend,
@@ -3563,14 +3549,14 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1098, ../sass/jobboard.scss */
+/* line 1097, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume legend a,
 #wpjb-main.wpjr-page-my-resume .wpjb-job-content h3 a,
 #wpjb-main.wpjr-page-resume legend a,
 #wpjb-main.wpjr-page-resume .wpjb-job-content h3 a {
   text-shadow: 1px 1px 1px #fff;
 }
-/* line 1102, ../sass/jobboard.scss */
+/* line 1101, ../sass/jobboard.scss */
 #wpjb-main.wpjr-page-my-resume .wpjb-element-input-textarea .wpjb-label,
 #wpjb-main.wpjr-page-resume .wpjb-element-input-textarea .wpjb-label {
   font-size: 1.21429em;
@@ -3578,7 +3564,7 @@ body {
   font-weight: 600;
 }
 
-/* line 1108, ../sass/jobboard.scss */
+/* line 1107, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline {
   height: 100px;
   display: table;
@@ -3586,7 +3572,7 @@ body {
   padding-bottom: 1em;
   position: relative;
 }
-/* line 1114, ../sass/jobboard.scss */
+/* line 1113, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline:after {
   content: '';
   height: 1px;
@@ -3597,51 +3583,51 @@ body {
   bottom: 0;
   background: white;
 }
-/* line 1126, ../sass/jobboard.scss */
+/* line 1125, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline strong,
 .wpjr-page-resume .wpjb-resume-headline .wpjb-resume-name {
   padding: 0;
   margin: 0;
 }
-/* line 1130, ../sass/jobboard.scss */
+/* line 1129, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline strong {
   font-size: 0.92857em;
   line-height: 1.84615em;
   color: darkgrey;
   font-weight: normal;
 }
-/* line 1135, ../sass/jobboard.scss */
+/* line 1134, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline .wpjb-summary {
   clear: both;
 }
-/* line 1138, ../sass/jobboard.scss */
+/* line 1137, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline img {
   line-height: 100px;
   vertical-align: middle;
 }
-/* line 1143, ../sass/jobboard.scss */
+/* line 1142, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline .wpjb-resume-main-info,
 .wpjr-page-resume .wpjb-resume-headline .wpjb-resume-photo-wrap {
   display: table-cell;
   vertical-align: middle;
   height: 100px;
 }
-/* line 1148, ../sass/jobboard.scss */
+/* line 1147, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline .wpjb-resume-photo-wrap {
   width: 100px;
   text-align: center;
   padding-right: 1em;
 }
-/* line 1153, ../sass/jobboard.scss */
+/* line 1152, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-resume-headline .wpjb-resume-main-info {
   width: auto;
 }
-/* line 1157, ../sass/jobboard.scss */
+/* line 1156, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-summary {
   font-size: 0.92857em;
   line-height: 1.84615em;
 }
-/* line 1159, ../sass/jobboard.scss */
+/* line 1158, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-summary:after {
   content: '';
   height: 1px;
@@ -3651,11 +3637,11 @@ body {
   left: 0;
   right: 0;
 }
-/* line 1163, ../sass/jobboard.scss */
+/* line 1162, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-contact-candidate {
   padding-bottom: 1.5em;
 }
-/* line 1165, ../sass/jobboard.scss */
+/* line 1164, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-contact-candidate h3 {
   background: none !important;
   border-top: 20px solid white;
@@ -3664,76 +3650,76 @@ body {
   padding-bottom: 0 !important;
   margin-bottom: 0;
 }
-/* line 1173, ../sass/jobboard.scss */
+/* line 1172, ../sass/jobboard.scss */
 .wpjr-page-resume .wpjb-contact-candidate .wpjb-element-input-textarea label {
   font-size: 14px !important;
 }
 
-/* line 1178, ../sass/jobboard.scss */
+/* line 1177, ../sass/jobboard.scss */
 .wpjb-slide-icon:after {
   content: url("img/down-arrow-button.png");
   margin-left: .5em;
 }
 
-/* line 1182, ../sass/jobboard.scss */
+/* line 1181, ../sass/jobboard.scss */
 .wpjb-resume-photo {
   max-height: 100px;
   max-width: 100px;
   vertical-align: middle;
 }
 
-/* line 1187, ../sass/jobboard.scss */
+/* line 1186, ../sass/jobboard.scss */
 .wpjb-element-name-is_current .wpjb-field {
   width: 100%;
   text-align: center;
 }
 
-/* line 1194, ../sass/jobboard.scss */
+/* line 1193, ../sass/jobboard.scss */
 .wpjb-experience .date-range,
 .wpjb-education .date-range {
   float: right;
 }
-/* line 1197, ../sass/jobboard.scss */
+/* line 1196, ../sass/jobboard.scss */
 .wpjb-experience em,
 .wpjb-education em {
   font-style: normal;
   font-size: 0.85714em;
   line-height: 2em;
 }
-/* line 1201, ../sass/jobboard.scss */
+/* line 1200, ../sass/jobboard.scss */
 .wpjb-experience .wpjb-detail-description,
 .wpjb-education .wpjb-detail-description {
   margin-top: 2em;
 }
 
-/* line 1207, ../sass/jobboard.scss */
+/* line 1206, ../sass/jobboard.scss */
 .wpjb-column-left,
 .wpjb-column-right {
   width: 50%;
   float: left;
 }
 
-/* line 1211, ../sass/jobboard.scss */
+/* line 1210, ../sass/jobboard.scss */
 .wpjb-column-right {
   text-align: right;
 }
 
 /* BROWSE RESUMES table */
-/* line 1216, ../sass/jobboard.scss */
+/* line 1215, ../sass/jobboard.scss */
 #wpjb-resume-list {
   width: 100%;
 }
-/* line 1218, ../sass/jobboard.scss */
+/* line 1217, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item {
   width: 49%;
   float: left;
   margin: 1em 0;
 }
-/* line 1222, ../sass/jobboard.scss */
+/* line 1221, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item:nth-child(2n) {
   margin-left: 2%;
 }
-/* line 1225, ../sass/jobboard.scss */
+/* line 1224, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item td {
   display: block;
   width: 100% !important;
@@ -3749,22 +3735,22 @@ body {
   box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
-  /* line 1218, ../sass/jobboard.scss */
+  /* line 1217, ../sass/jobboard.scss */
   #wpjb-resume-list .wpjr-resume-item {
     float: none;
     width: 100%;
   }
-  /* line 1236, ../sass/jobboard.scss */
+  /* line 1235, ../sass/jobboard.scss */
   #wpjb-resume-list .wpjr-resume-item td {
     margin: 1em 0;
   }
 }
-/* line 1241, ../sass/jobboard.scss */
+/* line 1240, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjb-resume-photo-wrap {
   max-width: 80px;
   height: 50px;
 }
-/* line 1244, ../sass/jobboard.scss */
+/* line 1243, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjb-resume-photo-wrap img {
   max-height: 50px;
   max-width: 50px;
@@ -3772,18 +3758,18 @@ body {
   vertical-align: middle;
   margin: 0 auto;
 }
-/* line 1252, ../sass/jobboard.scss */
+/* line 1251, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-content {
   position: relative;
   width: 100%;
   min-height: 80px;
 }
-/* line 1256, ../sass/jobboard.scss */
+/* line 1255, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-content .wpjb-resume-photo-wrap {
   float: left;
   padding: 0 .5em 0 1em;
 }
-/* line 1260, ../sass/jobboard.scss */
+/* line 1259, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-content .wpjr-resume-item-date {
   position: absolute;
   font-size: 0.85714em;
@@ -3796,27 +3782,27 @@ body {
   padding-left: 0.5em;
   padding-bottom: 0.5em;
 }
-/* line 1273, ../sass/jobboard.scss */
+/* line 1272, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-title a,
 #wpjb-resume-list .wpjr-resume-item-headline {
   display: block;
   width: 70%;
   padding-left: 1em;
 }
-/* line 1278, ../sass/jobboard.scss */
+/* line 1277, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-title a {
   font-size: 1.14286em;
   line-height: 1.5em;
   color: #4e4e4e;
   font-weight: 600;
 }
-/* line 1283, ../sass/jobboard.scss */
+/* line 1282, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-headline {
   color: #696969;
   font-size: 0.92857em;
   line-height: 1.84615em;
 }
-/* line 1287, ../sass/jobboard.scss */
+/* line 1286, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta {
   width: 100%;
   background: #ecedf0;
@@ -3827,27 +3813,27 @@ body {
   font-size: 0.85714em;
   line-height: 2em;
 }
-/* line 1295, ../sass/jobboard.scss */
+/* line 1294, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta > div {
   width: 50%;
   display: table-cell;
   vertical-align: middle;
   padding: 1em 0;
 }
-/* line 1301, ../sass/jobboard.scss */
+/* line 1300, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta .wpjr-resume-item-category {
   border-left: 1px solid #dbdcdf;
 }
-/* line 1303, ../sass/jobboard.scss */
+/* line 1302, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta .wpjr-resume-item-category img {
   vertical-align: middle;
   margin-right: 0.1em;
 }
-/* line 1307, ../sass/jobboard.scss */
+/* line 1306, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta .wpjr-resume-item-category a {
   color: #696969;
 }
-/* line 1311, ../sass/jobboard.scss */
+/* line 1310, ../sass/jobboard.scss */
 #wpjb-resume-list .wpjr-resume-item-meta:after {
   content: '';
   display: table;
@@ -3855,20 +3841,20 @@ body {
 }
 
 /* job applications but probably will affect more */
-/* line 1320, ../sass/jobboard.scss */
+/* line 1319, ../sass/jobboard.scss */
 .wpjb-table {
   width: 100%;
 }
-/* line 1322, ../sass/jobboard.scss */
+/* line 1321, ../sass/jobboard.scss */
 .wpjb-table tr {
   border-bottom: 1px solid white;
 }
-/* line 1325, ../sass/jobboard.scss */
+/* line 1324, ../sass/jobboard.scss */
 .wpjb-table td {
   padding: 1em 0;
 }
 
-/* line 1329, ../sass/jobboard.scss */
+/* line 1328, ../sass/jobboard.scss */
 .wpjb-dropdown {
   list-style-type: none;
   margin: 0;
@@ -3887,25 +3873,25 @@ body {
   width: 150px;
   z-index: 79;
 }
-/* line 1340, ../sass/jobboard.scss */
+/* line 1339, ../sass/jobboard.scss */
 .wpjb-dropdown a {
   color: #fff;
   display: block;
   text-align: left;
   padding: 0.5em 1em;
 }
-/* line 1346, ../sass/jobboard.scss */
+/* line 1345, ../sass/jobboard.scss */
 .wpjb-dropdown li {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.3);
 }
-/* line 1350, ../sass/jobboard.scss */
+/* line 1349, ../sass/jobboard.scss */
 .wpjb-dropdown li hr {
   border-color: rgba(255, 255, 255, 0.5) !important;
   background: transparent;
 }
-/* line 1355, ../sass/jobboard.scss */
+/* line 1354, ../sass/jobboard.scss */
 .wpjb-dropdown li a {
   font-weight: 600;
   -webkit-box-sizing: border-box;
@@ -3916,7 +3902,7 @@ body {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0);
 }
-/* line 1362, ../sass/jobboard.scss */
+/* line 1361, ../sass/jobboard.scss */
 .wpjb-dropdown li a:hover {
   background: rgba(0, 0, 0, 0.05);
   border-width: 1px 0;
@@ -3925,43 +3911,43 @@ body {
 }
 
 /* company jobs company panel company-panel.php */
-/* line 1374, ../sass/jobboard.scss */
+/* line 1373, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-company-panel tr .wpjb-last {
   width: 5%;
   padding-right: 0;
   text-align: center;
 }
-/* line 1379, ../sass/jobboard.scss */
+/* line 1378, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-company-panel tr .wpjb-column-expires {
   width: 15%;
 }
-/* line 1382, ../sass/jobboard.scss */
+/* line 1381, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-company-panel tr .wpjb-statistics {
   text-align: left;
   width: 30%;
 }
-/* line 1386, ../sass/jobboard.scss */
+/* line 1385, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-company-panel tr th {
   text-align: left;
 }
-/* line 1390, ../sass/jobboard.scss */
+/* line 1389, ../sass/jobboard.scss */
 #wpjb-main.wpjb-page-company-panel .wpjb-title {
   text-align: left;
 }
 
-/* line 1395, ../sass/jobboard.scss */
+/* line 1394, ../sass/jobboard.scss */
 .wpjb-expanded-map-row {
   width: 100%;
   overflow: hidden;
 }
-/* line 1398, ../sass/jobboard.scss */
+/* line 1397, ../sass/jobboard.scss */
 .wpjb-expanded-map-row td {
   width: 100%;
   padding: 0;
   margin: 0;
   width: 100% !important;
 }
-/* line 1403, ../sass/jobboard.scss */
+/* line 1402, ../sass/jobboard.scss */
 .wpjb-expanded-map-row td iframe {
   position: relative;
   width: 106.6%;
@@ -3969,7 +3955,7 @@ body {
   display: none;
 }
 
-/* line 1415, ../sass/jobboard.scss */
+/* line 1414, ../sass/jobboard.scss */
 .wpjb-page-single .wpjb-info tr,
 .wpjr-page-resume .wpjb-info tr {
   background: none;
@@ -3979,24 +3965,24 @@ body {
 }
 
 /* company list profile */
-/* line 1424, ../sass/jobboard.scss */
+/* line 1423, ../sass/jobboard.scss */
 .wpjb-company-list {
   list-style-type: none;
 }
-/* line 1426, ../sass/jobboard.scss */
+/* line 1425, ../sass/jobboard.scss */
 .wpjb-company-list li {
   margin: 1em 0;
   font-style: italic;
   font-size: 13px;
   color: #686868;
 }
-/* line 1431, ../sass/jobboard.scss */
+/* line 1430, ../sass/jobboard.scss */
 .wpjb-company-list li a {
   font-style: normal;
   font-size: 16px;
 }
 
-/* line 1437, ../sass/jobboard.scss */
+/* line 1436, ../sass/jobboard.scss */
 .wpjb-company-list .wpjb-new-btn {
   padding: 2px 8px;
   margin-right: 1em;
@@ -4050,68 +4036,183 @@ h1, h2, h3, h4 {
 }
 
 /* line 36, ../sass/custom.scss */
+input[type=range] {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+  background: none;
+  /*fix for FF unable to apply focus style bug */
+  border: none;
+  /*required for proper track sizing in FF*/
+  width: 300px;
+}
+
+/* line 46, ../sass/custom.scss */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+/* line 53, ../sass/custom.scss */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #01ca48;
+  margin-top: -4px;
+}
+
+/* line 62, ../sass/custom.scss */
+input[type=range]:focus {
+  outline: none;
+}
+
+/* line 65, ../sass/custom.scss */
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
+/* line 69, ../sass/custom.scss */
+input[type=range]::-moz-range-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+/* line 76, ../sass/custom.scss */
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #01ca48;
+}
+
+/* line 84, ../sass/custom.scss */
+.range label {
+  padding-left: 10px;
+}
+
+/*hide the outline behind the border*/
+/* line 89, ../sass/custom.scss */
+input[type=range]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+/* line 94, ../sass/custom.scss */
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 5px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+/* line 108, ../sass/custom.scss */
+input[type=range]::-ms-fill-lower {
+  background: #777;
+  border-radius: 10px;
+}
+
+/* line 112, ../sass/custom.scss */
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+/* line 116, ../sass/custom.scss */
+input[type=range]::-ms-thumb {
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: goldenrod;
+}
+
+/* line 123, ../sass/custom.scss */
+input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+
+/* line 126, ../sass/custom.scss */
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}
+
+/* line 130, ../sass/custom.scss */
 header {
   min-height: 100px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* line 42, ../sass/custom.scss */
+/* line 136, ../sass/custom.scss */
 .menu-main-nav-container {
   padding-top: 20px;
   min-height: 70px;
 }
-/* line 45, ../sass/custom.scss */
+/* line 139, ../sass/custom.scss */
 .menu-main-nav-container ul {
   list-style: none;
 }
-/* line 47, ../sass/custom.scss */
+/* line 141, ../sass/custom.scss */
 .menu-main-nav-container ul li {
   float: left;
   width: 17%;
   text-align: center;
   padding-top: 10px;
 }
-/* line 52, ../sass/custom.scss */
+/* line 146, ../sass/custom.scss */
 .menu-main-nav-container ul li a {
   text-transform: uppercase;
   color: #808080;
 }
-/* line 55, ../sass/custom.scss */
+/* line 149, ../sass/custom.scss */
 .menu-main-nav-container ul li a:hover {
   color: #01ca48;
 }
-/* line 60, ../sass/custom.scss */
+/* line 154, ../sass/custom.scss */
 .menu-main-nav-container ul li.menu-item-159, .menu-main-nav-container ul .menu-item-31 {
   width: 30%;
   padding-top: 0px;
 }
 
-/* line 68, ../sass/custom.scss */
+/* line 162, ../sass/custom.scss */
 .cont {
   width: 100%;
   height: 50px;
 }
 
-/* line 72, ../sass/custom.scss */
+/* line 166, ../sass/custom.scss */
 .tsf_top {
   padding: 10px 0px 0px 10px;
   width: 350px;
   float: right;
 }
-/* line 77, ../sass/custom.scss */
+/* line 171, ../sass/custom.scss */
 .tsf_top a i {
   font-size: 20px;
   color: #C0C2C2;
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 84, ../sass/custom.scss */
+/* line 178, ../sass/custom.scss */
 .tsf_top a:hover i {
   color: #01ca48;
 }
 
-/* line 135, ../sass/custom.scss */
+/* line 231, ../sass/custom.scss */
 .btn_orange {
   background: orange;
   color: white;
@@ -4120,7 +4221,7 @@ header {
   text-transform: uppercase;
 }
 
-/* line 139, ../sass/custom.scss */
+/* line 235, ../sass/custom.scss */
 .btn_green {
   background: #01ca48;
   color: white;
@@ -4129,12 +4230,12 @@ header {
   text-transform: uppercase;
 }
 
-/* line 144, ../sass/custom.scss */
+/* line 240, ../sass/custom.scss */
 #banner {
   max-width: 100%;
 }
 
-/* line 148, ../sass/custom.scss */
+/* line 244, ../sass/custom.scss */
 .right {
   background-image: url(../wpjobboard/images/interview.jpg);
   background-repeat: no-repeat;
@@ -4143,7 +4244,7 @@ header {
   position: relative;
   box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 151, ../sass/custom.scss */
+/* line 247, ../sass/custom.scss */
 .right .panel {
   padding: 10px;
   background: rgba(1, 202, 72, 0.9);
@@ -4154,28 +4255,28 @@ header {
   width: 90%;
   min-height: 100px;
 }
-/* line 115, ../sass/custom.scss */
+/* line 209, ../sass/custom.scss */
 .right .panel h1 {
   font-size: 26px;
 }
-/* line 154, ../sass/custom.scss */
+/* line 250, ../sass/custom.scss */
 .right .panel a {
   background: orange;
   padding: 10px;
   color: white;
 }
-/* line 159, ../sass/custom.scss */
+/* line 255, ../sass/custom.scss */
 .right .panel h1 {
   font-weight: 500;
   text-align: left;
   color: white;
 }
-/* line 164, ../sass/custom.scss */
+/* line 260, ../sass/custom.scss */
 .right .panel .button {
   display: inline-block;
 }
 
-/* line 170, ../sass/custom.scss */
+/* line 266, ../sass/custom.scss */
 .left {
   background-image: url(../wpjobboard/images/candidate.jpg);
   background-repeat: no-repeat;
@@ -4184,7 +4285,7 @@ header {
   position: relative;
   box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 174, ../sass/custom.scss */
+/* line 270, ../sass/custom.scss */
 .left .panel {
   background: rgba(1, 202, 72, 0.9);
   position: absolute;
@@ -4196,61 +4297,63 @@ header {
   padding: 10px;
   text-align: right;
 }
-/* line 115, ../sass/custom.scss */
+/* line 209, ../sass/custom.scss */
 .left .panel h1 {
   font-size: 26px;
 }
-/* line 179, ../sass/custom.scss */
+/* line 275, ../sass/custom.scss */
 .left .panel a {
   background: #FFF;
   padding: 10px;
   color: black;
 }
-/* line 184, ../sass/custom.scss */
+/* line 280, ../sass/custom.scss */
 .left .panel h1 {
   font-weight: 500;
   text-align: right;
   color: white;
 }
-/* line 189, ../sass/custom.scss */
+/* line 285, ../sass/custom.scss */
 .left .panel .button {
   display: inline-block;
 }
 
-/* line 197, ../sass/custom.scss */
+/* line 293, ../sass/custom.scss */
 .btn {
   border-radius: 0px !important;
 }
 
-/* line 201, ../sass/custom.scss */
+/* line 297, ../sass/custom.scss */
 #srch {
   background: #ECF0F1;
   padding: 20px;
 }
-/* line 204, ../sass/custom.scss */
-#srch input {
+/* line 300, ../sass/custom.scss */
+#srch input[type="text"] {
   width: 100%;
 }
-/* line 207, ../sass/custom.scss */
+/* line 303, ../sass/custom.scss */
 #srch span.customSelect {
   width: 100%;
 }
-/* line 210, ../sass/custom.scss */
+/* line 306, ../sass/custom.scss */
 #srch .btn {
   width: 100px;
   margin: 15px auto;
   display: block;
 }
 
-/* line 217, ../sass/custom.scss */
+/* line 313, ../sass/custom.scss */
 #testmonials {
   max-width: 100%;
   min-height: 400px;
   text-align: center;
   padding: 20px;
 }
-/* line 121, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 #testmonials h2.text-center {
+  font-size: 1em;
+  line-height: 1.71429em;
   font-weight: 500;
   border: none;
   padding: 0px;
@@ -4258,23 +4361,23 @@ header {
   margin: 0px;
   padding-bottom: 10px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #testmonials .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 225, ../sass/custom.scss */
+/* line 321, ../sass/custom.scss */
 #testmonials .message p {
   font-size: 20px;
   font-style: italic;
   color: #808080;
 }
-/* line 229, ../sass/custom.scss */
+/* line 325, ../sass/custom.scss */
 #testmonials .message p span {
   font-size: 18px;
 }
 
-/* line 237, ../sass/custom.scss */
+/* line 333, ../sass/custom.scss */
 .full_testimonial {
   display: none;
   position: absolute;
@@ -4284,7 +4387,7 @@ header {
   padding: 20px;
   box-shadow: 0px 2px 14px -2px #000;
 }
-/* line 245, ../sass/custom.scss */
+/* line 341, ../sass/custom.scss */
 .full_testimonial img.cl_logo {
   display: block;
   margin-left: auto;
@@ -4293,13 +4396,15 @@ header {
   height: auto;
 }
 
-/* line 254, ../sass/custom.scss */
+/* line 350, ../sass/custom.scss */
 #discovered {
   padding: 20px;
   background: #ECF0F1;
 }
-/* line 121, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 #discovered h2.text-center {
+  font-size: 1em;
+  line-height: 1.71429em;
   font-weight: 500;
   border: none;
   padding: 0px;
@@ -4307,23 +4412,23 @@ header {
   margin: 0px;
   padding-bottom: 10px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #discovered .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 258, ../sass/custom.scss */
+/* line 354, ../sass/custom.scss */
 #discovered .columns img {
   margin-bottom: 40px;
 }
-/* line 262, ../sass/custom.scss */
+/* line 358, ../sass/custom.scss */
 #discovered a img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 270, ../sass/custom.scss */
+/* line 366, ../sass/custom.scss */
 .dis_img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+ */
@@ -4334,7 +4439,7 @@ header {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-/* line 279, ../sass/custom.scss */
+/* line 375, ../sass/custom.scss */
 .dis_img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4343,17 +4448,19 @@ header {
   filter: none;
 }
 
-/* line 287, ../sass/custom.scss */
+/* line 383, ../sass/custom.scss */
 .widget_recent_entries {
   max-width: 100%;
 }
 
-/* line 290, ../sass/custom.scss */
+/* line 386, ../sass/custom.scss */
 #featured_themes {
-  padding: 0px !important;
+  padding: 0px;
 }
-/* line 121, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 #featured_themes h2.text-center {
+  font-size: 1em;
+  line-height: 1.71429em;
   font-weight: 500;
   border: none;
   padding: 0px;
@@ -4361,32 +4468,32 @@ header {
   margin: 0px;
   padding-bottom: 10px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #featured_themes .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 293, ../sass/custom.scss */
+/* line 389, ../sass/custom.scss */
 #featured_themes section {
   padding: 20px;
 }
-/* line 296, ../sass/custom.scss */
+/* line 392, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs {
   margin: 0 auto;
   position: relative;
 }
-/* line 300, ../sass/custom.scss */
+/* line 396, ../sass/custom.scss */
 #featured_themes li {
   list-style: none;
 }
-/* line 303, ../sass/custom.scss */
+/* line 399, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a {
   border: 1px solid #E3E3E3;
   border-radius: 0px;
   margin: 0px 5px 0px 5px;
   padding: 0px;
 }
-/* line 309, ../sass/custom.scss */
+/* line 405, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo {
   height: 110px;
   text-align: center;
@@ -4395,12 +4502,12 @@ header {
   display: table;
   width: 100%;
 }
-/* line 317, ../sass/custom.scss */
+/* line 413, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo .chld {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 321, ../sass/custom.scss */
+/* line 417, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_logo img {
   max-height: 100px;
   max-width: 100%;
@@ -4408,64 +4515,66 @@ header {
   margin: 0 auto;
   padding: 10px;
 }
-/* line 330, ../sass/custom.scss */
+/* line 426, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_content {
   padding: 20px;
 }
-/* line 332, ../sass/custom.scss */
+/* line 428, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_content i {
   color: #01ca48;
 }
-/* line 337, ../sass/custom.scss */
+/* line 433, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra {
   height: 47px;
   border-top: 1px solid #E3E3E3;
   text-align: center;
 }
-/* line 341, ../sass/custom.scss */
+/* line 437, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra i {
   margin-right: 10px;
 }
-/* line 344, ../sass/custom.scss */
+/* line 440, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra .location {
   background-color: #F0F0F0;
 }
-/* line 347, ../sass/custom.scss */
+/* line 443, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .featured_extra .salary {
   background: #FAFAFA;
   height: 100%;
   padding: 13px 0px;
 }
-/* line 354, ../sass/custom.scss */
+/* line 450, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a .job-title {
   font-size: 14px;
   color: #565656;
 }
-/* line 359, ../sass/custom.scss */
+/* line 455, ../sass/custom.scss */
 #featured_themes .widget_wpjb-featured-jobs li a p {
   margin: 0px;
   color: #929191;
 }
-/* line 366, ../sass/custom.scss */
+/* line 462, ../sass/custom.scss */
 #featured_themes .widget_recent_entries {
   background: #ECF0F1;
   width: 100%;
   margin: 0px;
 }
 
-/* line 378, ../sass/custom.scss */
+/* line 474, ../sass/custom.scss */
 .close {
   position: absolute;
   right: 0px;
   top: 0px;
 }
 
-/* line 383, ../sass/custom.scss */
+/* line 479, ../sass/custom.scss */
 #help {
   max-width: 100%;
 }
-/* line 121, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 #help h2.text-center {
+  font-size: 1em;
+  line-height: 1.71429em;
   font-weight: 500;
   border: none;
   padding: 0px;
@@ -4473,94 +4582,94 @@ header {
   margin: 0px;
   padding-bottom: 10px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #help .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
-/* line 387, ../sass/custom.scss */
+/* line 483, ../sass/custom.scss */
 #help i {
   font-size: 40px;
 }
-/* line 391, ../sass/custom.scss */
+/* line 487, ../sass/custom.scss */
 #help div {
   text-align: center;
 }
 
-/* line 398, ../sass/custom.scss */
+/* line 494, ../sass/custom.scss */
 footer#foot {
   position: relative;
   width: 100%;
   background: #343434;
   clear: both;
 }
-/* line 405, ../sass/custom.scss */
+/* line 501, ../sass/custom.scss */
 footer#foot .latest-tweets a {
   color: #01ca48;
 }
-/* line 409, ../sass/custom.scss */
+/* line 505, ../sass/custom.scss */
 footer#foot #footer_wrapper {
   max-width: 90%;
 }
-/* line 412, ../sass/custom.scss */
+/* line 508, ../sass/custom.scss */
 footer#foot #footer_wrapper h2 {
   color: white;
 }
-/* line 415, ../sass/custom.scss */
+/* line 511, ../sass/custom.scss */
 footer#foot #footer_wrapper ul {
   padding: 0px;
   list-style: none;
 }
-/* line 420, ../sass/custom.scss */
+/* line 516, ../sass/custom.scss */
 footer#foot #footer_wrapper #wpjb-widget-alerts-2 label {
   display: block;
 }
-/* line 423, ../sass/custom.scss */
+/* line 519, ../sass/custom.scss */
 footer#foot #footer_wrapper #wpjb-widget-alerts-2 input {
   margin: 10px 0px 10px 0px;
   width: 100%;
 }
-/* line 429, ../sass/custom.scss */
+/* line 525, ../sass/custom.scss */
 footer#foot .columns {
   min-height: 355px;
 }
-/* line 432, ../sass/custom.scss */
+/* line 528, ../sass/custom.scss */
 footer#foot .columns:nth-child(2), footer#foot .columns:nth-child(3), footer#foot .columns:nth-child(4) {
   border-left: 1px solid #414141;
 }
-/* line 435, ../sass/custom.scss */
+/* line 531, ../sass/custom.scss */
 footer#foot h3 {
   color: white;
 }
-/* line 438, ../sass/custom.scss */
+/* line 534, ../sass/custom.scss */
 footer#foot p {
   color: #868686;
 }
-/* line 441, ../sass/custom.scss */
+/* line 537, ../sass/custom.scss */
 footer#foot a {
   color: #868686;
   text-transform: uppercase;
 }
-/* line 444, ../sass/custom.scss */
+/* line 540, ../sass/custom.scss */
 footer#foot a:hover {
   color: #01ca48;
 }
-/* line 448, ../sass/custom.scss */
+/* line 544, ../sass/custom.scss */
 footer#foot i {
   font-size: 20px;
   padding: 10px;
 }
-/* line 454, ../sass/custom.scss */
+/* line 550, ../sass/custom.scss */
 footer#foot .widget input {
   border-radius: 0px !important;
 }
 
-/* line 461, ../sass/custom.scss */
+/* line 557, ../sass/custom.scss */
 .menu-footer-menu-container {
   line-height: 3em;
 }
 
-/* line 464, ../sass/custom.scss */
+/* line 560, ../sass/custom.scss */
 #common_banner {
   background: url(../wpjobboard/images/city.jpg);
   background-size: cover;
@@ -4570,17 +4679,17 @@ footer#foot .widget input {
   max-width: 100%;
   padding-top: 80px;
 }
-/* line 475, ../sass/custom.scss */
+/* line 571, ../sass/custom.scss */
 #common_banner input, #common_banner .customSelect {
   width: 100%;
 }
-/* line 478, ../sass/custom.scss */
+/* line 574, ../sass/custom.scss */
 #common_banner .search_wrapper {
   background: rgba(1, 202, 72, 0.9);
   min-height: 120px;
   padding: 20px;
 }
-/* line 483, ../sass/custom.scss */
+/* line 579, ../sass/custom.scss */
 #common_banner .btn {
   width: 100px;
   margin: 15px auto 0px auto;
@@ -4588,36 +4697,39 @@ footer#foot .widget input {
   background: orange;
 }
 
-/* line 491, ../sass/custom.scss */
+/* line 587, ../sass/custom.scss */
 #apply_scroll {
   display: block;
   text-align: center;
 }
 
-/* line 497, ../sass/custom.scss */
+/* line 592, ../sass/custom.scss */
+#side {
+  padding-top: 20px;
+}
+/* line 594, ../sass/custom.scss */
 #side .widget.widget_wpjb-search {
   height: 520px;
-  margin-top: 20px;
 }
-/* line 498, ../sass/custom.scss */
+/* line 595, ../sass/custom.scss */
 #side .widget.widget_wpjb-search #adv {
   padding: 0px 6px;
 }
 
-/* line 507, ../sass/custom.scss */
+/* line 603, ../sass/custom.scss */
 #side .widget {
   height: 300px;
   overflow: hidden;
   margin: 0px;
   background: #EDFCF2;
 }
-/* line 512, ../sass/custom.scss */
+/* line 608, ../sass/custom.scss */
 #side .widget .wpjb-submit {
   background: #FFA500 !important;
   width: 110px;
   margin: 0 auto !important;
 }
-/* line 517, ../sass/custom.scss */
+/* line 613, ../sass/custom.scss */
 #side .widget .expnd {
   display: block;
   background: #01ca48;
@@ -4626,103 +4738,108 @@ footer#foot .widget input {
   border: none;
   font-weight: normal;
 }
-/* line 525, ../sass/custom.scss */
+/* line 621, ../sass/custom.scss */
 #side .widget .wpjb-label {
   position: relative;
   left: 0px;
   line-height: 1em;
   width: 40%;
 }
-/* line 531, ../sass/custom.scss */
+/* line 627, ../sass/custom.scss */
 #side .widget .wpjb-field {
   width: 60%;
 }
-/* line 533, ../sass/custom.scss */
+/* line 629, ../sass/custom.scss */
 #side .widget .wpjb-field input {
   width: 100%;
 }
-/* line 538, ../sass/custom.scss */
+/* line 634, ../sass/custom.scss */
 #side .widget fieldset {
   border: none;
 }
-/* line 541, ../sass/custom.scss */
+/* line 637, ../sass/custom.scss */
 #side .widget h2 {
   border-bottom: none !important;
   background: #01ca48;
   padding: 10px;
   margin: 0px;
 }
-/* line 546, ../sass/custom.scss */
+/* line 642, ../sass/custom.scss */
 #side .widget h2 a {
   color: white;
 }
 
-/* line 555, ../sass/custom.scss */
+/* line 651, ../sass/custom.scss */
 .wpjr-page-resume .wpjb-info tr {
   text-align: left;
   width: 100%;
 }
-/* line 559, ../sass/custom.scss */
+/* line 655, ../sass/custom.scss */
 .wpjr-page-resume .wpjb-info tr td:first-child {
   width: 20%;
 }
 
-/* line 567, ../sass/custom.scss */
-#content_wrapper {
-  max-width: 100%;
+/* line 662, ../sass/custom.scss */
+.wpjb-field {
+  position: relative;
 }
 
-/* line 572, ../sass/custom.scss */
+/* line 665, ../sass/custom.scss */
+#content_wrapper {
+  max-width: 2000px;
+}
+
+/* line 670, ../sass/custom.scss */
 #content_wrapper.home .row .row {
   max-width: 960px !important;
   margin: 0 auto;
 }
 
-/* line 579, ../sass/custom.scss */
+/* line 677, ../sass/custom.scss */
 #recent_post img {
   display: block;
   margin: 0 auto;
 }
 
-/* line 584, ../sass/custom.scss */
+/* line 682, ../sass/custom.scss */
 .company_logo {
   height: 130px;
   display: table;
 }
-/* line 587, ../sass/custom.scss */
+/* line 685, ../sass/custom.scss */
 .company_logo .mid {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 591, ../sass/custom.scss */
+/* line 689, ../sass/custom.scss */
 .company_logo img {
   max-height: 100%;
   max-width: 100%;
 }
 
-/* line 596, ../sass/custom.scss */
+/* line 694, ../sass/custom.scss */
 .clear {
   clear: both;
 }
 
-/* line 601, ../sass/custom.scss */
+/* line 699, ../sass/custom.scss */
 #job-info .columns {
   height: 130px;
   display: table;
 }
-/* line 604, ../sass/custom.scss */
+/* line 702, ../sass/custom.scss */
 #job-info .columns .extra {
   display: table-cell;
   height: 130px;
   vertical-align: middle;
 }
 
-/* line 613, ../sass/custom.scss */
+/* line 711, ../sass/custom.scss */
 #employer-packages {
   padding: 20px 0px;
 }
 
-/* line 619, ../sass/custom.scss */
+/* line 717, ../sass/custom.scss */
 .tabs .packages, .tabs .single_sus, .tabs .sus {
   background: #F9FAFA;
   border-right: 1px solid #E5E5E5;
@@ -4730,41 +4847,41 @@ footer#foot .widget input {
   border-bottom: 1px solid #E5E5E5;
   text-align: center;
 }
-/* line 625, ../sass/custom.scss */
+/* line 723, ../sass/custom.scss */
 .tabs .packages img, .tabs .single_sus img, .tabs .sus img {
   width: 50px;
 }
-/* line 629, ../sass/custom.scss */
+/* line 727, ../sass/custom.scss */
 .tabs .packages p, .tabs .single_sus p, .tabs .sus p {
   color: #929292;
 }
-/* line 633, ../sass/custom.scss */
+/* line 731, ../sass/custom.scss */
 .tabs .packages:first-child, .tabs .single_sus:first-child, .tabs .sus:first-child {
   border-left: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
 }
-/* line 639, ../sass/custom.scss */
+/* line 737, ../sass/custom.scss */
 .tabs .active {
   background: white;
 }
-/* line 641, ../sass/custom.scss */
+/* line 739, ../sass/custom.scss */
 .tabs .active p {
   color: orange;
 }
 
-/* line 648, ../sass/custom.scss */
+/* line 746, ../sass/custom.scss */
 .intro {
   width: 72%;
   text-align: center;
   margin: 10px auto;
 }
 
-/* line 654, ../sass/custom.scss */
+/* line 752, ../sass/custom.scss */
 .all_packages {
   max-width: 960px !important;
   margin: 20px auto !important;
 }
-/* line 657, ../sass/custom.scss */
+/* line 755, ../sass/custom.scss */
 .all_packages .panel {
   background: #F9FAFA;
   width: 100%;
@@ -4774,58 +4891,58 @@ footer#foot .widget input {
   border: 1px solid #E5E5E5;
   padding: 10px;
 }
-/* line 666, ../sass/custom.scss */
+/* line 764, ../sass/custom.scss */
 .all_packages .panel .price {
   font-size: 30px;
   font-weight: 200;
 }
-/* line 671, ../sass/custom.scss */
+/* line 769, ../sass/custom.scss */
 .all_packages .panel hr {
   margin-top: -13px;
 }
-/* line 674, ../sass/custom.scss */
+/* line 772, ../sass/custom.scss */
 .all_packages .panel .popular {
   margin: -10px;
   height: 30px;
   background: white;
   border-bottom: 1px solid #E5E5E5;
 }
-/* line 679, ../sass/custom.scss */
+/* line 777, ../sass/custom.scss */
 .all_packages .panel .popular p {
   color: orange;
   padding: 5px;
   margin: 0px;
 }
-/* line 687, ../sass/custom.scss */
+/* line 785, ../sass/custom.scss */
 .all_packages .panel p {
   font-size: 12px;
 }
-/* line 691, ../sass/custom.scss */
+/* line 789, ../sass/custom.scss */
 .all_packages .panel.gold, .all_packages .panel.bronze {
   margin-top: 40px;
   min-height: 590px;
 }
-/* line 696, ../sass/custom.scss */
+/* line 794, ../sass/custom.scss */
 .all_packages .details {
   text-align: left;
   margin-top: 30px;
 }
-/* line 699, ../sass/custom.scss */
+/* line 797, ../sass/custom.scss */
 .all_packages .details .underline {
   text-decoration: line-through;
 }
 
-/* line 705, ../sass/custom.scss */
+/* line 803, ../sass/custom.scss */
 #sng {
   display: block;
 }
 
-/* line 709, ../sass/custom.scss */
+/* line 807, ../sass/custom.scss */
 #susc, #pk {
   display: none;
 }
 
-/* line 713, ../sass/custom.scss */
+/* line 811, ../sass/custom.scss */
 .quotes {
   background: url(../wpjobboard/images/image004.jpg);
   height: 300px;
@@ -4833,7 +4950,7 @@ footer#foot .widget input {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 719, ../sass/custom.scss */
+/* line 817, ../sass/custom.scss */
 .quotes .qt {
   position: absolute;
   color: white;
@@ -4844,7 +4961,7 @@ footer#foot .widget input {
   width: 250px;
   text-shadow: 2px 2px 2px #000;
 }
-/* line 729, ../sass/custom.scss */
+/* line 827, ../sass/custom.scss */
 .quotes .qt i {
   font-family: sans-serif;
   font-size: 130px;
@@ -4852,59 +4969,59 @@ footer#foot .widget input {
   color: #01ca48;
   height: 0px;
 }
-/* line 737, ../sass/custom.scss */
+/* line 835, ../sass/custom.scss */
 .quotes .qt i.start {
   left: -50px;
 }
-/* line 741, ../sass/custom.scss */
+/* line 839, ../sass/custom.scss */
 .quotes .qt i.end {
   right: 40px;
   bottom: 0px;
 }
-/* line 745, ../sass/custom.scss */
+/* line 843, ../sass/custom.scss */
 .quotes .qt span {
   font-size: 20px;
   color: #01ca48;
 }
-/* line 751, ../sass/custom.scss */
+/* line 849, ../sass/custom.scss */
 .quotes .one {
   top: 110px;
   left: 140px;
 }
-/* line 752, ../sass/custom.scss */
+/* line 850, ../sass/custom.scss */
 .quotes .two {
   bottom: 20px;
   left: 50px;
 }
-/* line 753, ../sass/custom.scss */
+/* line 851, ../sass/custom.scss */
 .quotes .three {
   top: 20px;
   right: 30px;
 }
-/* line 754, ../sass/custom.scss */
+/* line 852, ../sass/custom.scss */
 .quotes .four {
   bottom: 12px;
   right: 40px;
 }
-/* line 755, ../sass/custom.scss */
+/* line 853, ../sass/custom.scss */
 .quotes .five {
   left: 40px;
   bottom: 10px;
 }
 
-/* line 758, ../sass/custom.scss */
+/* line 856, ../sass/custom.scss */
 .solutions {
   background: #ECF0F1;
   max-width: 100%;
   height: auto;
   text-align: center;
 }
-/* line 763, ../sass/custom.scss */
+/* line 861, ../sass/custom.scss */
 .solutions .wrap {
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 767, ../sass/custom.scss */
+/* line 865, ../sass/custom.scss */
 .solutions a img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+ */
@@ -4915,7 +5032,7 @@ footer#foot .widget input {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 776, ../sass/custom.scss */
+/* line 874, ../sass/custom.scss */
 .solutions a img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4927,21 +5044,21 @@ footer#foot .widget input {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 788, ../sass/custom.scss */
+/* line 886, ../sass/custom.scss */
 .solutions .columns {
   height: 100px;
   padding-top: 10px;
 }
-/* line 791, ../sass/custom.scss */
+/* line 889, ../sass/custom.scss */
 .solutions .columns img {
   padding-bottom: 20px;
 }
 
-/* line 798, ../sass/custom.scss */
+/* line 896, ../sass/custom.scss */
 a.active .arrow_box {
   display: block;
 }
-/* line 801, ../sass/custom.scss */
+/* line 899, ../sass/custom.scss */
 a.active img {
   -webkit-filter: none;
   -moz-filter: none;
@@ -4950,24 +5067,24 @@ a.active img {
   filter: none;
 }
 
-/* line 810, ../sass/custom.scss */
+/* line 908, ../sass/custom.scss */
 .show {
   display: block;
 }
 
-/* line 814, ../sass/custom.scss */
+/* line 912, ../sass/custom.scss */
 .hide {
   display: none;
 }
 
-/* line 818, ../sass/custom.scss */
+/* line 916, ../sass/custom.scss */
 .arrow_box {
   position: relative;
   background: #ffffff;
   display: none;
 }
 
-/* line 823, ../sass/custom.scss */
+/* line 921, ../sass/custom.scss */
 .arrow_box:after {
   bottom: 100%;
   left: 50%;
@@ -4983,14 +5100,16 @@ a.active img {
   margin-left: -10px;
 }
 
-/* line 839, ../sass/custom.scss */
+/* line 937, ../sass/custom.scss */
 #recruiters #pk {
   display: block;
   background: #ECF0F1;
   padding: 20px;
 }
-/* line 121, ../sass/custom.scss */
+/* line 216, ../sass/custom.scss */
 #recruiters #pk h2.text-center {
+  font-size: 1em;
+  line-height: 1.71429em;
   font-weight: 500;
   border: none;
   padding: 0px;
@@ -4998,13 +5117,13 @@ a.active img {
   margin: 0px;
   padding-bottom: 10px;
 }
-/* line 129, ../sass/custom.scss */
+/* line 225, ../sass/custom.scss */
 #recruiters #pk .sub-title {
   color: grey;
   margin-bottom: 40px;
 }
 
-/* line 847, ../sass/custom.scss */
+/* line 945, ../sass/custom.scss */
 .content {
   max-width: 960px;
   margin: 0 auto;
@@ -5015,7 +5134,7 @@ a.active img {
   transition: All 0.5s ease;
 }
 
-/* line 857, ../sass/custom.scss */
+/* line 955, ../sass/custom.scss */
 .emp_bannerblock {
   position: absolute;
   color: white;
@@ -5025,27 +5144,27 @@ a.active img {
   padding: 20px;
   background: rgba(1, 202, 72, 0.9);
 }
-/* line 866, ../sass/custom.scss */
+/* line 964, ../sass/custom.scss */
 .emp_bannerblock .btn {
   display: inline-block;
   background: orange;
 }
 
-/* line 872, ../sass/custom.scss */
+/* line 970, ../sass/custom.scss */
 .reviews {
   max-width: 960px;
   margin: 0 auto;
   min-height: 200px;
 }
-/* line 876, ../sass/custom.scss */
+/* line 974, ../sass/custom.scss */
 .reviews a {
   color: black;
 }
-/* line 878, ../sass/custom.scss */
+/* line 976, ../sass/custom.scss */
 .reviews a:hover {
   color: black;
 }
-/* line 883, ../sass/custom.scss */
+/* line 981, ../sass/custom.scss */
 .reviews img {
   display: block;
   margin-left: auto;
@@ -5053,63 +5172,63 @@ a.active img {
   max-height: 100px;
 }
 
-/* line 891, ../sass/custom.scss */
+/* line 989, ../sass/custom.scss */
 .main-testimonials {
-  padding: 20px;
+  padding: 20px !important;
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 895, ../sass/custom.scss */
+/* line 994, ../sass/custom.scss */
 .main-testimonials a {
   display: block;
 }
-/* line 899, ../sass/custom.scss */
+/* line 998, ../sass/custom.scss */
 .main-testimonials li {
   margin-bottom: 20px;
 }
 
-/* line 903, ../sass/custom.scss */
+/* line 1002, ../sass/custom.scss */
 .clients_imgs {
   transition: all 0.5s ease;
 }
-/* line 905, ../sass/custom.scss */
+/* line 1004, ../sass/custom.scss */
 .clients_imgs img {
   margin-bottom: 20px !important;
 }
 
-/* line 910, ../sass/custom.scss */
+/* line 1009, ../sass/custom.scss */
 .filters {
   height: 40px;
   width: 135px;
 }
 
-/* line 915, ../sass/custom.scss */
+/* line 1014, ../sass/custom.scss */
 .cl_logo {
   height: 100px;
 }
 
-/* line 918, ../sass/custom.scss */
+/* line 1017, ../sass/custom.scss */
 .more_clients {
   max-width: 90%;
   margin: 0 auto;
   float: none;
 }
-/* line 922, ../sass/custom.scss */
+/* line 1021, ../sass/custom.scss */
 .more_clients .clients_imgs {
   padding: 20px 0px;
   min-height: 400px;
 }
-/* line 925, ../sass/custom.scss */
+/* line 1024, ../sass/custom.scss */
 .more_clients .clients_imgs img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   filter: gray;
   -webkit-filter: grayscale(100%);
 }
-/* line 930, ../sass/custom.scss */
+/* line 1029, ../sass/custom.scss */
 .more_clients .clients_imgs img:last-child {
   float: left;
 }
-/* line 934, ../sass/custom.scss */
+/* line 1033, ../sass/custom.scss */
 .more_clients .clients_imgs img:hover {
   -webkit-filter: none;
   -moz-filter: none;
@@ -5118,12 +5237,12 @@ a.active img {
   filter: none;
 }
 
-/* line 946, ../sass/custom.scss */
+/* line 1045, ../sass/custom.scss */
 .wpjb-form-slider {
   width: 100%;
 }
 
-/* line 950, ../sass/custom.scss */
+/* line 1049, ../sass/custom.scss */
 .one-submit {
   display: block;
   margin-left: auto;
@@ -5135,55 +5254,115 @@ a.active img {
   font-weight: 700;
 }
 
-/* line 962, ../sass/custom.scss */
+/* line 1061, ../sass/custom.scss */
 .error p {
   color: red;
 }
 
-/* line 967, ../sass/custom.scss */
+/* line 1066, ../sass/custom.scss */
 .success p {
   color: #01ca48;
 }
 
+/* line 1072, ../sass/custom.scss */
+.create-ad .widget_wpjb-search {
+  display: none;
+}
+
+/* line 1076, ../sass/custom.scss */
+.daq-multiselect-input {
+  border: 1px solid #FFF;
+}
+
+/* line 1079, ../sass/custom.scss */
+.daq-multiselect-options {
+  overflow: auto !important;
+  display: none;
+  background: white;
+  position: absolute;
+  z-index: 110;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #EAEBEB;
+}
+/* line 1089, ../sass/custom.scss */
+.daq-multiselect-options label {
+  display: block;
+}
+/* line 1092, ../sass/custom.scss */
+.daq-multiselect-options input {
+  width: 10% !important;
+}
+
+/* line 1096, ../sass/custom.scss */
+.daq-multiselect {
+  position: absolute !important;
+  top: 0px;
+  pointer-events: none;
+  background: none !important;
+}
+
+/* line 1104, ../sass/custom.scss */
+.wpjb-info tr {
+  background: none !important;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+/* line 1109, ../sass/custom.scss */
+.wpjb-info tr td {
+  padding: 15px 3.4%;
+  position: relative;
+  border-right: 1px solid #E3E3E3;
+}
+/* line 1113, ../sass/custom.scss */
+.wpjb-info tr td:first-child {
+  width: 30%;
+}
+/* line 1118, ../sass/custom.scss */
+.wpjb-info tr .type {
+  border-right: none;
+}
+
 @media only screen and (max-width: 64em) {
-  /* line 972, ../sass/custom.scss */
+  /* line 1123, ../sass/custom.scss */
   #common_banner {
     background: #01ca48;
     padding: 0px;
   }
-  /* line 975, ../sass/custom.scss */
+  /* line 1126, ../sass/custom.scss */
   #common_banner .search_wrapper {
     padding-top: 20px;
   }
-  /* line 977, ../sass/custom.scss */
+  /* line 1128, ../sass/custom.scss */
   #common_banner .search_wrapper input {
     margin-bottom: 5px !important;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 988, ../sass/custom.scss */
+  /* line 1139, ../sass/custom.scss */
   .menu-main-nav-container ul {
     margin: 0px;
     padding: 10px;
   }
-  /* line 991, ../sass/custom.scss */
+  /* line 1142, ../sass/custom.scss */
   .menu-main-nav-container ul li {
     width: 100% !important;
   }
 
-  /* line 998, ../sass/custom.scss */
+  /* line 1149, ../sass/custom.scss */
   #job-info .columns {
     height: auto;
     display: block;
   }
-  /* line 1001, ../sass/custom.scss */
+  /* line 1152, ../sass/custom.scss */
   #job-info .columns div {
     display: block;
     height: auto;
     vertical-align: middle;
   }
 
-  /* line 1011, ../sass/custom.scss */
+  /* line 1162, ../sass/custom.scss */
   .wpjb-page-single .wpjb-info tr,
   .wpjr-page-resume .wpjb-info tr {
     background: none;
@@ -5193,17 +5372,17 @@ a.active img {
     border-top: 1px solid #E3E3E3;
     border-bottom: none;
   }
-  /* line 1018, ../sass/custom.scss */
+  /* line 1169, ../sass/custom.scss */
   .wpjb-page-single .wpjb-info tr td,
   .wpjr-page-resume .wpjb-info tr td {
     border: none;
   }
 
-  /* line 1024, ../sass/custom.scss */
+  /* line 1175, ../sass/custom.scss */
   #banner {
     height: 230px;
   }
-  /* line 1026, ../sass/custom.scss */
+  /* line 1177, ../sass/custom.scss */
   #banner .left, #banner .right {
     background: none;
     box-shadow: none;
@@ -5211,12 +5390,12 @@ a.active img {
     padding: 0px;
     height: 120px;
   }
-  /* line 1032, ../sass/custom.scss */
+  /* line 1183, ../sass/custom.scss */
   #banner .left h1, #banner .right h1 {
     text-align: center;
     font-size: 20px;
   }
-  /* line 1036, ../sass/custom.scss */
+  /* line 1187, ../sass/custom.scss */
   #banner .left .panel, #banner .right .panel {
     position: relative;
     width: 100%;
@@ -5225,22 +5404,22 @@ a.active img {
     height: 100%;
   }
 
-  /* line 1047, ../sass/custom.scss */
+  /* line 1198, ../sass/custom.scss */
   #featured_themes li {
     margin: 20px auto;
   }
 
-  /* line 1052, ../sass/custom.scss */
+  /* line 1203, ../sass/custom.scss */
   #help {
     display: none;
   }
 
-  /* line 1056, ../sass/custom.scss */
+  /* line 1207, ../sass/custom.scss */
   .quotes {
     display: none;
   }
 
-  /* line 1059, ../sass/custom.scss */
+  /* line 1210, ../sass/custom.scss */
   .emp_bannerblock {
     position: relative;
   }

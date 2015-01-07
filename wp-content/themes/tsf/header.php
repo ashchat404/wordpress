@@ -17,6 +17,7 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.87302.js"></script>
         <!--[if lt IE 9]>
                 <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/stylesheets/ie8.css' type='text/css' media='all' />
                 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -41,7 +42,15 @@
                         <a href="https://plus.google.com/111836940371173250719/posts"><i class="fi-social-google-plus"></i></a>
                         <a href="https://www.linkedin.com/company/the-sales-floor-ltd"><i class="fi-social-linkedin"></i></a>
                         <a href="http://testing.thesalesfloor.co.uk/new/wordpress/recruiters/" class="btn_orange button">Recruiter</a>
-                        <a href="<?php esc_attr_e(wpjr_link_to("login")) ?>" class="btn_green button">Sign in</a>
+                        <?php 
+                            $info = wp_get_current_user();
+   
+                        ?>
+                        <?php if($info->ID>0): ?>
+                            <a href="<?php echo wpjr_link_to("logout") ?>" class="btn_green button"><?php _e("Logout", "jobeleon") ?></a>
+                        <?php else: ?>
+                            <a href="<?php esc_attr_e(wpjr_link_to("login")) ?>" class="btn_green button">Sign in</a>
+                        <?php endif; ?>
                 </div>
             </div>
 

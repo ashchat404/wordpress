@@ -79,20 +79,15 @@ if ($param["category"] > 0) {
                         <input type="text" name="query" class="wpjb-ls-query" placeholder="<?php _e('Keyword', 'jobeleon'); ?>" value="<?php esc_attr_e($param["query"]) ?>" />
                     </div>
                     <div class="large-6 medium-6 columns">
-                        <input id="location" placeholder="<?php _e('location', 'jobeleon'); ?>" name="location" type="text">
+                        <input id="location" placeholder="<?php _e('Location, Postcode', 'jobeleon'); ?>" name="location" type="text">
                     </div>
                     <div style="clear:both"></div>
-                    <div class="large-6 medium-6 columns large-centered">
-                        <select id="radius" name="radius" class="hasCustomSelect">
-                            <option value="">&nbsp;</option>
-                            <option value="5 km">5 km</option>
-                            <option value="10 km">10 km</option>
-                            <option value="25 km">25 km</option>
-                            <option value="50 km">50 km</option>
-                            <option value="100 km">100 km</option>
-                            <option value="200 km">200 km</option>
-                            <option value="500 km">500 km</option>
-                        </select>                            
+                    <br>
+                    <div class="large-4 medium-4 columns large-centered medium-centered">
+                        <div class="range">                            
+                        </div>
+                        <div class="rad_drop">
+                        </div>                 
                     </div>
                     <div style="clear:both"></div>
                     <input type="submit" class="btn" value="<?php _e("Search", "jobeleon") ?>" />
@@ -106,36 +101,38 @@ if ($param["category"] > 0) {
     <?php endif; ?>
     </section>
 
-    <section id="testmonials" class="large-12 columns">
+    <section id="testmonials" class="large-12 columns row">
         <h2 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/chat-icon.png"> Testmonials</h2>
         <p class="sub-title text-center">Here's what people are saying about us</p>
         <div class="reviews">
             <div>  
                 <a href="http://localhost:8888/wordpress/testimonials/">
-                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
-                    <p>“We started working with The Sales Floor team not long after their launch, and found them
-                    personal, professional and very different to other job board offerings out there.
-                    For a start they actually are a Sales Specialist...</p>
-                <b>- Ronan Carter, Director</b>
-            </a>
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
+                        <p>“We started working with The Sales Floor team not long after their launch, and found them
+                        personal, professional and very different to other job board offerings out there.
+                        For a start they actually are a Sales Specialist...</p>
+                    <b>- Ronan Carter, Director</b>
+                </a>
             </div>
             <div> 
                 <a href="http://localhost:8888/wordpress/testimonials/">
-                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
-                <p> “I initially contacted The Sales Floor to help us with an urgent need for a quick hire, I was very impressed with the results. Within hours I had been provided with a substantial list of potential target candidates...</p>
-                <b>- James Harpum, Financial Controller</b>
-            </a>
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
+                    <p> “I initially contacted The Sales Floor to help us with an urgent need for a quick hire, I was very impressed with the results. Within hours I had been provided with a substantial list of potential target candidates...</p>
+                    <b>- James Harpum, Financial Controller</b>
+                </a>
             </div>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
-                <p>
-“We decided to partner with The Sales Floor for a UK Sales requirement we had early in 
+                <a href="http://localhost:8888/wordpress/testimonials/">
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
+                    <p>
+                    “We decided to partner with The Sales Floor for a UK Sales requirement we had early in 
 
-2014. We found them straightforward, incredibly helpful, and quick to respond when we 
+                    2014. We found them straightforward, incredibly helpful, and quick to respond when we 
 
-needed them. They combine traditional ...
-                </p>
-                <b>- Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Group)</b>
+                    needed them. They combine traditional ...
+                    </p>
+                    <b>- Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Group)</b>
+                </a>
 
             </div>
             <div>
@@ -189,15 +186,21 @@ $(document).ready(function(){
       ]
     });
 });
-$("#testmonials a").click(function(event){
-    event.preventDefault();
-    $("#testmonials a").removeClass("active");
-    $(this).addClass("active");
-    var target = $(this).attr('data');
-    console.log(target)
-    $(".message p").hide('slow');
-    $("p[data="+target+"]").show('slow');
-});
+
+if (!Modernizr.inputtypes.range) {
+  // no native support for <input type="date"> :(
+  $(".range").remove();
+  $(".rad_drop").append("<select id='radius' name='radius' class='hasCustomSelect'><option value=''>&nbsp;</option><option value='5 km'>5 km</option><option value='10 km'>10 km</option><option value='25 km'>25 km</option><option value='50 km'>50 km</option><option value='100 km'>100 km</option><option value='200 km'>200 km</option><option value='500 km'>500 km</option></select>");
+}else{
+    $(".range").append("<label class='large-12 columns'>Radius: <span class='range_val'>0 Km</span></label><input type='range' name='radius' id='radius' min='0' value='0' max='160' list='radius_km' oninput='updateTextInput(this.value)' onchange='updateTextInput(this.value)' step='20' /><datalist id='radius_km'><option>0</option><option>20</option><option>40</option><option>60</option><option>80</option><option>100</option></datalist>");
+    $(".rad_drop").remove();  
+}
+
+
+
+function updateTextInput(val) {
+  $(".range_val").html(val+" Km"); 
+}
 </script>
 
 
