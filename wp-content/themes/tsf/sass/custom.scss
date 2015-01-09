@@ -1115,9 +1115,27 @@ a.active{
 		}
   	}
 
-  	.type{
-  		border-right: none;
+  	&:last-child{
+  		td{
+  			border-right: none;
+  		}
+  		
   	}
+}
+
+
+
+.wpjb-page-company{
+	.entry-header{
+		img{
+			width: 100%;
+		}
+	}
+
+	.profile_logo{
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
 @media only screen and (max-width: 64em) { 
 	#common_banner{

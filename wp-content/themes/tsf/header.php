@@ -42,11 +42,8 @@
                         <a href="https://plus.google.com/111836940371173250719/posts"><i class="fi-social-google-plus"></i></a>
                         <a href="https://www.linkedin.com/company/the-sales-floor-ltd"><i class="fi-social-linkedin"></i></a>
                         <a href="http://testing.thesalesfloor.co.uk/new/wordpress/recruiters/" class="btn_orange button">Recruiter</a>
-                        <?php 
-                            $info = wp_get_current_user();
-   
-                        ?>
-                        <?php if($info->ID>0): ?>
+
+                        <?php if(is_user_logged_in()):?>
                             <a href="<?php echo wpjr_link_to("logout") ?>" class="btn_green button"><?php _e("Logout", "jobeleon") ?></a>
                         <?php else: ?>
                             <a href="<?php esc_attr_e(wpjr_link_to("login")) ?>" class="btn_green button">Sign in</a>

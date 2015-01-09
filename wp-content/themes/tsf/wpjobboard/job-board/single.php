@@ -84,13 +84,15 @@
                                 <?php endforeach; ?>
                             </fieldset>
                         <?php endforeach; ?>
-<!--                         <fieldset>
-                            <legend class="wpjb-empty"></legend>
-                            <input type="submit" class="wpjb-submit" id="wpjb_submit" value="<?php _e("Send Application", "jobeleon") ?>" />
-                        </fieldset> -->
+                        <?php if(is_user_logged_in()):?>
+                            <fieldset>
+                                <legend class="wpjb-empty"></legend>
+                                <input type="submit" class="wpjb-submit" id="wpjb_submit" value="<?php _e("Send Application", "jobeleon") ?>" />
+                            </fieldset>
+                        <?php endif ; ?>
                     </form>
 
-                    <?php if(!$is_loggedin): ?>
+                    <?php if(!is_user_logged_in()):?>
 
                     <form id="wjp_register" action="" class="wpjb-form large-6 medium-6 columns" method="post">
                         <fieldset class="wpjb-fieldset-x">
@@ -160,14 +162,14 @@
                     </form>
 
                     <div class="error">
-                        <p></p>
+                        <p class="reg"></p><p class="app"></p><p class="err"></p>
                     </div>
                     <div class="success">
-                        <p></p>
+                        <p class="reg"></p><p class="app"></p>
                     </div>
 
                     <input type="button" value="Register and apply" class="one-submit" onclick="sub()" />
-                <?php endif; ?>
+<?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -193,10 +195,13 @@
     
 </div>
 <script type="text/javascript">
-$("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');
+var proceed = false;
+
+$("form.wpjb-form").get(1).setAttribute('action','http://localhost:8888/wordpress/resumes-4/register/');
 $('#email').change(function() {
     $('#user_email').val($(this).val());
 });
+
 function validateEmail(sEmail) {
     var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
     if (filter.test(sEmail)) {
@@ -207,9 +212,39 @@ function validateEmail(sEmail) {
     }
 }
 
-function sub(){
-var proceed = true;
+function check(email,usname){
+    var data = 'email-address='+email+'&usname='+usname;
+    $.ajax({
+            type:"post",
+            url:"<?php bloginfo('template_url'); ?>/wpjobboard/job-board/check.php",
+            data:data,
+            success:function(result){
+                console.log("lol");
+                if(result=="emailTakenunTaken"){
+                    console.log(result);
+                    $(".error p.err").html("Email used for registration and username are already taken, please try again or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
+                    proceed = false;
+                    return proceed;
+                }
+                else if(result=="emailAvailableunTaken"){
+                    $(".error p.err").html("Username already taken");
+                    proceed = false;
+                    return proceed;
+                }
+                else if(result=="emailTakenunAvailable"){
+                    $(".error p.err").html("Email used for registration is already taken, please use a different email or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
+                    proceed = false;
+                    return proceed;
+                }else{
+                    proceed = true;
+                    return proceed;
+                }
+            }
+     });
+    console.log(proceed);
+}
 
+function sub(){
 var ap_name = $("#wpjb-apply-form input#applicant_name").val();
 var ap_email = $("#wpjb-apply-form input#email").val();
 
@@ -220,36 +255,41 @@ var pass = $("#wjp_register input#user_password").val();
 var pass2 = $("#wjp_register input#user_password2").val();
 var email = $("#wjp_register input#user_email").val();
 
-if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
-    $(".error p").html("Please fill all the fields which are marked with *");
+if(validateEmail(email)){
+    proceed = true;
+}else{
+    $(".error p.err").html("Your email is invalid");
     proceed = false;
     return false;
 }
+
+check(email,uname);
+
+if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
+    $(".error p.err").html("Please fill all the fields which are marked with *");
+    proceed = false;
+    console.log(proceed);
+    return false;
+}
+
 
 if(validateEmail(ap_email)){
 
 }else{
-    $(".error p").html("Your email is invalid");
-    proceed = false;
-    return false;
-}
-
-if(validateEmail(email)){
-    proceed = true;
-}else{
-    $(".error p").html("Your email is invalid");
+    $(".error p.err").html("Your email is invalid");
     proceed = false;
     return false;
 }
 
 if(pass != pass2){
-    $(".error p").html("Passwords do not match");
+    $(".error p.err").html("Passwords do not match");
     proceed = false;
     return false;
 }
 
-    $("#wpjb-apply-form").submit(function (event){
 
+    $("#wpjb-apply-form").submit(function (event){
+        console.log(proceed);
         if(proceed == true){
             var postData = $(this).serializeArray();
             var formURL = $(this).attr("action");
@@ -260,12 +300,12 @@ if(pass != pass2){
                 data : postData,
                 success:function(data, textStatus, jqXHR) 
                 {
-                    $(".error").hide();
-                    $(".success p").html("Application sent and registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
+                    // $(".error").hide();
+                    $(".success p.app").html("Application sent successfully, view you email for confirmation");
                 },
                 error: function(jqXHR, textStatus, errorThrown) 
                 {
-                    $(".error p").html("Something went wrong"); 
+                    $(".error p.app").html("Something went wrong"); 
                 }
             });
             event.preventDefault();
@@ -276,7 +316,7 @@ if(pass != pass2){
     $("#wpjb-apply-form").submit();
 
     $("#wjp_register").submit(function (event){
-                        
+        console.log(proceed);
         if(proceed == true){
             var postData1 = $(this).serializeArray();
             var formURL1 = $(this).attr("action");
@@ -287,12 +327,12 @@ if(pass != pass2){
                 data : postData1,
                 success:function(data, textStatus, jqXHR) 
                 {
-                    $(".error").hide();
-                    $(".success p").html("Application sent and registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
+                    // $(".error").hide();
+                    $(".success p.reg").html("Registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
                 },
                 error: function(jqXHR, textStatus, errorThrown) 
                 {
-                    $(".error p").html("Something went wrong"); 
+                    $(".error p.red").html("Something went wrong"); 
                 }
             });
             event.preventDefault();

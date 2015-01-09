@@ -20,10 +20,10 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 <div id="wpjb-main" class="wpjb-page-company" >
 
     <?php wpjb_flash() ?>
-    <header class="entry-header" id="job-info">
+    <header class="entry-header large-12 columns" id="job-info">
         <div class="large-2 medium-2 columns">
             <?php if ($company->getLogoUrl()): ?>
-                <div><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
+                <div class="profile_logo"><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
             <?php endif; ?>
         </div>
         <div class="large-10 medium-10 columns">
@@ -37,11 +37,10 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
     <?php if($company->isVisible() || (Wpjb_Model_Company::current() && Wpjb_Model_Company::current()->id == $company->id)): ?>
 
-        <table class="wpjb-info">
+        <table class="wpjb-info large-12 columns">
             <tbody>
                 <?php if ($company->locationToString()): ?>
                     <tr>
-                        <td class="wpjb-info-label"><?php _e("Company Location", "jobeleon") ?></td>
                         <td>
                             <a href="#" class="wpjb-tooltip wpjb-expand-map">
                                 <img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/location-' . $suffix . '.png' ?>" alt="" class="wpjb-inline-img" />
@@ -66,7 +65,6 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
                 <?php if ($company->company_website): ?>
                     <tr>
-                        <td class="wpjb-info-label"><?php _e("Company Website", "jobeleon") ?></td>
                         <td><a href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a></td>
                     </tr>
                 <?php endif; ?>
@@ -82,7 +80,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             </tbody>
         </table>
 
-        <div class="wpjb-job-content">
+        <div class="wpjb-job-content large-12 columns">
 
             <div class="wpjb-job-text">
 
