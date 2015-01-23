@@ -76,7 +76,8 @@
                 'prev_text' => __('&laquo;'),
                 'next_text' => __('&raquo;'),
                 'total' => $total,
-                'current' => $current
+                'current' => $current,
+                'add_args' => false
             ));
         ?>
     </div>

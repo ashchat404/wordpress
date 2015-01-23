@@ -30,6 +30,8 @@ function wpjb_jobs_search() {
 
 function wpjb_jobs_list($atts) {
     
+    $request = Daq_Request::getInstance();
+    
     $params = shortcode_atts(array(
         "filter" => "active",
         "query" => null,
@@ -50,7 +52,7 @@ function wpjb_jobs_list($atts) {
         "search_bar" => "disabled",
         "pagination" => true,
         "standalone" => false,
-        'page' => 1,
+        'page' => $request->get("pg", 1),
         'count' => 20,
     ), $atts);
     
@@ -70,11 +72,12 @@ function wpjb_jobs_list($atts) {
     $view = Wpjb_Project::getInstance()->getApplication("frontend")->getView();
     $view->param = $params;
     $view->pagination = $params["pagination"];
-    $view->url = wpjb_link_to("home");
+    $view->url = get_the_permalink();
     $view->query = "";
     $view->shortcode = true;
     $view->search_bar = $params["search_bar"];
     $view->search_init = $init;
+    $view->format = '?pg=%#%';
     
     Wpjb_Project::getInstance()->placeHolder = $view;
     
@@ -102,6 +105,8 @@ function wpjb_resumes_search() {
 
 function wpjb_resumes_list($atts) {
     
+    $request = Daq_Request::getInstance();
+    
     $params = shortcode_atts(array(
         "filter" => "active",
         "query" => null,
@@ -116,7 +121,7 @@ function wpjb_resumes_list($atts) {
         "sort" => null,
         "order" => null,
         "sort_order" => "t1.modified_at DESC, t1.id DESC",
-        'page' => 1,
+        'page' => $request->get("pg", 1),
         'count' => 20,
     ), $atts);
     
@@ -128,9 +133,10 @@ function wpjb_resumes_list($atts) {
     
     $view = Wpjb_Project::getInstance()->getApplication("resumes")->getView();
     $view->param = $params;
-    $view->url = wpjr_link_to("home");
+    $view->url = get_the_permalink();
     $view->query = "";
     $view->shortcode = true;
+    $view->format = '?pg=%#%';
         
     Wpjb_Project::getInstance()->placeHolder = $view;
     

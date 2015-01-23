@@ -27,7 +27,7 @@
         <?php endforeach; ?>
         <?php else: ?>
         <div class="wpjb-grid-row">
-            <div class="wpjb-col-100 wpjb-grid-col-center"><?php _e("You did not sent any applications yet.", "wpjobboard"); ?></div>
+            <div class="wpjb-col-100 wpjb-grid-col-center"><?php _e("You did not send any applications yet.", "wpjobboard"); ?></div>
         </div>
         <?php endif; ?>
     </div>

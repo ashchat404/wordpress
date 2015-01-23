@@ -159,8 +159,7 @@
 }
 .wpjb-element-input-textarea {
         width: 100%;
-        padding: 11px 5px;
-        margin: 10px 0;
+        margin: -4px 0px 0px 0px;
 }
 .wpjb-element-input-text,
 .wpjb-element-input-select,
@@ -180,7 +179,7 @@
                 color: $form_color;
                 width: 30%;
                 @include adjust-font-size-to( 13px );
-                line-height: 40px;
+                line-height: 1.5em;
         }
         .wpjb-field {
                 width: 70%;
@@ -245,7 +244,6 @@
         @include button;
         display: inline-block;
         text-align: center;
-        width: 33%;
         background: #32a8cf;
         &:hover {
                 background: lighten( #32a8cf, 5% );
@@ -304,9 +302,7 @@
                 }
         }
 }
-.wpjb-submit {
-        width: 150px;
-}
+
 .wpjb-submit-info {
         color: $form_color;
         @include adjust-font-size-to( 13px );
@@ -387,10 +383,7 @@
 }
 /* job details single */
 .wpjb-page-single {
-        padding-bottom: 1em !important;
-        .entry-header {
-                padding-top: 2em;
-        }
+
 }
 .wpjb-related-jobs {
         &:before {

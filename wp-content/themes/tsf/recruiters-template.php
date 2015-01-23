@@ -72,7 +72,7 @@ if ($param["category"] > 0) {
 </div>
 
 <div id="content_wrapper" class="row <?php echo sanitize_title_with_dashes(get_the_title($ID)); ?>">
-    <section class="solutions row">
+    <section class="solutions large-12 columns">
         <div class="wrap">
             <div class="large-3 medium-3 small-3 columns">
                 <a data-target="chlng" class="active" href="">

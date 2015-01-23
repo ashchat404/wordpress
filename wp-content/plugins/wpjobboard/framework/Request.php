@@ -41,12 +41,19 @@ class Daq_Request
     {
         if(self::$_instance === null) {
             self::$_instance = new self;
+            
+            if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="PUT") {
+                parse_str(file_get_contents("php://input"),$post);
+            } else {
+                $post = $_POST;
+            }
+            
             if(get_magic_quotes_gpc() || get_magic_quotes_runtime()) {
-                self::$_instance->_post = self::stripSlashesRecursive($_POST);
+                self::$_instance->_post = self::stripSlashesRecursive($post);
                 self::$_instance->_get = self::stripSlashesRecursive($_GET);
                 self::$_instance->_file = $_FILES;
             } else {
-                self::$_instance->_post = $_POST;
+                self::$_instance->_post = $post;
                 self::$_instance->_get = $_GET;
                 self::$_instance->_file = $_FILES;
             }

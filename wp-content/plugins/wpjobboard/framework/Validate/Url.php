@@ -12,7 +12,7 @@ class Daq_Validate_Url
     public function isValid($value)
     {
         $err = __('Invalid URL. Provide valid URL', "wpjobboard");
-        if(!preg_match("#^(http|https)://[A-z0-9\-\_\./\?&;=\#\!]+$#i",$value)) {
+        if(!preg_match("#^(http|https)://[A-z0-9\-\_\./\?&;=,\#\!\%]+$#i",$value)) {
             $this->setError($err);
             return false;
         }

@@ -25,7 +25,7 @@ class Wpjb_Project extends Daq_ProjectAbstract
     /**
      * Version is modified by build script.
      */
-    const VERSION = "4.2.0";
+    const VERSION = "4.2.1";
 
     /**
      * Returns instance of self
@@ -59,6 +59,7 @@ class Wpjb_Project extends Daq_ProjectAbstract
         add_action('deleted_user', array($this, "deletedUser"));
         
         add_filter("init", array($this, "init"));
+        add_filter('init', array($this, "actions"), 15);
         add_action("admin_menu", array($this, "addAdminMenu"));
         add_action("admin_enqueue_scripts", array($this, "adminEnqueueScripts"));
         add_action("admin_print_scripts", array($this, "addScripts"));
@@ -140,6 +141,8 @@ class Wpjb_Project extends Daq_ProjectAbstract
             add_filter("wpjb_select_template", array("Wpjb_Service_Linkedin", "dispatch"));
             add_action("wpja_minor_section_apply", array("Wpjb_Service_Linkedin", "sectionApply"));
         }
+        
+        add_action("wpjb_job_published", "wpjb_mobile_notification_jobs");
 
     }
     
@@ -158,7 +161,7 @@ class Wpjb_Project extends Daq_ProjectAbstract
     public function init()
     {   
         global $wp, $wp_rewrite;
-        
+
         if(!$this->conf("front_hide_bookmarks") && current_user_can("manage_resumes")) {
             add_action("wpjb_tpl_single_actions", array("Wpjb_Model_Shortlist", "displaySingleJob"), 5);
         }
@@ -704,6 +707,7 @@ class Wpjb_Project extends Daq_ProjectAbstract
         $e->addValidator(new Daq_Validate_Callback("wpjb_recaptcha_check"));
         $e->setRenderer("wpjb_recaptcha_form");
         $e->setLabel(__("Captcha", "wpjobboard"));
+        
         $form->addElement($e, "recaptcha");
         
         if($form instanceof Wpjb_Form_Apply) {
@@ -734,6 +738,50 @@ class Wpjb_Project extends Daq_ProjectAbstract
         }
 
         return $template;
+    }
+    
+    public function actions()
+    {
+
+        if(!isset($_POST["_wpjb_action"]) || !is_string($_POST["_wpjb_action"])) {
+            return;
+        }
+        
+        
+        switch($_POST["_wpjb_action"]) {
+            case "login":
+                
+                $form = new Wpjb_Form_Login();
+                $user = $form->isValid(Daq_Request::getInstance()->post());
+                $flash = new Wpjb_Utility_Session();
+                
+                if($user instanceof WP_Error) {
+                    foreach($user->get_error_messages() as $error) {
+                        $flash->addError($error);
+                    }
+                } elseif($user === false) {
+                    $flash->addError(__("Incorrect username or password", "wpjobboard"));
+                } else {
+                    $flash->addInfo(__("You have been logged in.", "wpjobboard"));
+
+                    $r = trim($form->value("redirect_to"));
+                    if(!empty($r)) {
+                        $redirect = $r;
+                    } else {
+                        $redirect = site_url();
+                    }
+
+                    // @todo: apply some filters maybe??
+                    
+                    $flash->save();
+                    wp_redirect($redirect);
+                    exit;
+                }
+                break;
+            
+            default:
+                // do nothing
+        }
     }
     
 }

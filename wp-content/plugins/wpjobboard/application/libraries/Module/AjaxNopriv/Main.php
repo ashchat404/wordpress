@@ -190,9 +190,15 @@ class Wpjb_Module_AjaxNopriv_Main
         }
         
         try {
+            
+            if(isset($criteria["query"]) && !empty($criteria["query"])) {
+                $criteria["keyword"] = $criteria["query"];
+                unset($criteria["query"]);
+            }
+            
             $alert = new Wpjb_Model_Alert;
             $alert->user_id = get_current_user_id();
-            $alert->keyword = $criteria["query"];
+            $alert->keyword = $criteria["keyword"];
             $alert->email = $r->getParam("email");
             $alert->created_at = date("Y-m-d H:i:s");
             $alert->last_run = "0000-00-00 00:00:00";

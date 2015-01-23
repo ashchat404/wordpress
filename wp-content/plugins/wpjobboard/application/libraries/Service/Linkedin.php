@@ -471,6 +471,11 @@ class Wpjb_Service_Linkedin {
     
     public static function apply($job) 
     {
+        
+        if(!wp_get_current_user() && wpjb_conf("front_apply_members_only", false)) {
+            return;
+        }
+        
         add_action("wp_footer", array("Wpjb_Service_Linkedin", "footer"));
         
         ?>

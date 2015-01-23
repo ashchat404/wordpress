@@ -198,7 +198,7 @@ class Wpjb_Model_JobSearch extends Daq_Db_OrmAbstract
             }
             $select->join("t1.tagged t2c", "t2c.object='job'");
             $select->where("t2c.tag_id IN(?)", array_map("intval", $category));
-            $tagJoin = true;
+            $groupResults = true;
         }
         if(!empty($type)) {
             if(!is_array($type)) {
@@ -206,7 +206,7 @@ class Wpjb_Model_JobSearch extends Daq_Db_OrmAbstract
             }
             $select->join("t1.tagged t2t", "t2t.object='job'");
             $select->where("t2t.tag_id IN(?)", array_map("intval", $type));
-            $tagJoin = true;
+            $groupResults = true;
         }
 
         if(!empty($meta)) {
@@ -302,8 +302,8 @@ class Wpjb_Model_JobSearch extends Daq_Db_OrmAbstract
             $lat = $addr->geo_latitude;
             $prefix = $select->getDb()->prefix;
 
-            $qLng = "(SELECT `value` FROM ".$prefix."wpjb_meta_value AS tmp_lng WHERE tmp_lng.object_id=t1.id AND meta_id=6)";
-            $qLat = "(SELECT `value` FROM ".$prefix."wpjb_meta_value AS tmp_lat WHERE tmp_lat.object_id=t1.id AND meta_id=5)";
+            $qLng = "(SELECT `value` FROM ".$prefix."wpjb_meta_value AS tmp_lng WHERE tmp_lng.object_id=t1.id AND meta_id=6 LIMIT 1)";
+            $qLat = "(SELECT `value` FROM ".$prefix."wpjb_meta_value AS tmp_lat WHERE tmp_lat.object_id=t1.id AND meta_id=5 LIMIT 1)";
 
             $custom_columns .= ", @lng := $qLng AS `lng`, @lat := $qLat AS `lat`, ($u*acos(cos(radians($lat))*cos( radians(@lat))*cos(radians(@lng)-radians($lng))+sin(radians($lat))*sin(radians(@lat)))) AS `distance`";
         }
@@ -346,6 +346,10 @@ class Wpjb_Model_JobSearch extends Daq_Db_OrmAbstract
             } else {
                 $select->where($q, $query);
             }
+        }
+        
+        if($groupResults) {
+            $select->group("t1.id");
         }
         
         $select->select("t1.*".$custom_columns);

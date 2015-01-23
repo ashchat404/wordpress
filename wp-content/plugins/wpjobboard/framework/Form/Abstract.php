@@ -514,6 +514,20 @@ abstract class Daq_Form_Abstract
         }
     }
     
+    public function getOptions() {
+        return $this->_options;
+    }
+    
+    public function getOption($name) {
+        foreach($this->_options as $key => $option) {
+            if($name == $key) {
+                return $option;
+            }
+        }
+        
+        return null;
+    }
+    
     abstract function init();
 }
 

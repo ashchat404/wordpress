@@ -141,8 +141,8 @@ class Wpjb_Module_Frontend_Plain extends Wpjb_Controller_Frontend
             $this->_tagC("state",  $job->job_state);
             $this->_tagC("country",  $ct['iso2']);
             $this->_tagC("description", strip_tags($job->job_description));
-            $this->_tagC("type", $job->getTag()->category->title);
-            $this->_tagC("category", $job->getTag()->type->title);
+            $this->_tagC("type", $job->getTag()->category[0]->title);
+            $this->_tagC("category", $job->getTag()->type[0]->title);
             $this->_close("job");
         }
         $this->_close("source");

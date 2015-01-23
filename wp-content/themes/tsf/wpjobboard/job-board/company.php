@@ -20,22 +20,32 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 <div id="wpjb-main" class="wpjb-page-company" >
 
     <?php wpjb_flash() ?>
+    <?php if($company->isVisible() || (Wpjb_Model_Company::current() && Wpjb_Model_Company::current()->id == $company->id)): ?>
     <header class="entry-header large-12 columns" id="job-info">
-        <div class="large-2 medium-2 columns">
+        <div class="large-2 medium-4 columns">
             <?php if ($company->getLogoUrl()): ?>
                 <div class="profile_logo"><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
+                <div class="company-social">
+                    <?php if ($company->meta->facebook_link): ?>
+                        <a target="_blank" href="<?php esc_html_e($company->meta->facebook_link->value()) ?>"><i class="fi-social-facebook"></i></a>
+                    <?php endif; ?>
+                    <?php if ($company->meta->twitter_username): ?>
+                        <a target="_blank" href="http://twitter.com/<?php esc_html_e($company->meta->twitter_username->value()) ?>"><i class="fi-social-twitter"></i></a>
+                    <?php endif; ?>
+                    <?php if ($company->meta->linkedin_link): ?>
+                        <a target="_blank" href="<?php esc_html_e($company->meta->linkedin_link->value()) ?>"><i class="fi-social-linkedin"></i></a>
+                    <?php endif; ?>
+                </div>
             <?php endif; ?>
         </div>
-        <div class="large-10 medium-10 columns">
+        <div class="large-10 medium-8 columns">
             <div class="extra">
                 <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?></h1>
+                <p class="entry-exerpt">"<?php esc_html_e($company->meta->company_exerpt->value()) ?>"</p>
             </div>
-
         </div>
         
     </header>
-
-    <?php if($company->isVisible() || (Wpjb_Model_Company::current() && Wpjb_Model_Company::current()->id == $company->id)): ?>
 
         <table class="wpjb-info large-12 columns">
             <tbody>
@@ -61,26 +71,62 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                             </td>
                         </tr>
                     <?php endif; ?>
+
+                    <tr>
+                        <td>
+                                <?php $jobCount = wpjb_find_jobs($param) ?>
+                                <?php if ($jobCount->total > 0): foreach ($jobCount->job as $job): ?>
+                                    <?php $tot=$jobCount->total?>
+                                        <?php
+                                    endforeach;
+                                    echo $tot." Opening (s)";
+                                else :
+                                    ?>
+                                    <li>
+                                        <?php _e("No jobs.", "jobeleon"); ?>
+                                    </li>
+                                <?php endif; ?>
+                        </td>
+                    </tr>
                 <?php endif; ?>
 
                 <?php if ($company->company_website): ?>
                     <tr>
-                        <td><a href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a></td>
+                        <td><a target="_blank" href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a></td>
                     </tr>
                 <?php endif; ?>
-
-                <?php foreach($company->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type_exclude"=>"ui-input-textarea")) as $k => $value): ?>
+                <?php if ($company->meta->company_industry): ?>
                     <tr>
-                        <td class="wpjb-info-label"><?php esc_html_e($value->conf("title")); ?></td>
-                        <td><?php esc_html_e(join(", ", (array) $value->values())) ?></td>
+                        <td>Industry - <?php esc_html_e($company->meta->company_industry->value()) ?></td>
                     </tr>
-                <?php endforeach; ?>
+                <?php endif; ?>
 
                 <?php do_action("wpjb_template_company_meta_text", $company) ?>
             </tbody>
         </table>
 
+        <h3 class="text-center"><?php _e("Jobs available at ", "jobeleon") ?><?php esc_html_e($company->company_name) ?></h3>
+        <div id="company-openings" class="wpjb-company-openings large-12 columns">
+            <ul class="wpjb-company-list">
+                <?php $jobList = wpjb_find_jobs($param) ?>
+                <?php if ($jobList->total > 0): foreach ($jobList->job as $job): ?>
+                        <?php /* @var $job Wpjb_Model_Job */ ?>
+                        <li class="<?php wpjb_job_features($job); ?> large-4 columns text-center">
+                            <a href="<?php echo wpjb_link_to("job", $job); ?>"><?php esc_html_e($job->job_title) ?></a>
+                        </li>
+                        <?php
+                    endforeach;
+                else :
+                    ?>
+                    <li>
+                        <?php _e("Currently this employer doesn't have any openings.", "jobeleon"); ?>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+
         <div class="wpjb-job-content large-12 columns">
+            <h3 class="text-center">Why work for us?</h3>
 
             <div class="wpjb-job-text">
 
@@ -99,30 +145,11 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
             <?php do_action("wpjb_template_job_meta_richtext", $company) ?>
 
-            <h3><?php _e("Current job openings at", "jobeleon") ?> <?php esc_html_e($company->company_name) ?></h3>
-            <div class="wpjb-company-openings">
-                <ul class="wpjb-company-list">
-                    <?php $jobList = wpjb_find_jobs($param) ?>
-                    <?php if ($jobList->total > 0): foreach ($jobList->job as $job): ?>
-                            <?php /* @var $job Wpjb_Model_Job */ ?>
-                            <li class="<?php wpjb_job_features($job); ?>">
-                                <?php if ($job->isNew()): ?><span class="wpjb-new-btn btn"><?php _e("New", "jobeleon") ?></span><?php endif; ?>
-                                <a href="<?php echo wpjb_link_to("job", $job); ?>"><?php esc_html_e($job->job_title) ?></a>
-                                <?php wpjb_time_ago($job->job_created_at, __("posted {time_ago} ago.", "wpjobboard")) ?>
-                            </li>
-                            <?php
-                        endforeach;
-                    else :
-                        ?>
-                        <li>
-                            <?php _e("Currently this employer doesn't have any openings.", "jobeleon"); ?>
-                        </li>
-                    <?php endif; ?>
-                </ul>
-            </div>
-
         </div>
 
     <?php endif; ?>
 
 </div>
+<script type="text/javascript">
+
+</script>

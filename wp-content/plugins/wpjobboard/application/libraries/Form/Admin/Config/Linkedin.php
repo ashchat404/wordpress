@@ -119,13 +119,21 @@ class Wpjb_Form_Admin_Config_Linkedin extends Daq_Form_Abstract
         
         if($linkedin->getOauthToken()) {
             $url = wpjb_admin_url("config", "edit", null, array("form"=>"linkedin", "revoke"=>1));
-            $profile = $linkedin->profile();
-
-            $name  = '<span style="line-height:28px">'.(string)$profile->{'first-name'}." ".(string)$profile->{'last-name'}.'</span>';
-            $name .= ' <a href="'.esc_attr($url).'" class="button">Revoke Access</a>';
             
-            if(!$this->getElement("linkedin_share_as")->getOptions()) {
-                $this->getElement("linkedin_share_as")->addOptions($this->_shareAs());
+            try {
+                $profile = $linkedin->profile();
+
+                $name  = '<span style="line-height:28px">'.(string)$profile->{'first-name'}." ".(string)$profile->{'last-name'}.'</span>';
+                $name .= ' <a href="'.esc_attr($url).'" class="button">Revoke Access</a>';
+
+                if(!$this->getElement("linkedin_share_as")->getOptions()) {
+                    $this->getElement("linkedin_share_as")->addOptions($this->_shareAs());
+                }
+
+            } catch(Exception $e) {
+                $name  = '<span style="line-height:28px; color:red">Could not connect, please try again later or "Revoke Access" and connect to LinkedIn again.</span>';
+                $name .= '<span style="line-height:28px; color:red">Error: '.$e->getMessage().'</span>';
+                $name .= ' <a href="'.esc_attr($url).'" class="button">Revoke Access</a>';
             }
             
             $this->linkedin = $name;
@@ -138,33 +146,39 @@ class Wpjb_Form_Admin_Config_Linkedin extends Daq_Form_Abstract
         $linkedin = Wpjb_Service_Linkedin::linkedin();
         $shareAs = array();
         
-        if($linkedin->getOauthToken()) {
-           $profile = $linkedin->profile();
+        try {
+        
+            if($linkedin->getOauthToken()) {
+               $profile = $linkedin->profile();
 
-            $shareAs = array(
-                array(
-                    "key"=>"private", 
-                    "value"=>"private", 
-                    "description"=>(string)$profile->{'first-name'}." ".(string)$profile->{'last-name'}
-                )
-            );
-            
-            $companies = $linkedin->admin();
-            
-            if($companies->attributes()->total > 0) {
-                $company = $companies->company;
-                if(!is_array($company)) {
-                    $company = array($company);
-                }
-                
-                foreach($company as $c) {
-                    $shareAs[] = array(
-                        "key"=>(string)$c->id, 
-                        "value"=>(string)$c->id, 
-                        "description"=>(string)$c->name
-                    );
+                $shareAs = array(
+                    array(
+                        "key"=>"private", 
+                        "value"=>"private", 
+                        "description"=>(string)$profile->{'first-name'}." ".(string)$profile->{'last-name'}
+                    )
+                );
+
+                $companies = $linkedin->admin();
+
+                if($companies->attributes()->total > 0) {
+                    $company = $companies->company;
+                    if(!is_array($company)) {
+                        $company = array($company);
+                    }
+
+                    foreach($company as $c) {
+                        $shareAs[] = array(
+                            "key"=>(string)$c->id, 
+                            "value"=>(string)$c->id, 
+                            "description"=>(string)$c->name
+                        );
+                    }
                 }
             }
+            
+        } catch(Exception $e) {
+            // do some logging here
         }
         
         return $shareAs;

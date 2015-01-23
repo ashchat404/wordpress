@@ -4,7 +4,7 @@ Plugin Name: WPJobBoard
 Plugin URI: http://wpjobboard.net/
 Description: Probably the most advanced yet user friendly job board plugin. The plugin allows to publish jobs, manage user resumes and applications. On activation it will create two Pages: "Jobs" and "Resumes", you might also want to add "Job Board Menu" and "Resumes Menu" widgets to the sidebar as they have all the navigation links. 
 Author: Grzegorz Winiarski
-Version: 4.2.0
+Version: 4.2.1
 Author URI: http://wpjobboard.net
 */
 
@@ -64,7 +64,8 @@ $wpjbbase = $wpjobboard->path("templates")."/";
 $wpjobboard->setEnv("template_base", $wpjbbase);
 
 $view = new Daq_View();
-$view->addDir("TEMPLATEPATH/wpjobboard/job-board");
+$view->addDir(get_stylesheet_directory()."/wpjobboard/job-board");
+$view->addDir(get_template_directory()."/wpjobboard/job-board");
 $view->addDir($wpjbbase."job-board");
 $view->addHelper("flash", new Wpjb_Utility_Session);
 $app = new Wpjb_Application_Frontend;
@@ -83,7 +84,8 @@ $routes = Daq_Config::parseIni(
 );
 
 $view = new Daq_View();
-$view->addDir("TEMPLATEPATH/wpjobboard/resumes");
+$view->addDir(get_stylesheet_directory()."/wpjobboard/resumes");
+$view->addDir(get_template_directory()."/wpjobboard/resumes");
 $view->addDir($wpjbbase."resumes");
 $view->addHelper("flash", new Wpjb_Utility_Session);
 $res = new Wpjb_Application_Resumes();

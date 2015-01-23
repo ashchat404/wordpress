@@ -11,7 +11,12 @@
  * 
  */
 ?>
-
+<div>
+<!--<?php
+$info = wp_get_current_user(); 
+/*print_r($info);*/
+ ?>-->
+</div>
 <?php if ($is_employer && $is_loggedin): ?>
     <?php echo $theme->before_widget ?>
     <?php if ($title) echo $theme->before_title . $title . $theme->after_title ?>

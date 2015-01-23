@@ -16,6 +16,7 @@ class Wpjb_Module_Frontend_Index extends Wpjb_Controller_Frontend
         $this->view->placeholder = false;
         $this->view->query = null;
         $this->view->pagination = true;
+        $this->view->format = null;
     }
     
     public function indexAction()
@@ -281,8 +282,14 @@ class Wpjb_Module_Frontend_Index extends Wpjb_Controller_Frontend
 
         } else {
             // job inactive or not exists
-            $msg = __("Selected job is inactive or does not exist", "wpjobboard");
-            $this->view->_flash->addError($msg);
+            $goback = "javascript:history.back(-1);";
+            
+            if(isset($_SERVER['HTTP_REFERER']) && stripos($_SERVER['HTTP_REFERER'], site_url())===0) {
+                $goback = $_SERVER['HTTP_REFERER'];
+            }
+            
+            $msg = __("Selected job is inactive or does not exist. <a href=\"%s\">Go back</a>.", "wpjobboard");
+            $this->view->_flash->addError(sprintf($msg, $goback));
             $this->view->job = null;
             return false;
         }

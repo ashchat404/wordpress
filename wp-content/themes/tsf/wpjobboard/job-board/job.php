@@ -22,9 +22,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     <meta itemprop="title" content="<?php esc_attr_e($job->job_title) ?>" />
     <meta itemprop="datePosted" content="<?php esc_attr_e($job->job_created_at) ?>" />
 
-    <header class="entry-header" id="job-info">
-        <div class="row">
-            <div class="large-12 columns">
+    <header class="entry-header large-12 columns" id="job-info">
                 <div class="large-2 medium-2 columns">
                     <?php if ($job->getLogoUrl()): ?>
                         <div class="company_logo">
@@ -34,24 +32,22 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="extra large-8 medium-6 columns">
+                <div class="extra <?php if ($application_url): ?>large-10 medium-8 <?php else: ?>large-8 medium-6<?php endif; ?> columns">
                     <div class="extra">
                         <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?> <br><br>Salary: <?php esc_html_e($job->meta->salary->value()) ?></h1>
                     </div>
                 </div>
-                <div class="extra large-2 medium-4 columns">
-                    <?php if ($application_url): ?>
-                    <?php else: ?>
+                <?php if ($application_url): ?>
+                <?php else: ?>
+                    <div class="extra large-2 medium-4 columns">
                         <div class="extra">
                             <a id="apply_scroll" class="wpjb-button wpjb-form-toggle wpjb-form-job-apply btn" href="#wpjb-scroll" rel="nofollow"  data-wpjb-form="wpjb-form-job-apply"><?php _e("Apply", "jobeleon") ?> </a>
                         </div>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
+                    </div>
+                <?php endif; ?>
     </header>
 
-    <table class="wpjb-info">
+    <table class="wpjb-info large-12 columns">
         <tbody>
             <?php if ($job->locationToString()): ?>
                 <tr>
@@ -176,3 +172,8 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     </div>
 
 </div>
+<script type="text/javascript">
+$( window ).load(function() {
+
+});
+</script>

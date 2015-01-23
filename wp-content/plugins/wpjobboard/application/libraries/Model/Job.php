@@ -818,6 +818,20 @@ class Wpjb_Model_Job extends Daq_Db_OrmAbstract
         return wpjb_link_to("job", $this);
     }
     
+    public function doScheme($name)
+    {
+        $scheme = apply_filters("wpjb_scheme", get_option("wpjb_form_job"), $this);
+        
+        if(wpjb_scheme_get($scheme, $name.".visibility")>0) {
+            return true;
+        } elseif(wpjb_scheme_get($scheme, $name.".render_callback")) {
+            call_user_func(wpjb_scheme_get($scheme, $name.".render_callback"), $this);
+            return true;
+        }
+
+        return false;
+    }
+    
 }
 
 ?>

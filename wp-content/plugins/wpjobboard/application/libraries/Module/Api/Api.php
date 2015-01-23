@@ -35,7 +35,7 @@ class Wpjb_Module_Api_Api extends Daq_Controller_Abstract
         $auth = $this->getServer("HTTP_X_AUTHORIZATION");
         $type = $this->getServer("HTTP_X_AUTHORIZATION_TYPE", "AES");
 
-        $encryption = new Daq_Helper_Security($key, $type);
+	$encryption = new Daq_Helper_Security();
         
         if(!$auth) {
             throw new Exception("Missing authorization code.");
@@ -72,6 +72,175 @@ class Wpjb_Module_Api_Api extends Daq_Controller_Abstract
         $this->reply(array("access_token"=>$token));
     }
     
+    public function phoneAction()
+    {
+        $method = strtolower($this->getMethod());
+        $action = $method."Action";
+        $user = $this->authenticate();
+        $access = "";
+        
+        if($user === null) {
+            $access = "public";
+        } elseif(user_can($user, "import")) {
+            $access = "admin";
+        } elseif(user_can($user, "manage_jobs")) {
+            $access = "employer";
+        } else {
+            $access = "user";
+        }
+        
+        $ctrl = new Wpjb_Module_Api_Phone();
+        $ctrl->setMethod($method);
+        $ctrl->setAccess($access);
+        $ctrl->setUser($user);
+        $ctrl->userCan($method);
+        
+        $matched = $this->getRouter()->getMatched();
+        $params = array();
+        
+        foreach($this->getRequest()->get() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        foreach($this->getRequest()->post() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        
+        $this->validateParams($params, $ctrl->conf("//disallowed_params"));
+        
+        if(!empty($matched["path"])) {
+            $params["id"] = (array)explode(",", $matched["path"]);
+        } 
+        
+        $response = $ctrl->$action($params);
+        
+        $json = json_encode($response);
+        
+        header("Content-type: application/json; charset=utf-8");
+        
+        if($this->getRequest()->get("pretty") == "1") {
+            echo $this->pretty($json);
+        } else {
+            echo $json;
+        }
+    }
+    
+    public function alertAction()
+    {
+        $method = strtolower($this->getMethod());
+        $action = $method."Action";
+        $user = $this->authenticate();
+        $access = "";
+        
+        if($user === null) {
+            $access = "public";
+        } elseif(user_can($user, "import")) {
+            $access = "admin";
+        } elseif(user_can($user, "manage_jobs")) {
+            $access = "employer";
+        } else {
+            $access = "user";
+        }
+        
+        $ctrl = new Wpjb_Module_Api_Alert();
+        $ctrl->setMethod($method);
+        $ctrl->setAccess($access);
+        $ctrl->setUser($user);
+        $ctrl->userCan($method);
+        
+        $matched = $this->getRouter()->getMatched();
+        $params = array();
+        
+        foreach($this->getRequest()->get() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        foreach($this->getRequest()->post() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        
+        $this->validateParams($params, $ctrl->conf("//disallowed_params"));
+        
+        if(!empty($matched["path"])) {
+            $params["id"] = (array)explode(",", $matched["path"]);
+        } 
+        
+        $response = $ctrl->$action($params);
+        
+        $json = json_encode($response);
+        
+        header("Content-type: application/json; charset=utf-8");
+        
+        if($this->getRequest()->get("pretty") == "1") {
+            echo $this->pretty($json);
+        } else {
+            echo $json;
+        }
+    }
+    
+    public function applicationsAction()
+    {
+        $method = strtolower($this->getMethod());
+        $action = $method."Action";
+        $user = $this->authenticate();
+        $access = "";
+        
+        if($user === null) {
+            $access = "public";
+        } elseif(user_can($user, "import")) {
+            $access = "admin";
+        } elseif(user_can($user, "manage_jobs")) {
+            $access = "employer";
+        } else {
+            $access = "user";
+        }
+        
+        $ctrl = new Wpjb_Module_Api_Applications();
+        $ctrl->setMethod($method);
+        $ctrl->setAccess($access);
+        $ctrl->setUser($user);
+        $ctrl->userCan($method);
+        
+        $matched = $this->getRouter()->getMatched();
+        $params = array();
+        
+        foreach($this->getRequest()->get() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        foreach($this->getRequest()->post() as $k => $v) {
+            if(!empty($k)) {
+                $params[$k] = $v;
+            }
+        }
+        
+        $this->validateParams($params, $ctrl->conf("//disallowed_params"));
+        
+        if(!empty($matched["path"])) {
+            $params["id"] = (array)explode(",", $matched["path"]);
+        } 
+
+        $response = $ctrl->$action($params);
+        
+        $json = json_encode($response);
+        
+        header("Content-type: application/json; charset=utf-8");
+        
+        if($this->getRequest()->get("pretty") == "1") {
+            echo $this->pretty($json);
+        } else {
+            echo $json;
+        }
+    }
+
+
     public function authenticate()
     {
         $key = wpjb_conf("crypt_key", 1234);

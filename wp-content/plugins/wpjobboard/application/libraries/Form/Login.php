@@ -11,6 +11,10 @@ class Wpjb_Form_Login extends Daq_Form_Abstract
 {
     public function init()
     {
+        $e = $this->create("_wpjb_action", "hidden");
+        $e->setValue("login");
+        $this->addElement($e, "hidden");
+        
         $e = $this->create("user_login", Daq_Form_Element::TYPE_TEXT);
         $e->setLabel(__("Username", "wpjobboard"));
         $e->setRequired(true);

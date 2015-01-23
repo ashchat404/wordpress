@@ -1,14 +1,14 @@
-# Copyright (C) 2014 
+# Copyright (C) 2015 
 # This file is distributed under the same license as the  package.
 msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wpjobboard\n"
-"POT-Creation-Date: 2014-10-09 08:56:30+00:00\n"
+"POT-Creation-Date: 2015-01-14 08:12:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
@@ -57,41 +57,41 @@ msgid "Edit"
 msgstr ""
 
 #: application/functions/admin.php:202 application/functions/admin.php:240
-#: application/libraries/Project.php:370 application/libraries/Project.php:491
+#: application/libraries/Project.php:373 application/libraries/Project.php:494
 #: application/views/alerts/index.php:30 application/views/alerts/index.php:73
-#: application/views/alerts/index.php:162
+#: application/views/alerts/index.php:163
 #: application/views/application/edit.php:94
 #: application/views/application/index.php:54
 #: application/views/application/index.php:103
-#: application/views/application/index.php:153
+#: application/views/application/index.php:154
 #: application/views/category/index.php:22
 #: application/views/category/index.php:59
-#: application/views/category/index.php:88
+#: application/views/category/index.php:89
 #: application/views/discount/index.php:20
 #: application/views/discount/index.php:58
-#: application/views/discount/index.php:96
+#: application/views/discount/index.php:97
 #: application/views/employers/edit.php:65
 #: application/views/employers/index.php:36
 #: application/views/employers/index.php:80
-#: application/views/employers/index.php:118
+#: application/views/employers/index.php:119
 #: application/views/import/index.php:19 application/views/import/index.php:54
-#: application/views/import/index.php:103 application/views/job/edit.php:60
+#: application/views/import/index.php:104 application/views/job/edit.php:60
 #: application/views/job/index.php:45 application/views/job/index.php:110
-#: application/views/job/index.php:238 application/views/jobType/index.php:21
+#: application/views/job/index.php:239 application/views/jobType/index.php:21
 #: application/views/jobType/index.php:58
-#: application/views/jobType/index.php:87
+#: application/views/jobType/index.php:88
 #: application/views/memberships/index.php:31
 #: application/views/memberships/index.php:70
-#: application/views/memberships/index.php:131
+#: application/views/memberships/index.php:132
 #: application/views/payment/index.php:26
 #: application/views/payment/index.php:81
-#: application/views/payment/index.php:128
+#: application/views/payment/index.php:129
 #: application/views/pricing/list.php:36 application/views/pricing/list.php:75
-#: application/views/pricing/list.php:108
+#: application/views/pricing/list.php:109
 #: application/views/resumes/edit.php:61
 #: application/views/resumes/index.php:48
 #: application/views/resumes/index.php:86
-#: application/views/resumes/index.php:140
+#: application/views/resumes/index.php:141
 #: templates/resumes/my-bookmarks.php:35 templates/resumes/my-resume.php:50
 #: templates/resumes/my-resume.php:101
 msgid "Delete"
@@ -99,7 +99,7 @@ msgstr ""
 
 #: application/functions/admin.php:215 application/functions/admin.php:253
 #: templates/resumes/my-resume.php:61 templates/resumes/my-resume.php:112
-#: templates/resumes/resume.php:170
+#: templates/resumes/resume.php:182
 msgid "Current"
 msgstr ""
 
@@ -282,8 +282,8 @@ msgstr ""
 msgid "Inactive"
 msgstr ""
 
-#: application/functions/functions.php:128
-#: application/functions/functions.php:156
+#: application/functions/functions.php:132
+#: application/functions/functions.php:160
 #: application/views/alerts/index.php:148
 #: application/views/application/index.php:139
 #: application/views/category/index.php:76
@@ -298,8 +298,8 @@ msgstr ""
 msgid "&laquo;"
 msgstr ""
 
-#: application/functions/functions.php:129
-#: application/functions/functions.php:157
+#: application/functions/functions.php:133
+#: application/functions/functions.php:161
 #: application/views/alerts/index.php:149
 #: application/views/application/index.php:140
 #: application/views/category/index.php:77
@@ -314,34 +314,34 @@ msgstr ""
 msgid "&raquo;"
 msgstr ""
 
-#: application/functions/functions.php:208
-#: application/functions/functions.php:343
+#: application/functions/functions.php:212
+#: application/functions/functions.php:347
 #: application/libraries/Form/AdvancedSearch.php:75
 #: application/libraries/Form/ResumesSearch.php:58
 #: application/views/resumes/index.php:96
 msgid "Today"
 msgstr ""
 
-#: application/functions/functions.php:210
-#: application/functions/functions.php:345
+#: application/functions/functions.php:214
+#: application/functions/functions.php:349
 msgid "Yesterday"
 msgstr ""
 
-#: application/functions/functions.php:298
+#: application/functions/functions.php:302
 #: application/views/employers/edit.php:42
 msgid "view profile"
 msgstr ""
 
-#: application/functions/functions.php:365
+#: application/functions/functions.php:369
 #: application/libraries/Module/AjaxNopriv/Resumes.php:54
 msgid "never"
 msgstr ""
 
-#: application/functions/functions.php:403
+#: application/functions/functions.php:407
 msgid "{ago} ago"
 msgstr ""
 
-#: application/functions/functions.php:405
+#: application/functions/functions.php:409
 #: application/views/alerts/index.php:82 application/views/import/index.php:64
 #: application/views/job/index.php:152
 #: application/views/memberships/index.php:84
@@ -350,92 +350,108 @@ msgstr ""
 msgid "Never"
 msgstr ""
 
-#: application/functions/functions.php:550
+#: application/functions/functions.php:554
 msgid "Create ad"
 msgstr ""
 
-#: application/functions/functions.php:551
+#: application/functions/functions.php:555
 #: application/libraries/Module/Frontend/AddJob.php:16
-#: application/libraries/Project.php:369 application/libraries/Project.php:490
+#: application/libraries/Project.php:372 application/libraries/Project.php:493
 #: templates/job-board/add.php:79
 msgid "Preview"
 msgstr ""
 
-#: application/functions/functions.php:552
+#: application/functions/functions.php:556
 msgid "Done!"
 msgstr ""
 
-#: application/functions/functions.php:596
+#: application/functions/functions.php:600
 msgid "<i>locked</i>"
 msgstr ""
 
-#: application/functions/functions.php:632
+#: application/functions/functions.php:636
 msgid "All Categories"
 msgstr ""
 
-#: application/functions/functions.php:645
+#: application/functions/functions.php:649
 msgid "All Jobs"
 msgstr ""
 
-#: application/functions/functions.php:671
+#: application/functions/functions.php:675
 msgid "None"
 msgstr ""
 
-#: application/functions/functions.php:673
+#: application/functions/functions.php:677
 msgid "Pending approval"
 msgstr ""
 
-#: application/functions/functions.php:675
+#: application/functions/functions.php:679
 msgid "Declined (update your resume and submit it again)"
 msgstr ""
 
-#: application/functions/functions.php:677
+#: application/functions/functions.php:681
 msgid "Approved"
 msgstr ""
 
-#: application/functions/functions.php:785
-#: application/functions/functions.php:879
-#: application/functions/functions.php:970
+#: application/functions/functions.php:829
+msgid "The secret parameter is missing."
+msgstr ""
+
+#: application/functions/functions.php:830
+msgid "The secret parameter is invalid or malformed."
+msgstr ""
+
+#: application/functions/functions.php:831
+msgid "The response parameter is missing."
+msgstr ""
+
+#: application/functions/functions.php:832
+msgid "The response parameter is invalid or malformed."
+msgstr ""
+
+#: application/functions/functions.php:850
+#: application/functions/functions.php:944
+#: application/functions/functions.php:1035
 msgid "Purchased Membership"
 msgstr ""
 
-#: application/functions/functions.php:786
-#: application/functions/functions.php:880
+#: application/functions/functions.php:851
+#: application/functions/functions.php:945
 #: application/libraries/Form/Admin/Discount.php:53
 #: application/views/pricing/index.php:10
 msgid "Single Job Posting"
 msgstr ""
 
-#: application/functions/functions.php:836
-#: application/functions/functions.php:930
+#: application/functions/functions.php:901
+#: application/functions/functions.php:995
 msgid "(1 posting left)"
 msgid_plural "(%d postings left)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: application/functions/functions.php:843
+#: application/functions/functions.php:908
 msgid "visible for 1 day"
 msgid_plural "visible for %d days"
 msgstr[0] ""
 msgstr[1] ""
 
-#: application/functions/functions.php:971
+#: application/functions/functions.php:1036
 #: application/views/pricing/index.php:16
 msgid "Single Resume Access"
 msgstr ""
 
-#: application/functions/functions.php:1021
+#: application/functions/functions.php:1086
 msgid "(1 resume left)"
 msgid_plural "(%d resumes left)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: application/functions/shortcodes.php:204
-#: application/libraries/Module/Frontend/Index.php:386
+#: application/functions/shortcodes.php:210
+#: application/libraries/Module/Frontend/Index.php:393
 msgid "Your application has been sent."
 msgstr ""
 
-#: application/functions/shortcodes.php:208
+#: application/functions/shortcodes.php:214
 #: application/libraries/Module/Admin/Application.php:22
 #: application/libraries/Module/Admin/Application.php:28
 #: application/libraries/Module/Admin/Application.php:37
@@ -460,39 +476,39 @@ msgstr ""
 #: application/libraries/Module/Admin/Pricing.php:34
 #: application/libraries/Module/Admin/Pricing.php:179
 #: application/libraries/Module/Admin/Resumes.php:23
-#: application/libraries/Module/Frontend/Employer.php:581
-#: application/libraries/Module/Frontend/Employer.php:736
-#: application/libraries/Module/Frontend/Index.php:391
-#: application/libraries/Module/Resumes/Index.php:992
+#: application/libraries/Module/Frontend/Employer.php:559
+#: application/libraries/Module/Frontend/Employer.php:714
+#: application/libraries/Module/Frontend/Index.php:398
+#: application/libraries/Module/Resumes/Index.php:994
 msgid "There are errors in your form."
 msgstr ""
 
-#: application/functions/shortcodes.php:222 templates/job-board/single.php:95
+#: application/functions/shortcodes.php:228 templates/job-board/single.php:95
 msgid "Send Application"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Application.php:30
 #: application/views/alerts/index.php:33
-#: application/views/alerts/index.php:165
-#: application/views/application/index.php:159
+#: application/views/alerts/index.php:166
+#: application/views/application/index.php:160
 #: application/views/category/index.php:25
-#: application/views/category/index.php:90
+#: application/views/category/index.php:91
 #: application/views/discount/index.php:25
-#: application/views/discount/index.php:100
+#: application/views/discount/index.php:101
 #: application/views/employers/index.php:43
-#: application/views/employers/index.php:124
+#: application/views/employers/index.php:125
 #: application/views/import/index.php:22
-#: application/views/import/index.php:105 application/views/job/index.php:55
-#: application/views/job/index.php:247 application/views/jobType/index.php:24
-#: application/views/jobType/index.php:89
+#: application/views/import/index.php:106 application/views/job/index.php:55
+#: application/views/job/index.php:248 application/views/jobType/index.php:24
+#: application/views/jobType/index.php:90
 #: application/views/memberships/index.php:34
-#: application/views/memberships/index.php:133
+#: application/views/memberships/index.php:134
 #: application/views/payment/index.php:29
-#: application/views/payment/index.php:131
+#: application/views/payment/index.php:132
 #: application/views/pricing/list.php:41
-#: application/views/pricing/list.php:112
+#: application/views/pricing/list.php:113
 #: application/views/resumes/index.php:51
-#: application/views/resumes/index.php:142 templates/job-board/single.php:44
+#: application/views/resumes/index.php:143 templates/job-board/single.php:44
 msgid "Apply"
 msgstr ""
 
@@ -528,20 +544,20 @@ msgstr ""
 #: application/libraries/Form/Abstract/Job.php:57
 #: application/libraries/Form/AdvancedSearch.php:35
 #: application/libraries/Form/ResumesSearch.php:37
-#: application/views/import/index.php:37 templates/job-board/company.php:54
-#: templates/job-board/job.php:58 templates/widget/recently-viewed.php:29
+#: application/views/import/index.php:37 templates/job-board/company.php:55
+#: templates/job-board/job.php:66 templates/widget/recently-viewed.php:29
 msgid "Location"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Company.php:38
-#: application/libraries/Form/Login.php:15
+#: application/libraries/Form/Login.php:19
 #: application/libraries/Form/Resumes/Login.php:15
 #: application/libraries/Form/Resumes/Register.php:27
 msgid "Username"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Company.php:45
-#: application/libraries/Form/Login.php:20
+#: application/libraries/Form/Login.php:24
 #: application/libraries/Form/Resumes/Login.php:20
 #: application/libraries/Form/Resumes/Register.php:35
 msgid "Password"
@@ -555,7 +571,7 @@ msgstr ""
 #: application/libraries/Form/Abstract/Company.php:58
 #: application/libraries/Form/Resumes/Register.php:48
 #: application/views/resumes/index.php:66
-#: templates/job-board/job-applications.php:34 templates/resumes/resume.php:83
+#: templates/job-board/job-applications.php:34 templates/resumes/resume.php:91
 #: templates/widget/alerts.php:21
 msgid "E-mail"
 msgstr ""
@@ -609,7 +625,7 @@ msgid "Job Information"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Job.php:56
-#: templates/job-board/company.php:106
+#: templates/job-board/company.php:108
 msgid "Company Information"
 msgstr ""
 
@@ -625,7 +641,7 @@ msgstr ""
 
 #: application/libraries/Form/Abstract/Job.php:74
 #: application/libraries/Form/Abstract/Resume.php:103
-#: templates/job-board/company.php:74 templates/resumes/resume.php:109
+#: templates/job-board/company.php:75 templates/resumes/resume.php:119
 msgid "Website"
 msgstr ""
 
@@ -636,7 +652,7 @@ msgstr ""
 #: application/libraries/Form/Abstract/Job.php:96
 #: application/libraries/Form/Abstract/Payment.php:45
 #: application/libraries/Form/Admin/Config/Facebook.php:195
-#: application/libraries/Form/Admin/Config/Linkedin.php:226
+#: application/libraries/Form/Admin/Config/Linkedin.php:240
 #: application/libraries/Form/Resumes/Education.php:68
 #: application/views/category/index.php:39
 #: application/views/discount/index.php:37
@@ -663,20 +679,20 @@ msgstr ""
 #: application/libraries/Form/Abstract/Job.php:105
 #: application/libraries/Form/Resumes/Education.php:73
 #: application/libraries/Form/Resumes/Experience.php:73
-#: templates/job-board/job.php:117
+#: templates/job-board/job.php:127
 msgid "Description"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Job.php:111
 #: application/libraries/Form/AdvancedSearch.php:53
-#: application/views/job/index.php:84 templates/job-board/job.php:77
+#: application/views/job/index.php:84 templates/job-board/job.php:85
 msgid "Job Type"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Job.php:118
 #: application/libraries/Form/Abstract/Resume.php:143
-#: application/views/job/index.php:83 templates/job-board/job.php:86
-#: templates/resumes/resume.php:72
+#: application/views/job/index.php:83 templates/job-board/job.php:96
+#: templates/resumes/resume.php:80
 msgid "Category"
 msgstr ""
 
@@ -735,7 +751,7 @@ msgid "Account Information"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Resume.php:37
-#: templates/resumes/resume.php:53
+#: templates/resumes/resume.php:61
 msgid "Address"
 msgstr ""
 
@@ -746,13 +762,13 @@ msgstr ""
 
 #: application/libraries/Form/Abstract/Resume.php:39
 #: application/libraries/Form/Resumes/Experience.php:19
-#: templates/resumes/resume.php:146
+#: templates/resumes/resume.php:158
 msgid "Experience"
 msgstr ""
 
 #: application/libraries/Form/Abstract/Resume.php:40
 #: application/libraries/Form/Resumes/Education.php:19
-#: templates/resumes/resume.php:145
+#: templates/resumes/resume.php:157
 msgid "Education"
 msgstr ""
 
@@ -775,7 +791,7 @@ msgid "This field will be shown only to registered employers."
 msgstr ""
 
 #: application/libraries/Form/Abstract/Resume.php:97
-#: templates/resumes/resume.php:96
+#: templates/resumes/resume.php:105
 msgid "Phone Number"
 msgstr ""
 
@@ -972,7 +988,7 @@ msgid "Step 1/3"
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Facebook.php:173
-#: application/libraries/Form/Admin/Config/Linkedin.php:185
+#: application/libraries/Form/Admin/Config/Linkedin.php:199
 msgid "Account"
 msgstr ""
 
@@ -981,7 +997,7 @@ msgid "Share new jobs on Facebook"
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Facebook.php:191
-#: application/libraries/Form/Admin/Config/Linkedin.php:222
+#: application/libraries/Form/Admin/Config/Linkedin.php:236
 msgid "E.g. New job posting!"
 msgstr ""
 
@@ -1006,7 +1022,7 @@ msgid "Share has been sent, please check your Facebook account."
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Facebook.php:240
-#: application/libraries/Form/Admin/Config/Linkedin.php:287
+#: application/libraries/Form/Admin/Config/Linkedin.php:301
 msgid "Send Test Share"
 msgstr ""
 
@@ -1103,14 +1119,14 @@ msgid "Hide 'bookmark' button on job details page."
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Jobs.php:75
-#: application/libraries/Module/Frontend/Employer.php:283
+#: application/libraries/Module/Frontend/Employer.php:261
 #: application/views/application/index.php:4
 #: application/views/job/index.php:92 templates/job-board/company-panel.php:42
 msgid "Applications"
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Jobs.php:76
-#: application/libraries/Module/Frontend/Index.php:299
+#: application/libraries/Module/Frontend/Index.php:306
 msgid "Only registered members can apply for jobs."
 msgstr ""
 
@@ -1228,43 +1244,43 @@ msgstr ""
 msgid "Connect with LinkedIn"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:195
+#: application/libraries/Form/Admin/Config/Linkedin.php:209
 msgid "Automatic Sharing"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:203
+#: application/libraries/Form/Admin/Config/Linkedin.php:217
 msgid "Post As"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:215
+#: application/libraries/Form/Admin/Config/Linkedin.php:229
 msgid "Share new jobs on LinkedIn"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:219
+#: application/libraries/Form/Admin/Config/Linkedin.php:233
 msgid "Comment"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:232
+#: application/libraries/Form/Admin/Config/Linkedin.php:246
 msgid "You can use above variables in Comment and Title"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:238
+#: application/libraries/Form/Admin/Config/Linkedin.php:252
 msgid "Apply with LinkedIn"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:242
+#: application/libraries/Form/Admin/Config/Linkedin.php:256
 msgid "Allow applications from LinkedIn"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:246
+#: application/libraries/Form/Admin/Config/Linkedin.php:260
 msgid "Application Method"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:264
+#: application/libraries/Form/Admin/Config/Linkedin.php:278
 msgid "LinkedIn: You need to have at least one posted job to send test tweet."
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Linkedin.php:269
+#: application/libraries/Form/Admin/Config/Linkedin.php:283
 msgid "Share has been posted, please check your LinkedIn account."
 msgstr ""
 
@@ -1310,43 +1326,76 @@ msgid "PayPal Environment"
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Recaptcha.php:19
+#: application/libraries/Form/Admin/Config/Recaptcha.php:26
 #: application/libraries/Module/Admin/Config.php:83
 msgid "reCAPTCHA"
 msgstr ""
 
 #: application/libraries/Form/Admin/Config/Recaptcha.php:25
+msgid "Captcha Type"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:27
+msgid "noCAPTCHA (recommended)"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:32
 msgid "reCAPTCHA Public Key"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:30
+#: application/libraries/Form/Admin/Config/Recaptcha.php:37
 msgid "reCAPTCHA Private Key"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:35
+#: application/libraries/Form/Admin/Config/Recaptcha.php:42
+msgid "Captcha Theme"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:43
+msgid "Light"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:44
+msgid "Dark"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:49
+msgid "Captcha Media"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:50
+msgid "Image"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:51
+msgid "Audio"
+msgstr ""
+
+#: application/libraries/Form/Admin/Config/Recaptcha.php:56
 msgid "Enable reCAPTCHA for"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:36
+#: application/libraries/Form/Admin/Config/Recaptcha.php:57
 msgid "Add Job Form"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:37
+#: application/libraries/Form/Admin/Config/Recaptcha.php:58
 msgid "Application Form"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:38
+#: application/libraries/Form/Admin/Config/Recaptcha.php:59
 msgid "Employer Registration Form"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:39
+#: application/libraries/Form/Admin/Config/Recaptcha.php:60
 msgid "Employer Login Form"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:40
+#: application/libraries/Form/Admin/Config/Recaptcha.php:61
 msgid "Candidate Registration Form"
 msgstr ""
 
-#: application/libraries/Form/Admin/Config/Recaptcha.php:41
+#: application/libraries/Form/Admin/Config/Recaptcha.php:62
 msgid "Candidate Login Form"
 msgstr ""
 
@@ -2177,7 +2226,7 @@ msgstr ""
 msgid "Your Email"
 msgstr ""
 
-#: application/libraries/Form/Login.php:25
+#: application/libraries/Form/Login.php:29
 #: application/libraries/Form/Resumes/Login.php:25
 msgid "Remember me"
 msgstr ""
@@ -2241,14 +2290,14 @@ msgstr ""
 
 #: application/libraries/Form/Resumes/Purchase.php:70
 #: templates/job-board/company-products.php:99
-#: templates/resumes/resume.php:217
+#: templates/resumes/resume.php:231
 msgid "Purchase"
 msgstr ""
 
 #: application/libraries/Form/Resumes/Register.php:14
-#: application/libraries/Module/Resumes/Index.php:955
+#: application/libraries/Module/Resumes/Index.php:957
 #: templates/job-board/company-new.php:35 templates/job-board/single.php:36
-#: templates/resumes/resume.php:213
+#: templates/resumes/resume.php:227
 msgid "Register"
 msgstr ""
 
@@ -2899,7 +2948,7 @@ msgid "Number of deactivated resumes: {success}"
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:130
-#: application/libraries/Module/Resumes/Index.php:780
+#: application/libraries/Module/Resumes/Index.php:782
 msgid "New work experience has been added."
 msgstr ""
 
@@ -2908,54 +2957,54 @@ msgstr ""
 #: application/libraries/Module/Admin/Resumes.php:196
 #: application/libraries/Module/Admin/Resumes.php:202
 #: application/libraries/Module/Frontend/Employer.php:93
-#: application/libraries/Module/Frontend/Employer.php:406
-#: application/libraries/Module/Frontend/Employer.php:447
-#: application/libraries/Module/Frontend/Employer.php:482
-#: application/libraries/Module/Frontend/Employer.php:530
-#: application/libraries/Module/Frontend/Employer.php:703
-#: application/libraries/Module/Resumes/Index.php:460
-#: application/libraries/Module/Resumes/Index.php:487
-#: application/libraries/Module/Resumes/Index.php:712
-#: application/libraries/Module/Resumes/Index.php:761
-#: application/libraries/Module/Resumes/Index.php:781
-#: application/libraries/Module/Resumes/Index.php:786
-#: application/libraries/Module/Resumes/Index.php:843
-#: application/libraries/Module/Resumes/Index.php:849
+#: application/libraries/Module/Frontend/Employer.php:384
+#: application/libraries/Module/Frontend/Employer.php:425
+#: application/libraries/Module/Frontend/Employer.php:460
+#: application/libraries/Module/Frontend/Employer.php:508
+#: application/libraries/Module/Frontend/Employer.php:681
+#: application/libraries/Module/Resumes/Index.php:462
+#: application/libraries/Module/Resumes/Index.php:489
+#: application/libraries/Module/Resumes/Index.php:714
+#: application/libraries/Module/Resumes/Index.php:763
+#: application/libraries/Module/Resumes/Index.php:783
+#: application/libraries/Module/Resumes/Index.php:788
+#: application/libraries/Module/Resumes/Index.php:845
+#: application/libraries/Module/Resumes/Index.php:851
 msgid "There are errors in your form"
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:132
-#: application/libraries/Module/Resumes/Index.php:782
+#: application/libraries/Module/Resumes/Index.php:784
 msgid "Add work experience"
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:136
-#: application/libraries/Module/Resumes/Index.php:785
+#: application/libraries/Module/Resumes/Index.php:787
 msgid "New education has been added."
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:138
-#: application/libraries/Module/Resumes/Index.php:787
+#: application/libraries/Module/Resumes/Index.php:789
 msgid "Add education"
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:195
-#: application/libraries/Module/Resumes/Index.php:842
+#: application/libraries/Module/Resumes/Index.php:844
 msgid "Work experience has been updated."
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:197
-#: application/libraries/Module/Resumes/Index.php:844
+#: application/libraries/Module/Resumes/Index.php:846
 msgid "Edit work experience"
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:201
-#: application/libraries/Module/Resumes/Index.php:848
+#: application/libraries/Module/Resumes/Index.php:850
 msgid "Education has been updated."
 msgstr ""
 
 #: application/libraries/Module/Admin/Resumes.php:203
-#: application/libraries/Module/Resumes/Index.php:850
+#: application/libraries/Module/Resumes/Index.php:852
 msgid "Edit education"
 msgstr ""
 
@@ -3008,11 +3057,11 @@ msgstr ""
 msgid "You provided invalid email address."
 msgstr ""
 
-#: application/libraries/Module/AjaxNopriv/Main.php:204
+#: application/libraries/Module/AjaxNopriv/Main.php:210
 msgid "Alert was saved successfully."
 msgstr ""
 
-#: application/libraries/Module/AjaxNopriv/Main.php:207
+#: application/libraries/Module/AjaxNopriv/Main.php:213
 msgid "There was an error while saving alert."
 msgstr ""
 
@@ -3065,24 +3114,39 @@ msgstr ""
 msgid "Only registered members can post jobs"
 msgstr ""
 
-#: application/libraries/Module/Frontend/AddJob.php:76
+#: application/libraries/Module/Frontend/AddJob.php:77
 msgid "You cannot post jobs. Your account is inactive."
 msgstr ""
 
-#: application/libraries/Module/Frontend/AddJob.php:199
+#: application/libraries/Module/Frontend/AddJob.php:200
 msgid "Form has been reset."
 msgstr ""
 
-#: application/libraries/Module/Frontend/AddJob.php:267
+#: application/libraries/Module/Frontend/AddJob.php:217
+#: application/libraries/Module/Resumes/Index.php:909
+#: application/views/application/edit.php:36
+#: application/views/employers/edit.php:33
+#: application/views/resumes/edit.php:30
+#: templates/job-board/company-login.php:35 templates/job-board/single.php:35
+#: templates/resumes/login.php:43 templates/resumes/resume.php:223
+msgid "Login"
+msgstr ""
+
+#: application/libraries/Module/Frontend/AddJob.php:222
+#: templates/job-board/company-login.php:36 templates/resumes/login.php:44
+msgid "Not a member? Register"
+msgstr ""
+
+#: application/libraries/Module/Frontend/AddJob.php:283
 msgid "There are errors in your form. Please correct them before proceeding."
 msgstr ""
 
-#: application/libraries/Module/Frontend/AddJob.php:356
+#: application/libraries/Module/Frontend/AddJob.php:372
 msgid "Payment method not found."
 msgstr ""
 
 #: application/libraries/Module/Frontend/Employer.php:24
-#: application/libraries/Module/Resumes/Index.php:513
+#: application/libraries/Module/Resumes/Index.php:515
 msgid "Please update (if required) and save your profile before continuing."
 msgstr ""
 
@@ -3097,7 +3161,7 @@ msgid "Incorrect account type"
 msgstr ""
 
 #: application/libraries/Module/Frontend/Employer.php:44
-#: application/libraries/Module/Resumes/Index.php:946
+#: application/libraries/Module/Resumes/Index.php:948
 msgid "User registration is disabled."
 msgstr ""
 
@@ -3114,461 +3178,452 @@ msgstr ""
 msgid "Employer Login"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:129
-#: application/libraries/Module/Resumes/Index.php:918
-msgid "Incorrect username or password"
-msgstr ""
-
-#: application/libraries/Module/Frontend/Employer.php:131
-#: application/libraries/Module/Resumes/Index.php:920
-msgid "You have been logged in."
-msgstr ""
-
-#: application/libraries/Module/Frontend/Employer.php:157
+#: application/libraries/Module/Frontend/Employer.php:135
 #: templates/job-board/company-panel.php:29
 #: templates/job-board/company-panel.php:32
 msgid "Active listings"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:179
+#: application/libraries/Module/Frontend/Employer.php:157
 #: templates/job-board/company-panel.php:30
 #: templates/job-board/company-panel.php:33
 msgid "Expired listings"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:198
-#: application/libraries/Module/Frontend/Employer.php:295
-#: application/libraries/Module/Frontend/Employer.php:331
-#: application/libraries/Module/Frontend/Employer.php:360
-#: application/libraries/Module/Frontend/Employer.php:395
-#: application/libraries/Module/Frontend/Employer.php:434
-#: application/libraries/Module/Frontend/Employer.php:463
-#: application/libraries/Module/Frontend/Employer.php:506
-#: application/libraries/Module/Frontend/Employer.php:552
-#: application/libraries/Module/Frontend/Employer.php:653
-#: application/libraries/Module/Frontend/Employer.php:676
-#: application/libraries/Module/Frontend/Employer.php:719
+#: application/libraries/Module/Frontend/Employer.php:176
+#: application/libraries/Module/Frontend/Employer.php:273
+#: application/libraries/Module/Frontend/Employer.php:309
+#: application/libraries/Module/Frontend/Employer.php:338
+#: application/libraries/Module/Frontend/Employer.php:373
+#: application/libraries/Module/Frontend/Employer.php:412
+#: application/libraries/Module/Frontend/Employer.php:441
+#: application/libraries/Module/Frontend/Employer.php:484
+#: application/libraries/Module/Frontend/Employer.php:530
+#: application/libraries/Module/Frontend/Employer.php:631
+#: application/libraries/Module/Frontend/Employer.php:654
+#: application/libraries/Module/Frontend/Employer.php:697
 msgid "You are not allowed to access this page."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:207
-#: application/libraries/Module/Frontend/Employer.php:221
+#: application/libraries/Module/Frontend/Employer.php:185
+#: application/libraries/Module/Frontend/Employer.php:199
 msgid "You cannot edit this job."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:213
-#: application/libraries/Module/Frontend/Employer.php:227
+#: application/libraries/Module/Frontend/Employer.php:191
+#: application/libraries/Module/Frontend/Employer.php:205
 msgid "Job status has been changed"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:340
+#: application/libraries/Module/Frontend/Employer.php:318
 msgid "Application for position: {job_title}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:364
+#: application/libraries/Module/Frontend/Employer.php:342
 msgid "Invalid status given."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:373
+#: application/libraries/Module/Frontend/Employer.php:351
 msgid "Application was marked as %s."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:388
-#: application/libraries/Project.php:665 application/views/job/edit.php:4
+#: application/libraries/Module/Frontend/Employer.php:366
+#: application/libraries/Project.php:668 application/views/job/edit.php:4
 msgid "Edit Job"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:391
-#: application/libraries/Module/Frontend/Employer.php:430
+#: application/libraries/Module/Frontend/Employer.php:369
+#: application/libraries/Module/Frontend/Employer.php:408
 msgid "Administrator does not allow job postings edition."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:403
+#: application/libraries/Module/Frontend/Employer.php:381
 msgid "Job has been saved"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:425
-#: application/libraries/Module/Frontend/Employer.php:427
+#: application/libraries/Module/Frontend/Employer.php:403
+#: application/libraries/Module/Frontend/Employer.php:405
 msgid "Delete Job"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:442
+#: application/libraries/Module/Frontend/Employer.php:420
 msgid "Job has been deleted."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:469
-#: application/libraries/Module/Frontend/Employer.php:471
-#: application/libraries/Module/Resumes/Index.php:699
+#: application/libraries/Module/Frontend/Employer.php:447
+#: application/libraries/Module/Frontend/Employer.php:449
 #: application/libraries/Module/Resumes/Index.php:701
+#: application/libraries/Module/Resumes/Index.php:703
 #: templates/job-board/company-edit.php:25 templates/resumes/my-resume.php:8
 msgid "Change Password"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:478
-#: application/libraries/Module/Resumes/Index.php:708
+#: application/libraries/Module/Frontend/Employer.php:456
+#: application/libraries/Module/Resumes/Index.php:710
 msgid "Your password has been changed. <a href=\"%s\">Go Back &rarr;</a>"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:513
-#: application/libraries/Module/Frontend/Employer.php:515
-#: application/libraries/Module/Resumes/Index.php:744
+#: application/libraries/Module/Frontend/Employer.php:491
+#: application/libraries/Module/Frontend/Employer.php:493
 #: application/libraries/Module/Resumes/Index.php:746
+#: application/libraries/Module/Resumes/Index.php:748
 #: templates/job-board/company-edit.php:26 templates/resumes/my-resume.php:9
 msgid "Delete Account"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:525
-#: application/libraries/Module/Resumes/Index.php:756
+#: application/libraries/Module/Frontend/Employer.php:503
+#: application/libraries/Module/Resumes/Index.php:758
 msgid "Account Deleted"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:526
-#: application/libraries/Module/Resumes/Index.php:757
+#: application/libraries/Module/Frontend/Employer.php:504
+#: application/libraries/Module/Resumes/Index.php:759
 msgid "Your account has been deleted. <a href=\"%s\">Go Back &rarr;</a>"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:556
+#: application/libraries/Module/Frontend/Employer.php:534
 #: application/views/payment/index.php:74
 #: templates/widget/job-board-menu.php:36
 msgid "Membership"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:571
+#: application/libraries/Module/Frontend/Employer.php:549
 msgid "Incorrect package ID."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:579
-#: application/libraries/Module/Frontend/Employer.php:580
-#: application/libraries/Module/Frontend/Employer.php:635
-#: application/libraries/Module/Frontend/Employer.php:636
+#: application/libraries/Module/Frontend/Employer.php:557
+#: application/libraries/Module/Frontend/Employer.php:558
+#: application/libraries/Module/Frontend/Employer.php:613
+#: application/libraries/Module/Frontend/Employer.php:614
 msgid "Purchase Membership"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:604
+#: application/libraries/Module/Frontend/Employer.php:582
 msgid "Your free membership is now active."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:662
+#: application/libraries/Module/Frontend/Employer.php:640
 msgid "Package Details: '%s'"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:683
+#: application/libraries/Module/Frontend/Employer.php:661
 msgid "You do not have active membership."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:687
-#: application/libraries/Module/Frontend/Employer.php:689
+#: application/libraries/Module/Frontend/Employer.php:665
+#: application/libraries/Module/Frontend/Employer.php:667
 msgid "Cancel Membership"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:698
+#: application/libraries/Module/Frontend/Employer.php:676
 msgid "Membership Cancelled"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:699
+#: application/libraries/Module/Frontend/Employer.php:677
 msgid "Your membership has been cancelled. <a href=\"%s\">Go Back &rarr;</a>"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:723
+#: application/libraries/Module/Frontend/Employer.php:701
 #: templates/widget/job-board-menu.php:31
 msgid "Company Profile"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:738
+#: application/libraries/Module/Frontend/Employer.php:716
 msgid "Company information has been saved."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:751
-#: application/libraries/Module/Resumes/Index.php:939
+#: application/libraries/Module/Frontend/Employer.php:729
+#: application/libraries/Module/Resumes/Index.php:941
 msgid "You have been logged out"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:759
+#: application/libraries/Module/Frontend/Employer.php:737
 msgid "Request manual verification"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:763
+#: application/libraries/Module/Frontend/Employer.php:741
 msgid ""
 "Only Employers can request verification (your account type is 'Candidate')."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:770
+#: application/libraries/Module/Frontend/Employer.php:748
 msgid "Your verification request is pending approval."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:775
+#: application/libraries/Module/Frontend/Employer.php:753
 msgid ""
 "Congratulations! Your company profile was verified successfully. Nothing "
 "else to do here."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:780
+#: application/libraries/Module/Frontend/Employer.php:758
 msgid ""
 "Your verification request was declined. Please update your profile according "
 "to Admin guidelines and try again."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Employer.php:795
+#: application/libraries/Module/Frontend/Employer.php:773
 msgid "Verification request sent."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:23
+#: application/libraries/Module/Frontend/Index.php:24
 msgid "Job Board"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:44
+#: application/libraries/Module/Frontend/Index.php:45
 msgid "{company_name}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:53
+#: application/libraries/Module/Frontend/Index.php:54
 msgid "Company profile is inactive."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:55
+#: application/libraries/Module/Frontend/Index.php:56
 msgid "Company profile is hidden."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:57
+#: application/libraries/Module/Frontend/Index.php:58
 msgid ""
 "Company profile will be visible once employer will post at least one job."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:71
+#: application/libraries/Module/Frontend/Index.php:72
 msgid "Category does not exist."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:75
+#: application/libraries/Module/Frontend/Index.php:76
 msgid "Category: {category}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:103
+#: application/libraries/Module/Frontend/Index.php:104
 msgid "Job type does not exist."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:107
+#: application/libraries/Module/Frontend/Index.php:108
 msgid "Job Type: {type}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:133
-#: application/libraries/Module/Resumes/Index.php:298
+#: application/libraries/Module/Frontend/Index.php:134
+#: application/libraries/Module/Resumes/Index.php:300
 msgid "Search Results: {keyword}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:206
-#: application/libraries/Module/Resumes/Index.php:287
+#: application/libraries/Module/Frontend/Index.php:207
+#: application/libraries/Module/Resumes/Index.php:289
 #: templates/widget/job-board-menu.php:19
 msgid "Advanced Search"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:246
+#: application/libraries/Module/Frontend/Index.php:247
 msgid "{job_title}"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:254
+#: application/libraries/Module/Frontend/Index.php:255
 msgid "Attention! This job posting is one day old and might be already filled."
 msgid_plural ""
 "Attention! This job posting is %d days old and might be already filled."
 msgstr[0] ""
 msgstr[1] ""
 
-#: application/libraries/Module/Frontend/Index.php:264
+#: application/libraries/Module/Frontend/Index.php:265
 msgid ""
 "This job posting was marked by employer as filled and is probably no longer "
 "available"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:284
-msgid "Selected job is inactive or does not exist"
+#: application/libraries/Module/Frontend/Index.php:291
+msgid "Selected job is inactive or does not exist. <a href=\"%s\">Go back</a>."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:418
-#: application/libraries/Module/Resumes/Index.php:446
+#: application/libraries/Module/Frontend/Index.php:425
+#: application/libraries/Module/Resumes/Index.php:448
 #: application/views/job/add.php:85 application/views/job/edit.php:78
 #: templates/job-board/payment.php:27
 msgid "Payment"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:421
+#: application/libraries/Module/Frontend/Index.php:428
 msgid "This payment was already processed correctly."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:436
-#: application/libraries/Module/Frontend/Index.php:464
+#: application/libraries/Module/Frontend/Index.php:443
+#: application/libraries/Module/Frontend/Index.php:471
 #: application/libraries/Widget/Alerts.php:19
 msgid "Job Alerts"
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:453
+#: application/libraries/Module/Frontend/Index.php:460
 msgid "Alert was added to the database."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:455
+#: application/libraries/Module/Frontend/Index.php:462
 msgid "Alert could not be added. There was an error in the form."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:468
+#: application/libraries/Module/Frontend/Index.php:475
 msgid "Provided hash code is empty."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:480
+#: application/libraries/Module/Frontend/Index.php:487
 msgid "Provided hash code is invalid."
 msgstr ""
 
-#: application/libraries/Module/Frontend/Index.php:486
+#: application/libraries/Module/Frontend/Index.php:493
 msgid "Alert deleted."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:64
+#: application/libraries/Module/Resumes/Index.php:66
 msgid "Login or register as Employer to contact this candidate."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:68
+#: application/libraries/Module/Resumes/Index.php:70
 msgid "Login or purchase this resume contact details."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:77
+#: application/libraries/Module/Resumes/Index.php:79
 msgid "You need to verify your account before contacting candidate."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:80
+#: application/libraries/Module/Resumes/Index.php:82
 msgid "Your account is pending verification or verification was declined."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:83
-#: application/libraries/Module/Resumes/Index.php:92
+#: application/libraries/Module/Resumes/Index.php:85
+#: application/libraries/Module/Resumes/Index.php:94
 msgid "Purchase this resume contact details"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:90
+#: application/libraries/Module/Resumes/Index.php:92
 msgid ""
 "Incorrect account type. You need to be registered as Employer to contact "
 "Candidates"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:114
+#: application/libraries/Module/Resumes/Index.php:116
 msgid "Only registered members can contact candidates."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:117
+#: application/libraries/Module/Resumes/Index.php:119
 msgid "Only Employers can contact candidates."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:120
+#: application/libraries/Module/Resumes/Index.php:122
 msgid "Only <strong>verified</strong> Employers can contact candidates."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:123
+#: application/libraries/Module/Resumes/Index.php:125
 msgid "Contacting candidaes requires premium access."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:139
+#: application/libraries/Module/Resumes/Index.php:141
 msgid "Only registered members can browse resumes."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:142
+#: application/libraries/Module/Resumes/Index.php:144
 msgid "Only Employers can browse resumes."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:145
+#: application/libraries/Module/Resumes/Index.php:147
 msgid "Only <strong>verified</strong> Employers can browse resumes."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:148
+#: application/libraries/Module/Resumes/Index.php:150
 msgid "Resumes browsing requires premium access."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:262
+#: application/libraries/Module/Resumes/Index.php:264
 #: templates/widget/resumes-menu.php:23
 msgid "Browse Resumes"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:374
+#: application/libraries/Module/Resumes/Index.php:376
 msgid "{full_name}"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:453
+#: application/libraries/Module/Resumes/Index.php:455
 msgid "Access to resume details has been granted."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:478
+#: application/libraries/Module/Resumes/Index.php:480
 msgid "[%1$s] Message from %2$s"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:483
+#: application/libraries/Module/Resumes/Index.php:485
 msgid "Your message has been sent."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:499
-#: application/libraries/Module/Resumes/Index.php:630
+#: application/libraries/Module/Resumes/Index.php:501
+#: application/libraries/Module/Resumes/Index.php:632
 msgid "My resume details"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:502
-#: application/libraries/Module/Resumes/Index.php:542
-#: application/libraries/Module/Resumes/Index.php:587
-#: application/libraries/Module/Resumes/Index.php:640
-#: application/libraries/Module/Resumes/Index.php:688
-#: application/libraries/Module/Resumes/Index.php:732
+#: application/libraries/Module/Resumes/Index.php:504
+#: application/libraries/Module/Resumes/Index.php:544
+#: application/libraries/Module/Resumes/Index.php:589
+#: application/libraries/Module/Resumes/Index.php:642
+#: application/libraries/Module/Resumes/Index.php:690
+#: application/libraries/Module/Resumes/Index.php:734
 msgid "You need to be logged in to access this page."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:507
-#: application/libraries/Module/Resumes/Index.php:547
-#: application/libraries/Module/Resumes/Index.php:592
+#: application/libraries/Module/Resumes/Index.php:509
+#: application/libraries/Module/Resumes/Index.php:549
+#: application/libraries/Module/Resumes/Index.php:594
 msgid ""
 "You need to be registered as Candidate in order to access this page. Your "
 "current account type is Employer."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:524
-#: application/libraries/Module/Resumes/Index.php:667
+#: application/libraries/Module/Resumes/Index.php:526
+#: application/libraries/Module/Resumes/Index.php:669
 msgid "Your resume has been saved."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:527
-#: application/libraries/Module/Resumes/Index.php:676
+#: application/libraries/Module/Resumes/Index.php:529
+#: application/libraries/Module/Resumes/Index.php:678
 msgid "Cannot save your resume. There are errors in your form."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:539
+#: application/libraries/Module/Resumes/Index.php:541
 #: templates/widget/resumes-menu.php:39
 msgid "My Applications"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:584
+#: application/libraries/Module/Resumes/Index.php:586
 #: templates/widget/resumes-menu.php:45
 msgid "My Bookmarks"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:645
-#: application/libraries/Module/Resumes/Index.php:693
-#: application/libraries/Module/Resumes/Index.php:737
+#: application/libraries/Module/Resumes/Index.php:647
+#: application/libraries/Module/Resumes/Index.php:695
+#: application/libraries/Module/Resumes/Index.php:739
 msgid "You need to be registered as Candidate in order to access this page."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:660
+#: application/libraries/Module/Resumes/Index.php:662
 msgid "Incorrect group name."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:834
-#: application/libraries/Module/Resumes/Index.php:889
+#: application/libraries/Module/Resumes/Index.php:836
+#: application/libraries/Module/Resumes/Index.php:891
 msgid "It seems this resume detail does not belong to you!"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:895
+#: application/libraries/Module/Resumes/Index.php:897
 msgid "Resume detail deleted."
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:907
-#: application/views/application/edit.php:36
-#: application/views/employers/edit.php:33
-#: application/views/resumes/edit.php:30
-#: templates/job-board/company-login.php:35 templates/job-board/single.php:35
-#: templates/resumes/login.php:43 templates/resumes/resume.php:209
-msgid "Login"
+#: application/libraries/Module/Resumes/Index.php:920
+#: application/libraries/Project.php:763
+msgid "Incorrect username or password"
 msgstr ""
 
-#: application/libraries/Module/Resumes/Index.php:978
+#: application/libraries/Module/Resumes/Index.php:922
+#: application/libraries/Project.php:765
+msgid "You have been logged in."
+msgstr ""
+
+#: application/libraries/Module/Resumes/Index.php:980
 msgid "You have been registered."
 msgstr ""
 
@@ -3608,104 +3663,104 @@ msgstr ""
 msgid "Submit Payment"
 msgstr ""
 
-#: application/libraries/Project.php:271
+#: application/libraries/Project.php:274
 msgid "new applications"
 msgstr ""
 
-#: application/libraries/Project.php:278
+#: application/libraries/Project.php:281
 msgid "jobs awaiting approval"
 msgstr ""
 
-#: application/libraries/Project.php:289
+#: application/libraries/Project.php:292
 msgid "employers requesting approval"
 msgstr ""
 
-#: application/libraries/Project.php:367 application/libraries/Project.php:488
+#: application/libraries/Project.php:370 application/libraries/Project.php:491
 msgid "Click here to dispose this message"
 msgstr ""
 
-#: application/libraries/Project.php:368 application/libraries/Project.php:489
+#: application/libraries/Project.php:371 application/libraries/Project.php:492
 msgid "%d more left"
 msgstr ""
 
-#: application/libraries/Project.php:375
+#: application/libraries/Project.php:378
 msgid "Are you sure you want to delete this item?"
 msgstr ""
 
-#: application/libraries/Project.php:378 application/libraries/Project.php:480
+#: application/libraries/Project.php:381 application/libraries/Project.php:483
 msgid "Select options ..."
 msgstr ""
 
-#: application/libraries/Project.php:390
+#: application/libraries/Project.php:393
 msgid "None (free listing)"
 msgstr ""
 
-#: application/libraries/Project.php:391
+#: application/libraries/Project.php:394
 msgid "yesterday"
 msgstr ""
 
-#: application/libraries/Project.php:392
+#: application/libraries/Project.php:395
 msgid "immediately"
 msgstr ""
 
-#: application/libraries/Project.php:393
+#: application/libraries/Project.php:396
 msgid "tomorrow"
 msgstr ""
 
-#: application/libraries/Project.php:394
+#: application/libraries/Project.php:397
 msgid "%d day"
 msgstr ""
 
-#: application/libraries/Project.php:395
+#: application/libraries/Project.php:398
 msgid "%d days"
 msgstr ""
 
-#: application/libraries/Project.php:439
+#: application/libraries/Project.php:442
 msgid "save"
 msgstr ""
 
-#: application/libraries/Project.php:440
+#: application/libraries/Project.php:443
 msgid "cancel"
 msgstr ""
 
-#: application/libraries/Project.php:441
+#: application/libraries/Project.php:444
 #: templates/job-board/job-application.php:39
 msgid "change"
 msgstr ""
 
-#: application/libraries/Project.php:442
+#: application/libraries/Project.php:445
 msgid "Do you really want to delete"
 msgstr ""
 
-#: application/libraries/Project.php:443
+#: application/libraries/Project.php:446
 msgid "Select action first"
 msgstr ""
 
-#: application/libraries/Project.php:469
+#: application/libraries/Project.php:472
 msgid "No job listings found"
 msgstr ""
 
-#: application/libraries/Project.php:470
+#: application/libraries/Project.php:473
 msgid "No resumes found"
 msgstr ""
 
-#: application/libraries/Project.php:471
+#: application/libraries/Project.php:474
 msgid "Load %d more"
 msgstr ""
 
-#: application/libraries/Project.php:484
+#: application/libraries/Project.php:487
 msgid "Payment completed successfully."
 msgstr ""
 
-#: application/libraries/Project.php:514
+#: application/libraries/Project.php:517
 msgid "Job Board Stats"
 msgstr ""
 
-#: application/libraries/Project.php:677
+#: application/libraries/Project.php:680
 msgid "Edit Resume"
 msgstr ""
 
-#: application/libraries/Project.php:700 application/libraries/Project.php:706
+#: application/libraries/Project.php:703 application/libraries/Project.php:709
 msgid "Captcha"
 msgstr ""
 
@@ -3721,11 +3776,11 @@ msgstr ""
 msgid "View LinkedIn Profile"
 msgstr ""
 
-#: application/libraries/Service/Linkedin.php:478
+#: application/libraries/Service/Linkedin.php:483
 msgid "Apply From LinkedIn"
 msgstr ""
 
-#: application/libraries/Service/Linkedin.php:516
+#: application/libraries/Service/Linkedin.php:521
 msgid "Connecting to LinkedIn ..."
 msgstr ""
 
@@ -3887,27 +3942,27 @@ msgid "Search by Email"
 msgstr ""
 
 #: application/views/alerts/index.php:29
-#: application/views/alerts/index.php:161
+#: application/views/alerts/index.php:162
 #: application/views/application/index.php:53
-#: application/views/application/index.php:152
+#: application/views/application/index.php:153
 #: application/views/category/index.php:21
-#: application/views/category/index.php:87
+#: application/views/category/index.php:88
 #: application/views/discount/index.php:19
-#: application/views/discount/index.php:95
+#: application/views/discount/index.php:96
 #: application/views/employers/index.php:33
-#: application/views/employers/index.php:115
+#: application/views/employers/index.php:116
 #: application/views/import/index.php:18
-#: application/views/import/index.php:102 application/views/job/index.php:44
-#: application/views/job/index.php:237 application/views/jobType/index.php:20
-#: application/views/jobType/index.php:86
+#: application/views/import/index.php:103 application/views/job/index.php:44
+#: application/views/job/index.php:238 application/views/jobType/index.php:20
+#: application/views/jobType/index.php:87
 #: application/views/memberships/index.php:30
-#: application/views/memberships/index.php:130
+#: application/views/memberships/index.php:131
 #: application/views/payment/index.php:24
-#: application/views/payment/index.php:126
+#: application/views/payment/index.php:127
 #: application/views/pricing/list.php:35
-#: application/views/pricing/list.php:107
+#: application/views/pricing/list.php:108
 #: application/views/resumes/index.php:45
-#: application/views/resumes/index.php:137
+#: application/views/resumes/index.php:138
 msgid "Bulk Actions"
 msgstr ""
 
@@ -3936,8 +3991,8 @@ msgstr ""
 msgid "%d days ago."
 msgstr ""
 
-#: application/views/alerts/index.php:173
-#: application/views/application/index.php:167
+#: application/views/alerts/index.php:174
+#: application/views/application/index.php:168
 msgid "Export to CSV"
 msgstr ""
 
@@ -4035,17 +4090,17 @@ msgid "Search Applications"
 msgstr ""
 
 #: application/views/application/index.php:55
-#: application/views/application/index.php:154
+#: application/views/application/index.php:155
 msgid "Accept"
 msgstr ""
 
 #: application/views/application/index.php:56
-#: application/views/application/index.php:155
+#: application/views/application/index.php:156
 msgid "Reject"
 msgstr ""
 
 #: application/views/application/index.php:57
-#: application/views/application/index.php:156
+#: application/views/application/index.php:157
 msgid "Mark as read"
 msgstr ""
 
@@ -4515,27 +4570,27 @@ msgid "discount"
 msgstr ""
 
 #: application/views/discount/index.php:21
-#: application/views/discount/index.php:97
+#: application/views/discount/index.php:98
 #: application/views/employers/index.php:34
-#: application/views/employers/index.php:116
-#: application/views/job/index.php:46 application/views/job/index.php:239
+#: application/views/employers/index.php:117
+#: application/views/job/index.php:46 application/views/job/index.php:240
 #: application/views/pricing/list.php:37
-#: application/views/pricing/list.php:109
+#: application/views/pricing/list.php:110
 #: application/views/resumes/index.php:46
-#: application/views/resumes/index.php:138
+#: application/views/resumes/index.php:139
 #: templates/job-board/company-products.php:99
 msgid "Activate"
 msgstr ""
 
 #: application/views/discount/index.php:22
-#: application/views/discount/index.php:98
+#: application/views/discount/index.php:99
 #: application/views/employers/index.php:35
-#: application/views/employers/index.php:117
-#: application/views/job/index.php:47 application/views/job/index.php:240
+#: application/views/employers/index.php:118
+#: application/views/job/index.php:47 application/views/job/index.php:241
 #: application/views/pricing/list.php:38
-#: application/views/pricing/list.php:110
+#: application/views/pricing/list.php:111
 #: application/views/resumes/index.php:47
-#: application/views/resumes/index.php:139
+#: application/views/resumes/index.php:140
 msgid "Deactivate"
 msgstr ""
 
@@ -4622,12 +4677,12 @@ msgid "Search Employers"
 msgstr ""
 
 #: application/views/employers/index.php:38
-#: application/views/employers/index.php:120
+#: application/views/employers/index.php:121
 msgid "Approve"
 msgstr ""
 
 #: application/views/employers/index.php:39
-#: application/views/employers/index.php:121
+#: application/views/employers/index.php:122
 msgid "Decline"
 msgstr ""
 
@@ -4798,7 +4853,7 @@ msgstr ""
 
 #: application/views/job/edit.php:109 application/views/payment/index.php:25
 #: application/views/payment/index.php:80
-#: application/views/payment/index.php:127
+#: application/views/payment/index.php:128
 msgid "Mark as Paid"
 msgstr ""
 
@@ -5462,10 +5517,6 @@ msgstr ""
 msgid "Update profile"
 msgstr ""
 
-#: templates/job-board/company-login.php:36 templates/resumes/login.php:44
-msgid "Not a member? Register"
-msgstr ""
-
 #: templates/job-board/company-panel.php:62
 msgid "1 application"
 msgid_plural "%d applications"
@@ -5563,7 +5614,7 @@ msgid ""
 "company information."
 msgstr ""
 
-#: templates/job-board/company-verify.php:31 templates/resumes/resume.php:221
+#: templates/job-board/company-verify.php:31 templates/resumes/resume.php:235
 msgid "Request verification"
 msgstr ""
 
@@ -5575,29 +5626,29 @@ msgstr ""
 msgid "Go back."
 msgstr ""
 
-#: templates/job-board/company.php:39
+#: templates/job-board/company.php:40
 msgid "Active Listings"
 msgstr ""
 
-#: templates/job-board/company.php:44
+#: templates/job-board/company.php:45
 msgid "Registered: %1$s (%2$s ago)"
 msgstr ""
 
-#: templates/job-board/company.php:57 templates/job-board/job.php:61
-#: templates/resumes/resume.php:56
+#: templates/job-board/company.php:58 templates/job-board/job.php:69
+#: templates/resumes/resume.php:64
 msgid "show on map"
 msgstr ""
 
-#: templates/job-board/company.php:123
+#: templates/job-board/company.php:130
 msgid "Current job openings at"
 msgstr ""
 
-#: templates/job-board/company.php:134 templates/job-board/index-item.php:37
+#: templates/job-board/company.php:141 templates/job-board/index-item.php:41
 #: templates/job-board/single.php:115
 msgid "new"
 msgstr ""
 
-#: templates/job-board/company.php:142
+#: templates/job-board/company.php:149
 msgid "Currently this employer doesn't have any openings."
 msgstr ""
 
@@ -5660,7 +5711,7 @@ msgstr ""
 msgid "Go back"
 msgstr ""
 
-#: templates/job-board/job.php:48
+#: templates/job-board/job.php:56
 msgid "Published: %1$s (%2$s ago)"
 msgstr ""
 
@@ -5750,7 +5801,7 @@ msgid ""
 "Your personalized RSS Feed is below, copy the address to your RSS reader."
 msgstr ""
 
-#: templates/resumes/index-item.php:26 templates/resumes/my-resume.php:23
+#: templates/resumes/index-item.php:29 templates/resumes/my-resume.php:23
 msgid "Last Updated"
 msgstr ""
 
@@ -5772,7 +5823,7 @@ msgid "at"
 msgstr ""
 
 #: templates/resumes/my-applications.php:30
-msgid "You did not sent any applications yet."
+msgid "You did not send any applications yet."
 msgstr ""
 
 #: templates/resumes/my-bookmarks.php:21
@@ -5834,21 +5885,21 @@ msgstr ""
 msgid "Last Updated: %1$s (%2$s ago)"
 msgstr ""
 
-#: templates/resumes/resume.php:86 templates/resumes/resume.php:99
-#: templates/resumes/resume.php:112 templates/resumes/resume.php:125
+#: templates/resumes/resume.php:95 templates/resumes/resume.php:109
+#: templates/resumes/resume.php:123 templates/resumes/resume.php:137
 msgid "Locked"
 msgstr ""
 
-#: templates/resumes/resume.php:199 templates/resumes/resume.php:205
+#: templates/resumes/resume.php:213 templates/resumes/resume.php:219
 msgid "Contact Candidate"
 msgstr ""
 
-#: templates/resumes/resume.php:268
+#: templates/resumes/resume.php:282
 msgid "Submit"
 msgstr ""
 
 #: templates/widget/alerts.php:7
-msgid "Like this job search results?"
+msgid "Do you like these job search results?"
 msgstr ""
 
 #: templates/widget/alerts.php:8

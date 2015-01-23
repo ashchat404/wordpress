@@ -12,56 +12,55 @@
  */
 class Daq_Helper_Security
 {
-    const CIPHER = MCRYPT_RIJNDAEL_128; // Rijndael-128 is AES
-    const MODE   = MCRYPT_MODE_CBC;
+    private $iv = 'fedcba9876543210'; #Same as in JAVA
+    private $key = '0123456789abcdef'; #Same as in JAVA
 
-    /* Cryptographic key of length 16, 24 or 32. NOT a password! */
-    private $key;
-    private $type;
-    
-    public static function enabled()
+    function __construct()
     {
-        if(function_exists("mcrypt_encrypt")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    
-    public function __construct($key, $type = "AES") {
-        $this->key = $key;
-        $this->type = $type;
     }
 
-    public function encrypt($plaintext) {
-        
-        if($this->type != "AES") {
-            return base64_encode($plaintext);
-        }
-        
-        $ivSize = mcrypt_get_iv_size(self::CIPHER, self::MODE);
-        $iv = mcrypt_create_iv($ivSize, MCRYPT_DEV_RANDOM);
-        $ciphertext = mcrypt_encrypt(self::CIPHER, $this->key, $plaintext, self::MODE, $iv);
-        return base64_encode($iv.$ciphertext);
+    function encrypt($str) 
+    {   
+        $iv = $this->iv;
+
+        $td = mcrypt_module_open('rijndael-128', '', 'cbc', $iv);
+
+        mcrypt_generic_init($td, $this->key, $iv);
+        $encrypted = mcrypt_generic($td, $str);
+
+        mcrypt_generic_deinit($td);
+        mcrypt_module_close($td);
+
+        return bin2hex($encrypted);
     }
 
-    public function decrypt($ciphertext) {
-        $ciphertext = base64_decode($ciphertext);
-        
-        if($this->type != "AES") {
-            return $ciphertext;
-        }
-        
-        $ivSize = mcrypt_get_iv_size(self::CIPHER, self::MODE);
-        if (strlen($ciphertext) < $ivSize) {
-            throw new Exception('Missing initialization vector');
+    function decrypt($code) 
+    {
+        $code = $this->hex2bin($code);
+        $iv = $this->iv;
+
+        $td = mcrypt_module_open('rijndael-128', '', 'cbc', $iv);
+
+        mcrypt_generic_init($td, $this->key, $iv);
+        $decrypted = mdecrypt_generic($td, $code);
+
+        mcrypt_generic_deinit($td);
+        mcrypt_module_close($td);
+
+        return utf8_encode(trim($decrypted));
+    }
+
+    protected function hex2bin($hexdata) 
+    {
+        $bindata = '';
+
+        for ($i = 0; $i < strlen($hexdata); $i += 2) {
+                $bindata .= chr(hexdec(substr($hexdata, $i, 2)));
         }
 
-        $iv = substr($ciphertext, 0, $ivSize);
-        $ciphertext = substr($ciphertext, $ivSize);
-        $plaintext = mcrypt_decrypt(self::CIPHER, $this->key, $ciphertext, self::MODE, $iv);
-        return rtrim($plaintext, "\0");
+        return $bindata;
     }
+
 }
 
 ?>

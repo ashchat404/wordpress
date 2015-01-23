@@ -226,7 +226,8 @@
                 'prev_text' => __('&laquo;'),
                 'next_text' => __('&raquo;'),
                 'total' => $result->pages,
-                'current' => $result->page
+                'current' => $result->page,
+                'add_args' => false
             ));
         ?>
     </div>

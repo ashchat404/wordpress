@@ -13,8 +13,6 @@
 
  /* @var $resume Wpjb_Model_Resume */
  /* @var $can_browse boolean True if user has access to resumes */
-
- $tolock = array("user_email", "phone");
  
 ?>
 
@@ -24,7 +22,8 @@
     
     <div class="wpjb-top-header wpjb-layer-inside">
         <div class="wpjb-top-header-image">
-            <?php if($resume->getAvatarUrl()): ?>
+            <?php if($resume->doScheme("image")): ?>
+            <?php elseif($resume->getAvatarUrl()): ?>
             <img src="<?php esc_attr_e($resume->getAvatarUrl("64x64")) ?>" alt=""  />
             <?php else: ?>
             <span class="wpjb-glyphs wpjb-icon-user wpjb-icon-only wpjb-icon-64"></span>
@@ -34,7 +33,8 @@
         <div class="wpjb-top-header-content">
             <div>
                 <span class="wpjb-top-header-title">
-                    <?php if($resume->headline): ?>
+                    <?php if($resume->doScheme("headline")):  ?>
+                    <?php elseif($resume->headline): ?>
                     <?php esc_html_e($resume->headline) ?>
                     <?php else: ?>
                     —
@@ -47,6 +47,14 @@
             </div>
         </div>
     </div>
+
+    <?php if($resume->description): ?>
+    <div class="wpjb-text-box" style="margin: 1em 0 1em 0; font-size: 1.1em">
+        <?php if($resume->doScheme("description")): else: ?>
+        <div class="wpjb-text"><?php echo wpjb_rich_text($resume->description, "html") ?></div>
+        <?php endif; ?>
+    </div>
+    <?php endif; ?>
     
     <div class="wpjb-grid wpjb-grid-closed-top">
         <div class="wpjb-grid-row">
@@ -82,7 +90,8 @@
         <div class="wpjb-grid-row">
             <div class="wpjb-grid-col wpjb-col-30"><?php _e("E-mail", "wpjobboard"); ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs wpjb-icon-mail-alt">
-                <?php if(in_array("user_email", $tolock) && !$can_browse): ?>
+                <?php if($resume->doScheme("user_email")):  ?>
+                <?php elseif(in_array("user_email", $tolock) && !$can_browse): ?>
                 <span class="wpjb-glyphs wpjb-icon-lock"><em><?php _e("Locked", "wpjobboard") ?></em></span>
                 <?php else: ?>
                 <?php esc_html_e($resume->getUser()->user_email) ?>
@@ -95,7 +104,8 @@
         <div class="wpjb-grid-row">
             <div class="wpjb-grid-col wpjb-col-30"><?php _e("Phone Number", "wpjobboard") ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs wpjb-icon-phone">
-                <?php if(in_array("phone", $tolock) && !$can_browse): ?>
+                <?php if($resume->doScheme("phone")): ?>
+                <?php elseif(in_array("phone", $tolock) && !$can_browse): ?>
                 <span class="wpjb-glyphs wpjb-icon-lock"><em><?php _e("Locked", "wpjobboard") ?></em></span>
                 <?php else: ?>
                 <?php esc_html_e($resume->phone) ?>
@@ -108,7 +118,8 @@
         <div class="wpjb-grid-row">
             <div class="wpjb-grid-col wpjb-col-30"><?php _e("Website", "wpjobboard") ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs wpjb-icon-link-ext-alt">
-                <?php if(in_array("user_url", $tolock) && !$can_browse): ?>
+                <?php if($resume->doScheme("user_url")): ?>
+                <?php elseif(in_array("user_url", $tolock) && !$can_browse): ?>
                 <span class="wpjb-glyphs wpjb-icon-lock"><em><?php _e("Locked", "wpjobboard") ?></em></span>
                 <?php else: ?>
                 <a href="<?php esc_attr_e($resume->getUser()->user_url) ?>"><?php esc_html_e($resume->getUser()->user_url) ?></a>
@@ -121,7 +132,8 @@
         <div class="wpjb-grid-row <?php esc_attr_e("wpjb-row-meta-".$value->conf("name")) ?>">
             <div class="wpjb-grid-col wpjb-col-30"><?php esc_html_e($value->conf("title")); ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs <?php esc_attr_e($value->conf("render_icon", "wpjb-icon-empty")) ?>">
-                <?php if(in_array($k, $tolock) && !$can_browse): ?>
+                <?php if($resume->doScheme($k)): ?>
+                <?php elseif(in_array($k, $tolock) && !$can_browse): ?>
                     <span class="wpjb-glyphs wpjb-icon-lock"><em><?php _e("Locked", "wpjobboard") ?></em></span>
                 <?php elseif($value->conf("render_callback")): ?>
                     <?php call_user_func($value->conf("render_callback")); ?>
@@ -187,7 +199,9 @@
         
         <h3><?php esc_html_e($value->conf("title")); ?></h3>
         <div class="wpjb-text">
-            <?php wpjb_rich_text($value->value(), $value->conf("textarea_wysiwyg") ? "html" : "text") ?>
+            <?php if($resume->doScheme($k)): else: ?>
+            <?php wpjb_rich_text($value->value(), $value->conf("textarea_wysiwyg") ? "html" : "text"); ?>
+            <?php endif; ?>
         </div>
         
         <?php endforeach; ?>

@@ -292,6 +292,10 @@ class Wpjb_Model_ResumeSearch extends Daq_Db_OrmAbstract
             }
         }
         
+        if($groupResults) {
+            $select->group("t1.id");
+        }
+        
         $select = apply_filters("wpjr_resume_query", $select);
         
         //$itemsFound = $select->select("COUNT(*) AS cnt".$custom_columns)->fetchColumn();

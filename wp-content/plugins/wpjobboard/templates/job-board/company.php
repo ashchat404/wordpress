@@ -26,7 +26,8 @@
     
     <div class="wpjb-top-header wpjb-layer-inside">
         <div class="wpjb-top-header-image">
-            <?php if($company->getLogoUrl()): ?>
+            <?php if($company->doScheme("company_logo")): ?>
+            <?php elseif($company->getLogoUrl()): ?>
             <img src="<?php echo $company->getLogoUrl("64x64") ?>" alt=""  />
             <?php else: ?>
             <span class="wpjb-glyphs wpjb-icon-building wpjb-icon-only wpjb-icon-64"></span>
@@ -73,7 +74,9 @@
         <div class="wpjb-grid-row">
             <div class="wpjb-grid-col wpjb-col-30"><?php _e("Website", "wpjobboard"); ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs wpjb-icon-link-ext-alt">
+                <?php if($company->doScheme("company_website")): else: ?>
                 <a href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a>
+                <?php endif; ?>
             </div>
         </div>   
         <?php endif; ?>
@@ -82,10 +85,9 @@
         <div class="wpjb-grid-row <?php esc_attr_e("wpjb-row-meta-".$value->conf("name")) ?>">
             <div class="wpjb-grid-col wpjb-col-30"><?php esc_html_e($value->conf("title")); ?></div>
             <div class="wpjb-grid-col wpjb-col-65 wpjb-glyphs <?php esc_attr_e($value->conf("render_icon", "wpjb-icon-empty")) ?>">
-                <?php if($value->conf("render_callback")): ?>
-                    <?php call_user_func($value->conf("render_callback")); ?>
+                <?php if($company->doScheme($k)): ?>
                 <?php elseif($value->conf("type") == "ui-input-file"): ?>
-                    <?php foreach($job->file->{$value->name} as $file): ?>
+                    <?php foreach($company->file->{$value->name} as $file): ?>
                     <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
                     <?php echo wpjb_format_bytes($file->size) ?><br/>
                     <?php endforeach ?>
@@ -102,17 +104,22 @@
     
     <div class="wpjb-text-box">
 
-        <?php if($company->company_info): ?>
+        <?php if(empty($company->company_info)): else: ?>
         <h3><?php _e("Company Information", "wpjobboard") ?></h3>
         <div class="wpjb-text">
+            <?php if($company->doScheme("company_info")): else: ?>
             <?php wpjb_rich_text($company->company_info, $company->meta->company_info_format->value()) ?>
+            <?php endif; ?>
         </div>
         <?php endif; ?>
         
         <?php foreach($company->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type"=>"ui-input-textarea")) as $k => $value): ?>
+        
         <h3><?php esc_html_e($value->conf("title")); ?></h3>
-        <div class="wpjb-job-text">
+        <div class="wpjb-text">
+            <?php if($company->doScheme($k)): else: ?>
             <?php wpjb_rich_text($value->value()) ?>
+            <?php endif; ?>
         </div>
         <?php endforeach; ?>
 

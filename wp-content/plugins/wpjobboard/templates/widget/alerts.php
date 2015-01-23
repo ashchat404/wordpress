@@ -4,7 +4,7 @@
 <?php if($is_smart): ?>
 
 <div class="wpjb wpjb-widget-smart-alert">
-    <div><span><?php _e("Like this job search results?", "wpjobboard") ?></span></div>
+    <div><span><?php _e("Do you like these job search results?", "wpjobboard") ?></span></div>
     <a href="#" class="wpjb-subscribe wpjb-button"><?php _e("Subscribe Now ...", "wpjobboard") ?></a>
 </div>
 

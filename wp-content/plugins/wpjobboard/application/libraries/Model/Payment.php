@@ -80,6 +80,8 @@ class Wpjb_Model_Payment extends Daq_Db_OrmAbstract
         }
         
         $object->paymentAccepted($this);
+        
+        do_action("wpjb_payment_complete", $this, $object);
     }
 }
 

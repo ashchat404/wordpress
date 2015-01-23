@@ -329,6 +329,11 @@ jQuery(function() {
 jQuery(function($) {
     $(".wpjb-form-toggle").click(function(event) {
         var id = $(this).data("wpjb-form");
+        
+        if(!id) {
+            id = $(this).attr("data-wpjb-form");
+        }        
+        
         $(this).find(".wpjb-slide-icon").toggleClass("wpjb-slide-up");
         
         $("#"+id).slideToggle("fast", function() {
@@ -455,7 +460,7 @@ function wpjb_ls_jobs_init() {
         return false;
     });
                 
-    $("#wpjb-paginate-links").hide();
+    $(".wpjb-paginate-links").hide();
                 
     wpjb_ls_jobs();
 }        
@@ -480,7 +485,6 @@ function wpjb_ls_jobs(e) {
     data.action = "wpjb_jobs_search";
     data.page = page;
     data.type = [];
-    data.category = [];
     
     WPJB_SEARCH_CRITERIA.filter = "active";
                 
@@ -531,7 +535,7 @@ function wpjb_ls_jobs(e) {
             $(".wpjb-job-list").css("opacity", "1");
             $(".wpjb-job-list").append(response.html);
                                 
-            loaded = $(".wpjb-job-list div").length;
+            loaded = $(".wpjb-job-list > div").length;
                                 
             var delta = total-loaded;
                                 

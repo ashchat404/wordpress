@@ -69,6 +69,7 @@ class Wpjb_Module_Frontend_AddJob extends Wpjb_Controller_Frontend
             $this->view->_flash->addError(__("Only registered members can post jobs", "wpjobboard"));
             $this->view->canPost = false;
             $this->view->can_post = false;
+            return "../default/form";
             return false;
         }
         
@@ -207,8 +208,23 @@ class Wpjb_Module_Frontend_AddJob extends Wpjb_Controller_Frontend
         
         $this->view->show_pricing = true;
         $canPost = $this->_canPost();
-        if(!$canPost) {
-            return false;
+        if(is_string($canPost)) {
+            
+            $form = new Wpjb_Form_Login();
+            $form->getElement("redirect_to")->setValue(wpjb_link_to("step_add"));
+            
+            $this->view->form = $form;
+            $this->view->submit = __("Login", "wpjobboard");
+            $this->view->buttons = array(
+                array(
+                    "tag"=>"a", 
+                    "href"=>wpjb_link_to("employer_new"), 
+                    "html"=>__("Not a member? Register", "wpjobboard")
+                ),
+            );
+            return $canPost;
+        } elseif($canPost !== true) {
+            return $canPost;
         }
 
         $query = new Daq_Db_Query;
@@ -247,7 +263,7 @@ class Wpjb_Module_Frontend_AddJob extends Wpjb_Controller_Frontend
 
     public function previewAction()
     {
-        if(!$this->_canPost()) {
+        if($this->_canPost() !== true) {
             wp_redirect($this->_stepAdd);
         }
 
@@ -276,7 +292,7 @@ class Wpjb_Module_Frontend_AddJob extends Wpjb_Controller_Frontend
 
     public function saveAction()
     {
-        if(!$this->_canPost()) {
+        if($this->_canPost() !== true) {
             $this->redirect(wpjb_link_to("step_add"));
         }
 
@@ -364,7 +380,7 @@ class Wpjb_Module_Frontend_AddJob extends Wpjb_Controller_Frontend
 
     public function completeAction()
     {
-        if(!$this->_canPost()) {
+        if($this->_canPost() !== true) {
             wp_redirect($this->_stepAdd);
         }
         $this->view->current_step = 3;

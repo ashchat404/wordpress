@@ -25,14 +25,23 @@ class Wpjb_Application_Frontend extends Daq_Application_FrontAbstract
             $result = $this->_route['action'];
         }
         
-        if($result === false) {
-            wpjb_flash();
-        } elseif(stripos($result, ".php") && is_file($result)) {
-            do_action("wpjb_front_pre_render", $this, $result);
-            $this->controller->view->render($result, true);
-        } else {
-            do_action("wpjb_front_pre_render", $this, $result);
-            $this->controller->view->render($result.".php");
+        if(!is_array($result)) {
+            $result = array($result);
+        }
+        
+        foreach($result as $r) {
+            if($r === false) {
+                wpjb_flash();
+                break;
+            } elseif(stripos($r, ".php") && is_file($r)) {
+                do_action("wpjb_front_pre_render", $this, $r);
+                $this->controller->view->render($r, true);
+                break;
+            } else {
+                do_action("wpjb_front_pre_render", $this, $r);
+                $this->controller->view->render($r.".php");
+                break;
+            }
         }
 
         $this->_dispatched = true;

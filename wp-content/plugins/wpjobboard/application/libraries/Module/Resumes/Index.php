@@ -15,6 +15,8 @@ class Wpjb_Module_Resumes_Index extends Wpjb_Controller_Frontend
         $this->_perPage = Wpjb_Project::getInstance()->conf("front_jobs_per_page", 20);
         $this->view->baseUrl = Wpjb_Project::getInstance()->getUrl("resumes");
         $this->view->query = null;
+        $this->view->format = null;
+        $this->view->tolock = apply_filters("wpjb_lock_resume", array("user_email", "phone"));
     }
 
     protected function _canView($id)
@@ -976,7 +978,7 @@ class Wpjb_Module_Resumes_Index extends Wpjb_Controller_Frontend
                 $mail->send();
 
                 $this->view->_flash->addInfo(__("You have been registered.", "wpjobboard"));
-
+                
                 $form = new Wpjb_Form_Resumes_Login();
                 if($form->hasElement("recaptcha_response_field")) {
                     $form->removeElement("recaptcha_response_field");

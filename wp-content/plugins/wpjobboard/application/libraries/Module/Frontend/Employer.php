@@ -114,36 +114,14 @@ class Wpjb_Module_Frontend_Employer extends Wpjb_Controller_Frontend
         if($this->getRequest()->get("redirect_to")) {
             $redirect = base64_decode($this->getRequest()->get("redirect_to"));
             $form->getElement("redirect_to")->setValue($redirect);
-        }
-        
-        
-        $this->view->errors = array();
-
-        if($this->isPost()) {
-            $user = $form->isValid($this->getRequest()->getAll());
-            if($user instanceof WP_Error) {
-                foreach($user->get_error_messages() as $error) {
-                    $this->view->_flash->addError($error);
-                }
-            } elseif($user === false) {
-                $this->view->_flash->addError(__("Incorrect username or password", "wpjobboard"));
-            } else {
-                $this->view->_flash->addInfo(__("You have been logged in.", "wpjobboard"));
-
-                $r = trim($form->value("redirect_to"));
-                if(!empty($r)) {
-                    $redirect = $r;
-                } else {
-                    $redirect = wpjb_link_to("employer_panel");
-                }
-
-                $this->redirect($redirect);
-            }
+        } else {
+            $form->getElement("redirect_to")->setValue(wpjb_link_to("employer_panel"));
         }
 
         $this->view->form = $form;
+        $this->view->page_class = "wpjb-page-company-login";
 
-        return "company-login";
+        return array("company-login", "../default/form");
     }
 
     public function panelactiveAction()

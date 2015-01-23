@@ -371,6 +371,7 @@ abstract class Daq_ProjectAbstract
 
     public function redirectCanonical($url)
     {
+        
         if(get_option("show_on_front") != "page") {
             return $url;
         }
@@ -383,7 +384,7 @@ abstract class Daq_ProjectAbstract
                 return false;
             }
         }
-
+        
         return $url;
     }
     
@@ -417,7 +418,7 @@ abstract class Daq_ProjectAbstract
     public function execute($content)
     {
         global $wp;
-
+        
         foreach($this->_apps() as $app) {
             /* @var $app Daq_Application */
             
@@ -464,7 +465,7 @@ abstract class Daq_ProjectAbstract
                     exit;
                 }
             }
-
+            
             $this->text = ob_get_clean();
         }
         
@@ -502,6 +503,9 @@ abstract class Daq_ProjectAbstract
         foreach($this->_apps() as $app) {
             $qvars[] = $app->getOption("query_var");
         }
+        
+        $qvars[] = "wpjbstep";
+        
         return $qvars;
     }
     
@@ -556,9 +560,12 @@ abstract class Daq_ProjectAbstract
                 $newrules[$opt.'/(.*)$'] = 'index.php?'.$opt.'=$matches[1]';
             } else {
                 $url  = str_replace('%pagename%', get_page_uri($page), $struct);
+                
                 $pattern = $url.self::REWRITE_PATTERN;
-
                 $newrules[$pattern] = 'index.php?page_id='.$page->ID.'&'.$opt.'=$matches[1]';
+                
+                #$pattern = "(pl|en)+/".$url."/(.*)";
+                #$newrules[$pattern] = 'index.php?page_id='.$page->ID.'&lang=$matches[1]&'.$opt.'=$matches[2]';
             }
         }
 

@@ -42,7 +42,6 @@ class Wpjb_Widget_JobBoardMenu extends Daq_Widget_Abstract
         } else {
             $this->view->is_employer = false;
         }
-
         if($info->ID>0) {
             $this->view->is_loggedin = true;
         } else {

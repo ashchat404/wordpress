@@ -13,11 +13,12 @@
  */
 
  /* @var $form Wpjb_Form_AddJob */
- /* @var $can_post boolean User has job posting priviledges */
+ /* @var $action string Form action URL */
+ /* @var $submit string Text on the submit button */
 
 ?>
 
-<div class="wpjb wpjb-page-default-form">
+<div class="wpjb wpjb-page-default-form  <?php if(isset($page_class)) echo $page_class ?>">
     
     <?php wpjb_flash() ?>
     
@@ -52,6 +53,13 @@
         <fieldset>
             <div>
                 <input type="submit" class="wpjb-submit" name="wpjb_submit" id="wpjb_submit" value="<?php esc_attr_e($submit) ?>" />
+                
+                <?php if(isset($buttons) && is_array($buttons)): ?>
+                <?php foreach($buttons as $button): ?>
+                <?php echo Daq_Helper_Html::build($button["tag"], array_replace($button, array("tag"=>null, "html"=>null)), $button["html"]) ?>
+                <?php endforeach; ?>
+                <?php endif; ?>
+                
             </div>
         </fieldset>
         

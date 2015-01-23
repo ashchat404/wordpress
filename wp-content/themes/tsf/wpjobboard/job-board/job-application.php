@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Job application details
  *
  * @author Greg Winiarski
@@ -44,12 +44,12 @@
             </tr>
             <?php if($application->user_id && is_array(wpjb_conf("cv_show_applicant_resume"))): ?>
             <tr>
-                <td><?php _e("Applicant Resume", "jobeleon") ?></td>
+                <td><?php _e("Applicant Resume", "jobeleon") ?> </td>
                 <td><a href="<?php esc_attr_e(wpjr_link_to("resume", $application->getResume(), array("application_id"=>$application->id))) ?>"><?php _e("View Resume", "jobeleon") ?></a></td>
             </tr>
             <?php endif; ?>
             <tr>
-                <td><?php _e("Applicant Name", "jobeleon") ?></td>
+                <td><?php _e("Applicant Name", "jobeleon") ?> </td>
                 <td><?php echo $application->applicant_name ?></td>
             </tr>
             <tr>
@@ -57,14 +57,28 @@
                 <td><?php echo $application->email ?></td>
             </tr>
             <tr>
-                <td><?php _e("Date Sent", "jobeleon") ?></td>
+                <td><?php _e("Date Sent", "jobeleon") ?> </td>
                 <td><?php echo wpjb_date_display(get_option("date_format"), $application->applied_at) ?></td>
             </tr>
             <?php foreach($application->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type_exclude"=>"ui-input-textarea")) as $k => $value): ?>
+                <?php if($k == "dropbox_link"): ?>
+                    <tr>
+                        <td><?php esc_html_e($value->conf("title")); ?></td>
+                        <td><?php echo "<a target='_blank' href='$value'>View CV</a>";?></td>
+                    </tr>
+                    
+                <?php elseif($k == "googledrive_link"):?>
+                    <tr>
+                        <td><?php esc_html_e($value->conf("title")); ?></td>
+                        <td><?php echo "<a target='_blank' href='$value'>View CV</a>";?></td>
+                    </tr>
+
+                <?php else:?>
                 <tr>
-                    <td class="wpjb-info-label"><?php esc_html_e($value->conf("title")); ?></td>
-                    <td><?php esc_html_e(join(", ", (array) $value->values())) ?></td>
+                    <td><?php esc_html_e($value->conf("title")); ?> - <?php esc_html_e(join(", ", (array) $value->values())) ?></td>
                 </tr>
+
+                <?php endif;?>
             <?php endforeach; ?>
 
             <?php if (count($application->getFiles())): ?>

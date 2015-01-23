@@ -509,4 +509,40 @@ function wpjb_google_map_url($object) {
     }
 }
 
+function wpjb_scheme_get($scheme, $path) {
+    return wpjb_array_path($scheme["field"], $path);
+}
+
+function wpjb_array_path($arr, $path) {
+    
+    if(stripos($path, ".")===false) {
+        if(isset($arr[$path])) {
+            return $arr[$path];
+        } else {
+            return null;
+        }
+    }
+    
+    list($top, $rest) = explode(".", $path);
+
+    if(isset($arr[$top])) {
+        return wpjb_array_path($arr[$top], $rest);
+    }
+    
+}
+
+function wpjb_scheme_handle($scheme, $name) {
+    
+    if(wpjb_scheme_get($scheme, $name.".visibility")>0) {
+        return true;
+    } elseif(wpjb_scheme_get($scheme, $name.".render_callback")) {
+        call_user_func(wpjb_scheme_get($scheme, $name.".render_callback"));
+        return true;
+    }
+    
+    return false;
+}
+
+
+
 ?>

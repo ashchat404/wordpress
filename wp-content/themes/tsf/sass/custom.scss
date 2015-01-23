@@ -29,6 +29,8 @@ h1,h2,h3,h4{
 	max-width:960px;
 }
 
+
+
 .widget a{
 	font-weight:normal;
 }
@@ -128,9 +130,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 header{
-	min-height: 100px;
+	min-height: 50px;
 	width: 100%;
-	margin-bottom:20px;
+	margin: 20px 0px;
 }
 
 .menu-main-nav-container{
@@ -151,7 +153,7 @@ header{
 				}
 			}
 		}
-		li.menu-item-159, .menu-item-31{
+		li.menu-item-159, .menu-item-31,.menu-item-14{
 			width: 30%;
 			padding-top: 0px;
 		}
@@ -561,7 +563,6 @@ footer#foot{
 	background:url(../wpjobboard/images/city.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;
-	min-height:200px;
 	background-position:0 -30px;
 	max-width:100%;
 	padding-top:80px;
@@ -589,17 +590,24 @@ footer#foot{
 	text-align:center;
 }
 
+.search-results{
+	#side .widget.widget_wpjb-search{
+		height: auto;
+	}
+}
+#payment_method{
+	width:70%!important;
+}
 #side{
-	padding-top:20px;
+
 	.widget.widget_wpjb-search{
 		#adv{
 			padding:0px 6px;
 		}
-		height:520px;
+		height:35px;
+		margin-top:20px;
 	}
-}
 
-#side{
 	.widget{
 		height:300px;
 		overflow:hidden;
@@ -617,6 +625,11 @@ footer#foot{
 			padding:6px;
 			border:none;
 			font-weight: normal;
+			position:relative;
+			.exp{
+				position:absolute;
+				right: 5px;
+			}
 		}
 		.wpjb-label{
 			position:relative;
@@ -659,6 +672,8 @@ footer#foot{
 		}
 	} 
 } 
+
+
 .wpjb-field{
 	position: relative;
 }
@@ -680,8 +695,8 @@ footer#foot{
 	}
 }
 .company_logo{
-	height:130px;
 	display:table;
+	height:70px;
 	.mid{
 		display: table-cell;
 		vertical-align: middle;
@@ -696,13 +711,20 @@ footer#foot{
 }
 
 #job-info{
+	min-height:120px;
 	.columns{
-		height: 130px;
 		display: table;
+		min-height: 120px;
 		.extra{
 			display: table-cell;
-			height: 130px;
 			vertical-align: middle;
+			h1{
+				margin: 7px 0px;
+			}
+		}
+		.entry-exerpt{
+			font-style: italic;
+			color: grey;
 		}
 	}
 }
@@ -1042,10 +1064,14 @@ a.active{
 	}
 }
 
-.wpjb-form-slider{
+.wpjb-form-slider-width{
 	width:100%;
 }
-
+.wpcf7-form{
+	input.wpcf7-email{
+		width: 100%;
+	}
+}
 .one-submit{
 	display: block;
 	margin-left: auto;
@@ -1063,6 +1089,11 @@ a.active{
 	}
 }
 .success{
+	img{
+		width: 20px;
+		margin: 0 auto;
+		display: block;
+	}
 	p{
 		color:$green;
 	}
@@ -1123,28 +1154,196 @@ a.active{
   	}
 }
 
-
+.company-social{
+	display:block;
+	margin:10px auto;
+	text-align: center;
+	i{
+		font-size: 2em;
+		padding:0px 5px;
+	}
+	i.fi-social-facebook{
+		color: #C0C2C2;
+		&:hover{
+			color:#3A5795;
+		}
+	}
+	i.fi-social-twitter{
+		color: #C0C2C2;
+		&:hover{
+			color: #55ACEE;
+		}
+	}
+	i.fi-social-linkedin{
+		color: #C0C2C2;
+		&:hover{
+			color: #0077B5;
+		}
+	}
+}
+.wpjb-company-list{
+	padding:0px;
+	li{
+		
+		a{
+			background:$green;
+			color: white;
+			padding:10px 5px;
+			display: block;
+		}
+	}
+}
 
 .wpjb-page-company{
 	.entry-header{
 		img{
-			width: 100%;
+			max-width: 100%;
+		}
+	}
+	.wpjb-info{
+		tr{
+			height: 80px;
+		}
+	}
+	.profile_logo{
+		display: block;
+	}
+}
+.job-link{
+	display:none;
+}
+
+.wpjb-element-name-dropbox_link, .wpjb-element-name-googledrive_link{
+	display:none;
+}
+.wpjb-element-name-file{
+	.wpjb-field{
+		width:100%;
+		#wpjb-upload-file{
+			width:100%;
+		}
+		#wpjb-upload-limit-file{
+				display: block;
+				text-align: center;		}
+	}
+	width:50%;
+	float:left;
+}
+.wpjb-page-job-applications{
+	.wpjb-table{
+		thead{
+			tr th{
+				text-align: center;
+			}
+		}
+		td{
+			text-align: center;
+		}
+	}
+}
+.wpjb-page-job-application{
+	tr{
+		width: 100%;
+		border:none;
+		border-bottom:1px solid #E3E3E3;
+		text-align: left;
+		td{
+			border:none;
+		}
+	}
+}
+.dp_gd{
+	#gd,#dp{
+		float:left;
+		width: 50px;
+		margin: 0px 10px;
+	}
+	padding:6px 5px;
+	margin:5px 0px;
+	a{
+		height: 40px;
+	}
+}
+#wpjb-scroll{
+	.wpjb-element-name-firstname, .wpjb-element-name-lastname, .wpjb-element-name-user_email{
+		display:none;
+	}
+	#wjp_register{
+		fieldset{
+			margin: 0px 0px;
+			padding:0px 0px;
 		}
 	}
 
-	.profile_logo{
-		display: table-cell;
-		vertical-align: middle;
+}
+.dp_msg,.gd_msg{
+	color:$green;
+	text-align:center;
+	display: block;
+}
+
+#wpjb-payment{
+	tr{
+		width: 100%;
+		border-bottom:none;
 	}
 }
 @media only screen and (max-width: 64em) { 
+	#breadcrumbs{
+		padding:0px;
+		text-align: center;
+	}
+	#job-info{
+		min-height:120px;
+		text-align: center;
+		.columns{
+			display: block;
+			min-height: 120px;
+			.extra{
+				display: block;
+				h1{
+					float: none;
+					margin: 7px 10px;
+				}
+			}
+		}
+		.company-social{
+			width: 100%;
+			margin: 10px 0px;
+		}
+	}
+	.profile_logo{
+		display: block!important;
+		height: 120px!important;
+	}
+
+	.company_logo{
+		display:block;
+		height:120px;
+		.mid{
+			display: block;
+			height:120px;
+		}
+	}
+
 	#common_banner{
 		background:$green;
 		padding: 0px;
 		.search_wrapper{
-			padding-top:20px;
+			padding:5px 0px;
 			input{
 				margin-bottom: 5px!important;
+			}
+		}
+	}
+	.wpjb-info{
+		tr{
+			height:20px!important;
+			width: 100%;
+			border-bottom: none;
+			td{
+				border-right:none;
+				padding:5px;
 			}
 		}
 	}
@@ -1152,6 +1351,15 @@ a.active{
 }
 
 @media only screen and (max-width: 40em) { 
+	header{
+		min-height: 50px;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.one-submit{
+		width:80%;
+	}
 
 	.menu-main-nav-container{
 		ul{
@@ -1160,18 +1368,6 @@ a.active{
 			li{
 				width: 100%!important;
 			}			
-		}
-	}
-
-	#job-info{
-		.columns{
-			height: auto;
-			display: block;
-			div{
-				display: block;
-				height: auto;
-				vertical-align: middle;
-			}
 		}
 	}
 
@@ -1186,6 +1382,7 @@ a.active{
 	        border-bottom:none;
 	        td{
 	        	border:none;
+	        	padding:5px;
 	        }
 		}
 	}

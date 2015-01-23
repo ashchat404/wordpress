@@ -107,11 +107,15 @@ function wpjr_paginate_links()
     _wpjb_paginate_links("resumes");
 }
 
-function wpjb_paginate_links($url, $count, $page, $query = null)
+function wpjb_paginate_links($url, $count, $page, $query = null, $format = null)
 {
     $glue = "?";
-    if(stripos($url, "?")) {
+    if(stripos($url.$format, "?")) {
         $glue = "&";
+    }
+    
+    if($format === null) {
+        $format = 'page/%#%/';
     }
     
     if(empty($query)) {
@@ -124,7 +128,7 @@ function wpjb_paginate_links($url, $count, $page, $query = null)
     
     echo paginate_links( array(
         'base' => rtrim($url, "/")."/%_%".$query,
-        'format' => 'page/%#%/',
+        'format' => $format,
         'prev_text' => __('&laquo;'),
         'next_text' => __('&raquo;'),
         'total' => $count,
@@ -739,42 +743,103 @@ function wpjb_locale() {
 }
 
 function wpjb_recaptcha_form() {
+    
     if(!function_exists("recaptcha_get_html")) {
         $rc = "/application/vendor/recaptcha/recaptchalib.php";
         $rc = Wpjb_Project::getInstance()->getBaseDir().$rc;
         require_once $rc;
     }
-    echo '<style type="text/css">#recaptcha_widget_div div { padding: 0px; margin: 0px }</style>';
-    echo recaptcha_get_html(Wpjb_Project::getInstance()->getConfig("front_recaptcha_public"), null, is_ssl());
+    
+    $captchaType = wpjb_conf("front_recaptcha_type", "re-captcha");
+    
+    if($captchaType == "re-captcha") {
+        echo '<style type="text/css">#recaptcha_widget_div div { padding: 0px; margin: 0px }</style>';
+        echo recaptcha_get_html(Wpjb_Project::getInstance()->getConfig("front_recaptcha_public"), null, is_ssl());
+    } else {
+        $key = Wpjb_Project::getInstance()->getConfig("front_recaptcha_public");
+        $html = new Daq_Helper_Html("div", array(
+            "class" => "g-recaptcha",
+            "data-sitekey" => wpjb_conf("front_recaptcha_public"),
+            "data-theme" => wpjb_conf("front_recaptcha_theme", "light"),
+            "data-type" => wpjb_conf("front_recaptcha_media", "image"),
+        ));
+        $html->forceLongClosing(true);
+        
+        echo '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
+        echo $html->render();
+        echo '<input type="hidden" name="recaptcha_response_field" value="1" />';
+    }
+
 }
 
 function wpjb_recaptcha_check() {
-    if(!function_exists("recaptcha_get_html")) {
-        $rc = "/application/vendor/recaptcha/recaptchalib.php";
-        include_once Wpjb_Project::getInstance()->getBaseDir().$rc;
-    }
     
-    $recaptcha_challenge_field = null;
-    if(isset($_POST["recaptcha_challenge_field"])) {
-        $recaptcha_challenge_field = $_POST["recaptcha_challenge_field"];
-    }
+    if(wpjb_conf("front_recaptcha_type", "re-captcha") == "re-captcha") {
     
-    $recaptcha_response_field = null;
-    if(isset($_POST["recaptcha_response_field"])) {
-        $recaptcha_response_field = $_POST["recaptcha_response_field"];
-    }
-    
-    $resp = recaptcha_check_answer (
-        Wpjb_Project::getInstance()->getConfig("front_recaptcha_private"),
-        $_SERVER["REMOTE_ADDR"],
-        $recaptcha_challenge_field,
-        $recaptcha_response_field
-    );
+        if(!function_exists("recaptcha_get_html")) {
+            $rc = "/application/vendor/recaptcha/recaptchalib.php";
+            include_once Wpjb_Project::getInstance()->getBaseDir().$rc;
+        }
 
-    if (!$resp->is_valid) {
-        return $resp->error;
+        $recaptcha_challenge_field = null;
+        if(isset($_POST["recaptcha_challenge_field"])) {
+            $recaptcha_challenge_field = $_POST["recaptcha_challenge_field"];
+        }
+
+        $recaptcha_response_field = null;
+        if(isset($_POST["recaptcha_response_field"])) {
+            $recaptcha_response_field = $_POST["recaptcha_response_field"];
+        }
+
+        $resp = recaptcha_check_answer (
+            Wpjb_Project::getInstance()->getConfig("front_recaptcha_private"),
+            $_SERVER["REMOTE_ADDR"],
+            $recaptcha_challenge_field,
+            $recaptcha_response_field
+        );
+
+        if (!$resp->is_valid) {
+            return $resp->error;
+        } else {
+            return true;
+        }
+        
     } else {
-        return true;
+        
+        $query = array(
+            "secret" => wpjb_conf("front_recaptcha_private"),
+            "response" => $_POST["g-recaptcha-response"],
+            "remoteip" => $_SERVER["REMOTE_ADDR"]
+        );
+        
+        $response = wp_remote_get("https://www.google.com/recaptcha/api/siteverify?".http_build_query($query));
+        
+        if(is_wp_error($response)) {
+            return $response->get_error_message();
+        } 
+        
+        $data = json_decode($response["body"]);
+        
+        if($data->success) {
+            return true;
+        }
+        
+        $ec = 'error-codes';
+        
+        $errors = array(
+            "missing-input-secret" => __("The secret parameter is missing.", "wpjobboard"),
+            "invalid-input-secret" => __("The secret parameter is invalid or malformed.", "wpjobboard"),
+            "missing-input-response" => __("The response parameter is missing.", "wpjobboard"),
+            "invalid-input-response" => __("The response parameter is invalid or malformed.", "wpjobboard"),
+        );
+        
+        foreach($errors as $key => $err) {
+            if(in_array($key, $data->$ec)) {
+                return $err; 
+            }
+        }
+        
+        return null;
     }
 
 }
@@ -1032,5 +1097,98 @@ function wpjb_form_helper_resume_listing(Daq_Form_Element $field, $form)
     }
 }
 
+function wpjb_mobile_notification_jobs(Wpjb_Model_Job $job) {
+    
+    $googleApiKey = wpjb_conf("google_api_key");
+    $ids = array();
+    echo $googleApiKey;
+    $query = new Daq_Db_Query;
+    $query->from("Wpjb_Model_Alert t");
+    $query->where("user_id IS NOT NULL");
+    $query->where("frequency = 0");
+    
+    $list = $query->execute();
+    
+    foreach($list as $alert) {
+        
+        $params = unserialize($alert->params);
+        $params["query"] = $params["keyword"];
+        $params["id"] = $job->id;
+        $params["count_only"] = true;
+        
+        $jobs = wpjb_find_jobs($params);
+
+        if($jobs == 1) {
+            
+            $mobile = get_user_meta($alert->user_id, "wpjb_mobile_device", true);
+            
+            foreach($mobile->device as $device) {
+                if($device["mobile_os"] == "android") {
+                    
+                    $ids[] = $device["mobile_id"];
+                    
+                    $alert->last_run = date_i18n("Y-m-d H:i:s");
+                    $alert->save();
+                } // endif;
+            } // endforeach;
+        } // endif;
+    }
+
+    if(empty($ids)) {
+        return;
+    }
+
+    // prep the bundle
+    $msg = array (
+        'message' 	=> 'here is a message. message',
+        'title'		=> 'This is a title. title',
+        'subtitle'	=> 'This is a subtitle. subtitle',
+        'tickerText'	=> 'Ticker text here...Ticker text here...Ticker text here',
+        'vibrate'	=> 0,
+        'sound'		=> 0,
+        'largeIcon'	=> 'large_icon',
+        'smallIcon'	=> 'small_icon'
+    );
+
+    $fields = array(
+        'registration_ids' 	=> $ids,
+        'data'			=> $msg
+    );
+
+    $headers = array(
+        'Authorization' => 'key=' . $googleApiKey,
+        'Content-Type' => 'application/json'
+    );
+
+    $response = wp_remote_post('https://android.googleapis.com/gcm/send', array(
+        "headers" => $headers,
+        "body" => json_encode($fields)
+        
+    ));
+    
+    if ( is_wp_error( $response ) ) {
+       $error_message = $response->get_error_message();
+       echo "Something went wrong: $error_message";
+    } else {
+       echo 'Response:<pre>';
+       print_r( $response );
+       echo '</pre>';
+    }
+    
+    
+    return;
+    
+    $ch = curl_init();
+    curl_setopt( $ch,CURLOPT_URL, 'https://android.googleapis.com/gcm/send' );
+    curl_setopt( $ch,CURLOPT_POST, true );
+    curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+    curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+    curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+    curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
+    $result = curl_exec($ch );
+    curl_close( $ch );
+
+    echo $result;
+}
 
 ?>

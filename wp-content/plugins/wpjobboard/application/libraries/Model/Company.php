@@ -536,6 +536,20 @@ class Wpjb_Model_Company extends Daq_Db_OrmAbstract
         
         return $response;
     }
+    
+    public function doScheme($name)
+    {
+        $scheme = apply_filters("wpjb_scheme", get_option("wpjb_form_company"), $this);
+        
+        if(wpjb_scheme_get($scheme, $name.".visibility")>0) {
+            return true;
+        } elseif(wpjb_scheme_get($scheme, $name.".render_callback")) {
+            call_user_func(wpjb_scheme_get($scheme, $name.".render_callback"), $this);
+            return true;
+        }
+
+        return false;
+    }
 }
 
 ?>

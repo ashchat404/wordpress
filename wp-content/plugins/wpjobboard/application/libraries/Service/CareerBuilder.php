@@ -50,6 +50,7 @@ class Wpjb_Service_CareerBuilder
         $t1 = new stdClass();
         $t1->type = "type";
         $t1->title = (string)$job->Job->EmploymentType;
+        $t1->slug = preg_replace("([^A-z0-9\-]+)", "", sanitize_title($t1->title));
         
         $t2 = new stdClass();
         $t2->type = "category";

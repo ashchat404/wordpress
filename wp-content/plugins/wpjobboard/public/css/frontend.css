@@ -85,6 +85,7 @@ body .wpjb center {
 
 .wpjb select,
 .wpjb textarea,
+.wpjb input[type=password],
 .wpjb input[type=text] {
     margin: 2px;
     padding: 6px;
@@ -352,6 +353,18 @@ body .wpjb center {
     clear: both;
     overflow: hidden;
 }
+.wpjb .wpjb-text p {
+    margin: 0 0 20px; 
+}
+.wpjb .wpjb-text ul, 
+.wpjb .wpjb-text ol { 
+    list-style: disc; 
+    margin: 0 0 30px 30px; 
+}
+.wpjb .wpjb-text ol li,
+.wpjb .wpjb-text ul li {
+    list-style-type: disc;
+}
 
 .wpjb .wpjb-text-box > h3 {
     text-transform: uppercase;
@@ -422,6 +435,7 @@ div.wpjb-flash-error {
     border: 1px solid #DE5400;
     background-color: #FFE87C;
     padding: 5px 15px;
+    margin: 0 0 5px 0;
     line-height: 2em;
 }
 
@@ -862,7 +876,7 @@ div.wpjb-flash-small {
 
 .wpjb .wpjb-top-header-image {
     float: left; 
-    margin: 0 15px 0 15px; 
+    margin: 0 0 0 15px; 
     padding: 0px;
 }
 
@@ -873,6 +887,8 @@ div.wpjb-flash-small {
 
 .wpjb .wpjb-top-header-content { 
     float: left;
+    margin: 0 0 0 15px;
+    padding: 0;
 }
 
 .wpjb .wpjb-top-header-title {
@@ -884,6 +900,15 @@ div.wpjb-flash-small {
 .wpjb .wpjb-top-header-subtitle {
     display: block;
     font-size: 1.2em;
+}
+
+.wpjb-ls-load-more .wpjb-button {
+    margin: 1em 0 1em 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    text-align: center;
 }
 
 /* ADD JOB */
@@ -1106,4 +1131,7 @@ div.wpjb-flash-small {
 
 #wpjb-top-search label  {
     display: inline !important;
+    width: auto;
+    float: none;
 }
+
