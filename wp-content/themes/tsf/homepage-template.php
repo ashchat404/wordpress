@@ -50,14 +50,14 @@ if ($param["category"] > 0) {
 }
 ?>
 <section id="banner">
-    <div class="large-6 medium-6 columns left">
+    <div class="large-6 medium-6 small-6 columns left">
         <div class="panel">
             <h1>Find Your Next Sales Job Today</h1>
             <a title="Find a job" class="button" href="<?php echo wpjb_link_to("advsearch")?>" ><?php _e("Find a job", "jobeleon") ?></a>
         </div>
     </div>
 
-    <div class="large-6 medium-6 columns right">
+    <div class="large-6 medium-6 columns small-6 right">
         <div class="panel">
             <h1>Advertise Your Sales Job Within Minutes</h1>
            <a title="Post a job" class="button" href="<?php echo wpjb_link_to("step_add") ?>" ><?php _e("Post a job", "jobeleon") ?></a>
@@ -154,7 +154,22 @@ if ($param["category"] > 0) {
         <div class="row">
             <div class="large-12 columns">
                 <a href="http://localhost:8888/wordpress/testimonials/#more">
-                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/discovered-by.png">
+                    <div class="large-3 medium-3 small-6 columns">
+                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/harrods_2.png">
+
+                    </div>
+                    <div class="large-3 medium-3 small-6 columns">
+                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/manutd.png">
+
+                    </div>
+                    <div class="large-3 medium-3 small-6 columns">
+                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/carlsberg.png">
+
+                    </div>
+                    <div class="large-3 medium-3 small-6 columns">
+                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bgas.png">
+
+                    </div>
                 </a>
             </div>
         </div>

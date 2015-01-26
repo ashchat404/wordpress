@@ -15,6 +15,14 @@
         <title><?php wp_title('|', true, 'right'); ?></title>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+        <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+        <!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
+
+        <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. --> 
+        <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/apple-touch-icon-precomposed.png">
+
+        <!-- Firefox, Chrome, Safari, IE 11+ and Opera. 196x196 pixels in size. -->
+        <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.87302.js"></script>
@@ -53,8 +61,30 @@
 
             <hr>
 
-            <div class="row">
+            <div class="row desktop">
                 <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+            </div>
+            <div class="row mobile">
+                <a href="#" class="small-2 columns open_main">
+                    <i class="fi-list-thumbnails"></i>
+                </a>
+                <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="small-10 columns" rel="home"><img src="<?php echo get_theme_mod('wpjobboard_theme_logo'); ?>" alt="<?php bloginfo('name'); ?> logo" class="logo" /></a>
+                <div class="contt">
+                    <h2>Main menu</h2>
+                    <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+                    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("mobile_nav") ) : ?>
+                    <?php endif; ?>
+                </div>
+
             </div>
     
         </header>
+        <script type="text/javascript">
+            var oddClick = true;
+            $(".open_main").click(function() {
+                $(".mobile .contt").animate({
+                    left: oddClick ? 0 : "-50%"
+                },500);
+                oddClick = !oddClick;
+            });
+        </script>

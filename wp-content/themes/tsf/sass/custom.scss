@@ -35,6 +35,14 @@ h1,h2,h3,h4{
 	font-weight:normal;
 }
 
+	.row.mobile{
+		display:none;
+	}
+
+	.row.desktop{
+		display:block;
+	}
+
 input[type=range] {
     /*removes default webkit styles*/
     -webkit-appearance: none;
@@ -350,11 +358,16 @@ header{
 }
 
 #discovered{
+	.row{
+		width: 55%;
+		margin:0 auto;
+	}
 	padding:20px;
 	@include subheader;	
 	background:#ECF0F1;
 	.columns img{
 		margin-bottom: 40px;
+		max-height: 80px;
 	}
 	a{
 		img{
@@ -561,7 +574,6 @@ footer#foot{
 }
 #common_banner{
 	background:url(../wpjobboard/images/city.jpg);
-	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:0 -30px;
 	max-width:100%;
@@ -585,6 +597,30 @@ footer#foot{
 	}
 }
 
+.widget_wpjb-widget-alerts{
+	background: #1A7365 url(../wpjobboard/images/mail_svg.svg)!important;
+	color: #FFF;
+	min-height: 203px!important;
+	height:auto!important;
+	background-repeat:no-repeat!important;
+	background-position: center!important;
+	background-size:50%!important;
+	a{
+		background: $button-orange;
+	}
+	form{
+		padding:10px;
+	}
+}
+.wpjb-widget-smart-alert{
+	text-align: center;
+	font-size: 2em;
+	.wpjb-subscribe{
+		width: 80%!important;
+		margin: 25px auto 0px;
+		display: block!important;
+	}
+}
 #apply_scroll{
 	display:block;
 	text-align:center;
@@ -592,7 +628,7 @@ footer#foot{
 
 .search-results{
 	#side .widget.widget_wpjb-search{
-		height: auto;
+		height: 35px;
 	}
 }
 #payment_method{
@@ -609,7 +645,7 @@ footer#foot{
 	}
 
 	.widget{
-		height:300px;
+		height:35px;
 		overflow:hidden;
 		margin:0px;
 		background: #EDFCF2;
@@ -719,7 +755,7 @@ footer#foot{
 			display: table-cell;
 			vertical-align: middle;
 			h1{
-				margin: 7px 0px;
+				margin: 7px 7px 7px 0px;
 			}
 		}
 		.entry-exerpt{
@@ -728,8 +764,49 @@ footer#foot{
 		}
 	}
 }
-
-
+#wpjb_widget_alerts{
+	input[type="submit"]{
+		background:$button-orange;
+	}
+}
+.extra.comp{
+	h1{float: left;}
+	a{
+		display: block;
+		text-align: center;
+	}
+	form{
+		display: none;
+		float: left;
+		ul{
+			list-style: none;
+			padding:0px;
+			margin: 0px;
+			li:first-child{
+				display: none;
+			}
+			li{
+				input{
+					width: 100%;
+				}
+				input[type="submit"]{
+					display: block;
+					margin: 2px auto;
+				}
+			}
+		}
+	}
+	.entry-exerpt{
+		clear: both;
+	}
+}
+.comp_fl{
+	a{
+		float: none;
+	}
+	display:table-cell;
+	vertical-align:middle;
+}
 #employer-packages{
 	padding:20px 0px;
 }
@@ -1257,11 +1334,21 @@ a.active{
 		float:left;
 		width: 50px;
 		margin: 0px 10px;
+		border-radius: 10px;
+		padding: 5px;
+		height: 50px;
 	}
 	padding:6px 5px;
 	margin:5px 0px;
 	a{
 		height: 40px;
+		display: block;
+	}
+	#dp{
+		border: 1px solid #4C96D1;
+	}
+	#gd{
+		border: 1px solid #3DB39E;
 	}
 }
 #wpjb-scroll{
@@ -1288,7 +1375,7 @@ a.active{
 		border-bottom:none;
 	}
 }
-@media only screen and (max-width: 64em) { 
+@media only screen and (max-width: 64em) {
 	#breadcrumbs{
 		padding:0px;
 		text-align: center;
@@ -1298,9 +1385,10 @@ a.active{
 		text-align: center;
 		.columns{
 			display: block;
-			min-height: 120px;
+			min-height: 50px;
 			.extra{
 				display: block;
+				margin: 10px 0px;
 				h1{
 					float: none;
 					margin: 7px 10px;
@@ -1351,10 +1439,76 @@ a.active{
 }
 
 @media only screen and (max-width: 40em) { 
+	.wpjb-over-job-table{
+		.wpjb-breadcrumb{
+			display: none;
+		}
+	}
 	header{
 		min-height: 50px;
 		width: 100%;
 		margin: 0px;
+	}
+	#side{
+		display: none;
+	}
+	.row.mobile{
+		display:block;
+		height: 50px;
+		margin: 10px 0px;
+		.contt{
+			position: absolute;
+			left: -50%;
+			box-shadow: #000 1px 3px 15px;
+			z-index: 999;
+			background: #373636;
+			width: 50%;
+			top:122px;
+			h2{
+				display: block;
+				padding: 5px;
+				color: #999;
+				text-transform: uppercase;
+				font-size: 0.66667rem;
+				font-weight: bold;
+				background: #444;
+				border-top: 1px solid #5E5E5E;
+				border-bottom: none;
+				margin: 0;
+			}
+			ul{
+				list-style: none;
+				padding:0px;
+				margin: 0px;
+				li{
+					a{
+						color: rgba(255, 255, 255, 0.7);
+						border-bottom: 1px solid #262626;
+						display: block;
+						padding: 10px;
+						text-align:left!important;
+						&:hover{
+							background: none;
+						}
+					}
+				}
+			}
+		}
+		#wpjb_widget_alerts{
+			padding:10px;
+			input[type="submit"]{
+				background:$button-orange;
+			}
+		}
+	}
+
+	.fi-list-thumbnails{
+		float: right;
+		font-size: 40px;
+		color: #808080;
+	}
+	.row.desktop{
+		display:none;
 	}
 
 	.one-submit{
@@ -1362,11 +1516,20 @@ a.active{
 	}
 
 	.menu-main-nav-container{
+		z-index: 9999;
+		min-height: 0px;
+		padding:0px;
+		height: 0px;
+		height: auto;
 		ul{
 			margin:0px;
 			padding:10px;
+			li::nth-child(3){
+				display: none;
+			}
 			li{
 				width: 100%!important;
+				float: none;
 			}			
 		}
 	}
@@ -1388,21 +1551,23 @@ a.active{
 	}
 
 	#banner{
-		height:230px;
+		height:90px;
 		.left,.right{
 			background:none;
 			box-shadow: none;
 			margin: 0px;
 			padding:0px;
-			height:120px;
+			height:90px;
 			h1{
 				text-align: center;
 				font-size: 20px;
+				display: none;
 			}
 			.panel{
 				position:relative;
 				width: 100%;
-				padding:10px;
+				padding:25px;
+				min-height: 50px;
 				text-align: center;
 				height:100%;
 			}

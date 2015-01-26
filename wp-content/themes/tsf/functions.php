@@ -126,7 +126,7 @@ function wpjobboard_theme_widgets_init() {
         'id' => 'sidebar-1',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
-        'before_title' => '<a class="widget-title expnd">',
+        'before_title' => '<a class="widget-title expnd"><i class="fi-list-thumbnails"> </i>',
         'after_title' => '</a>',
     ));
 
@@ -143,6 +143,13 @@ function wpjobboard_theme_widgets_init() {
         'name' => __('Footer_alert_widget', 'jobeleon'),
         'id' => 'sidebar-3',
         'before_widget' => '<div id="%1$s" class="large-3 medium-3 columns">',
+        'after_widget' => '</div>',
+    ));
+
+    register_sidebar(array(
+        'name' => __('mobile_nav', 'jobeleon'),
+        'id' => 'sidebar-4',
+        'before_widget' => '<div id="%1$s" class="widget">',
         'after_widget' => '</div>',
     ));
 }

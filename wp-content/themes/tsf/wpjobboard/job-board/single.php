@@ -159,7 +159,7 @@
 
                                     <div class=
                                     "wpjb-element-input-password wpjb-element-name-user_password2">
-                                        <label class="wpjb-label">Password (repeat)<span class=
+                                        <label class="wpjb-label">Password (Repeat)<span class=
                                         "wpjb-required">*</span></label>
 
                                         <div class="wpjb-field">
@@ -263,229 +263,217 @@
 <script type="text/javascript">
     var ap_link = "<?php esc_attr_e($application_url) ?>";
     console.log(ap_link);
-$(document).ready( function() {
-    var proceed;
-    //Dropbox upload file script below
-    options = {
+    $(document).ready( function() {
+        var proceed;
+        options = {
+            success: function(files) {
+                $("#dropbox_link").val(files[0].link);
+                $(".dp_msg").html("✔");
+            },
+            cancel: function() {
+            },
+            linkType: "preview", // or "direct"
+            multiselect: false, // or true
+            extensions: ['.pdf', '.doc', '.docx'],
+        };
 
-        // Required. Called when a user selects an item in the Chooser.
-        success: function(files) {
-            $("#dropbox_link").val(files[0].link);
-            $(".dp_msg").html("✔");
-        },
+        $("#dp_choose").click(function(event){
+            event.preventDefault();
+            Dropbox.choose(options);
+        })
+        $(".wpcf7-form input[type=url]").val($(location).attr('href'));
 
-        // Optional. Called when the user closes the dialog without selecting a file
-        // and does not include any parameters.
-        cancel: function() {
+        $("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');
+        $('#email').change(function() {
+            $('#user_email').val($(this).val());
+        });
+        $('#applicant_name').change(function() {
+            $('#firstname').val($(this).val());
+        });
+        $('#last_name').change(function() {
+            $('#lastname').val($(this).val());
+        });
+    });
 
-        },
-        linkType: "preview", // or "direct"
-        multiselect: false, // or true
-        extensions: ['.pdf', '.doc', '.docx'],
-    };
-
-    $("#dp_choose").click(function(event){
+    function onApiLoad(){
+        gapi.load('auth',{'callback':onAuthApiLoad}); 
+        gapi.load('picker'); 
+    }
+    $("#gd_choose").click(function(event){
         event.preventDefault();
-        Dropbox.choose(options);
-    })
-    //Dropbox end script
-
-    //This stores url of jobs posted on our website to track which applicant clicked on which job advert before moving on to external application link 
-    $(".wpcf7-form input[type=url]").val($(location).attr('href'));
-
-    $("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');
-    $('#email').change(function() {
-        $('#user_email').val($(this).val());
+        onApiLoad();
     });
-    $('#applicant_name').change(function() {
-        $('#firstname').val($(this).val());
-    });
-    $('#last_name').change(function() {
-        $('#lastname').val($(this).val());
-    });
-})
+    function onAuthApiLoad(){
+        window.gapi.auth.authorize({
+            'client_id':'139188146942-8fb0f8h6rdgkq2b3foiornkmjmmbdknj.apps.googleusercontent.com',
+            'scope':['https://www.googleapis.com/auth/drive']
+        },handleAuthResult);
+    } 
+    var oauthToken;
+    function handleAuthResult(authResult){
+        if(authResult && !authResult.error){
+            oauthToken = authResult.access_token;
+            createPicker();
+        }else{
 
-//Google drive upload file script
-
-function onApiLoad(){
-    gapi.load('auth',{'callback':onAuthApiLoad}); 
-    gapi.load('picker'); 
-}
-$("#gd_choose").click(function(event){
-    event.preventDefault();
-    onApiLoad();
-});
-function onAuthApiLoad(){
-    window.gapi.auth.authorize({
-        'client_id':'139188146942-8fb0f8h6rdgkq2b3foiornkmjmmbdknj.apps.googleusercontent.com',
-        'scope':['https://www.googleapis.com/auth/drive']
-    },handleAuthResult);
-} 
-var oauthToken;
-function handleAuthResult(authResult){
-    if(authResult && !authResult.error){
-        oauthToken = authResult.access_token;
-        createPicker();
-    }else{
-
+        }
     }
-}
-function createPicker(){    
-    var picker = new google.picker.PickerBuilder()
-        .addView(new google.picker.DocsView())                
-        .setOAuthToken(oauthToken)
-        .setDeveloperKey('AIzaSyBt8bjYSFra-dwqNSVj-EQmLb2HyuwMcVU')
-        .setCallback(pickerCallback)
-        .build();
-    picker.setVisible(true);
-}
-
-function pickerCallback(data) {
-    var url = 'nothing';
-    if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
-      var doc = data[google.picker.Response.DOCUMENTS][0];
-      url = doc[google.picker.Document.URL];
-      $('#googledrive_link').val(url);
-      $(".gd_msg").html("✔");
-    }
-    
-  }
-
-function validateEmail(sEmail) {
-    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    if (filter.test(sEmail)) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-
-function validation(){
-    proceed = true;
-    var ap_name = $("#wpjb-apply-form input#applicant_name").val();
-    var ap_email = $("#wpjb-apply-form input#email").val();
-
-    var name = $("#wjp_register input#firstname").val();
-    var lastname = $("#wjp_register input#lastname").val();
-    var uname = $("#wjp_register input#user_login").val();
-    var pass = $("#wjp_register input#user_password").val();
-    var pass2 = $("#wjp_register input#user_password2").val();
-    var email = $("#wjp_register input#user_email").val();
-
-    if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
-        $(".error p.err").html("Please fill all the fields which are marked with *");
-        proceed = false;
-        return false;
+    function createPicker(){    
+        var picker = new google.picker.PickerBuilder()
+            .addView(new google.picker.DocsView())                
+            .setOAuthToken(oauthToken)
+            .setDeveloperKey('AIzaSyBt8bjYSFra-dwqNSVj-EQmLb2HyuwMcVU')
+            .setCallback(pickerCallback)
+            .build();
+        picker.setVisible(true);
     }
 
-    else if(!validateEmail(email)){
-        $(".error p.err").html("Your email is invalid");
-        proceed = false;
-        return false;    
+    function pickerCallback(data) {
+        var url = 'nothing';
+        if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+          var doc = data[google.picker.Response.DOCUMENTS][0];
+          url = doc[google.picker.Document.URL];
+          $('#googledrive_link').val(url);
+          $(".gd_msg").html("✔");
+        }
+        
+      }
+
+    function validateEmail(sEmail) {
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (filter.test(sEmail)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
+    function validation(){
+        proceed = true;
+        var ap_name = $("#wpjb-apply-form input#applicant_name").val();
+        var ap_email = $("#wpjb-apply-form input#email").val();
 
-    else if(!validateEmail(ap_email)){
-        $(".error p.err").html("Your email is invalid");
-        proceed = false;
-        return false;
-    }
+        var name = $("#wjp_register input#firstname").val();
+        var lastname = $("#wjp_register input#lastname").val();
+        var uname = $("#wjp_register input#user_login").val();
+        var pass = $("#wjp_register input#user_password").val();
+        var pass2 = $("#wjp_register input#user_password2").val();
+        var email = $("#wjp_register input#user_email").val();
 
-    else if(pass != pass2){
-        $(".error p.err").html("Passwords do not match");
-        proceed = false;
-        return false;
-    }
+        if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
+            $(".error p.err").html("Please fill all the fields which are marked with *");
+            proceed = false;
+            return false;
+        }
 
-    else{
-        var data = 'email-address='+email+'&usname='+uname;
-        $(".success p.app").show();
-        $(".success p.app").html("<img src='<?php bloginfo('template_url'); ?>/wpjobboard/images/spinner-2x.gif'>")
-        $.ajax({
-                type:"post",
-                url:"<?php bloginfo('template_url'); ?>/wpjobboard/job-board/check.php",
-                data:data,
-                success:function(result){
-                    if(result=="emailTakenunTaken"){
-                        $(".success p.app").hide();
-                        $(".error p.err").html("Email used for registration and username are already taken, please try again or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
-                        proceed = false;
-                        return false;
-                        
+        else if(!validateEmail(email)){
+            $(".error p.err").html("Your email is invalid");
+            proceed = false;
+            return false;    
+        }
+
+
+        else if(!validateEmail(ap_email)){
+            $(".error p.err").html("Your email is invalid");
+            proceed = false;
+            return false;
+        }
+
+        else if(pass != pass2){
+            $(".error p.err").html("Passwords do not match");
+            proceed = false;
+            return false;
+        }
+
+        else{
+            var data = 'email-address='+email+'&usname='+uname;
+            $(".success p.app").show();
+            $(".success p.app").html("<img src='<?php bloginfo('template_url'); ?>/wpjobboard/images/spinner-2x.gif'>")
+            $.ajax({
+                    type:"post",
+                    url:"<?php bloginfo('template_url'); ?>/wpjobboard/job-board/check.php",
+                    data:data,
+                    success:function(result){
+                        if(result=="emailTakenunTaken"){
+                            $(".success p.app").hide();
+                            $(".error p.err").html("Email used for registration and username are already taken, please try again or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
+                            proceed = false;
+                            return false;
+                            
+                        }
+                        else if(result=="emailAvailableunTaken"){
+                            $(".success p.app").hide();
+                            $(".error p.err").html("Username already taken");
+                            proceed = false;
+                            return false;
+                            
+                        }
+                        else if(result=="emailTakenunAvailable"){
+                            $(".success p.app").hide();
+                            $(".error p.err").html("Email used for registration is already taken, please use a different email or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
+                            proceed = false;
+                            return false;
+                            
+                        }else{
+                            $("#wpjb-apply-form").submit(function (event){
+                                if(proceed == true){
+                                    var postData = $(this).serializeArray();
+                                    var formURL = $(this).attr("action");
+                                    $.ajax(
+                                    {
+                                        url : formURL,
+                                        type: "POST",
+                                        data : postData,
+                                        success:function(data, textStatus, jqXHR) 
+                                        {
+                                            $(".error").hide();
+                                            $(".success p.app").show();
+                                            $(".success p.app").html("Application sent successfully, view your email for confirmation");
+                                        },
+                                        error: function(jqXHR, textStatus, errorThrown) 
+                                        {
+                                            $(".error p.app").html("Something went wrong"); 
+                                        }
+                                    });
+                                    event.preventDefault();
+                                    $(this).unbind(event);            
+                                }
+
+                            });
+                            $("#wpjb-apply-form").submit();
+
+                            $("#wjp_register").submit(function (event){
+                                if(proceed == true){
+                                    var postData1 = $(this).serializeArray();
+                                    var formURL1 = $(this).attr("action");
+                                    $.ajax(
+                                    {
+                                        url : formURL1,
+                                        type: "POST",
+                                        data : postData1,
+                                        success:function(data, textStatus, jqXHR) 
+                                        {
+                                            $(".error").hide();
+                                            $(".success p.reg").html("Registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
+                                        },
+                                        error: function(jqXHR, textStatus, errorThrown) 
+                                        {
+                                            $(".error p.red").html("Something went wrong"); 
+                                        }
+                                    });
+                                    event.preventDefault();
+                                    $(this).unbind(event);
+                                }else{
+
+                                }
+
+                            });   
+                            $("#wjp_register").submit();
+                        }
                     }
-                    else if(result=="emailAvailableunTaken"){
-                        $(".success p.app").hide();
-                        $(".error p.err").html("Username already taken");
-                        proceed = false;
-                        return false;
-                        
-                    }
-                    else if(result=="emailTakenunAvailable"){
-                        $(".success p.app").hide();
-                        $(".error p.err").html("Email used for registration is already taken, please use a different email or click <a href='http://localhost:8888/wordpress/wp-login.php?action=lostpassword'>Forgot Password</a>");
-                        proceed = false;
-                        return false;
-                        
-                    }else{
-                        $("#wpjb-apply-form").submit(function (event){
-                            if(proceed == true){
-                                var postData = $(this).serializeArray();
-                                var formURL = $(this).attr("action");
-                                $.ajax(
-                                {
-                                    url : formURL,
-                                    type: "POST",
-                                    data : postData,
-                                    success:function(data, textStatus, jqXHR) 
-                                    {
-                                        $(".error").hide();
-                                        $(".success p.app").show();
-                                        $(".success p.app").html("Application sent successfully, view your email for confirmation");
-                                    },
-                                    error: function(jqXHR, textStatus, errorThrown) 
-                                    {
-                                        $(".error p.app").html("Something went wrong"); 
-                                    }
-                                });
-                                event.preventDefault();
-                                $(this).unbind(event);            
-                            }
+             });
+        }
 
-                        });
-                        $("#wpjb-apply-form").submit();
-
-                        $("#wjp_register").submit(function (event){
-                            if(proceed == true){
-                                var postData1 = $(this).serializeArray();
-                                var formURL1 = $(this).attr("action");
-                                $.ajax(
-                                {
-                                    url : formURL1,
-                                    type: "POST",
-                                    data : postData1,
-                                    success:function(data, textStatus, jqXHR) 
-                                    {
-                                        $(".error").hide();
-                                        $(".success p.reg").html("Registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
-                                    },
-                                    error: function(jqXHR, textStatus, errorThrown) 
-                                    {
-                                        $(".error p.red").html("Something went wrong"); 
-                                    }
-                                });
-                                event.preventDefault();
-                                $(this).unbind(event);
-                            }else{
-
-                            }
-
-                        });   
-                        $("#wjp_register").submit();
-                    }
-                }
-         });
     }
-
-}
 </script>

@@ -7,12 +7,8 @@
  */
 ?>
 <div id="side" class="large-3 medium-3 columns" class="" role="complementary">
-<!-- 	<div id="adv">
-
-	</div> -->
     <?php do_action('before_sidebar'); ?>
     <?php if (!dynamic_sidebar('sidebar-1')) : ?>
-
     <?php endif; // end sidebar widget area ?>
 </div><!-- #secondary .widget-area -->
 <?php echo $theme->after_widget ?>

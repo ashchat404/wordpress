@@ -52,7 +52,7 @@
         function checkWidth() {
             var windowsize = $window.width();
             if (windowsize <= 720) {
-                $(".menu li:nth-child(3)").insertBefore($(".menu li:nth-child(1)"));
+                $(".mobile .menu li:nth-child(3)").hide();
                 return false;
             }else{
                 return false;

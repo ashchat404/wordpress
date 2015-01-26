@@ -39,9 +39,31 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             <?php endif; ?>
         </div>
         <div class="large-10 medium-8 columns">
-            <div class="extra">
-                <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?></h1>
-                <p class="entry-exerpt">"<?php esc_html_e($company->meta->company_exerpt->value()) ?>"</p>
+            <div class="extra comp">
+                <div class="large-9 columns">
+                    <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?> - </h1>
+                    <p class="entry-exerpt">"<?php esc_html_e($company->meta->company_exerpt->value()) ?>"</p>
+
+                </div>
+                <div class="large-3 columns">
+                    <div class="comp_fl">
+                        <a class="btn fol" href="#"> Follow</a>
+                        <form action="http://localhost:8888/wordpress/jobs-3/alert-confirmation" method="post">
+                            <input type="hidden" name="add_alert" value="1">
+                            <ul id="wpjb_widget_alerts" class="wpjb_widget">
+                                    <li>
+                                        <input type="text" name="keyword" value="<?php esc_html_e(Wpjb_Project::getInstance()->title) ?>" placeholder="Keyword">
+                                    </li>
+                                    <li>
+                                        <input type="text" name="email" value="" placeholder="E-Mail">
+                                    </li>
+                                    <li>
+                                        <input type="submit" value="Add Alert">
+                                    </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -113,6 +135,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                         <?php /* @var $job Wpjb_Model_Job */ ?>
                         <li class="<?php wpjb_job_features($job); ?> large-4 columns text-center">
                             <a href="<?php echo wpjb_link_to("job", $job); ?>"><?php esc_html_e($job->job_title) ?></a>
+                            <p><?php esc_html_e($job->meta->salary->value()) ?></p>
                         </li>
                         <?php
                     endforeach;
@@ -151,5 +174,9 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
 </div>
 <script type="text/javascript">
-
+    $(".fol").click(function(event){
+        $(this).hide();
+        event.preventDefault();
+        $(".extra form").fadeIn();
+    });
 </script>

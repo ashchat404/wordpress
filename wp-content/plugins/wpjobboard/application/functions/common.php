@@ -263,7 +263,7 @@ function wpjb_form_field_upload(Daq_Form_Element $e, $form = null) {
     <div class="wpjb-upload-actions">
         
         <a href="#<?php echo $limit ?>" id="wpjb-upload-<?php echo $e->getName() ?>" class="button">
-            <span class="wpjb-upload-empty wpjb-glyphs wpjb-icon-upload">&nbsp;<?php _e("upload file ...", "wpjobboard") ?></span>
+            <span class="wpjb-upload-empty wpjb-glyphs wpjb-icon-upload">&nbsp;<?php _e("upload file", "wpjobboard") ?></span>
         </a>
         
         <span id="wpjb-upload-limit-<?php echo $e->getName() ?>" style="opacity:0.5">

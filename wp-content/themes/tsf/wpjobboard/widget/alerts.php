@@ -9,8 +9,8 @@ $email_label = __("E-Mail", "jobeleon");
 <?php if($is_smart): ?>
 
 <div class="wpjb-widget-smart-alert">
-    <div><p><?php _e("Like this job search results?", "jobeleon") ?></p></div>
-    <a href="#" class="wpjb-subscribe wpjb-button" style="width:100%;display:inline-block;box-sizing:border-box;"><?php _e("Subscribe Now ...", "jobeleon") ?></a>
+    <div><p><?php _e("Want more jobs like these?", "jobeleon") ?></p></div>
+    <a href="#" class="wpjb-subscribe wpjb-button" style="width:100%;display:inline-block;box-sizing:border-box;"><?php _e("JOBS BY EMAIL", "jobeleon") ?></a>
 </div>
 
 <?php else: ?>
