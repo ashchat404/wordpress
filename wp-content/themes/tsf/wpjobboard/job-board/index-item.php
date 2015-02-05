@@ -16,8 +16,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
 $random_logo_colors = array('#dbc0e0', '#d7d7d7', '#cde0c0');
 ?>
-
-<tr class="<?php wpjb_job_features($job); ?>">
+<tr class="<?php wpjb_job_features($job); ?>" id="job-<?php esc_html_e($job->id); ?>">
     <td class="wpjb-column-logo">
         <?php if ($job->getLogoUrl()): ?>
             <a href="<?php echo wpjb_link_to("job", $job) ?>">

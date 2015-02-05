@@ -20,7 +20,12 @@
 <div class="where-am-i">
     <h2><?php _e('Company panel', 'jobeleon'); ?></h2>
 </div><!-- .where-am-i -->
-<p>Hi <?php print_r(wp_get_current_user()->display_name);?>, here you can <a title="Post a job" class="button" href="<?php echo wpjb_link_to("step_add") ?>" ><?php _e("post jobs", "jobeleon") ?></a>, manager your listings, view applications and more. Please create your <b>company's profile</b> by adding necessary details <a href="<?php echo wpjb_link_to("employer_edit") ?>"><?php _e("here", "jobeleon") ?></a>.</p>
+<p>
+    Hi <?php print_r(wp_get_current_user()->display_name);?>,<br> 
+    Welcome to your profile manager. From here you can <a title="Post a job" class="button" href="<?php echo wpjb_link_to("step_add") ?>" ><?php _e("post jobs", "jobeleon") ?></a>, manager your listings, view applications and edit your profile.<br>
+    You’ll find all your live jobs listed below, and can manage your account via the Employer Menu on the right. Please create your <b>company's profile</b> by adding necessary details <a href="<?php echo wpjb_link_to("employer_edit") ?>"><?php _e("here", "jobeleon") ?></a>.</p>
+
+
 <div id="wpjb-main" class="wpjb-page-company-panel">
 
     <?php wpjb_flash(); ?>

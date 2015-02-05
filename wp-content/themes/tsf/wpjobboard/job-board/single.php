@@ -98,10 +98,7 @@
                                                     </div>
                                             <?php endif;?>
                                             <?php endforeach; ?>
-                                            <div class="large-1 columns">
-                                                <p>OR</p>
-                                            </div>
-                                            <div class="large-5 columns dp_gd">
+                                            <div class="large-6 medium-6 small-6 columns dp_gd">
                                                     <div id="dp">
                                                         <a id="dp_choose" href="#"><img src="<?php bloginfo('template_url'); ?>/wpjobboard/images/dp.png"></a>
                                                         <span class="dp_msg"></span>
@@ -188,7 +185,7 @@
                                 </div>
                             </div>
 
-                            <input type="button" value="Register and apply" class="one-submit" onclick="validation()" />
+                            <input type="button" value="Apply and Save Details" class="one-submit" onclick="validation()" />
                         <?php else: ?>
                             <form id="wpjb-apply-form" action="<?php esc_attr_e(wpjb_link_to("job", $job, array("form"=>"apply"))) ?>#wpjb-scroll" method="post" enctype="multipart/form-data" class="wpjb-form wpjb-form-nolines">
                                 <?php echo $form->renderHidden() ?>
@@ -239,28 +236,104 @@
             </div>
         <?php endif; ?>
     <?php endif; ?>
-    
-    <?php $relatedJobs = wpjb_find_jobs($related) ?>
-    <?php if ($show_related && $relatedJobs->total > 0): ?>
-        <div class="large-12 columns wpjb-job-content wpjb-related-jobs">
-            <h3><?php _e("Related Jobs", "jobeleon") ?></h3>
-            <ul>
-                <?php foreach ($relatedJobs->job as $relatedJob): ?>
-                    <?php /* @var $relatedJob Wpjb_Model_Job */ ?>
-                    <li class="<?php wpjb_job_features($relatedJob); ?>">
+<div class="cd-tabs">
+    <nav>
+        <ul class="cd-tabs-navigation">
+            <li><a data-content="related_jobs" class="selected" href="#0"><h3><?php _e("Related Jobs", "jobeleon") ?></h3></a></li>
+            <li><a data-content="related_location" href="#0"><h3><?php _e("Jobs by location", "jobeleon") ?></h3></a></li>
+            <li><a data-content="related_industry" href="#0"><h3><?php _e("Jobs by Industry", "jobeleon") ?></h3></a></li>
+        </ul>
+    </nav>
 
-                        <?php if ($relatedJob->isNew()): ?><span class="btn wpjb-new-related wpjb-new-btn"><?php _e("New", "jobeleon") ?></span><?php endif; ?>
-                        <a href="<?php echo wpjb_link_to("job", $relatedJob); ?>"><?php esc_html_e($relatedJob->job_title) ?></a>
-                        <span class="wpjb-related-posted"><?php wpjb_time_ago($relatedJob->job_created_at, __("posted {time_ago} ago.", "jobeleon")) ?></span>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    <?php endif; ?>
+    <ul class="cd-tabs-content">
+        <li id="related_jobs" data-content="related_jobs" class="selected">
+        </li>
+
+        <li id="related_location" data-content="related_location">
+        </li>
+
+        <li id="related_industry" data-content="related_industry">
+        </li>
+
+    </ul> <!-- cd-tabs-content -->
+</div> <!-- cd-tabs -->
     
 </div>
 <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="5d6y33s4m5iznz8"></script>
 <script type="text/javascript">
+    $("#related_jobs").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=<?php $l = str_replace(' ','+',$job->job_title);  echo $l; ?>=&category= #wpjb-job-list",function(){
+        if($("#related_jobs .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
+            $("#job-<?php esc_html_e($job->id);?>").remove();
+        }
+        if($("#related_jobs #wpjb-job-list tbody tr").length === 0){
+            $("#related_jobs #wpjb-job-list tbody").append("<tr></tr>");
+            $("#related_jobs #wpjb-job-list tbody tr").text("No job found");
+        }
+    });
+    $("#related_location").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=<?php $p = str_replace(' ','+',$job->locationToString());echo $p; ?>=&category= #wpjb-job-list",function(){
+        if($("#related_location .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
+            $("#job-<?php esc_html_e($job->id);?>").remove();
+        }
+        if($("#related_location #wpjb-job-list tbody tr").length === 0){
+            $("#related_location #wpjb-job-list tbody").append("<tr></tr>");
+            $("#related_location #wpjb-job-list tbody tr").text("No job found");
+        }
+
+    });
+    $("#related_industry").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=&category=<?php foreach ($job->getTag()->category as $category){esc_html_e($category->id);} ?> #wpjb-job-list",function(){
+        if($("#related_industry .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
+            $("#job-<?php esc_html_e($job->id);?>").remove();
+        }
+        if($("#related_industry #wpjb-job-list tbody tr").length === 0){
+            $("#related_industry #wpjb-job-list tbody").append("<tr></tr>");
+            $("#related_industry #wpjb-job-list tbody tr").text("No job found");
+        }
+    });
+
+
+jQuery(document).ready(function($){
+    var tabItems = $('.cd-tabs-navigation a'),
+        tabContentWrapper = $('.cd-tabs-content');
+
+    tabItems.on('click', function(event){
+        event.preventDefault();
+        var selectedItem = $(this);
+        if( !selectedItem.hasClass('selected') ) {
+            var selectedTab = selectedItem.data('content'),
+                selectedContent = tabContentWrapper.find('li[data-content="'+selectedTab+'"]'),
+                slectedContentHeight = selectedContent.innerHeight();
+            
+            tabItems.removeClass('selected');
+            selectedItem.addClass('selected');
+            selectedContent.addClass('selected').siblings('li').removeClass('selected');
+            //animate tabContentWrapper height when content changes 
+            tabContentWrapper.animate({
+                'height': slectedContentHeight
+            }, 200);
+        }
+    });
+
+    //hide the .cd-tabs::after element when tabbed navigation has scrolled to the end (mobile version)
+    checkScrolling($('.cd-tabs nav'));
+    $(window).on('resize', function(){
+        checkScrolling($('.cd-tabs nav'));
+        tabContentWrapper.css('height', 'auto');
+    });
+    $('.cd-tabs nav').on('scroll', function(){ 
+        checkScrolling($(this));
+    });
+
+    function checkScrolling(tabs){
+        var totalTabWidth = parseInt(tabs.children('.cd-tabs-navigation').width()),
+            tabsViewport = parseInt(tabs.width());
+        if( tabs.scrollLeft() >= totalTabWidth - tabsViewport) {
+            tabs.parent('.cd-tabs').addClass('is-ended');
+        } else {
+            tabs.parent('.cd-tabs').removeClass('is-ended');
+        }
+    }
+});
+
     var ap_link = "<?php esc_attr_e($application_url) ?>";
     console.log(ap_link);
     $(document).ready( function() {
@@ -276,14 +349,14 @@
             multiselect: false, // or true
             extensions: ['.pdf', '.doc', '.docx'],
         };
-
         $("#dp_choose").click(function(event){
             event.preventDefault();
             Dropbox.choose(options);
         })
         $(".wpcf7-form input[type=url]").val($(location).attr('href'));
-
-        $("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');
+        if($("form.wpjb-form").length){
+            $("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');            
+        }
         $('#email').change(function() {
             $('#user_email').val($(this).val());
         });
@@ -294,7 +367,6 @@
             $('#lastname').val($(this).val());
         });
     });
-
     function onApiLoad(){
         gapi.load('auth',{'callback':onAuthApiLoad}); 
         gapi.load('picker'); 
@@ -315,7 +387,6 @@
             oauthToken = authResult.access_token;
             createPicker();
         }else{
-
         }
     }
     function createPicker(){    
@@ -327,7 +398,6 @@
             .build();
         picker.setVisible(true);
     }
-
     function pickerCallback(data) {
         var url = 'nothing';
         if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
@@ -338,7 +408,6 @@
         }
         
       }
-
     function validateEmail(sEmail) {
         var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
         if (filter.test(sEmail)) {
@@ -348,44 +417,36 @@
             return false;
         }
     }
-
     function validation(){
         proceed = true;
         var ap_name = $("#wpjb-apply-form input#applicant_name").val();
         var ap_email = $("#wpjb-apply-form input#email").val();
-
         var name = $("#wjp_register input#firstname").val();
         var lastname = $("#wjp_register input#lastname").val();
         var uname = $("#wjp_register input#user_login").val();
         var pass = $("#wjp_register input#user_password").val();
         var pass2 = $("#wjp_register input#user_password2").val();
         var email = $("#wjp_register input#user_email").val();
-
         if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
             $(".error p.err").html("Please fill all the fields which are marked with *");
             proceed = false;
             return false;
         }
-
         else if(!validateEmail(email)){
             $(".error p.err").html("Your email is invalid");
             proceed = false;
             return false;    
         }
-
-
         else if(!validateEmail(ap_email)){
             $(".error p.err").html("Your email is invalid");
             proceed = false;
             return false;
         }
-
         else if(pass != pass2){
             $(".error p.err").html("Passwords do not match");
             proceed = false;
             return false;
         }
-
         else{
             var data = 'email-address='+email+'&usname='+uname;
             $(".success p.app").show();
@@ -439,10 +500,8 @@
                                     event.preventDefault();
                                     $(this).unbind(event);            
                                 }
-
                             });
                             $("#wpjb-apply-form").submit();
-
                             $("#wjp_register").submit(function (event){
                                 if(proceed == true){
                                     var postData1 = $(this).serializeArray();
@@ -465,15 +524,12 @@
                                     event.preventDefault();
                                     $(this).unbind(event);
                                 }else{
-
                                 }
-
                             });   
                             $("#wjp_register").submit();
                         }
                     }
              });
         }
-
     }
 </script>

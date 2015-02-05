@@ -42,26 +42,6 @@
                 </p>
             </form>
         </div><!-- .wpjb-subscribe-content -->
-
-        <div class="wpjb-subscribe-content wpjb-subscribe-rss">
-            <strong>
-                <img src="<?php esc_attr_e(get_template_directory_uri() . '/wpjobboard/images/rss-feed-icon.png') ?>" alt="" />
-                <?php _e("Custom RSS Feed", "jobeleon") ?>
-            </strong>
-            <form action="" method="post">
-
-                <p>
-                    <span><?php _e("Your personalized RSS Feed is below, copy the address to your RSS reader.", "jobeleon") ?></span>
-
-                <div class="wpjb-btn-with-input">
-                    <input type="text" value="<?php esc_attr_e($feed_url) ?>" name="feed" readonly="readonly" />
-                    <a href="<?php esc_attr_e($feed_url) ?>" class="wpjb-button btn">
-                        <?php _e("Subscribe", "jobeleon") ?>
-                    </a>
-                </div>
-                </p>
-            </form>
-        </div>
     </div>
 </div>
 

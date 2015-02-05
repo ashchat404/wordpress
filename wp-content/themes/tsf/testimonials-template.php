@@ -320,9 +320,9 @@ Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Gro
 </div>
                 <li class="large-4 columns">
                     <a data-target="bg" class="row block" href="#">
-                            <div class="featured_logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
-                            </div>
+                        <div class="featured_logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
+                        </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
                                 <p class="job-company"> “Our relationship with The Sales Floor has so far resulted in us hiring three candidates into call centre 
@@ -344,82 +344,83 @@ We are also still considering candidates for a couple...<i>more</i></p>
                     </a>
                 </li>
 <div class="full_testimonial bg">
-<a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-    <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
-<div class="clear"></div>
-<b>Background</b>
+    <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
+    <div class="clear"></div>
+    <b>Background</b>
 
-British Gas have a cyclical pattern of high levels of recruitment throughout the year, which see them 
+    British Gas have a cyclical pattern of high levels of recruitment throughout the year, which see them 
 
-needing to run high volume campaigns across the country on a regular basis. Using recruitment 
+    needing to run high volume campaigns across the country on a regular basis. Using recruitment 
 
-agencies would ultimately prove too costly for the volumes they have to deal with, and therefore direct 
+    agencies would ultimately prove too costly for the volumes they have to deal with, and therefore direct 
 
-advertising is usually their preferred option. <br>
+    advertising is usually their preferred option. <br>
 
-<b>What had they tried?</b>
+    <b>What had they tried?</b>
 
-British Gas have used many forms of advertising in the past; LinkedIn, as well as most job boards in 
+    British Gas have used many forms of advertising in the past; LinkedIn, as well as most job boards in 
 
-the generalist and specialist space, however they have never found much success with other niche 
+    the generalist and specialist space, however they have never found much success with other niche 
 
-sales boards, and the generalist boards were not performing for their sales requirements, and hence 
+    sales boards, and the generalist boards were not performing for their sales requirements, and hence 
 
-they needed to try something new. <br>
+    they needed to try something new. <br>
 
-<b>What We Provided</b>
+    <b>What We Provided</b>
 
-The Sales Floor provided British Gas with a branded campaign, including multiple roles advertised 
+    The Sales Floor provided British Gas with a branded campaign, including multiple roles advertised 
 
-across the country, ranging from low-level, high volume hires to more senior professional hires. British 
+    across the country, ranging from low-level, high volume hires to more senior professional hires. British 
 
-Gas were set up with tailored, targeted campaigns across Google, Indeed.com and Adzuna, ensuring 
+    Gas were set up with tailored, targeted campaigns across Google, Indeed.com and Adzuna, ensuring 
 
-a high level of traffic to the volume roles they needed to fill. For the professional hires, The Sales 
+    a high level of traffic to the volume roles they needed to fill. For the professional hires, The Sales 
 
-Floor set up social media campaigns, run across LinkedIn and Twitter, targeting a more senior, 
+    Floor set up social media campaigns, run across LinkedIn and Twitter, targeting a more senior, 
 
-passive audience, as well as providing shortlists of passive candidates from our own networks for 
+    passive audience, as well as providing shortlists of passive candidates from our own networks for 
 
-British Gas to reach out to. <br>
+    British Gas to reach out to. <br>
 
-<b>The Result</b>
+    <b>The Result</b>
 
-Within 3 weeks of running the campaign over the Christmas period, British Gas had received on 
+    Within 3 weeks of running the campaign over the Christmas period, British Gas had received on 
 
-average 200 applications per week to their jobs. They set up numerous interviews across all their 
+    average 200 applications per week to their jobs. They set up numerous interviews across all their 
 
-roles, and have so far hired 3 candidates, with more in the interview process still being considered 
+    roles, and have so far hired 3 candidates, with more in the interview process still being considered 
 
-too. <br>
+    too. <br>
 
-<b>What they had to say</b>
+    <b>What they had to say</b>
 
-“Our relationship with The Sales Floor has so far resulted in us hiring three candidates into call centre 
+    “Our relationship with The Sales Floor has so far resulted in us hiring three candidates into call centre 
 
-and field sales roles. 
+    and field sales roles. 
 
-We are also still considering candidates for a couple of senior sales roles, so there may be more 
+    We are also still considering candidates for a couple of senior sales roles, so there may be more 
 
-success to follow! <br>
+    success to follow! <br>
 
-The team were extremely helpful from day one, and have worked hard behind the scenes to generate 
+    The team were extremely helpful from day one, and have worked hard behind the scenes to generate 
 
-interest in our roles from a relevant candidate audience. 
+    interest in our roles from a relevant candidate audience. 
 
-If you are looking for a new sales specific job board, then The Sales Floor is a great new addition to 
+    If you are looking for a new sales specific job board, then The Sales Floor is a great new addition to 
 
-the marketplace.”<br>
+    the marketplace.”<br>
 
-Helen Butterworth, Group Attraction and Diversity.
+    Helen Butterworth, Group Attraction and Diversity.
 </div>
                 <li class="large-4 columns">
-                    <a class="row block" href="#">
+                    <a data-target="Paymentsense" class="row block" href="#">
                             <div class="featured_logo">
+                                        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
-                                <p class="job-company"> - BRTI</p>
+                                <p class="job-company">"Paymentsense is a leader in the Financial Services and Merchant Provider space. They have clients all over the UK both big and small, and their sales team is heavily field based. They traditionally ...<i>more</i></p>
                             </h3>
                         </div>
 
@@ -433,28 +434,75 @@ Helen Butterworth, Group Attraction and Diversity.
                         </div>
                     </a>
                 </li> 
-                
+<div class="full_testimonial Paymentsense">
+    <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
+    <div class="clear"></div>
+<b>Background</b>
+Paymentsense is a leader in the Financial Services and Merchant Provider space. They have clients all over the UK both big and small, and their sales team is heavily field based. They traditionally used to use recruitment agencies, but the volume of recruitment they have gone through in the past year has meant they needed to focus on reducing their cost-per-hire.
+<br>
+<b>What had they tried?</b>
+Paymentsense already used a number of other job boards to start fulfilling their requirements, which was working well enough for them, but they were still looking to increase their volume of hires on a monthly basis, and also wanted to improve their brand awareness across social media.
+<br>
+ 
+<b>What we provided</b>
+<br>
+The Sales Floor provides regular monthly campaigns across the likes of Indeed.com, Facebook and our partner network of job boards to ensure a strong volume of applications to their field sales positions. We set up targeted, branded adverts across specific locations on the likes of Facebook and LinkedIn, which attracts a different calibre of candidate to the more traditional job board, and helps Paymentsense increase their brand awareness at the same time.
+ <br>
+<b>The Result</b>
+Since 2014 Paymentsense have hired multiple Field Sales Executives every single month off The Sales Floor. They have steadily increased their volume of posts each month since first being introduced and are now working with us to further increase their volume of hires into 2015.
+ <br>
+ 
+<b>What they had to say</b>
+“We’ve been using The Sales Floor since 2014 and their job adverts consistently turn in to hires for us. They’ve helped us reduce our cost-per-hire and I highly recommend them to anyone looking to advertise for sales people”
+ 
+</div>
                 <li class="large-4 columns">
-                    <a class="row block" href="#">
+                    <a class="row block" data-target="esp" href="#">
                             <div class="featured_logo">
+                                        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
+
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
-                                <p class="job-company"> - BRTI</p>
+                                <p class="job-company">"Journeycall, part of the ESP Group is a contact centre expert in the travel and smartcard industries. Given their expertise within this space, when they do hire, they look for very specific skills and ...<i>more</i></p>
                             </h3>
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 text-center columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
                 </li> 
             </div>
+<div class="full_testimonial esp">
+    <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
+    <div class="clear"></div>
+<b>Background</b>
+Journeycall, part of the ESP Group is a contact centre expert in the travel and smartcard industries. Given their expertise within this space, when they do hire, they look for very specific skills and experience with regards to which markets candidates have sold into; namely transportation and rail. They enlisted the help of The Sales Floor in 2014 looking to hire a Business Development Manager.
+<br>
+<b>What had they tried?</b>
+Journeycall had tried posting an advert on LinkedIn, with very little success, as well as trying to fill their role via usual methods, however they found that there weren’t receiving the right quality of candidates for the role in question. They needed a more proactive, targeted approach to finding applicants.
+<br>
+ 
+<b>What we provided</b>
+<br>
+Under our Gold Package, Journeycall received a branded advert on The Sales Floor’s own platform, as well as distribution of their job to other key job boards and aggregators in the UK. Within 24 hours, The Sales Floor carried out their proactive sourcing service for Journeycall, returning between 25-30 candidates from social media, hand-picked by our team, for Journeycall to reach out to and engage with directly. We also provided targeted advertising across LinkedIn- Setting up a branded advert only to be shown to Sales people, within London, who had sold into transportation and rail.
+ <br>
+<b>The Result</b>
+Within a few weeks, Journeycall had contact all the candidates provided via the proactive sourcing service, and off the back of that, had set up a number of interviews. One candidate was successful in being offered the role, and started soon afterwards, saving Journeycall thousands of pounds in recruitment fees.
+
+ <br>
+ 
+<b>What they had to say</b>
+“We used The Sales Floor for the first time after struggling to find someone through our usual channels, and it proved immensely effective. Their targeted focus on Social Media provided us with a selection of high calibre candidates and more importantly, their proactive sourcing service proved the ultimate difference, with us hiring one of the people they found for us, soon after our campaign went live. A highly proactive, and cost effective alternative to traditional agencies and job boards!  I would definitely use The Sales Floor again in the future.”
+<br>
+Lesley Stewart- Business Development Director
+ 
+</div>
             <div class="clear"></div>
         </div>
 
@@ -462,7 +510,7 @@ Helen Butterworth, Group Attraction and Diversity.
 
     <section id="more" class="more_clients large-12 columns">
         <h2 class="text-center">Some more clients </h2>
-        <div class="large-2 columns large-centered filters">
+        <div class="filters large-12 columns">
             <div class="wpjb-filters">
                 <ul class="wpjb-filter-list">
                     <li class="wpjb-top-filter">

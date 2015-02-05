@@ -376,13 +376,13 @@ function wpjb_resume_last_update_at($format, $resume)
 function wpjb_resume_title()
 {
     // @deprecated
-    echo esc_html(wpjb_view("resume")->title);
+    echo esc_html(wpjb_view("CV")->title);
 }
 
 function wpjb_resume_headline()
 {
     // @deprecated
-    echo esc_html(wpjb_view("resume")->headline);
+    echo esc_html(wpjb_view("CV")->headline);
 }
 
 function wpjb_resume_photo()
@@ -677,7 +677,7 @@ function wpjb_resume_status($resume)
     } elseif($object->is_approved == Wpjb_Model_Resume::RESUME_PENDING) {
         return __("Pending approval", "wpjobboard");
     } elseif($object->is_approved == Wpjb_Model_Resume::RESUME_DECLINED) {
-        return __("Declined (update your resume and submit it again)", "wpjobboard");
+        return __("Declined (update your profile and submit it again)", "wpjobboard");
     } else {
         return __("Approved", "wpjobboard");
     }
@@ -1034,7 +1034,7 @@ function wpjb_form_helper_resume_listing(Daq_Form_Element $field, $form)
     $group_titles = array();
     $groups = array(
         Wpjb_Model_Pricing::PRICE_EMPLOYER_MEMBERSHIP => array("item"=>array(), "title"=>__("Purchased Membership", "wpjobboard")),
-        Wpjb_Model_Pricing::PRICE_SINGLE_RESUME => array("item"=>array(), "title"=>__("Single Resume Access", "wpjobboard")),
+        Wpjb_Model_Pricing::PRICE_SINGLE_RESUME => array("item"=>array(), "title"=>__("Single CV Access", "wpjobboard")),
         
     );
     foreach($field->getOptions() as $o) {
@@ -1084,7 +1084,7 @@ function wpjb_form_helper_resume_listing(Daq_Form_Element $field, $form)
                 <span class="wpjb-listing-type-item-s1"><?php esc_html_e($option["desc"]) ?></span>
                 <span class="wpjb-listing-type-item-s2">
                     <?php if($membership && $u["status"] == "limited"): ?>
-                    <?php printf(_n("(1 resume left)", "(%d resumes left)", $credits, "wpjobboard"), $credits) ?>
+                    <?php printf(_n("(1 CV left)", "(%d CV left)", $credits, "wpjobboard"), $credits) ?>
                     <?php elseif(!$membership): ?>
                     <?php esc_html_e(wpjb_price($l->price, $l->currency)) ?>
                     <?php endif; ?>

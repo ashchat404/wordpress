@@ -18,7 +18,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 ?>
 
 <div class="where-am-i">
-    <h2><?php _e('Resume', 'jobeleon'); ?></h2> 
+    <h2><?php _e('CV', 'jobeleon'); ?></h2> 
 </div><!-- .where-am-i -->
 
 <div id="wpjb-main" class="wpjr-page-resume">
@@ -41,7 +41,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     <table class="wpjb-info">
         <tbody>
             <tr>
-                <td><?php _e("Last Resume Update", "jobeleon") ?></td>
+                <td><?php _e("Last profile Update", "jobeleon") ?></td>
                 <td><img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/calendar-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" /><?php echo wpjb_date_display(get_option('date_format'), $resume->modified_at) ?></td>
             </tr>
 

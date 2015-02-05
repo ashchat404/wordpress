@@ -62,7 +62,7 @@
                         <?php endif; ?>
                         
                         <?php if(!empty($single_resume)): ?>
-                        <li class="wpjb-membership-item-title"><strong><?php _e("Resumes Access Included", "jobeleon") ?></strong></li>
+                        <li class="wpjb-membership-item-title"><strong><?php _e("CV Access Included", "jobeleon") ?></strong></li>
                         <?php foreach($single_resume as $id => $usage): ?>
                         <?php 
                             $product = new Wpjb_Model_Pricing($id);

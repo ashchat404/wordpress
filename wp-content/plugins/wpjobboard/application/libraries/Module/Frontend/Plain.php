@@ -443,13 +443,16 @@ class Wpjb_Module_Frontend_Plain extends Wpjb_Controller_Frontend
         $channel->appendChild($link);
         $description = $rss->createElement("description", $this->_esc($site_title));
         $channel->appendChild($description);
+        $sf = $rss->createElement("SenderReference", "3790");
+        $channel->appendChild($sf);
 
         foreach($result as $id) {
-
             $job = new Wpjb_Model_Job($id);
-            
+            foreach ($job->getTag()->category as $category){
+                $ind = $category->title;
+            }
             $desc = strip_tags($job->job_description);
-            $desc = iconv("UTF-8", "UTF-8//IGNORE", substr($desc, 0, 250));
+            $desc = iconv("UTF-8", "UTF-8//IGNORE", substr($desc, 0));
 
             $desc = htmlspecialchars($desc, ENT_COMPAT, 'UTF-8');
             $description = $rss->createCDATASection($desc);
@@ -460,8 +463,21 @@ class Wpjb_Module_Frontend_Plain extends Wpjb_Controller_Frontend
             $link.= Wpjb_Project::getInstance()->router()->linkTo("job", $job);
             $pubDate = date(DATE_RSS, strtotime($job->job_created_at));
 
+            $ats_link = $this->_esc($job->meta->application_url->value());
+
             $item = $rss->createElement("item");
+            $item->appendChild($rss->createElement("id", $this->_esc($job->id)));            
             $item->appendChild($rss->createElement("title", $this->_esc($job->job_title)));
+            $item->appendChild($rss->createElement("location", $this->_esc($job->locationToString())));
+            $item->appendChild($rss->createElement("AdvertiserName", $this->_esc($job->company_name)));
+
+            if(!empty($ats_link)){
+                $item->appendChild($rss->createElement("AdvertiserATS", $ats_link));
+            }else{
+                $item->appendChild($rss->createElement("AdvertiserEmail", $this->_esc($job->company_email)));
+            }
+            $item->appendChild($rss->createElement("salary", $this->_esc(str_replace('£','',$job->meta->salary->value()))));
+            $item->appendChild($rss->createElement("industry", $ind));
             $item->appendChild($rss->createElement("link", $this->_esc($link)));
             $item->appendChild($desc);
             $item->appendChild($rss->createElement("pubDate", $pubDate));

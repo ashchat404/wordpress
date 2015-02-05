@@ -10,7 +10,7 @@
 ?>
 
 <div class="where-am-i">
-    <h2><?php _e('Resume edit', 'jobeleon'); ?></h2> 
+    <h2><?php _e('Profile edit', 'jobeleon'); ?></h2> 
 </div><!-- .where-am-i -->
 
 <div id="wpjb-main" class="wpjr-page-login">

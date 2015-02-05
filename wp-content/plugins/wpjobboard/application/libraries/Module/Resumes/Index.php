@@ -498,7 +498,7 @@ class Wpjb_Module_Resumes_Index extends Wpjb_Controller_Frontend
 
     public function myresumeAction()
     {
-        $this->setTitle(wpjb_conf("seo_resume_my_resume", __("My resume details", "wpjobboard")));
+        $this->setTitle(wpjb_conf("seo_resume_my_resume", __("My profile details", "wpjobboard")));
 
         if(!is_user_logged_in()) {
             $this->view->_flash->addError(__("You need to be logged in to access this page.", "wpjobboard"));
@@ -629,7 +629,7 @@ class Wpjb_Module_Resumes_Index extends Wpjb_Controller_Frontend
     
     public function editAction()
     {
-        $this->setTitle(wpjb_conf("seo_resume_my_resume", __("My resume details", "wpjobboard")));
+        $this->setTitle(wpjb_conf("seo_resume_my_resume", __("My profile details", "wpjobboard")));
 
         $object = Wpjb_Model_Resume::current();
         if(!is_object($object)) {

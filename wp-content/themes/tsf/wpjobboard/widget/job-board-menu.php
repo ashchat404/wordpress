@@ -11,12 +11,7 @@
  * 
  */
 ?>
-<div>
-<!--<?php
-$info = wp_get_current_user(); 
-/*print_r($info);*/
- ?>-->
-</div>
+
 <?php if ($is_employer && $is_loggedin): ?>
     <?php echo $theme->before_widget ?>
     <?php if ($title) echo $theme->before_title . $title . $theme->after_title ?>
@@ -29,16 +24,19 @@ $info = wp_get_current_user();
                     </a>
                 </li>
             <?php endif; ?>
-            <li>
-                <a href="<?php echo wpjb_url() ?>">
-                    <?php _e("View Jobs", "jobeleon") ?>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo wpjb_link_to("advsearch") ?>">
-                    <?php _e("Advanced Search", "jobeleon") ?>
-                </a>
-            </li>
+            <?php if(current_user_can("manage_resumes")):?>
+                <li>
+                    <a href="<?php echo wpjr_url() ?>">
+                        <?php _e("Browse CV", "jobeleon") ?>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo wpjr_link_to("advsearch") ?>">
+                        <?php _e("Advanced CV search", "jobeleon") ?>
+                    </a>
+                </li>
+            <?php endif;?>
 
             <li>
                 <a href="<?php echo wpjb_link_to("employer_panel") ?>">
@@ -52,7 +50,7 @@ $info = wp_get_current_user();
             </li>
             <li>
                 <a href="<?php echo wpjb_link_to("membership") ?>">
-                    <?php _e("Membership", "jobeleon") ?>
+                    <?php _e("Employer Packages", "jobeleon") ?>
                 </a>
             </li>
             <li>
@@ -79,17 +77,13 @@ $info = wp_get_current_user();
                     </a>
                 </li>
             <?php endif; ?>
-            <li>
-                <a href="<?php echo wpjb_url() ?>">
-                    <?php _e("View Jobs", "jobeleon") ?>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo wpjb_link_to("advsearch") ?>">
-                    <?php _e("Advanced Search", "jobeleon") ?>
-                </a>
-            </li>
 
+            <li>
+                <a href="<?php echo wpjb_link_to("membership") ?>">
+                    <?php _e("Employer packages", "jobeleon") ?>
+                </a>
+            </li>
+            
             <li>
                 <a href="<?php echo wpjb_link_to("employer_login") ?>">
                     <?php _e("Employer Login", "jobeleon") ?>

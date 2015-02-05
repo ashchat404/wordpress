@@ -34,7 +34,8 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                 </div>
                 <div class="extra <?php if ($application_url): ?>large-10 medium-8 <?php else: ?>large-8 medium-6<?php endif; ?> columns">
                     <div class="extra">
-                        <h1 class="entry-title"><?php esc_html_e(Wpjb_Project::getInstance()->title) ?> <br><br>Salary: <?php esc_html_e($job->meta->salary->value()) ?></h1>
+                        <h1 class="entry-title"><?php esc_html_e($job->job_title) ?></h1>
+                        <h2><?php wpjb_job_company($job) ?></h2>
                     </div>
                 </div>
                 <?php if ($application_url): ?>
@@ -172,8 +173,3 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     </div>
 
 </div>
-<script type="text/javascript">
-$( window ).load(function() {
-
-});
-</script>

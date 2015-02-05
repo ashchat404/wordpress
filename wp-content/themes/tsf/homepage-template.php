@@ -52,14 +52,14 @@ if ($param["category"] > 0) {
 <section id="banner">
     <div class="large-6 medium-6 small-6 columns left">
         <div class="panel">
-            <h1>Find Your Next Sales Job Today</h1>
+            <h1>Find Your New Sales Job Here</h1>
             <a title="Find a job" class="button" href="<?php echo wpjb_link_to("advsearch")?>" ><?php _e("Find a job", "jobeleon") ?></a>
         </div>
     </div>
 
     <div class="large-6 medium-6 columns small-6 right">
         <div class="panel">
-            <h1>Advertise Your Sales Job Within Minutes</h1>
+            <h1>Advertise Your Sales Job Today</h1>
            <a title="Post a job" class="button" href="<?php echo wpjb_link_to("step_add") ?>" ><?php _e("Post a job", "jobeleon") ?></a>
         </div>
     </div>
@@ -67,9 +67,9 @@ if ($param["category"] > 0) {
 <div id="content_wrapper" class="<?php echo sanitize_title_with_dashes(get_the_title($ID)); ?>">
 
     <section id="srch" class="large-12 columns">
+        <h2 class="text-center">Search for Jobs</h2>
         <div class="row">
             <div class="large-12 columns">
-                <h1 class="widget-title text-center">Welcome to The Sales Floor, a sales specialist job board created by sales people, for sales people. Whether you are looking for a new job, or a new hire, you’ve come to the right place.</h1>
                 <form action="<?php esc_attr_e($search_url) ?>" method="get">
                     <?php if (!get_option('permalink_structure')): ?>
                         <input type="hidden" name="page_id" value="<?php echo Wpjb_Project::getInstance()->conf("link_jobs") ?>" />
@@ -103,7 +103,7 @@ if ($param["category"] > 0) {
 
     <section id="testmonials" class="large-12 columns row">
         <h2 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/chat-icon.png"> Testmonials</h2>
-        <p class="sub-title text-center">Here's what people are saying about us</p>
+        <p class="sub-title text-center">Some kind words from our clients…</p>
         <div class="reviews">
             <div>  
                 <a href="http://localhost:8888/wordpress/testimonials/">
@@ -207,7 +207,7 @@ if (!Modernizr.inputtypes.range) {
   $(".range").remove();
   $(".rad_drop").append("<select id='radius' name='radius' class='hasCustomSelect'><option value=''>&nbsp;</option><option value='5 km'>5 km</option><option value='10 km'>10 km</option><option value='25 km'>25 km</option><option value='50 km'>50 km</option><option value='100 km'>100 km</option><option value='200 km'>200 km</option><option value='500 km'>500 km</option></select>");
 }else{
-    $(".range").append("<label class='large-12 columns'>Radius: <span class='range_val'>0 Km</span></label><input type='range' name='radius' id='radius' min='0' value='0' max='160' list='radius_km' oninput='updateTextInput(this.value)' onchange='updateTextInput(this.value)' step='20' /><datalist id='radius_km'><option>0</option><option>20</option><option>40</option><option>60</option><option>80</option><option>100</option></datalist>");
+    $(".range").append("<label class='large-12 columns'>Within: <span class='range_val'>0 Km</span></label><input type='range' name='radius' id='radius' min='0' value='0' max='160' list='radius_km' oninput='updateTextInput(this.value)' onchange='updateTextInput(this.value)' step='20' /><datalist id='radius_km'><option>0</option><option>20</option><option>40</option><option>60</option><option>80</option><option>100</option></datalist>");
     $(".rad_drop").remove();  
 }
 

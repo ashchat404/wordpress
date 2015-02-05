@@ -32,7 +32,7 @@ foreach (array("query", "category", "type") as $p) {
             <?php endif; ?>
 
             <div class="wpjb-btn-with-input wpjb-search-query">
-                <input type="text" id="search-field" name="query" class="text wpjb-ls-query" placeholder="<?php _e("Search Resumes with keyword", 'jobeleon') ?>" value="<?php esc_attr_e($param["query"]) ?>" />
+                <input type="text" id="search-field" name="query" class="text wpjb-ls-query" placeholder="<?php _e("Search CVs with keyword", 'jobeleon') ?>" value="<?php esc_attr_e($param["query"]) ?>" />
                 <input type="submit" class="btn" value="Search" />
             </div>
             <div class="wpjb-search-category">

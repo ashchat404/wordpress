@@ -595,7 +595,7 @@ msgstr ""
 
 #: wpjobboard/job-board/company-product-details.php:33
 #: wpjobboard/job-board/company-products.php:65
-msgid "Resumes Access Included"
+msgid "CV Access Included"
 msgstr ""
 
 #: wpjobboard/job-board/company-product-details.php:47
@@ -977,7 +977,7 @@ msgid "You did not sent any applications yet."
 msgstr ""
 
 #: wpjobboard/resumes/my-bookmarks.php:2 wpjobboard/widget/resumes-menu.php:43
-msgid "My Bookmarks"
+msgid "Saved Jobs"
 msgstr ""
 
 #: wpjobboard/resumes/my-bookmarks.php:28
@@ -1168,7 +1168,7 @@ msgid "Company Profile"
 msgstr ""
 
 #: wpjobboard/widget/job-board-menu.php:41
-#: wpjobboard/widget/resumes-menu.php:49
+#: wpjobboard/widget/'s-menu.php:49
 msgid "Logout"
 msgstr ""
 
@@ -1189,11 +1189,11 @@ msgid "view all &raquo;"
 msgstr ""
 
 #: wpjobboard/widget/resumes-menu.php:21
-msgid "Browse Resumes"
+msgid "Browse Cvs"
 msgstr ""
 
 #: wpjobboard/widget/resumes-menu.php:26
-msgid "Search Resumes"
+msgid "Search CVs"
 msgstr ""
 
 #: wpjobboard/widget/resumes-menu.php:55

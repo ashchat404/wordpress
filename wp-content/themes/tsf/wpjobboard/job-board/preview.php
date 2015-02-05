@@ -8,7 +8,8 @@
 
     <?php if (wpjb_user_can_post_job()): ?>
         <?php wpjb_add_job_steps(); ?>
-        <h2 class="wpjb-job-title"><?php esc_html_e($job->job_title) ?></h2>
+        <h2 class="wpjb-job-title">Preview</h2>
+        <br>
         <?php wpjb_job_template(); ?>
 
         <div style="text-align:center">

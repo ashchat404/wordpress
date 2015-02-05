@@ -89,15 +89,15 @@ if ($param["category"] > 0) {
 
         <div class="tabs row">
             <div class="tabs_wrapper large-6 columns large-centered medium-6 medium-centered">
-                <a href="#" data-target="sng" class="active packages large-4 columns">
+                <a href="#" data-target="sng" class="active packages large-4 small-4 columns">
                     <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/post-icon.png">
                     <p>Single job postings</p>
                 </a>
-                <a href="#" data-target="pk" class="single_sus large-4 columns">
+                <a href="#" data-target="pk" class="single_sus large-4 small-4  columns">
                     <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/package-icon.png">
-                    <p>Packages</p>
+                    <p>Bundled posts</p>
                 </a>
-                <a href="#" data-target="susc" class="sus large-4 columns">
+                <a href="#" data-target="susc" class="sus large-4  small-4 columns">
                     <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/sus-icon.png">
                     <p>Subscriptions</p>
                 </a>
@@ -108,12 +108,24 @@ if ($param["category"] > 0) {
     <section id="pk" data="toggle" class="large-12 columns">
 
         <div class="all_packages row">
-            <div class="large-4 columns">
-                <div class="panel bronze">
-                    <h2>Package Bronze</h2>
-                    <p class="price">£299</p>
+            <div class="large-4 medium-4 columns">
+                <div id="panel" data-target="1" class="panel bronze">
+                    <h2>Bronze package</h2>
+                    <p class="price value">£299</p>
                     <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="1">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£1000</b>
+                    </div>
+                    <br class="clear">
+                    <br class="clear">
+                    <a class="btn custom_link" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -127,14 +139,26 @@ if ($param["category"] > 0) {
                 </div>
             </div>
 
-            <div class="large-4 columns">
-                <div class="panel silver">
+            <div class="large-4 medium-4 columns">
+                <div id="panel" data-target="2" class="panel silver" >
                     <section class="popular">
                         <p>Most Popular</p>
                     </section>
-                    <h2>Package Silver</h2>
-                    <p class="price">£399</p>
-                    <p>Need someone with previous experience? Just rely on an advert- Let us proactively source for you.</p>
+                    <h2>Silver package</h2>
+                    <p class="price value">£399</p>
+                    <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="2">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£1000</b>
+                    </div>
+                    <br class="clear">
+                    <br class="clear">
                     <a class="btn" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
@@ -149,11 +173,23 @@ if ($param["category"] > 0) {
                 </div>
             </div>
 
-            <div class="large-4 columns">
-                <div class="panel gold">
-                    <h2>Package Gold</h2>
-                    <p class="price">£499</p>
+            <div class="large-4 medium-4 columns">
+                <div id="panel" data-target="3" class="panel gold" >
+                    <h2>Gold package</h2>
+                    <p class="price value">£499</p>
                     <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="3">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>7</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£1000</b>
+                    </div>
+                    <br class="clear">
+                    <br class="clear">
                     <a class="btn" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
@@ -173,9 +209,9 @@ if ($param["category"] > 0) {
     <section id="sng" data="toggle" class="large-12 columns">
 
         <div class="all_packages row">
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel bronze">
-                    <h2>Single Bronze</h2>
+                    <h2>Bronze</h2>
                     <p class="price">£299</p>
                     <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
                     <a class="btn" href="#">Purchase</a>
@@ -192,14 +228,14 @@ if ($param["category"] > 0) {
                 </div>
             </div>
 
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel silver">
                     <section class="popular">
                         <p>Most Popular</p>
                     </section>
-                    <h2>Single Silver</h2>
+                    <h2>Silver</h2>
                     <p class="price">£399</p>
-                    <p>Need someone with previous experience? Just rely on an advert- Let us proactively source for you.</p>
+                    <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
                     <a class="btn" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
@@ -214,9 +250,9 @@ if ($param["category"] > 0) {
                 </div>
             </div>
 
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel gold">
-                    <h2>Single Gold</h2>
+                    <h2>Gold</h2>
                     <p class="price">£499</p>
                     <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
                     <a class="btn" href="#">Purchase</a>
@@ -238,63 +274,52 @@ if ($param["category"] > 0) {
     <section id="susc" data="toggle" class="large-12 columns">
 
         <div class="all_packages row">
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel bronze">
-                    <h2>Subscription Bronze</h2>
-                    <p class="price">£299</p>
-                    <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <h2>Bronze subscription</h2>
+                    <em>Pricing per post starts at -</em>
+                    <p class="price">£75</p>
+                    <p>Looking for a long term option that keeps costs as low as possible? Our Bronze subscription gives you as many posts a month as you want, from as little as 3 months..</p>
+                    <p>Call our team now to discuss options, and set up your perfect package today.</p>
+                    <a href="tel:">0203 714 1155</a><br>
+                    <a href="#">info@thesalesfloor.co.uk</a>
+                    <br><br>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Bronze suscription enquire">Contact us</a>
                     <hr>
-                    <ul class="details">
-                        <li><p>4 week branded advert on The Sales Floor</p></li>
-                        <li><p>4 week sponsored advert on Indeed.com </p></li>
-                        <li><p>4 week adverts on other job boards within our partner network</p></li>
-                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                        <li><p class="underline">Proactive Sourcing</p></li>
-                        <li><p class="underline">CV filtering</p></li>
-                        <li><p class="underline">Targeted adverts</p></li>
-                    </ul>
                 </div>
             </div>
 
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel silver">
                     <section class="popular">
                         <p>Most Popular</p>
                     </section>
-                    <h2>Subscription Silver</h2>
-                    <p class="price">£399</p>
-                    <p>Need someone with previous experience? Just rely on an advert- Let us proactively source for you.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <h2>Silver subscription</h2>
+                    <em>Pricing per post starts at -</em>
+                    <p class="price">£99</p>
+                    <p>Looking for a long term option where we provide sourcing and talent pooling for all your roles? Our Silver subscription gives you as many posts a month as you want, from as little as 3 months.</p>
+                    <p>Call our team now to discuss options, and set up your perfect package today.</p>
+                    <a href="tel:">0203 714 1155</a><br>
+                    <a href="#">info@thesalesfloor.co.uk</a>
+                    <br><br>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Silver suscription enquire">Contact us</a>
                     <hr>
-                    <ul class="details">
-                        <li><p>4 week branded advert on The Sales Floor</p></li>
-                        <li><p>4 week sponsored advert on Indeed.com </p></li>
-                        <li><p>4 week adverts on other job boards within our partner network</p></li>
-                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                        <li><p>Proactive Sourcing</p></li>
-                        <li><p>CV filtering</p></li>
-                        <li><p class="underline">Targeted adverts</p></li>
-                    </ul>
                 </div>
             </div>
 
-            <div class="large-4 columns">
+            <div class="large-4 medium-4 columns">
                 <div class="panel gold">
-                    <h2>Subscription Gold</h2>
-                    <p class="price">£499</p>
-                    <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <h2>Gold subscription</h2>
+                    <em>Pricing per post starts at -</em>
+                    <p class="price">£149</p>
+                    <p>Looking for the whole package in your sales hires? Our Gold subscription gives you the whole package to help you find that talent, with as
+many posts a month as you want, from as little as 3 months.</p>
+                    <p>Call our team now to discuss options, and set up your perfect package today.</p>
+                    <a href="tel:">0203 714 1155</a><br>
+                    <a href="#">info@thesalesfloor.co.uk</a>
+                    <br><br>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Gold suscription enquire">Contact us</a>
                     <hr>
-                    <ul class="details">
-                        <li><p>4 week branded advert on The Sales Floor</p></li>
-                        <li><p>4 week sponsored advert on Indeed.com </p></li>
-                        <li><p>4 week adverts on other job boards within our partner network</p></li>
-                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                        <li><p>Proactive Sourcing</p></li>
-                        <li><p>CV filtering</p></li>
-                        <li><p>Targeted adverts</p></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -307,7 +332,24 @@ $(".tabs_wrapper a").click(function(event){
     var target = $(this).attr("data-target");
     $("[data=toggle]").css("display","none");
     $("#"+target+"").css("display","block");
-    console.log(target);
+});
+
+$('.cs_package').on('change', function() {
+    var tr = $(this).attr("data");
+    console.log(tr);
+    if(this.value == "3"){
+        var parent = $(this).parent().parent().attr("id");
+        $("#"+parent+"[data-target="+tr+"] .value").html("£1000");
+    }else if(this.value == "5"){
+        var parent = $(this).parent().parent().attr("id");
+        $("#"+parent+"[data-target="+tr+"] .value").html("£2000");
+    }else if(this.value == "7"){
+        var parent = $(this).parent().parent().attr("id");
+        $("#"+parent+"[data-target="+tr+"] .value").html("£3000");
+    }else if(this.value == "10"){
+        var parent = $(this).parent().parent().attr("id");
+        $("#"+parent+"[data-target="+tr+"] .value").html("£4000");
+    }
 });
 </script>
 

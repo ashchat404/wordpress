@@ -54,7 +54,15 @@
                         <?php if(is_user_logged_in()):?>
                             <a href="<?php echo wpjr_link_to("logout") ?>" class="btn_green button"><?php _e("Logout", "jobeleon") ?></a>
                         <?php else: ?>
-                            <a href="<?php esc_attr_e(wpjr_link_to("login")) ?>" class="btn_green button">Sign in</a>
+                        <div style="position:relative;display: inline-block;">
+                            <a href="#" class="btn_green sign_in button">
+                                Sign in
+                            </a>
+                            <ul class="sign_dropdown">
+                                <li><a href="<?php echo wpjb_link_to("employer_login") ?>">Employer login</li>
+                                <li><a href="<?php esc_attr_e(wpjr_link_to("login")) ?>">Candidate login</a></li>
+                            </ul>
+                        </div>
                         <?php endif; ?>
                 </div>
             </div>
@@ -65,7 +73,7 @@
                 <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
             </div>
             <div class="row mobile">
-                <a href="#" class="small-2 columns open_main">
+                <a href="#" id="open_nav" class="small-2 columns open_main">
                     <i class="fi-list-thumbnails"></i>
                 </a>
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="small-10 columns" rel="home"><img src="<?php echo get_theme_mod('wpjobboard_theme_logo'); ?>" alt="<?php bloginfo('name'); ?> logo" class="logo" /></a>
@@ -79,12 +87,26 @@
             </div>
     
         </header>
+        <h1 class="main-title text-center">A sales specialist job board created by sales people, for sales people</h1>
         <script type="text/javascript">
-            var oddClick = true;
-            $(".open_main").click(function() {
-                $(".mobile .contt").animate({
-                    left: oddClick ? 0 : "-50%"
-                },500);
-                oddClick = !oddClick;
+            $(document).mouseup(function (e)
+            {
+                var container = $(".contt");
+                if (!container.is(e.target) && container.has(e.target).length === 0)
+                {
+                    $(".contt").removeClass("open");
+                    return false;
+                }
             });
+            $("#open_nav").click(function(){
+                $(".contt").toggleClass("open");
+                return false;
+            });
+            $(".sign_in").click(function(event){
+                event.preventDefault();
+                $(".sign_dropdown").animate({
+                    overflow:"auto",
+                    height:"100px"
+                },200);
+            })
         </script>

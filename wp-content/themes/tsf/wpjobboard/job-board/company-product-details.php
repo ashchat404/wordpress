@@ -30,7 +30,7 @@
                 $package = $summary->bundle;
                 $inc_grup = array(
                     Wpjb_Model_Pricing::PRICE_SINGLE_JOB => __("Job Postings Included", "jobeleon"),
-                    Wpjb_Model_Pricing::PRICE_SINGLE_RESUME => __("Resumes Access Included", "jobeleon")
+                    Wpjb_Model_Pricing::PRICE_SINGLE_RESUME => __("CV Access Included", "jobeleon")
                 );
             ?>
             <?php foreach($inc_grup as $k => $title): ?>

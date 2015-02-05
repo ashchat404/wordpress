@@ -1,7 +1,7 @@
 <?php /* @var $resume Wpjb_Model_Resume */ ?>
 
 <div class="where-am-i">
-    <h2><?php _e('My Resume', 'jobeleon'); ?></h2> 
+    <h2><?php _e('My profile', 'jobeleon'); ?></h2> 
 </div><!-- .where-am-i -->
 
 <div id="wpjb-main" class="wpjr-page-my-resume">
@@ -9,17 +9,17 @@
     <?php wpjb_flash() ?>
 
     <div class="wpjb-menu-bar">
-        <a href="<?php echo wpjr_link_to("resume", $resume) ?>" class="btn"><?php _e("View Resume", "wpjobboard"); ?></a> 
+        <a href="<?php echo wpjr_link_to("resume", $resume) ?>" class="btn"><?php _e("View Profile", "wpjobboard"); ?></a> 
         <a href="<?php echo wpjr_link_to("myresume_password") ?>" class="btn"><?php _e("Change Password", "wpjobboard") ?></a> 
         <a href="<?php echo wpjr_link_to("myresume_delete") ?>" class="btn"><?php _e("Delete Account", "wpjobboard") ?></a> 
     </div>
     
     <form action="" method="post" id="wpjb-resume" class="wpjb-form" enctype="multipart/form-data">
         <fieldset>
-            <legend><?php _e("Resume Information", "jobeleon") ?></legend>
+            <legend><?php _e("Profile Information", "jobeleon") ?></legend>
             <?php if(wpjb_conf("cv_approval") == 1): ?>
             <div>
-                <label class="wpjb-label"><?php _e("Resume Status", "jobeleon") ?>:</label>
+                <label class="wpjb-label"><?php _e("Profile Status", "jobeleon") ?>:</label>
                 <span><?php echo wpjb_resume_status($resume) ?></span>
             </div>
             <?php endif; ?>

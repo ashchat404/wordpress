@@ -13,7 +13,7 @@
 ?>
 
 <div class="where-am-i">
-    <h2><?php _e('Advanced resume search', 'jobeleon'); ?></h2>
+    <h2><?php _e('Advanced CV search', 'jobeleon'); ?></h2>
 </div><!-- .where-am-i -->
 
 <div id="wpjb-main" class="wpjr-page-resumes-search">

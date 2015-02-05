@@ -1,17 +1,21 @@
 /*
 Error: Undefined variable: "$green".
-        on line 2 of /Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss
+        on line 48 of /Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss
 
-1: a {
-2: color: $green;
-3: text-decoration: none;
-4: 
-5: }
-6: img{
-7: 	max-height:100%;
+43: 	}
+44: }
+45: 
+46: 
+47: 
+48: a {color: $green;text-decoration: none;}
+49: img{max-height:100%;max-width:100%;}
+50: html,body {height:100%;}
+51: 
+52: hr{margin:0px;width:auto;border: 1px solid #E8EAEB;}
+53: 
 
 Backtrace:
-/Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss:2
+/Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss:48
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.10/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.10/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.10/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
@@ -62,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$green\".\A         on line 2 of /Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss\A \A 1: a {\A 2: color: $green;\A 3: text-decoration: none;\A 4: \A 5: }\A 6: img{\A 7: 	max-height:100%;"; }
+  content: "Error: Undefined variable: \"$green\".\A         on line 48 of /Applications/MAMP/htdocs/wordpress/wp-content/themes/tsf/sass/custom.scss\A \A 43: 	}\A 44: }\A 45: \A 46: \A 47: \A 48: a {color: $green;text-decoration: none;}\A 49: img{max-height:100%;max-width:100%;}\A 50: html,body {height:100%;}\A 51: \A 52: hr{margin:0px;width:auto;border: 1px solid #E8EAEB;}\A 53: "; }

@@ -17,18 +17,20 @@
 
     <ul id="wpjb_widget_resumesmenu" class="wpjb_widget">
         <li>
-            <a href="<?php echo wpjr_url() ?>">
-                <?php _e("Browse Resumes", "jobeleon") ?>
+            <a href="<?php echo wpjb_url() ?>">
+                <?php _e("View Jobs", "jobeleon") ?>
             </a>
         </li>
+
         <li>
-            <a href="<?php echo wpjr_link_to("advsearch") ?>">
-                <?php _e("Search Resumes", "jobeleon") ?>
+            <a href="<?php echo wpjb_link_to("advsearch") ?>">
+                <?php _e("Advanced Search", "jobeleon") ?>
             </a>
         </li>
+        
         <li>
             <a href="<?php echo wpjr_link_to("myresume") ?>">
-                <?php _e("My Resume", "jobeleon") ?>
+                <?php _e("My CV", "jobeleon") ?>
             </a>
         </li>
         <li>
@@ -39,7 +41,7 @@
         <?php if(!wpjb_conf("front_hide_bookmarks")): ?>
         <li>
             <a href="<?php echo wpjr_link_to("mybookmarks") ?>">
-                <?php _e("My Bookmarks", "jobeleon") ?>
+                <?php _e("Saved Jobs", "jobeleon") ?>
             </a>
         </li>
         <?php endif; ?>
@@ -60,13 +62,14 @@
 
     <ul id="wpjb_widget_resumesmenu" class="wpjb_widget">
         <li>
-            <a href="<?php echo wpjr_url() ?>">
-                <?php _e("Browse Resumes", "jobeleon") ?>
+            <a href="<?php echo wpjb_url() ?>">
+                <?php _e("View Jobs", "jobeleon") ?>
             </a>
         </li>
+
         <li>
-            <a href="<?php echo wpjr_link_to("advsearch") ?>">
-                <?php _e("Search Resumes", "jobeleon") ?>
+            <a href="<?php echo wpjb_link_to("advsearch") ?>">
+                <?php _e("Advanced Search", "jobeleon") ?>
             </a>
         </li>
 
@@ -75,6 +78,7 @@
                 <?php _e("Candidate Login", "jobeleon") ?>
             </a>
         </li>
+
         <li>
             <a href="<?php echo wpjr_link_to("register") ?>">
                 <?php _e("Candidate Registration", "jobeleon") ?>

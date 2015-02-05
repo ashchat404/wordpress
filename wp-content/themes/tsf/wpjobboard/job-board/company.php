@@ -58,7 +58,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                                         <input type="text" name="email" value="" placeholder="E-Mail">
                                     </li>
                                     <li>
-                                        <input type="submit" value="Add Alert">
+                                        <input type="submit" value="Keep me posted">
                                     </li>
                             </ul>
                         </form>
@@ -127,27 +127,6 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             </tbody>
         </table>
 
-        <h3 class="text-center"><?php _e("Jobs available at ", "jobeleon") ?><?php esc_html_e($company->company_name) ?></h3>
-        <div id="company-openings" class="wpjb-company-openings large-12 columns">
-            <ul class="wpjb-company-list">
-                <?php $jobList = wpjb_find_jobs($param) ?>
-                <?php if ($jobList->total > 0): foreach ($jobList->job as $job): ?>
-                        <?php /* @var $job Wpjb_Model_Job */ ?>
-                        <li class="<?php wpjb_job_features($job); ?> large-4 columns text-center">
-                            <a href="<?php echo wpjb_link_to("job", $job); ?>"><?php esc_html_e($job->job_title) ?></a>
-                            <p><?php esc_html_e($job->meta->salary->value()) ?></p>
-                        </li>
-                        <?php
-                    endforeach;
-                else :
-                    ?>
-                    <li>
-                        <?php _e("Currently this employer doesn't have any openings.", "jobeleon"); ?>
-                    </li>
-                <?php endif; ?>
-            </ul>
-        </div>
-
         <div class="wpjb-job-content large-12 columns">
             <h3 class="text-center">Why work for us?</h3>
 
@@ -159,7 +138,6 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
             <?php foreach($company->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type"=>"ui-input-textarea")) as $k => $value): ?>
 
-                <h3><?php esc_html_e($value->conf("title")); ?></h3>
                 <div class="wpjb-job-text">
                     <?php wpjb_rich_text($value->value()) ?>
                 </div>
@@ -168,6 +146,27 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
             <?php do_action("wpjb_template_job_meta_richtext", $company) ?>
 
+        </div>
+        <div class="clear"></div>
+
+        <div id="company-openings" class="wpjb-company-openings large-12 columns">
+            <h3 class="text-center"><?php _e("Jobs available at ", "jobeleon") ?><?php esc_html_e($company->company_name) ?></h3>
+            <ul class="wpjb-company-list">
+                <?php $jobList = wpjb_find_jobs($param) ?>
+                <?php if ($jobList->total > 0): foreach ($jobList->job as $job): ?>
+                        <?php /* @var $job Wpjb_Model_Job */ ?>
+                        <li class="<?php wpjb_job_features($job); ?> large-4 columns text-center">
+                            <a href="<?php echo wpjb_link_to("job", $job); ?>"><?php esc_html_e($job->job_title) ?></a>
+                        </li>
+                        <?php
+                    endforeach;
+                else :
+                    ?>
+                    <li>
+                        <?php _e("Currently this employer doesn't have any openings.", "jobeleon"); ?>
+                    </li>
+                <?php endif; ?>
+            </ul>
         </div>
 
     <?php endif; ?>
