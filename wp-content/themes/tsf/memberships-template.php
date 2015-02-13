@@ -109,23 +109,22 @@ if ($param["category"] > 0) {
 
         <div class="all_packages row">
             <div class="large-4 medium-4 columns">
-                <div id="panel" data-target="1" class="panel bronze">
+                <div id="bronze" data-target="1" class="panel bronze">
                     <h2>Bronze package</h2>
-                    <p class="price value">£299</p>
+                    <p class="price value">£765.00</p>
                     <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
                     <div class="large-5 columns"><p>Select No. of posts:</p></div>
                     <div class="large-7 columns package-select">
                         <select class="cs_package" data="1">
-                            <option>3</option>
+                            <option selected="selected">3</option>
                             <option>5</option>
-                            <option>7</option>
                             <option>10</option>
                         </select>
-                        <b class="value">£1000</b>
+                        <b class="value">£765.00</b>
                     </div>
                     <br class="clear">
                     <br class="clear">
-                    <a class="btn custom_link" href="#">Purchase</a>
+                    <a class="btn custom_link" href="http://thesalesfloor.co.uk/jobs/employer/membership/purchase/8/">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -140,26 +139,25 @@ if ($param["category"] > 0) {
             </div>
 
             <div class="large-4 medium-4 columns">
-                <div id="panel" data-target="2" class="panel silver" >
+                <div id="silver" data-target="2" class="panel silver" >
                     <section class="popular">
                         <p>Most Popular</p>
                     </section>
                     <h2>Silver package</h2>
-                    <p class="price value">£399</p>
+                    <p class="price value">£1065.00</p>
                     <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
                     <div class="large-5 columns"><p>Select No. of posts:</p></div>
                     <div class="large-7 columns package-select">
                         <select class="cs_package" data="2">
-                            <option>3</option>
+                            <option selected="selected">3</option>
                             <option>5</option>
-                            <option>7</option>
                             <option>10</option>
                         </select>
-                        <b class="value">£1000</b>
+                        <b class="value">£1065.00</b>
                     </div>
                     <br class="clear">
                     <br class="clear">
-                    <a class="btn" href="#">Purchase</a>
+                    <a class="btn" href="http://thesalesfloor.co.uk/jobs/employer/membership/purchase/9/">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -174,23 +172,22 @@ if ($param["category"] > 0) {
             </div>
 
             <div class="large-4 medium-4 columns">
-                <div id="panel" data-target="3" class="panel gold" >
+                <div id="gold" data-target="3" class="panel gold" >
                     <h2>Gold package</h2>
-                    <p class="price value">£499</p>
+                    <p class="price value">£1365.00</p>
                     <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
                     <div class="large-5 columns"><p>Select No. of posts:</p></div>
                     <div class="large-7 columns package-select">
                         <select class="cs_package" data="3">
-                            <option>3</option>
+                            <option selected="selected">3</option>
                             <option>5</option>
-                            <option>7</option>
                             <option>10</option>
                         </select>
-                        <b class="value">£1000</b>
+                        <b class="value">£1365.00</b>
                     </div>
                     <br class="clear">
                     <br class="clear">
-                    <a class="btn" href="#">Purchase</a>
+                    <a class="btn" href="http://thesalesfloor.co.uk/jobs/employer/membership/purchase/10/">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -214,7 +211,7 @@ if ($param["category"] > 0) {
                     <h2>Bronze</h2>
                     <p class="price">£299</p>
                     <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <a class="btn popup" data="bronze" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -236,7 +233,7 @@ if ($param["category"] > 0) {
                     <h2>Silver</h2>
                     <p class="price">£399</p>
                     <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <a class="btn popup" data="silver" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -255,7 +252,7 @@ if ($param["category"] > 0) {
                     <h2>Gold</h2>
                     <p class="price">£499</p>
                     <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
-                    <a class="btn" href="#">Purchase</a>
+                    <a class="btn popup" data="gold" href="#">Purchase</a>
                     <hr>
                     <ul class="details">
                         <li><p>4 week branded advert on The Sales Floor</p></li>
@@ -284,7 +281,7 @@ if ($param["category"] > 0) {
                     <a href="tel:">0203 714 1155</a><br>
                     <a href="#">info@thesalesfloor.co.uk</a>
                     <br><br>
-                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Bronze suscription enquire">Contact us</a>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Bronze Subscription Enquiry">Contact us</a>
                     <hr>
                 </div>
             </div>
@@ -302,7 +299,7 @@ if ($param["category"] > 0) {
                     <a href="tel:">0203 714 1155</a><br>
                     <a href="#">info@thesalesfloor.co.uk</a>
                     <br><br>
-                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Silver suscription enquire">Contact us</a>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Silver Subscription Enquiry">Contact us</a>
                     <hr>
                 </div>
             </div>
@@ -318,7 +315,7 @@ many posts a month as you want, from as little as 3 months.</p>
                     <a href="tel:">0203 714 1155</a><br>
                     <a href="#">info@thesalesfloor.co.uk</a>
                     <br><br>
-                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Gold suscription enquire">Contact us</a>
+                    <a class="btn" href="mailto:info@thesalesfloor.co.uk?subject=Gold Subscription Enquiry">Contact us</a>
                     <hr>
                 </div>
             </div>
@@ -334,21 +331,56 @@ $(".tabs_wrapper a").click(function(event){
     $("#"+target+"").css("display","block");
 });
 
+
 $('.cs_package').on('change', function() {
     var tr = $(this).attr("data");
     console.log(tr);
     if(this.value == "3"){
         var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£1000");
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£765.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/8/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1065.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/11/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1365.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/14/");
+        }
+
     }else if(this.value == "5"){
         var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£2000");
-    }else if(this.value == "7"){
-        var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£3000");
+        
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1150.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/9/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1650.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/12/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£2150.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/15/");
+        }
+
     }else if(this.value == "10"){
         var parent = $(this).parent().parent().attr("id");
         $("#"+parent+"[data-target="+tr+"] .value").html("£4000");
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1990.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/10/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£2990.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/13/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£3990.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/16/");
+        }
     }
 });
 </script>

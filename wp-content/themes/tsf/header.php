@@ -30,7 +30,8 @@
                 <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/stylesheets/ie8.css' type='text/css' media='all' />
                 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
         <![endif]-->
-
+        <script type="text/javascript" src="http://gtcslt-di2.com/js/32306.js"></script>
+        <noscript><img src="http://gtcslt-di2.com/32306.png" style="display:none;" /></noscript>
         <?php wp_head(); ?>
 
     </head>
@@ -45,11 +46,11 @@
         <header id="tsf_header">
             <div class="cont">
                 <div class="tsf_top">
-                        <a href="https://www.facebook.com/Thesalesfloor"><i class="fi-social-facebook"></i></a>
-                        <a href="https://twitter.com/thesalesfloor"><i class="fi-social-twitter"></i></a>
-                        <a href="https://plus.google.com/111836940371173250719/posts"><i class="fi-social-google-plus"></i></a>
-                        <a href="https://www.linkedin.com/company/the-sales-floor-ltd"><i class="fi-social-linkedin"></i></a>
-                        <a href="http://testing.thesalesfloor.co.uk/new/wordpress/recruiters/" class="btn_orange button">Recruiter</a>
+                        <a target="_blank" href="https://www.facebook.com/Thesalesfloor"><i class="fi-social-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/thesalesfloor"><i class="fi-social-twitter"></i></a>
+                        <a target="_blank" href="https://plus.google.com/111836940371173250719/posts"><i class="fi-social-google-plus"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/the-sales-floor-ltd"><i class="fi-social-linkedin"></i></a>
+                        <a target="_blank" href="http://thesalesfloor.co.uk/recruiters/" class="btn_orange button">Recruiter</a>
 
                         <?php if(is_user_logged_in()):?>
                             <a href="<?php echo wpjr_link_to("logout") ?>" class="btn_green button"><?php _e("Logout", "jobeleon") ?></a>
@@ -59,7 +60,7 @@
                                 Sign in
                             </a>
                             <ul class="sign_dropdown">
-                                <li><a href="<?php echo wpjb_link_to("employer_login") ?>">Employer login</li>
+                                <li><a href="<?php echo wpjb_link_to("employer_login") ?>">Employer login</a></li>
                                 <li><a href="<?php esc_attr_e(wpjr_link_to("login")) ?>">Candidate login</a></li>
                             </ul>
                         </div>
@@ -89,15 +90,7 @@
         </header>
         <h1 class="main-title text-center">A sales specialist job board created by sales people, for sales people</h1>
         <script type="text/javascript">
-            $(document).mouseup(function (e)
-            {
-                var container = $(".contt");
-                if (!container.is(e.target) && container.has(e.target).length === 0)
-                {
-                    $(".contt").removeClass("open");
-                    return false;
-                }
-            });
+
             $("#open_nav").click(function(){
                 $(".contt").toggleClass("open");
                 return false;

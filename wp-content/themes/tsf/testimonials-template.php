@@ -91,7 +91,7 @@ if ($param["category"] > 0) {
                     <a data-target="pleasecycle" class="row block" title="read more" href="#">
                             <div class="featured_logo">
                                 <div class="chld">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
+                                    <img alt="pleasecycle logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
                                 </div>
                             </div>
                         <div class="row featured_content">
@@ -103,18 +103,15 @@ For a start they actually are a Sales Specialist...<i>more</i></p>
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
                 </li>
 <div class="full_testimonial pleasecycle">
-<a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-    <img class="cl_logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
+<a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+    <img alt="pleasecycle logo" class="cl_logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
 <div class="clear"></div>
 <b>Background</b>
 Pleasecycle is a small, growing tech start-up business, providing tools to organisations to help their staff start cycling more, thereby reducing carbon and also cutting down sick-days through employee engagement. Due to their size and growth curve Pleasecycle were looking for an Account Manager to join their team in London.<br>
@@ -136,7 +133,7 @@ Ronan Carter, Director
                 <li class="large-4 columns">
                     <a data-target="four" class="row block" href="#">
                             <div class="featured_logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
+                                <img alt="four logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
@@ -149,11 +146,8 @@ Within hours I had been provided with a substantial list of potential target can
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
@@ -165,8 +159,8 @@ b{
 }
 </style>
 <div class="full_testimonial four">
-<a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-    <img class="cl_logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
+<a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+    <img alt="four logo" class="cl_logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
 <div class="clear"></div>
 <b>Background</b>
 
@@ -229,7 +223,7 @@ James Harpum, Financial Controller
                 <li class="large-4 columns">
                     <a data-target="informa" class="row block" href="#">
                             <div class="featured_logo">
-                                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
+                                <img alt="informa logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
@@ -242,18 +236,15 @@ needed them. They combine traditional ...<i>more</i></p>
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
                 </li>
 <div class="full_testimonial informa">
 <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-    <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
+    <img alt="informa logo" class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
 <div class="clear"></div>
 
 <b>Background</b>
@@ -321,7 +312,7 @@ Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Gro
                 <li class="large-4 columns">
                     <a data-target="bg" class="row block" href="#">
                         <div class="featured_logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
+                            <img alt="british gas logo" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
                         </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
@@ -334,18 +325,15 @@ We are also still considering candidates for a couple...<i>more</i></p>
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
                 </li>
 <div class="full_testimonial bg">
     <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
+        <img alt="british gas logo" class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
     <div class="clear"></div>
     <b>Background</b>
 
@@ -416,7 +404,7 @@ We are also still considering candidates for a couple...<i>more</i></p>
                 <li class="large-4 columns">
                     <a data-target="Paymentsense" class="row block" href="#">
                             <div class="featured_logo">
-                                        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
+                                    <img alt="Paymentsense logo" class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
@@ -425,18 +413,15 @@ We are also still considering candidates for a couple...<i>more</i></p>
                         </div>
 
                         <div class="featured_extra">
-                            <div class="large-6 columns location">
+                            <div class="large-12 columns location">
                                 <p class=""><i class="fi-marker"></i>London</p>
-                            </div>
-                            <div class="large-6 columns salary">
-                                <p>Text</p>
                             </div>
                         </div>
                     </a>
                 </li> 
 <div class="full_testimonial Paymentsense">
-    <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
+    <a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img <img alt="Paymentsense logo" class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/PaymentSense-Logo.png">
     <div class="clear"></div>
 <b>Background</b>
 Paymentsense is a leader in the Financial Services and Merchant Provider space. They have clients all over the UK both big and small, and their sales team is heavily field based. They traditionally used to use recruitment agencies, but the volume of recruitment they have gone through in the past year has meant they needed to focus on reducing their cost-per-hire.
@@ -460,7 +445,7 @@ Since 2014 Paymentsense have hired multiple Field Sales Executives every single 
                 <li class="large-4 columns">
                     <a class="row block" data-target="esp" href="#">
                             <div class="featured_logo">
-                                        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
+                                        <img class="cl_logo" alt="esp logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
 
                             </div>
                         <div class="row featured_content">
@@ -478,8 +463,8 @@ Since 2014 Paymentsense have hired multiple Field Sales Executives every single 
                 </li> 
             </div>
 <div class="full_testimonial esp">
-    <a class="close" href="#"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
-        <img class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
+    <a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img alt="esp logo"  class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
     <div class="clear"></div>
 <b>Background</b>
 Journeycall, part of the ESP Group is a contact centre expert in the travel and smartcard industries. Given their expertise within this space, when they do hire, they look for very specific skills and experience with regards to which markets candidates have sold into; namely transportation and rail. They enlisted the help of The Sales Floor in 2014 looking to hire a Business Development Manager.

@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li>
-                <a href="<?php echo wpjb_link_to("membership") ?>">
+                <a href="http://thesalesfloor.co.uk/employer-packages/">
                     <?php _e("Employer Packages", "jobeleon") ?>
                 </a>
             </li>

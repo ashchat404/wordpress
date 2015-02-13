@@ -14,14 +14,14 @@
 <?php echo $theme->after_widget ?>
 <script type="text/javascript">
 
-	$(".expnd").click(function() {
+	$(".expnd").click(function(event) {
 		event.preventDefault();
 		var a = $(this).parent();
 		console.log(a.attr("class"));
 		if(a.hasClass("widget_wpjb-search")){
 			console.log("kd");
 		    a.animate({
-		        height: (a.height() == 800) ? 35 : 800
+		        height: (a.height() == 780) ? 35 : 780
 		    }, 400);		
 		}
 		else{
@@ -32,5 +32,5 @@
 		}
 	});
 
-	$("#adv").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/advanced-search/ #wpjb-main");
+	$("#adv").load("http://www.thesalesfloor.co.uk/jobs/advanced-search/ #wpjb-main");
 </script>

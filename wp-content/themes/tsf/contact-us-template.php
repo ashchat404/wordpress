@@ -86,8 +86,8 @@ if ($param["category"] > 0) {
 
  <section class="row">
     <div class="large-12 columns list-icon-items" id="contactus">
-        <div class="large-3 medium-3 small-6 columns"><a href="mailto:info@thesalesfloor.co.uk?subject=Query"><i class="circ fi-mail"><i class="circ pulse"></i></i><p>Mail</p><i>info@thesalesfloor.com</i></a></div>
-        <div class="large-3 medium-3 small-6 columns"><a href="tel:07472287228"><i class="circ fi-telephone"><i class="circ pulse"></i></i><p>Phone</p><i>07472287228</i></a></div>
+        <div class="large-3 medium-3 small-6 columns"><a href="mailto:info@thesalesfloor.co.uk?subject=Query"><i class="circ fi-mail"><i class="circ pulse"></i></i><p>Mail</p><i>info@thesalesfloor.co.uk</i></a></div>
+        <div class="large-3 medium-3 small-6 columns"><a href="tel:0203 714 1155"><i class="circ fi-telephone"><i class="circ pulse"></i></i><p>Phone</p><i>0203 714 1155</i></a></div>
         <div class="large-3 medium-3 small-6 columns"><a href="skype:thesalesfloor?call"><i class="circ fi-social-skype"><i class="circ pulse"></i></i><p>Skype</p><i>Call us</i></a></div>
         <div class="large-3 medium-3 small-6 columns"><a href="https://twitter.com/thesalesfloor"><i class="circ fi-social-twitter"><i class="circ pulse"></i></i><p>Twitter</p><i>Follow us</i></a></div>
     </div>

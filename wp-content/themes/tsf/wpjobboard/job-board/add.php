@@ -46,12 +46,10 @@
                                 <?php wpjb_form_input_hint($field) ?>
                                 <?php wpjb_form_input_errors($field) ?>
                             </div>
-
                         </div>
                     <?php endforeach; ?>
                 </fieldset>
             <?php endforeach; ?>
-
             <fieldset>
                 <div>
                     <?php if ($show_pricing): ?>
@@ -90,3 +88,6 @@
     <?php endif; ?>
 
 </div>
+<script type="text/javascript">
+$(".wpjb-element-name-listing .wpjb-field").append("<a href='http://www.thesalesfloor.co.uk/employer-packages'>View more packages</a>")
+</script>

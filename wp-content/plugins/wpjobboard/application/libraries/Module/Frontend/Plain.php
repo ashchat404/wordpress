@@ -390,8 +390,6 @@ class Wpjb_Module_Frontend_Plain extends Wpjb_Controller_Frontend
             "category" => $category,
             "type" => $type,
             "posted" => $request->get("posted"),
-            "page" => $request->get("page", 1),
-            "count" => $request->get("count", 50),
             "country" => $request->get("country"),
             "location" => $request->get("location"),
             "is_featured" => $request->get("is_featured"),
@@ -443,47 +441,98 @@ class Wpjb_Module_Frontend_Plain extends Wpjb_Controller_Frontend
         $channel->appendChild($link);
         $description = $rss->createElement("description", $this->_esc($site_title));
         $channel->appendChild($description);
-        $sf = $rss->createElement("SenderReference", "3790");
-        $channel->appendChild($sf);
 
         foreach($result as $id) {
             $job = new Wpjb_Model_Job($id);
-            foreach ($job->getTag()->category as $category){
-                $ind = $category->title;
-            }
             $desc = strip_tags($job->job_description);
             $desc = iconv("UTF-8", "UTF-8//IGNORE", substr($desc, 0));
-
             $desc = htmlspecialchars($desc, ENT_COMPAT, 'UTF-8');
             $description = $rss->createCDATASection($desc);
             $desc = $rss->createElement("description");
             $desc->appendChild($description);
 
+            $i_id = $rss->createCDATASection($job->id);
+            $j_id = $rss->createElement("id");
+            $j_id->appendChild($i_id);
+
+            $title = $rss->createCDATASection($job->job_title);
+            $j_title = $rss->createElement("title");
+            $j_title->appendChild($title);
+
+            $location = $rss->createCDATASection($job->locationToString());
+            $j_location = $rss->createElement("location");
+            $j_location->appendChild($location);
+
+            $AdvertiserName = $rss->createCDATASection($job->company_name);
+            $j_AdvertiserName = $rss->createElement("AdvertiserName");
+            $j_AdvertiserName->appendChild($AdvertiserName);
+
+            $salary = $rss->createCDATASection($job->meta->salary->value());
+            $j_salary = $rss->createElement("salary");
+            $j_salary->appendChild($salary);
+
+            foreach ($job->getTag()->category as $category){
+                $ind = $category->title;
+            }
+
+            $industry = $rss->createCDATASection($ind);
+            $j_industry = $rss->createElement("industry");
+            $j_industry->appendChild($industry);
+
+
+
             $link = Wpjb_Project::getInstance()->getUrl()."/";
             $link.= Wpjb_Project::getInstance()->router()->linkTo("job", $job);
             $pubDate = date(DATE_RSS, strtotime($job->job_created_at));
-
             $ats_link = $this->_esc($job->meta->application_url->value());
 
-            $item = $rss->createElement("item");
-            $item->appendChild($rss->createElement("id", $this->_esc($job->id)));            
-            $item->appendChild($rss->createElement("title", $this->_esc($job->job_title)));
-            $item->appendChild($rss->createElement("location", $this->_esc($job->locationToString())));
-            $item->appendChild($rss->createElement("AdvertiserName", $this->_esc($job->company_name)));
 
-            if(!empty($ats_link)){
-                $item->appendChild($rss->createElement("AdvertiserATS", $ats_link));
+            if(!$job->meta->salary->value()){
+
             }else{
-                $item->appendChild($rss->createElement("AdvertiserEmail", $this->_esc($job->company_email)));
-            }
-            $item->appendChild($rss->createElement("salary", $this->_esc(str_replace('£','',$job->meta->salary->value()))));
-            $item->appendChild($rss->createElement("industry", $ind));
-            $item->appendChild($rss->createElement("link", $this->_esc($link)));
-            $item->appendChild($desc);
-            $item->appendChild($rss->createElement("pubDate", $pubDate));
-            $item->appendChild($rss->createElement("guid", $this->_esc($link)));
+                $item = $rss->createElement("job");
+                $item->appendChild($j_id);
+                $item->appendChild($j_title);
+                $item->appendChild($j_location);
+                $item->appendChild($j_AdvertiserName);
 
-            $channel->appendChild($item);
+                if(!empty($ats_link)){
+                    $AdvertiserATS = $rss->createCDATASection($ats_link);
+                    $j_AdvertiserATS = $rss->createElement("AdvertiserATS");
+                    $j_AdvertiserATS->appendChild($AdvertiserATS);
+                    $item->appendChild($j_AdvertiserATS);
+                }else{
+
+                    $AdvertiserEmail = $rss->createCDATASection($job->company_email);
+                    $j_AdvertiserEmail = $rss->createElement("AdvertiserEmail");
+                    $j_AdvertiserEmail->appendChild($AdvertiserEmail);
+                    $item->appendChild($j_AdvertiserEmail);
+                }
+
+                $item->appendChild($j_salary);
+                $item->appendChild($j_industry);
+                
+
+                $l_link = $rss->createCDATASection($this->_esc($link));
+                $j_link = $rss->createElement("link");
+                $j_link->appendChild($l_link);
+                $item->appendChild($j_link);
+
+                $item->appendChild($desc);
+
+                $pubDate = $rss->createCDATASection($pubDate);
+                $j_pubDate = $rss->createElement("pubDate");
+                $j_pubDate->appendChild($pubDate);
+                $item->appendChild($j_pubDate);
+
+                $guid = $rss->createCDATASection($this->_esc($link));
+                $j_guid = $rss->createElement("guid");
+                $j_guid->appendChild($guid);
+                $item->appendChild($j_guid);
+
+                $channel->appendChild($item);
+            }
+
         }
 
         $wraper->appendChild($channel);

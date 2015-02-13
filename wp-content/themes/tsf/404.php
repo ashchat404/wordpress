@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: My Custom Page
+404 page
 */
 ?>
 <?php
@@ -67,7 +67,7 @@ if ($param["category"] > 0) {
 <div id="content_wrapper" class="<?php echo sanitize_title_with_dashes(get_the_title($ID)); ?>">
 
     <section id="srch" class="large-12 columns">
-        <h2 class="text-center">Search for Jobs</h2>
+        <h2 class="text-center">Oops...Page not found. Try our Home Page.</h2>
         <div class="row">
             <div class="large-12 columns">
                 <form action="<?php esc_attr_e($search_url) ?>" method="get">
@@ -93,85 +93,6 @@ if ($param["category"] > 0) {
                     <input type="submit" class="btn" value="<?php _e("Search", "jobeleon") ?>" />
                 </form>
             </div><!-- /search -->
-        </div>
-    </section>
-
-    <section id="featured_themes" class="large-12 columns">
-    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Hompage_widgets") ) : ?>
-    <?php endif; ?>
-    </section>
-
-    <section id="testmonials" class="large-12 columns row">
-        <h2 class="text-center"><img alt="chat" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/chat-icon.png"> Testmonials</h2>
-        <p class="sub-title text-center">Some kind words from our clients…</p>
-        <div class="reviews">
-            <div>  
-                <a href="http://thesalesfloor.co.uk/testimonials/">
-                    <img alt="" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
-                        <p>““We started working with The Sales Floor team not long after their launch, and found them
-personal, professional and very different to other job board offerings out there.
-For a start they actually are a Sales Specialist...</p>
-                    <b>- Ronan Carter, Director</b>
-                </a>
-            </div>
-            <div> 
-                <a href="http://thesalesfloor.co.uk/testimonials/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
-                    <p> “I initially contacted The Sales Floor to help us with an urgent need for a quick hire, I was very impressed with the results. Within hours I had been provided with a substantial list of potential target candidates...</p>
-                    <b>- James Harpum, Financial Controller</b>
-                </a>
-            </div>
-            <div>
-                <a href="http://thesalesfloor.co.uk/testimonials/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
-                    <p>
-                    “We decided to partner with The Sales Floor for a UK Sales requirement we had early in 
-
-                    2014. We found them straightforward, incredibly helpful, and quick to respond when we 
-
-                    needed them. They combine traditional ...
-                    </p>
-                    <b>- Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Group)</b>
-                </a>
-
-            </div>
-            <div>
-                <a href="http://thesalesfloor.co.uk/testimonials/">
-                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
-                    <p>“Our relationship with The Sales Floor has so far resulted in us hiring three candidates into call centre and field sales roles. We are also still considering candidates for a couple...</p>
-                    <b>- Helen Butterworth, Group Attraction and Diversity.</b>
-                </a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="discovered" class="large-12 columns">
-        <h2 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/mag-icon.png"> Discovered by</h2>
-        <p class="sub-title text-center">Come and see who else has discovered us…</p>
-
-        <div class="row">
-            <div class="large-12 columns">
-                <a href="http://localhost:8888/wordpress/testimonials/#more">
-                    <div class="large-3 medium-3 small-6 columns">
-                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/harrods_2.png">
-
-                    </div>
-                    <div class="large-3 medium-3 small-6 columns">
-                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/manutd.png">
-
-                    </div>
-                    <div class="large-3 medium-3 small-6 columns">
-                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/carlsberg.png">
-
-                    </div>
-                    <div class="large-3 medium-3 small-6 columns">
-                    <img class="dis_img" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bgas.png">
-
-                    </div>
-                </a>
-            </div>
         </div>
     </section>
 

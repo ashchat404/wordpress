@@ -37,11 +37,11 @@
                 </div>
 
                 <div class="featured_extra">
-                    <div class="large-6 columns location">
+                    <div class="large-12 columns location">
                         <p class=""><i class="fi-marker"></i><?php esc_html_e($job->locationToString()) ?></p>
                     </div>
-                    <div class="large-6 columns salary">
-                        <p>£<?php esc_html_e($job->meta->salary->value()) ?></p>
+                    <div class="large-12 columns salary">
+                        <p><?php esc_html_e($job->meta->salary->value()) ?></p>
                     </div>
                 </div>
             </a>

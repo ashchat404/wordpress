@@ -121,11 +121,11 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             <?php do_action("wpjb_template_job_meta_text", $job) ?>
         </tbody>
     </table>
-    <div class="row">
+    <div class="row large-12 columns">
         <h3 style="padding-left:25px"><?php _e("More Details", "jobeleon") ?></h3>
         <?php foreach($job->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type_exclude"=>"ui-input-textarea")) as $k => $value): ?>
         
-            <div class="large-12 columns">
+            <div class="<?php echo $k; ?> large-12 columns">
                 <?php if ($value->conf("type") == "ui-input-file"): ?>
                     <?php foreach ($job->file->{$value->name} as $file): ?>
                         <div class="large-4 medium-4 columns">
@@ -145,7 +145,6 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                             <?php esc_html_e(join(", ", (array) $value->values())) ?>
                         </div>
 
-                        
                 <?php endif; ?>
             </div>
         

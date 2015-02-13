@@ -259,9 +259,9 @@
 </div> <!-- cd-tabs -->
     
 </div>
-<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="5d6y33s4m5iznz8"></script>
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="kdg9gbvrq2tyvvq"></script>
 <script type="text/javascript">
-    $("#related_jobs").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=<?php $l = str_replace(' ','+',$job->job_title);  echo $l; ?>=&category= #wpjb-job-list",function(){
+    $("#related_jobs").load("http://www.thesalesfloor.co.uk/jobs/find/?query=<?php $l = str_replace(' ','+',$job->job_title);  echo $l; ?>=&category= #wpjb-job-list",function(){
         if($("#related_jobs .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
             $("#job-<?php esc_html_e($job->id);?>").remove();
         }
@@ -270,7 +270,7 @@
             $("#related_jobs #wpjb-job-list tbody tr").text("No job found");
         }
     });
-    $("#related_location").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=<?php $p = str_replace(' ','+',$job->locationToString());echo $p; ?>=&category= #wpjb-job-list",function(){
+    $("#related_location").load("http://www.thesalesfloor.co.uk/jobs/find/?query=<?php $p = str_replace(' ','+',$job->locationToString());echo $p; ?>=&category= #wpjb-job-list",function(){
         if($("#related_location .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
             $("#job-<?php esc_html_e($job->id);?>").remove();
         }
@@ -280,7 +280,7 @@
         }
 
     });
-    $("#related_industry").load("http://testing.thesalesfloor.co.uk/new/wordpress/jobs/find/?query=&category=<?php foreach ($job->getTag()->category as $category){esc_html_e($category->id);} ?> #wpjb-job-list",function(){
+    $("#related_industry").load("http://www.thesalesfloor.co.uk/jobs/find/?query=&category=<?php foreach ($job->getTag()->category as $category){esc_html_e($category->id);} ?> #wpjb-job-list",function(){
         if($("#related_industry .wpjb-table tr").attr("id") === "job-<?php esc_html_e($job->id); ?>"){
             $("#job-<?php esc_html_e($job->id);?>").remove();
         }
@@ -355,7 +355,7 @@ jQuery(document).ready(function($){
         })
         $(".wpcf7-form input[type=url]").val($(location).attr('href'));
         if($("form.wpjb-form").length){
-            $("form.wpjb-form").get(1).setAttribute('action','http://testing.thesalesfloor.co.uk/new/wordpress/resumes/register/');            
+            $("form.wpjb-form").get(1).setAttribute('action','http://www.thesalesfloor.co.uk/resumes/register/');            
         }
         $('#email').change(function() {
             $('#user_email').val($(this).val());
@@ -514,7 +514,7 @@ jQuery(document).ready(function($){
                                         success:function(data, textStatus, jqXHR) 
                                         {
                                             $(".error").hide();
-                                            $(".success p.reg").html("Registered successfully, click <a href='http://testing.thesalesfloor.co.uk/new/wordpress/resumes/my-resume/'><b>here</b></a> you view your account");
+                                            $(".success p.reg").html("Registered successfully, click <a href='http://thesalesfloor.co.uk/resumes/my-profile/'><b>here</b></a> you view your profile");
                                         },
                                         error: function(jqXHR, textStatus, errorThrown) 
                                         {

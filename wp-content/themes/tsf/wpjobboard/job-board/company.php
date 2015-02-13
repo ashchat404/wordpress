@@ -48,7 +48,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                 <div class="large-3 columns">
                     <div class="comp_fl">
                         <a class="btn fol" href="#"> Follow</a>
-                        <form action="http://localhost:8888/wordpress/jobs-3/alert-confirmation" method="post">
+                        <form action="http://thesalesfloor.co.uk/jobs/alert-confirmation" method="post">
                             <input type="hidden" name="add_alert" value="1">
                             <ul id="wpjb_widget_alerts" class="wpjb_widget">
                                     <li>

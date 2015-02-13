@@ -30,7 +30,7 @@
         
         <li>
             <a href="<?php echo wpjr_link_to("myresume") ?>">
-                <?php _e("My CV", "jobeleon") ?>
+                <?php _e("My profile", "jobeleon") ?>
             </a>
         </li>
         <li>

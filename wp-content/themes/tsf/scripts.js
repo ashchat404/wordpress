@@ -69,12 +69,6 @@
 				});
 			});
 		}
-
-		this.find('.wpcf7-character-count').wpcf7CharacterCount();
-
-		this.find('.wpcf7-validates-as-url').change(function() {
-			$(this).wpcf7NormalizeUrl();
-		});
 	};
 
 	$.wpcf7AjaxSuccess = function(data, status, xhr, $form) {
@@ -120,10 +114,11 @@
 				$.each(data.onSentOk, function(i, n) { eval(n) });
 
 			$(data.into).trigger('mailsent.wpcf7');
+
 			saveData(ap_link);
 			function saveData(_user){
 			   localStorage.setItem('_External_link', _user);
-			   window.location.href = "http://thesalesfloor.co.uk/thank-you/";
+			   window.location.href = "http://testing.thesalesfloor.co.uk/new/wordpress/thank-you/";
 			   return;
 			}
 		} else {
@@ -149,7 +144,7 @@
 		$responseOutput.attr('role', 'alert');
 
 		$.wpcf7UpdateScreenReaderResponse($form, data);
-	};
+	}
 
 	$.fn.wpcf7ExclusiveCheckbox = function() {
 		return this.find('input:checkbox').click(function() {
@@ -234,57 +229,6 @@
 					$freetext.prop('disabled', true);
 				}
 			});
-		});
-	};
-
-	$.fn.wpcf7CharacterCount = function() {
-		return this.each(function() {
-			var $count = $(this);
-			var name = $count.attr('data-target-name');
-			var down = $count.hasClass('down');
-			var starting = parseInt($count.attr('data-starting-value'), 10);
-			var maximum = parseInt($count.attr('data-maximum-value'), 10);
-			var minimum = parseInt($count.attr('data-minimum-value'), 10);
-
-			var updateCount = function($target) {
-				var length = $target.val().length;
-				var count = down ? starting - length : length;
-				$count.attr('data-current-value', count);
-				$count.text(count);
-
-				if (maximum && maximum < length) {
-					$count.addClass('too-long');
-				} else {
-					$count.removeClass('too-long');
-				}
-
-				if (minimum && length < minimum) {
-					$count.addClass('too-short');
-				} else {
-					$count.removeClass('too-short');
-				}
-			};
-
-			$count.closest('form').find(':input[name="' + name + '"]').each(function() {
-				updateCount($(this));
-
-				$(this).keyup(function() {
-					updateCount($(this));
-				});
-			});
-		});
-	};
-
-	$.fn.wpcf7NormalizeUrl = function() {
-		return this.each(function() {
-			var val = $.trim($(this).val());
-
-			if (! val.match(/^[a-z][a-z0-9.+-]*:/i)) { // check the scheme part
-				val = val.replace(/^\/+/, '');
-				val = 'http://' + val;
-			}
-
-			$(this).val(val);
 		});
 	};
 
@@ -397,7 +341,7 @@
 
 			$response.attr('role', 'alert').focus();
 		}
-	};
+	}
 
 	$.wpcf7SupportHtml5 = function() {
 		var features = {};

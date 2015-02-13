@@ -61,7 +61,7 @@ if ($param["category"] > 0) {
         <div class="emp_bannerblock">
             <div class="large-12 text-center columns">
                 <p class="find">Got a sales role to fill?</p>
-                <a href="#" class="btn">Advertise</a>
+                <a href="http://www.thesalesfloor.co.uk/jobs/add/" class="btn">Advertise</a>
             </div>
             <div class="clear"></div>
             <p style="font-size:12px;text-align:center;padding: 5px 20px;margin: 0px;">or call our sales team on 0203 714 1155</p>
@@ -74,19 +74,19 @@ if ($param["category"] > 0) {
         <div class="wrap">
             <div class="large-3 medium-3 small-3 columns">
                 <a data-target="chlng" class="active" href="">
-                        <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/problem-icon.png">
+                        <img alt="problem-icon" src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/problem-icon.png">
                     <div class="arrow_box"></div>
                 </a>
             </div>
             <div class="large-3 medium-3 small-3 columns">
                 <a data-target="sol" href="">
-                    <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/sol-icon.png">
+                    <img alt="solution icon" src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/sol-icon.png">
                     <div class="arrow_box"></div>
                 </a>
             </div>
             <div class="large-3 medium-3 small-3 columns">
                 <a data-target="diff" href="">
-                    <img src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/diff-icon.png">
+                    <img alt="difference icon" src="<?php bloginfo('template_directory'); ?>/wpjobboard/images/diff-icon.png">
                     <div class="arrow_box"></div>
                 </a>
             </div>
@@ -157,7 +157,7 @@ Want to see how we do this?.. <a href="#" class="hints" data-target="diff">Hybri
                     <div class="large-6 columns">
                         <h2 class="text-left no-padding">Your LinkedIn Candidates!</h2>
                         <h3>Hand-picked by The Sales Floor</h3>
-                        <img alt="linkedin Candidates" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/candidates-linkedin.jpg">
+                        <img alt="linkedin Candidates" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/candidates-linkedin.jpg" style="border: 1px solid #E1E1E1;">
                     </div>
                     <div class="clear"></div>
                </p>
@@ -167,7 +167,7 @@ Want to see how we do this?.. <a href="#" class="hints" data-target="diff">Hybri
                 <p>
 Since launching in 2014, over 1000 different employers have posted jobs on The Sales Floor. We’re proud to have a number of satisfied clients across a number of industries who would be only too happy to act as references for how much time and money our services have saved them.
 <br><br>
-Why not check out some of our other clients <a href="#">here</a>?
+Why not check out some of our other clients <a href="http://www.thesalesfloor.co.uk/testimonials/">here</a>?
 <br><br>
 If you want to find out more, or discuss your requirements in more depth with one of our management team, then call us on 0203 714 1155.
 <br><br>
@@ -195,106 +195,103 @@ If you want to find out more, or discuss your requirements in more depth with on
             </div>
         </div>
 
-        <section id="pk" data="toggle" class="large-12 columns">
+    <section id="pk" data="toggle" class="large-12 columns">
 
-            <div class="all_packages row">
-                <div class="large-4 medium-4 columns">
-                    <div id="panel" data-target="1" class="panel bronze">
-                        <h2>Bronze package</h2>
-                        <p class="price value">£299</p>
-                        <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
-                        <div class="large-5 columns"><p>Select No. of posts:</p></div>
-                        <div class="large-7 columns package-select">
-                            <select class="cs_package" data="1">
-                                <option>3</option>
-                                <option>5</option>
-                                <option>7</option>
-                                <option>10</option>
-                            </select>
-                            <b class="value">£1000</b>
-                        </div>
-                        <br class="clear">
-                        <br class="clear">
-                        <a class="btn custom_link" href="#">Purchase</a>
-                        <hr>
-                        <ul class="details">
-                            <li><p>4 week branded advert on The Sales Floor</p></li>
-                            <li><p>4 week sponsored advert on Indeed.com </p></li>
-                            <li><p>4 week adverts on other job boards within our partner network</p></li>
-                            <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                            <li><p class="underline">Proactive Sourcing</p></li>
-                            <li><p class="underline">CV filtering</p></li>
-                            <li><p class="underline">Targeted adverts</p></li>
-                        </ul>
+        <div class="all_packages row">
+            <div class="large-4 medium-4 columns">
+                <div id="bronze" data-target="1" class="panel bronze">
+                    <h2>Bronze package</h2>
+                    <p class="price value">£765.00</p>
+                    <p>Perfect for junior/entry level vacancies, or vacancies that require candidates to have little previous experience.</p>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="1">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£765.00</b>
                     </div>
-                </div>
-
-                <div class="large-4 medium-4 columns">
-                    <div id="panel" data-target="2" class="panel silver" >
-                        <section class="popular">
-                            <p>Most Popular</p>
-                        </section>
-                        <h2>Silver package</h2>
-                        <p class="price value">£399</p>
-                        <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
-                        <div class="large-5 columns"><p>Select No. of posts:</p></div>
-                        <div class="large-7 columns package-select">
-                            <select class="cs_package" data="2">
-                                <option>3</option>
-                                <option>5</option>
-                                <option>7</option>
-                                <option>10</option>
-                            </select>
-                            <b class="value">£1000</b>
-                        </div>
-                        <br class="clear">
-                        <br class="clear">
-                        <a class="btn" href="#">Purchase</a>
-                        <hr>
-                        <ul class="details">
-                            <li><p>4 week branded advert on The Sales Floor</p></li>
-                            <li><p>4 week sponsored advert on Indeed.com </p></li>
-                            <li><p>4 week adverts on other job boards within our partner network</p></li>
-                            <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                            <li><p>Proactive Sourcing</p></li>
-                            <li><p>CV filtering</p></li>
-                            <li><p class="underline">Targeted adverts</p></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="large-4 medium-4 columns">
-                    <div id="panel" data-target="3" class="panel gold" >
-                        <h2>Gold package</h2>
-                        <p class="price value">£499</p>
-                        <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
-                        <div class="large-5 columns"><p>Select No. of posts:</p></div>
-                        <div class="large-7 columns package-select">
-                            <select class="cs_package" data="3">
-                                <option>3</option>
-                                <option>5</option>
-                                <option>7</option>
-                                <option>10</option>
-                            </select>
-                            <b class="value">£1000</b>
-                        </div>
-                        <br class="clear">
-                        <br class="clear">
-                        <a class="btn" href="#">Purchase</a>
-                        <hr>
-                        <ul class="details">
-                            <li><p>4 week branded advert on The Sales Floor</p></li>
-                            <li><p>4 week sponsored advert on Indeed.com </p></li>
-                            <li><p>4 week adverts on other job boards within our partner network</p></li>
-                            <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
-                            <li><p>Proactive Sourcing</p></li>
-                            <li><p>CV filtering</p></li>
-                            <li><p>Targeted adverts</p></li>
-                        </ul>
-                    </div>
+                    <br class="clear">
+                    <br class="clear">
+                    <a class="btn custom_link" href="#">Purchase</a>
+                    <hr>
+                    <ul class="details">
+                        <li><p>4 week branded advert on The Sales Floor</p></li>
+                        <li><p>4 week sponsored advert on Indeed.com </p></li>
+                        <li><p>4 week adverts on other job boards within our partner network</p></li>
+                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
+                        <li><p class="underline">Proactive Sourcing</p></li>
+                        <li><p class="underline">CV filtering</p></li>
+                        <li><p class="underline">Targeted adverts</p></li>
+                    </ul>
                 </div>
             </div>
-        </section>
+
+            <div class="large-4 medium-4 columns">
+                <div id="silver" data-target="2" class="panel silver" >
+                    <section class="popular">
+                        <p>Most Popular</p>
+                    </section>
+                    <h2>Silver package</h2>
+                    <p class="price value">£1065.00</p>
+                    <p>Need someone with previous experience? Don’t Just rely on an advert- Let us proactively source for you.</p>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="2">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£1065.00</b>
+                    </div>
+                    <br class="clear">
+                    <br class="clear">
+                    <a class="btn" href="#">Purchase</a>
+                    <hr>
+                    <ul class="details">
+                        <li><p>4 week branded advert on The Sales Floor</p></li>
+                        <li><p>4 week sponsored advert on Indeed.com </p></li>
+                        <li><p>4 week adverts on other job boards within our partner network</p></li>
+                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
+                        <li><p>Proactive Sourcing</p></li>
+                        <li><p>CV filtering</p></li>
+                        <li><p class="underline">Targeted adverts</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="large-4 medium-4 columns">
+                <div id="gold" data-target="3" class="panel gold" >
+                    <h2>Gold package</h2>
+                    <p class="price value">£1365.00</p>
+                    <p>Take control of who see’s your adverts- Reach passive audiences across social media based on industry, job title, location and even company.</p>
+                    <div class="large-5 columns"><p>Select No. of posts:</p></div>
+                    <div class="large-7 columns package-select">
+                        <select class="cs_package" data="3">
+                            <option>3</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                        <b class="value">£1365.00</b>
+                    </div>
+                    <br class="clear">
+                    <br class="clear">
+                    <a class="btn" href="#">Purchase</a>
+                    <hr>
+                    <ul class="details">
+                        <li><p>4 week branded advert on The Sales Floor</p></li>
+                        <li><p>4 week sponsored advert on Indeed.com </p></li>
+                        <li><p>4 week adverts on other job boards within our partner network</p></li>
+                        <li><p>Daily updates and notifications to our communities of followers across Facebook, LinkedIn, and Twitter</p></li>
+                        <li><p>Proactive Sourcing</p></li>
+                        <li><p>CV filtering</p></li>
+                        <li><p>Targeted adverts</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section id="sng" data="toggle" class="large-12 columns">
 
@@ -416,20 +413,47 @@ If you want to find out more, or discuss your requirements in more depth with on
         </section>
         <br><br>
     </section>
-
+    
     <section id="testmonials" class="large-12 columns">
-        <h2 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/chat-icon.png"> Testmonials</h2>
-        <p class="sub-title text-center">HSome kind words from our clients…</p>
+        <h2 class="text-center"><img alt="chat" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/chat-icon.png"> Testmonials</h2>
+        <p class="sub-title text-center">Some kind words from our clients…</p>
         <div class="reviews">
             <div>  
-                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/harrods.png">
-                <p>We’d recommend them to anyone else looking for a new approach to finding sales people”</p>
-                <b>- John Deo</b>
+                <a href="http://thesalesfloor.co.uk/testimonials/">
+                    <img alt="" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/pls.png">
+                        <p>““We started working with The Sales Floor team not long after their launch, and found them
+personal, professional and very different to other job board offerings out there.
+For a start they actually are a Sales Specialist...</p>
+                    <b>- Ronan Carter, Director</b>
+                </a>
             </div>
-            <div>  
-                <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bytes.png">
-                <p>We’d recommend them to anyone else looking for a new approach to finding sales people”</p>
-                <b>- John Deo</b>
+            <div> 
+                <a href="http://thesalesfloor.co.uk/testimonials/">
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/fr.jpg">
+                    <p> “I initially contacted The Sales Floor to help us with an urgent need for a quick hire, I was very impressed with the results. Within hours I had been provided with a substantial list of potential target candidates...</p>
+                    <b>- James Harpum, Financial Controller</b>
+                </a>
+            </div>
+            <div>
+                <a href="http://thesalesfloor.co.uk/testimonials/">
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esi.gif">
+                    <p>
+                    “We decided to partner with The Sales Floor for a UK Sales requirement we had early in 
+
+                    2014. We found them straightforward, incredibly helpful, and quick to respond when we 
+
+                    needed them. They combine traditional ...
+                    </p>
+                    <b>- Mary Johnson, Talent Acquisition Manager (ESI International, part of Informa Group)</b>
+                </a>
+
+            </div>
+            <div>
+                <a href="http://thesalesfloor.co.uk/testimonials/">
+                    <img src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/bg.png">
+                    <p>“Our relationship with The Sales Floor has so far resulted in us hiring three candidates into call centre and field sales roles. We are also still considering candidates for a couple...</p>
+                    <b>- Helen Butterworth, Group Attraction and Diversity.</b>
+                </a>
             </div>
 
         </div>
@@ -481,16 +505,50 @@ $('.cs_package').on('change', function() {
     console.log(tr);
     if(this.value == "3"){
         var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£1000");
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£765.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/8/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1065.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/11/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1365.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/14/");
+        }
+
     }else if(this.value == "5"){
         var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£2000");
-    }else if(this.value == "7"){
-        var parent = $(this).parent().parent().attr("id");
-        $("#"+parent+"[data-target="+tr+"] .value").html("£3000");
+        
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1150.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/9/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1650.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/12/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£2150.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/15/");
+        }
+
     }else if(this.value == "10"){
         var parent = $(this).parent().parent().attr("id");
         $("#"+parent+"[data-target="+tr+"] .value").html("£4000");
+        if(parent === "bronze"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£1990.00");
+            $("#bronze .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/10/");
+        }
+        else if(parent === "silver"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£2990.00");
+            $("#silver .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/13/");
+        }
+        else if(parent === "gold"){
+            $("#"+parent+"[data-target="+tr+"] .value").html("£3990.00");
+            $("#gold .btn").attr("href","http://thesalesfloor.co.uk/jobs/employer/membership/purchase/16/");
+        }
     }
 });
 

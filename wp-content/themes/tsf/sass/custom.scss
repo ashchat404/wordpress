@@ -182,7 +182,7 @@ header{
 				}
 			}
 		}
-		li.menu-item-159, .menu-item-31,.menu-item-14{
+		li.menu-item-159, .menu-item-40,.menu-item-14{
 			width: 30%;
 			padding-top: 0px;
 		}
@@ -367,6 +367,12 @@ header{
 }
 .widget_recent_entries{
 	max-width:100%;
+	text-align:center;
+	img{
+		max-height: 170px;
+		display: block;
+		margin: 0 auto;
+	}
 }
 #featured_themes{
 	padding:0px;
@@ -416,7 +422,7 @@ header{
 		}
 
 		.featured_extra{
-			height: 47px;
+			min-height: 47px;
 			border-top: 1px solid #E3E3E3;
 			text-align: center;
 			i{
@@ -424,11 +430,12 @@ header{
 			}
 			.location{
 				background-color: #F0F0F0;
+				padding:10px;
 			}
 			.salary{
 				background: #FAFAFA;
 				height: 100%;
-				padding:13px 0px;
+				padding:10px;
 			}
 		}
 
@@ -497,6 +504,7 @@ footer#foot{
 		#wpjb-widget-alerts-2{
 			label{
 				display: block;
+				color:#868686;
 			}
 			input{
 				margin:10px 0px 10px 0px;
@@ -690,6 +698,7 @@ margin-top: 20px;
 		}
 	}
 }
+.salary_bracket{display:none;}
 #recent_post{
 	img{
 		display: block;
@@ -702,6 +711,7 @@ margin-top: 20px;
 	.mid{
 		display: table-cell;
 		vertical-align: middle;
+		max-width: 110px;
 	}
 	img{
 		max-height: 100%;
@@ -722,6 +732,7 @@ margin-top: 20px;
 			vertical-align: middle;
 			h1{
 				margin: 7px 7px 7px 0px;
+				line-height: 1.2em;
 			}
 		}
 		.entry-exerpt{
@@ -820,7 +831,7 @@ margin-top: 20px;
 	.panel{
 		background:#F9FAFA;
 		width: 100%;
-		margin:0 auto;
+		margin:10px auto;
 		min-height: 490px;
 		text-align: center;
 		border:1px solid #E5E5E5;
@@ -1193,6 +1204,9 @@ a.active{
 	padding:20px!important;
 	max-width:960px;
 	margin:0 auto;
+	.featured_extra{
+		height: auto!important;
+	}
 
 	a{
 		display: block;
@@ -1318,6 +1332,7 @@ a.active{
   	width: 25%;
   	float: left;
   	text-align: center;
+  	height: 80px;
   	td{
 		padding: 15px 3.4%;
 		position: relative;
@@ -1515,7 +1530,13 @@ a.active{
 		.mid{
 			display: block;
 			height:120px;
+			margin: 0 auto;
 		}
+	}
+
+	.comp_fl{
+		display: block;
+		form{float:none!important;}
 	}
 
 	#common_banner{
@@ -1543,6 +1564,10 @@ a.active{
 }
 
 @media only screen and (max-width: 40em) { 
+
+	.solutions .columns{
+		height: auto;
+	}
 	input[type=range]{
 		width:100%;
 	}
