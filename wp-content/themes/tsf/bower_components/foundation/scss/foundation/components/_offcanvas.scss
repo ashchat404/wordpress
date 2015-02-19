@@ -3,7 +3,6 @@
 // Licensed under MIT Open Source
 
 @import "global";
-@import "type";
 
 // Off Canvas Tab Bar Variables
 $include-html-off-canvas-classes: $include-html-classes !default;
@@ -172,7 +171,6 @@ $menu-slide: "transform 500ms ease" !default;
     line-height: $tabbar-header-line-height;
     margin: $tabbar-header-margin;
   }
-  h1,h2,h3,h4 { font-size: $h5-font-size; }
 }
 
 // SMALL SECTIONS

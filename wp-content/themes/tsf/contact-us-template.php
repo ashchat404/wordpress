@@ -91,7 +91,16 @@ if ($param["category"] > 0) {
         <div class="large-3 medium-3 small-6 columns"><a href="skype:thesalesfloor?call"><i class="circ fi-social-skype"><i class="circ pulse"></i></i><p>Skype</p><i>Call us</i></a></div>
         <div class="large-3 medium-3 small-6 columns"><a href="https://twitter.com/thesalesfloor"><i class="circ fi-social-twitter"><i class="circ pulse"></i></i><p>Twitter</p><i>Follow us</i></a></div>
     </div>
-    <div class="clear"></div>
+    <div class="clear"><br></div>
+    <div class="large-6 large-centered medium-centered small-centered medium-6 small-6 columns">
+        <p class="text-center">The Old Studio, 26-32 Voltaire Road, London, SW4 6DH</p>
+        <img src="http://maps.google.com/maps/api/staticmap?center=51.4657437,-0.1333171&zoom=16&size=600x400&maptype=roadmap&sensor=false&language=&markers=color:red|label:none|51.4657437,-0.1333171" title="sw46dh" width="600" height="400" style="border:1px solid #CECECE;">
+    </div>
+    <div style="width:90px;margin:0 auto;">
+        <a target="_blank" href="https://www.facebook.com/Thesalesfloor"><i class="fi-social-facebook i"></i></a>
+        <a target="_blank" href="https://plus.google.com/111836940371173250719/posts"><i class="fi-social-google-plus i"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/the-sales-floor-ltd"><i class="fi-social-linkedin i"></i></a>
+    </div>
  </section>
 
 <?php get_footer() ?>

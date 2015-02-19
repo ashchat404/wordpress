@@ -457,7 +457,7 @@ class Wpjb_Module_Frontend_Index extends Wpjb_Controller_Frontend
             $alert->params = serialize(array("filter"=>"active", "keyword"=>$alert->keyword));
             $alert->save();
             
-            $this->view->_flash->addInfo(__("Alert was added to the database.", "wpjobboard"));
+            $this->view->_flash->addInfo(__("Your alert was successfully set up!.", "wpjobboard"));
         } else {
             $this->view->_flash->addError(__("Alert could not be added. There was an error in the form.", "wpjobboard"));
         }

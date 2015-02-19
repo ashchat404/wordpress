@@ -505,10 +505,11 @@ Lesley Stewart- Business Development Director
                         <ul class="wpjb-sub-filters">
                             <li><a href="" data-filter="recruitment">Recruitment</a></li>
                             <li><a href="" data-filter="media">Media</a></li>
+                            <li><a href="" data-filter="automotive">Automotive</a></li>
                             <li><a href="" data-filter="retail">Retail</a></li>
                             <li><a href="" data-filter="energy">Energy / Environmental</a></li>
                             <li><a href="" data-filter="it">IT</a></li>
-                            <li><a href="" data-filter="food">Food Beverage</a></li>
+                            <li><a href="" data-filter="food">FMCG</a></li>
                             <li><a href="" data-filter="industrial">Industrial / Facilities</a></li>
                             <li><a href="" data-filter="training">Training / Qualifications</a></li>
                             <li><a href="" data-filter="is">Information Services</a></li>
@@ -530,6 +531,11 @@ Lesley Stewart- Business Development Director
             <img data-target="recruitment" alt="mp" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/mp.png">
             <img data-target="recruitment" alt="ha" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ha.png">
             <img data-target="recruitment" alt="ha" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/cd.png">
+
+            <img data-target="automotive" alt="jaguar logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/jag.jpg">
+            <img data-target="automotive" alt="bmw logo" class="large-2 medium-2 small-4 columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/bmw.jpg">
+            <img data-target="automotive" alt="innout logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/innout.jpg">
+
 
             <img data-target="media" alt="sky logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/sky.png">
             <img data-target="media" alt="hm" class="large-2  medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/hm.png">
@@ -563,6 +569,10 @@ Lesley Stewart- Business Development Director
             <img data-target="it" alt="ans logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ns.jpg">
             <img data-target="it" alt="ntware logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ntw.jpg">
             <img data-target="it" alt="netabse logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/net.jpg">
+            <img data-target="it" alt="zaizi logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/zaizi.jpg">
+            <img data-target="it" alt="Ensighten logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ens.jpg">
+            <img data-target="it" alt="tectrade logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/tectrade.jpg">
+
 
 
             <img data-target="retail" alt="harrods logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/harrods.jpg">
@@ -585,6 +595,9 @@ Lesley Stewart- Business Development Director
             <img data-target="food" alt="bic logo" class="large-2  medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/bic.jpg">
             <img data-target="food" alt="britvic logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/brtv.jpg">
             <img data-target="food" alt="carlsberg logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/carl.jpg">
+            <img data-target="food" alt="electrolux logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/electrolux.png">
+            <img data-target="food" alt="cbg logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/cbg.jpg">
+
 
             <img data-target="industrial" alt="tfc logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/tfc.jpg">
             <img data-target="industrial" alt="hilti logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/hilti.jpg">
@@ -615,6 +628,8 @@ Lesley Stewart- Business Development Director
             <img data-target="finance" alt="grouptrader logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/gpt.jpg">
             <img data-target="finance" alt="access pay logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/acp.jpg">
             <img data-target="finance" alt="experian logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/exp.jpg">
+            <img data-target="finance" alt="sortrefer logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/sortrefer.jpg">
+
 
             <img data-target="events" alt="iqpc logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/iqpc.jpg">
             <img data-target="events" alt="lbcg logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/lbcg.jpg">
@@ -629,6 +644,9 @@ Lesley Stewart- Business Development Director
             <img data-target="other" alt="office depot logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ofd.jpg">
             <img data-target="other" alt="manchester united logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/manutd.jpg">
             <img data-target="other" alt="img logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/img.jpg">
+            <img data-target="other" alt="workplace giving uk logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/workplace.jpg">
+            <img data-target="other" alt="ignition one logo" class="large-2 medium-2 small-4  columns" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/clients/ignition.jpg">
+
 
 
 

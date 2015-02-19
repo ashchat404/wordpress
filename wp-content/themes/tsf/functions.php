@@ -14,7 +14,11 @@ if (!isset($content_width))
 /*
  * Load Jetpack compatibility file.
  */
+ add_action('get_header', 'my_filter_head');
 
+  function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+  }
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
@@ -194,6 +198,7 @@ function wpjobboard_theme_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'wpjobboard_theme_scripts', 30);
+
 
 /**
  * Implement the Custom Header feature

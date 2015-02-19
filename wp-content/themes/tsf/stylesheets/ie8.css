@@ -1,1 +1,44 @@
-#content img{width:auto}#wpjb-step li:first-child:before{content:'1'}#wpjb-step li:before{content:'2'}#footer{width:72.7% !important}#wpjb-job-list{width:100% !important;margin-left:3.4%}#wpjb-job-list tr{display:table-row !important}.wpjb-sub-filters li,.wpjb-sub-filters li a{border:none !important}#header .site-title,#header .site-navigation{height:100%}
+/* line 1, ../sass/ie8.scss */
+#content {
+  /* responsive fix */
+}
+/* line 3, ../sass/ie8.scss */
+#content img {
+  width: auto;
+}
+
+/* line 9, ../sass/ie8.scss */
+#wpjb-step li:first-child:before {
+  content: '1';
+}
+/* line 12, ../sass/ie8.scss */
+#wpjb-step li:before {
+  content: '2';
+}
+
+/* line 17, ../sass/ie8.scss */
+#footer {
+  width: 72.7% !important;
+}
+
+/* line 21, ../sass/ie8.scss */
+#wpjb-job-list {
+  width: 100% !important;
+  margin-left: 3.4%;
+}
+/* line 24, ../sass/ie8.scss */
+#wpjb-job-list tr {
+  display: table-row !important;
+}
+
+/* line 29, ../sass/ie8.scss */
+.wpjb-sub-filters li,
+.wpjb-sub-filters li a {
+  border: none !important;
+}
+
+/* line 34, ../sass/ie8.scss */
+#header .site-title,
+#header .site-navigation {
+  height: 100%;
+}

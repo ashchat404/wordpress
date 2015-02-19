@@ -107,6 +107,9 @@
                                                         <a id="gd_choose" href="#" ><img src="<?php bloginfo('template_url'); ?>/wpjobboard/images/gd.png"></a>
                                                         <span class="gd_msg"></span>
                                                     </div>
+                                                    <div class="clear"> </div>
+                                                    <i style="font-size: 10px;line-height: 0.5px;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
+
                                             </div>
                                         </div>
                                 <?php endforeach; ?>
@@ -222,6 +225,8 @@
                                                         <a id="gd_choose" href="#" ><img src="<?php bloginfo('template_url'); ?>/wpjobboard/images/gd.png"></a>
                                                         <span class="gd_msg"></span>
                                                     </div>
+                                                    <div class="clear"></div>
+                                                    <i style="font-size:10px;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
                                             </div>
                                     </fieldset>
                                 <?php endforeach; ?>
@@ -355,7 +360,7 @@ jQuery(document).ready(function($){
         })
         $(".wpcf7-form input[type=url]").val($(location).attr('href'));
         if($("form.wpjb-form").length){
-            $("form.wpjb-form").get(1).setAttribute('action','http://www.thesalesfloor.co.uk/resumes/register/');            
+            $("form.wpjb-form").get(1).setAttribute('action','<?php echo site_url(); ?>/resumes/register/');            
         }
         $('#email').change(function() {
             $('#user_email').val($(this).val());
@@ -427,8 +432,11 @@ jQuery(document).ready(function($){
         var pass = $("#wjp_register input#user_password").val();
         var pass2 = $("#wjp_register input#user_password2").val();
         var email = $("#wjp_register input#user_email").val();
+
         if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
             $(".error p.err").html("Please fill all the fields which are marked with *");
+            console.log($("#dropbox_link").val());
+            console.log($("#googledrive_link").val());
             proceed = false;
             return false;
         }
@@ -447,6 +455,7 @@ jQuery(document).ready(function($){
             proceed = false;
             return false;
         }
+
         else{
             var data = 'email-address='+email+'&usname='+uname;
             $(".success p.app").show();
@@ -514,7 +523,7 @@ jQuery(document).ready(function($){
                                         success:function(data, textStatus, jqXHR) 
                                         {
                                             $(".error").hide();
-                                            $(".success p.reg").html("Registered successfully, click <a href='http://thesalesfloor.co.uk/resumes/my-profile/'><b>here</b></a> you view your profile");
+                                            $(".success p.reg").html("Registered successfully, click <a href='<?php echo site_url(); ?>/resumes/my-profile/'><b>here</b></a> you view your profile");
                                         },
                                         error: function(jqXHR, textStatus, errorThrown) 
                                         {

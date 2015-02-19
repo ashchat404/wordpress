@@ -778,10 +778,12 @@ img#wpjb-logo {
         }
 }
 #wpjb-job-list {
+        display: block;
         position: relative;
         @include adjust-font-size-to( 14px );
         border-collapse: separate;
         border-spacing: 0 10px;
+        tbody{display:block;}
         td {
                 padding: 9px 0;
                 &:first-child {
@@ -852,15 +854,25 @@ img#wpjb-logo {
                 .wpjb-sub {
                         color: lighten( $form_color, 20% );
                 }
+                @media screen and( max-width: 750px ) {
+                        width: 60%;
+                }
         }
         .wpjb-sub {
                 font-weight: normal;
         }
         .wpjb-column-location {
                 width: 80%;
+                @media screen and( max-width: 750px ) {
+                        width: 40%;
+                        float: none;
+                }
         }
         .wpjb-column-description {
                 width: 40%;
+                @media screen and( max-width: 750px ) {
+                        display: none;
+                }
         }
         .wpjb-column-date {
                 width: 10%;

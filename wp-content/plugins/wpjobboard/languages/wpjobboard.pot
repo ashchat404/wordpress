@@ -3453,7 +3453,7 @@ msgid "Job Alerts"
 msgstr ""
 
 #: application/libraries/Module/Frontend/Index.php:460
-msgid "Alert was added to the database."
+msgid "Your alert was successfully set up!."
 msgstr ""
 
 #: application/libraries/Module/Frontend/Index.php:462

@@ -11,6 +11,8 @@
 
 <?php get_sidebar(); ?>
 </div>
+  </div>
+</div>
 <footer id="foot" >
 	<div class="row" id="footer_wrapper">
 		<div class="large-12">
@@ -20,7 +22,15 @@
 	</div>
 </footer><!-- #colophon .site-footer -->
 
+<script src="<?php echo get_template_directory_uri(); ?>/bower_components/foundation/js/foundation.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.offcanvas.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/foundation.reveal.js"></script>
 
+<script>
+jQuery.noConflict();
+jQuery(document).foundation();
+</script> 
+     
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
