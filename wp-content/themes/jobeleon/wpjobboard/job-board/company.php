@@ -59,14 +59,22 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                 <?php if ($company->company_website): ?>
                     <tr>
                         <td class="wpjb-info-label"><?php _e("Company Website", "jobeleon") ?></td>
-                        <td><a href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a></td>
+                        <td>
+                            <?php if($company->doScheme("company_website")): else: ?>
+                            <a href="<?php esc_attr_e($company->company_website) ?>" class="wpjb-company-link"><?php esc_html_e($company->company_website) ?></a>
+                            <?php endif; ?>
+                        </td>
                     </tr>
                 <?php endif; ?>
 
                 <?php foreach($company->getMeta(array("visibility"=>0, "meta_type"=>3, "empty"=>false, "field_type_exclude"=>"ui-input-textarea")) as $k => $value): ?>
                     <tr>
                         <td class="wpjb-info-label"><?php esc_html_e($value->conf("title")); ?></td>
-                        <td><?php esc_html_e(join(", ", (array) $value->values())) ?></td>
+                        <td>
+                            <?php if($company->doScheme($k)): else: ?>
+                            <?php esc_html_e(join(", ", (array) $value->values())) ?>
+                            <?php endif; ?>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
 
@@ -78,11 +86,14 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
             <div class="wpjb-job-text">
 
-                <?php if ($company->getLogoUrl()): ?>
+                <?php if($company->doScheme("company_logo")): ?>
+                <?php elseif($company->getLogoUrl()): ?>
                     <div><img src="<?php echo $company->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
                 <?php endif; ?>
 
+                <?php if($company->doScheme("company_info")): else: ?>
                 <?php wpjb_rich_text($company->company_info, $company->meta->company_info_format->value()) ?>
+                <?php endif; ?>
 
             </div>
 
@@ -90,7 +101,9 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
                 <h3><?php esc_html_e($value->conf("title")); ?></h3>
                 <div class="wpjb-job-text">
+                    <?php if($company->doScheme($k)): else: ?>
                     <?php wpjb_rich_text($value->value()) ?>
+                    <?php endif; ?>
                 </div>
 
             <?php endforeach; ?>

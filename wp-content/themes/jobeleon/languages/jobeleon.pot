@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License.
 msgid ""
 msgstr ""
-"Project-Id-Version: Jobeleon 1.1.4\n"
+"Project-Id-Version: Jobeleon 1.1.5\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/jobeleon\n"
-"POT-Creation-Date: 2014-10-09 08:56:48+00:00\n"
+"POT-Creation-Date: 2014-12-03 08:19:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -368,7 +368,7 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: wpjobboard/default/form.php:21
+#: wpjobboard/default/form.php:23
 msgid "Form"
 msgstr ""
 
@@ -469,7 +469,7 @@ msgstr ""
 
 #: wpjobboard/job-board/company-login.php:38
 #: wpjobboard/job-board/single.php:39 wpjobboard/resumes/login.php:46
-#: wpjobboard/resumes/resume.php:179
+#: wpjobboard/resumes/resume.php:218
 msgid "Login"
 msgstr ""
 
@@ -482,7 +482,7 @@ msgid "Employer registration"
 msgstr ""
 
 #: wpjobboard/job-board/company-new.php:39 wpjobboard/job-board/single.php:40
-#: wpjobboard/resumes/resume.php:183
+#: wpjobboard/resumes/resume.php:222
 msgid "Register"
 msgstr ""
 
@@ -643,7 +643,7 @@ msgid "%1$s / %2$d days"
 msgstr ""
 
 #: wpjobboard/job-board/company-products.php:93
-#: wpjobboard/resumes/resume.php:187
+#: wpjobboard/resumes/resume.php:226
 msgid "Purchase"
 msgstr ""
 
@@ -667,7 +667,7 @@ msgid ""
 msgstr ""
 
 #: wpjobboard/job-board/company-verify.php:31
-#: wpjobboard/resumes/resume.php:191
+#: wpjobboard/resumes/resume.php:230
 msgid "Request verification"
 msgstr ""
 
@@ -691,20 +691,20 @@ msgstr ""
 msgid "Company Website"
 msgstr ""
 
-#: wpjobboard/job-board/company.php:100
+#: wpjobboard/job-board/company.php:113
 msgid "Current job openings at"
 msgstr ""
 
-#: wpjobboard/job-board/company.php:107 wpjobboard/job-board/index-item.php:50
+#: wpjobboard/job-board/company.php:120 wpjobboard/job-board/index-item.php:53
 #: wpjobboard/job-board/single.php:113
 msgid "New"
 msgstr ""
 
-#: wpjobboard/job-board/company.php:109 wpjobboard/job-board/single.php:115
+#: wpjobboard/job-board/company.php:122 wpjobboard/job-board/single.php:115
 msgid "posted {time_ago} ago."
 msgstr ""
 
-#: wpjobboard/job-board/company.php:116
+#: wpjobboard/job-board/company.php:129
 msgid "Currently this employer doesn't have any openings."
 msgstr ""
 
@@ -794,7 +794,7 @@ msgid "Applicant name"
 msgstr ""
 
 #: wpjobboard/job-board/job-applications.php:34
-#: wpjobboard/resumes/resume-min.php:55 wpjobboard/resumes/resume.php:74
+#: wpjobboard/resumes/resume-min.php:55 wpjobboard/resumes/resume.php:82
 msgid "E-mail"
 msgstr ""
 
@@ -823,28 +823,28 @@ msgstr ""
 msgid "Update"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:30 wpjobboard/resumes/my-applications.php:24
+#: wpjobboard/job-board/job.php:31 wpjobboard/resumes/my-applications.php:24
 #: wpjobboard/widget/recently-viewed.php:23
 msgid "at"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:43 wpjobboard/widget/recently-viewed.php:27
+#: wpjobboard/job-board/job.php:45 wpjobboard/widget/recently-viewed.php:27
 msgid "Location"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:75
+#: wpjobboard/job-board/job.php:77
 msgid "Date Posted"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:83 wpjobboard/resumes/resume-min.php:48
+#: wpjobboard/job-board/job.php:85 wpjobboard/resumes/resume-min.php:48
 msgid "Category"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:96
+#: wpjobboard/job-board/job.php:98
 msgid "Job Type"
 msgstr ""
 
-#: wpjobboard/job-board/job.php:129
+#: wpjobboard/job-board/job.php:132
 msgid "Description"
 msgstr ""
 
@@ -973,7 +973,7 @@ msgid "Sent"
 msgstr ""
 
 #: wpjobboard/resumes/my-applications.php:33
-msgid "You did not sent any applications yet."
+msgid "You did not send any applications yet."
 msgstr ""
 
 #: wpjobboard/resumes/my-bookmarks.php:2 wpjobboard/widget/resumes-menu.php:43
@@ -1034,7 +1034,7 @@ msgid "Add Experience"
 msgstr ""
 
 #: wpjobboard/resumes/my-resume.php:63 wpjobboard/resumes/my-resume.php:114
-#: wpjobboard/resumes/resume.php:140
+#: wpjobboard/resumes/resume.php:177
 msgid "Current"
 msgstr ""
 
@@ -1058,11 +1058,11 @@ msgstr ""
 msgid "Register account"
 msgstr ""
 
-#: wpjobboard/resumes/resume-min.php:21 wpjobboard/resumes/resume.php:44
+#: wpjobboard/resumes/resume-min.php:21 wpjobboard/resumes/resume.php:52
 msgid "Last Resume Update"
 msgstr ""
 
-#: wpjobboard/resumes/resume-min.php:27 wpjobboard/resumes/resume.php:50
+#: wpjobboard/resumes/resume-min.php:27 wpjobboard/resumes/resume.php:58
 msgid "Address"
 msgstr ""
 
@@ -1071,19 +1071,19 @@ msgid "Degree"
 msgstr ""
 
 #: wpjobboard/resumes/resume-min.php:41 wpjobboard/resumes/resume-min.php:87
-#: wpjobboard/resumes/resume.php:115
+#: wpjobboard/resumes/resume.php:152
 msgid "Experience"
 msgstr ""
 
-#: wpjobboard/resumes/resume-min.php:62 wpjobboard/resumes/resume.php:81
+#: wpjobboard/resumes/resume-min.php:62 wpjobboard/resumes/resume.php:97
 msgid "Phone Number"
 msgstr ""
 
-#: wpjobboard/resumes/resume-min.php:69 wpjobboard/resumes/resume.php:88
+#: wpjobboard/resumes/resume-min.php:69 wpjobboard/resumes/resume.php:112
 msgid "Website"
 msgstr ""
 
-#: wpjobboard/resumes/resume-min.php:92 wpjobboard/resumes/resume.php:116
+#: wpjobboard/resumes/resume-min.php:92 wpjobboard/resumes/resume.php:153
 msgid "Education"
 msgstr ""
 
@@ -1099,11 +1099,11 @@ msgstr ""
 msgid "Resume"
 msgstr ""
 
-#: wpjobboard/resumes/resume.php:169 wpjobboard/resumes/resume.php:175
+#: wpjobboard/resumes/resume.php:208 wpjobboard/resumes/resume.php:214
 msgid "Contact Candidate"
 msgstr ""
 
-#: wpjobboard/resumes/resume.php:233
+#: wpjobboard/resumes/resume.php:272
 msgid "Submit"
 msgstr ""
 
@@ -1212,9 +1212,9 @@ msgstr ""
 msgid "Jobeleon"
 msgstr ""
 
-#. #-#-#-#-#  jobeleon.pot (Jobeleon 1.1.4)  #-#-#-#-#
+#. #-#-#-#-#  jobeleon.pot (Jobeleon 1.1.5)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-#. #-#-#-#-#  jobeleon.pot (Jobeleon 1.1.4)  #-#-#-#-#
+#. #-#-#-#-#  jobeleon.pot (Jobeleon 1.1.5)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://wpjobboard.net/"
 msgstr ""

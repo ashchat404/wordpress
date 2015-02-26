@@ -27,6 +27,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
         <?php if ($job->company_name): ?>
             <tr>
                 <td class="wpjb-info-label wpjb-company-name">
+                    <?php if($job->doScheme("company_name")): else: ?>
                     <?php _e("at", "jobeleon") ?>                     
                     
                     <span itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
@@ -35,6 +36,7 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                         </span>
                     </span>
                     <?php wpjb_job_company_profile($job->getCompany(true)) ?>
+                    <?php endif; ?>
                 </td>
             </tr>
         <?php endif; ?>
@@ -108,13 +110,14 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             <tr>
                 <td class="wpjb-info-label"><?php esc_html_e($value->conf("title")); ?></td>
                 <td>
-                    <?php if ($value->conf("type") == "ui-input-file"): ?>
-                        <?php foreach ($job->file->{$value->name} as $file): ?>
-                            <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
-                            <?php echo wpjb_format_bytes($file->size) ?><br/>
+                    <?php if($job->doScheme($k)): ?>
+                    <?php elseif($value->conf("type") == "ui-input-file"): ?>
+                        <?php foreach($job->file->{$value->name} as $file): ?>
+                        <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
+                        <?php echo wpjb_format_bytes($file->size) ?><br/>
                         <?php endforeach ?>
                     <?php else: ?>
-                        <?php esc_html_e(join(", ", (array) $value->values())) ?>
+                        <?php esc_html_e(join(", ", (array)$value->values())) ?>
                     <?php endif; ?>
                 </td>
             </tr>
@@ -129,11 +132,14 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     <h3><?php _e("Description", "jobeleon") ?></h3>
     <div itemprop="description" class="wpjb-job-text">
 
-        <?php if ($job->getLogoUrl()): ?>
+        <?php if($job->doScheme("company_logo")): ?>
+        <?php elseif($job->getLogoUrl()): ?>
             <div><img src="<?php echo $job->getLogoUrl() ?>" id="wpjb-logo" alt="" /></div>
         <?php endif; ?>
 
+        <?php if($job->doScheme("job_description")): else: ?>
         <?php wpjb_rich_text($job->job_description, $job->meta->job_description_format->value()) ?>
+        <?php endif; ?>
 
     </div>
 
@@ -141,7 +147,9 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
         <h3><?php esc_html_e($value->conf("title")); ?></h3>
         <div class="wpjb-job-text">
+            <?php if($job->doScheme($k)): else: ?>
             <?php wpjb_rich_text($value->value(), $value->conf("textarea_wysiwyg") ? "html" : "text") ?>
+            <?php endif; ?>
         </div>
 
     <?php endforeach; ?>

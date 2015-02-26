@@ -151,7 +151,7 @@ if ($param["category"] > 0) {
 
     <?php if($pagination): ?>
     <div id="wpjb-paginate-links">
-        <?php wpjb_paginate_links($url, $result->pages, $result->page, $query) ?>
+        <?php wpjb_paginate_links($url, $result->pages, $result->page, $query, $format) ?>
     </div>
     <?php endif; ?>
 

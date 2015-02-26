@@ -30,7 +30,7 @@
             <?php endforeach; else :?>
             <tr>
                 <td colspan="3" align="center">
-                    <?php _e("You did not sent any applications yet.", "jobeleon"); ?>
+                    <?php _e("You did not send any applications yet.", "jobeleon"); ?>
                 </td>
             </tr>
             <?php endif; ?>

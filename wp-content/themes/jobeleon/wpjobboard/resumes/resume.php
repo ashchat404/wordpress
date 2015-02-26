@@ -25,7 +25,8 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
     <?php wpjb_flash() ?>
     <div class="wpjb-resume-headline">
         <div class="wpjb-resume-photo-wrap">
-            <?php if ($resume->getAvatarUrl()): ?>
+            <?php if($resume->doScheme("image")): ?>
+            <?php elseif ($resume->getAvatarUrl()): ?>
                 <img src="<?php esc_attr_e($resume->getAvatarUrl("100x100")) ?>" alt="" class="wpjb-resume-photo" />
             <?php else : ?>
                 <img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/candidate-avatar.png'; ?>" alt="" />
@@ -33,10 +34,17 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
         </div>
         <div class="wpjb-resume-main-info">
             <h2 class="wpjb-resume-name"><?php esc_html_e(Wpjb_Project::getInstance()->title); ?></h2>
+            <?php if($resume->doScheme("headline")): else:  ?>
             <strong><?php esc_html_e($resume->headline) ?></strong>
+            <?php endif; ?>
         </div>
     </div>
-    <div class="wpjb-summary"><?php echo wpjb_rich_text($resume->description, "html") ?></div>
+    
+    <div class="wpjb-summary">
+        <?php if($resume->doScheme("headline")): else: ?>
+        <?php echo wpjb_rich_text($resume->description, "html") ?>
+        <?php endif; ?>
+    </div>
 
     <table class="wpjb-info">
         <tbody>
@@ -72,21 +80,45 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
             <?php if ($resume->getUser(true)): ?>
                 <tr>
                     <td><?php _e("E-mail", "jobeleon") ?></td>
-                    <td><img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/mail-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" /><?php echo ($can_browse) ? $resume->getUser()->user_email : wpjobboard_theme_block_resume_details(); ?></td>
+                    <td>
+                        <img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/mail-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" />
+                        <?php if($resume->doScheme("user_email")):  ?>
+                        <?php elseif(in_array("user_email", $tolock) && !$can_browse): ?>
+                        <?php echo wpjobboard_theme_block_resume_details() ?>
+                        <?php else: ?>
+                        <?php esc_html_e($resume->getUser()->user_email) ?>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             <?php endif; ?>
 
             <?php if ($resume->phone): ?>
                 <tr>
                     <td><?php _e("Phone Number", "jobeleon") ?></td>
-                    <td><img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/phone-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" /><?php echo $can_browse ? $resume->phone : wpjobboard_theme_block_resume_details() ?></td>
+                    <td>
+                        <img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/phone-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" />
+                        <?php if($resume->doScheme("phone")): ?>
+                        <?php elseif(in_array("phone", $tolock) && !$can_browse): ?>
+                        <?php echo wpjobboard_theme_block_resume_details() ?>
+                        <?php else: ?>
+                        <?php esc_html_e($resume->phone) ?>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             <?php endif; ?>
 
             <?php if ($resume->getUser(true)->user_url): ?>
                 <tr>
                     <td><?php _e("Website", "jobeleon") ?></td>
-                    <td><img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/anchor-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" /><?php echo $can_browse ? $resume->getUser(true)->user_url : wpjobboard_theme_block_resume_details() ?></td>
+                    <td>
+                        <img src="<?php echo get_template_directory_uri() . '/wpjobboard/images/anchor-' . $suffix . '.png'; ?>" alt="" class="wpjb-inline-img" />
+                        <?php if($resume->doScheme("user_url")): ?>
+                        <?php elseif(in_array("user_url", $tolock) && !$can_browse): ?>
+                        <?php echo wpjobboard_theme_block_resume_details() ?>
+                        <?php else: ?>
+                        <a href="<?php esc_attr_e($resume->getUser()->user_url) ?>"><?php esc_html_e($resume->getUser()->user_url) ?></a>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             <?php endif; ?>
 
@@ -94,13 +126,18 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
                 <tr>
                     <td class="wpjb-info-label"><?php esc_html_e($value->conf("title")); ?></td>
                     <td>
-                        <?php if ($value->conf("type") == "ui-input-file"): ?>
-                            <?php foreach ($resume->file->{$value->name} as $file): ?>
-                                <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
-                                <?php echo wpjb_format_bytes($file->size) ?><br/>
+                        <?php if($resume->doScheme($k)): ?>
+                        <?php elseif(in_array($k, $tolock) && !$can_browse): ?>
+                            <?php echo wpjobboard_theme_block_resume_details() ?>
+                        <?php elseif($value->conf("render_callback")): ?>
+                            <?php call_user_func($value->conf("render_callback")); ?>
+                        <?php elseif($value->conf("type") == "ui-input-file"): ?>
+                            <?php foreach($resume->file->{$value->name} as $file): ?>
+                            <a href="<?php esc_attr_e($file->url) ?>" rel="nofollow"><?php esc_html_e($file->basename) ?></a>
+                            <?php echo wpjb_format_bytes($file->size) ?><br/>
                             <?php endforeach ?>
                         <?php else: ?>
-                            <?php esc_html_e(join(", ", (array) $value->values())) ?>
+                            <?php esc_html_e(join(", ", (array)$value->values())) ?>
                         <?php endif; ?>
                     </td>
                 </tr>
@@ -157,7 +194,9 @@ $suffix = !empty($color_scheme) ? $color_scheme : $suffix;
 
             <h3><?php esc_html_e($value->conf("title")); ?></h3>
             <div class="wpjb-job-text">
+                <?php if($resume->doScheme($k)): else: ?>
                 <?php wpjb_rich_text($value->value(), $value->conf("textarea_wysiwyg") ? "html" : "text") ?>
+                <?php endif; ?>
             </div>
 
         <?php endforeach; ?>

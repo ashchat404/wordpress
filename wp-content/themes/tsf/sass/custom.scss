@@ -53,6 +53,12 @@ hr{margin:0px;width:auto;border: 1px solid #E8EAEB;}
 
 h1,h2,h3,h4{font-weight:500;}
 
+.notes{
+	color: #808080;
+	font-size: 10px;
+	display:block;
+	text-align:center;
+}
 
 .logo{
 	display:none;
@@ -1465,7 +1471,7 @@ a.active{
 		margin: 0px 10px;
 		border-radius: 10px;
 		padding: 5px;
-		height: 50px;
+		min-height: 50px;
 	}
 	padding:6px 5px;
 	margin:5px 0px;

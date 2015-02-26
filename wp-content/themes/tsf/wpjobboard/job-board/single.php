@@ -108,7 +108,7 @@
                                                         <span class="gd_msg"></span>
                                                     </div>
                                                     <div class="clear"> </div>
-                                                    <i style="font-size: 10px;line-height: 0.5px;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
+                                                    <i class="notes" style="text-align:left;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
 
                                             </div>
                                         </div>
@@ -189,6 +189,9 @@
                             </div>
 
                             <input type="button" value="Apply and Save Details" class="one-submit" onclick="validation()" />
+                            <br>
+                            <i class="notes">By applying for this job, you agree with our <a target="_blank" href="http://www.thesalesfloor.co.uk/terms-and-conditions/">Terms and Conditions</a></i>
+
                         <?php else: ?>
                             <form id="wpjb-apply-form" action="<?php esc_attr_e(wpjb_link_to("job", $job, array("form"=>"apply"))) ?>#wpjb-scroll" method="post" enctype="multipart/form-data" class="wpjb-form wpjb-form-nolines">
                                 <?php echo $form->renderHidden() ?>
@@ -226,7 +229,7 @@
                                                         <span class="gd_msg"></span>
                                                     </div>
                                                     <div class="clear"></div>
-                                                    <i style="font-size:10px;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
+                                                    <i class="notes" style="text-align:left;">Note: If uploading via Google Drive please make sure you change the permissions of your document so employers can access it.</i>
                                             </div>
                                     </fieldset>
                                 <?php endforeach; ?>
@@ -234,7 +237,10 @@
                                     <legend class="wpjb-empty"></legend>
                                     <input type="submit" class="wpjb-submit" id="wpjb_submit" value="<?php _e("Send Application", "jobeleon") ?>" />
                                 </fieldset>
+                                <i class="notes">By applying for this job, you agree with our <a target="_blank" href="http://www.thesalesfloor.co.uk/terms-and-conditions/">Terms and Conditions</a></i>
+
                             </form>
+                            <script type="text/javascript">$("").prop("required",true)</script>
                         <?php endif;?>
                     <?php endif;?>
                 </div>
@@ -359,8 +365,8 @@ jQuery(document).ready(function($){
             Dropbox.choose(options);
         })
         $(".wpcf7-form input[type=url]").val($(location).attr('href'));
-        if($("form.wpjb-form").length){
-            $("form.wpjb-form").get(1).setAttribute('action','<?php echo site_url(); ?>/resumes/register/');            
+        if($("#wjp_register").length){
+            $("#wjp_register").attr('action','<?php echo site_url(); ?>/resumes/register/');
         }
         $('#email').change(function() {
             $('#user_email').val($(this).val());
@@ -435,8 +441,6 @@ jQuery(document).ready(function($){
 
         if(name == '' || lastname == '' || uname == '' || pass == '' || pass2 == '' || email == '' || ap_name == '' || ap_email == ''){
             $(".error p.err").html("Please fill all the fields which are marked with *");
-            console.log($("#dropbox_link").val());
-            console.log($("#googledrive_link").val());
             proceed = false;
             return false;
         }
@@ -454,6 +458,11 @@ jQuery(document).ready(function($){
             $(".error p.err").html("Passwords do not match");
             proceed = false;
             return false;
+        }
+        else if( (!$("#wpjb-apply-form input[type=file]").hasClass("selected")) &&  ($("#googledrive_link").val().length === 0) && ($("#dropbox_link").val().length === 0) ) {
+            $(".error p.err").html("Please upload file");
+            proceed = false;
+            return false;       
         }
 
         else{
@@ -523,7 +532,7 @@ jQuery(document).ready(function($){
                                         success:function(data, textStatus, jqXHR) 
                                         {
                                             $(".error").hide();
-                                            $(".success p.reg").html("Registered successfully, click <a href='<?php echo site_url(); ?>/resumes/my-profile/'><b>here</b></a> you view your profile");
+                                            $(".success p.reg").html("Registered successfully, Access your profile <a href='<?php echo site_url(); ?>/resumes/my-profile/'><b>here</b></a>, please make sure you complete your profile to ensure the employer can access all your details ");
                                         },
                                         error: function(jqXHR, textStatus, errorThrown) 
                                         {

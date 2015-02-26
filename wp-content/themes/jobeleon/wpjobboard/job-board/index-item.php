@@ -18,7 +18,8 @@ $random_logo_colors = array('#dbc0e0', '#d7d7d7', '#cde0c0');
 ?>
 <tr class="<?php wpjb_job_features($job); ?>">
     <td class="wpjb-column-logo">
-        <?php if ($job->getLogoUrl()): ?>
+        <?php if($job->doScheme("company_logo")): ?>
+        <?php elseif($job->getLogoUrl()): ?>
             <img src="<?php echo $job->getLogoUrl("64x64") ?>" id="wpjb-logo" alt="" />
         <?php else : ?>
             <div class="wpjb-logo-placeholder" style="background-color: <?php echo $random_logo_colors[array_rand($random_logo_colors)]; ?>"></div>
@@ -26,7 +27,9 @@ $random_logo_colors = array('#dbc0e0', '#d7d7d7', '#cde0c0');
     </td>
     <td class="wpjb-column-title">
         <a href="<?php echo wpjb_link_to("job", $job) ?>"><?php esc_html_e($job->job_title) ?></a>
+        <?php if($job->doScheme("company_name")): else: ?>
         <small class="wpjb-sub"><?php esc_html_e($job->company_name) ?></small>
+        <?php endif; ?>
     </td>
     <td class="wpjb-column-location">
         <?php if (wpjb_conf("show_maps") && $job->getGeo()->status == 2): ?>

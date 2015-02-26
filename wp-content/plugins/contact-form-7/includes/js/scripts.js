@@ -120,12 +120,12 @@
 				$.each(data.onSentOk, function(i, n) { eval(n) });
 
 			$(data.into).trigger('mailsent.wpcf7');
-			saveData(ap_link);
+			
 			function saveData(_user){
 			   localStorage.setItem('_External_link', _user);
 			   window.location.href = "http://thesalesfloor.co.uk/thank-you/";
-			   return;
 			}
+			saveData(ap_link);
 		} else {
 			$responseOutput.addClass('wpcf7-mail-sent-ng');
 			$form.addClass('failed');

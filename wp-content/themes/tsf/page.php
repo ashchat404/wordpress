@@ -58,11 +58,6 @@ if ($param["category"] > 0) {
 }
 ?>
 
-<?php if (!( is_wpjb() || is_wpjr() )) : ?>
-    <div class="where-am-i">
-        <h2><?php the_title(); ?></h2> 
-    </div><!-- .where-am-i -->
-<?php endif; ?>
 <div id="common_banner" class="row">
     <div class="search_wrapper large-6 medium-6 medium-centered large-centered columns">
         <div class="">

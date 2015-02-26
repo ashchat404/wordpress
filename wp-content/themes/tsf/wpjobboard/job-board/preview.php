@@ -12,7 +12,7 @@
         <br>
         <?php wpjb_job_template(); ?>
 
-        <div style="text-align:center">
+        <div style="text-align:center;clear:both;">
             <h3>
                 <a href="<?php echo wpjb_link_to("step_add") ?>" class="wpjb-go-back">&#171; <?php _e("Edit Listing", "jobeleon") ?></a>
                 <a href="<?php echo wpjb_link_to("step_save"); ?>" class="wpjb-go-publish btn"><?php _e("Publish Listing", "jobeleon") ?></a>

@@ -36,23 +36,23 @@
         <![endif]-->
         <script type="text/javascript" src="http://gtcslt-di2.com/js/32306.js"></script>
         <noscript><img src="http://gtcslt-di2.com/32306.png" style="display:none;" /></noscript>
-<?php if ( is_user_logged_in() ) { ?>
-    <style  type="text/css" media="screen">
-        html{margin-top:32px}
-        
-      @media only screen and (max-width: 64em) {
-        html{
-            margin-top:46px;
-        }
-        #wpadminbar{
-            position: fixed!important;
-        }
-        .left-off-canvas-toggle{
-            display: block;
-        }
-      }
-    </style>
-<?php } ?>
+        <?php if ( is_user_logged_in() ) { ?>
+            <style  type="text/css" media="screen">
+                html{margin-top:32px}
+                
+              @media only screen and (max-width: 64em) {
+                html{
+                    margin-top:46px;
+                }
+                #wpadminbar{
+                    position: fixed!important;
+                }
+                .left-off-canvas-toggle{
+                    display: block;
+                }
+              }
+            </style>
+        <?php } ?>
         <?php wp_head(); ?>
 
     </head>

@@ -728,6 +728,7 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 			<?php endwhile; ?>
 			</ul>
 		</div>
+		<a class="text-center" href="http://www.thesalesfloor.co.uk/author/admin/">View more posts</a>
 		<?php echo $args['after_widget']; ?>
 <?php
 		// Reset the global $the_post as this query will have stomped on it

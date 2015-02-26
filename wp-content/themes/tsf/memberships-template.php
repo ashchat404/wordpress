@@ -127,7 +127,7 @@ if ($param["category"] > 0) {
                     <?php if(!is_user_logged_in()):?>
                         <a class="btn popup bundle" href="#" data-reveal-id="main-pop" data="bronze_posts">Purchase</a>
                     <?php else:?>
-                        <a class="btn bundle" data="gold_posts" href="#">Purchase</a>
+                        <a class="btn bundle" data="gold_posts" href="http://www.thesalesfloor.co.uk/jobs/employer/membership/purchase/8/">Purchase</a>
                     <?php endif;?>
                     
                     <hr>
@@ -165,7 +165,7 @@ if ($param["category"] > 0) {
                     <?php if(!is_user_logged_in()):?>
                         <a class="btn popup bundle" href="#" data-reveal-id="main-pop" data="silver_posts">Purchase</a>
                     <?php else:?>
-                        <a class="btn bundle" data="gold_posts" href="#">Purchase</a>
+                        <a class="btn bundle" data="gold_posts" href="http://www.thesalesfloor.co.uk/jobs/employer/membership/purchase/11/">Purchase</a>
                     <?php endif;?>
                     <hr>
                     <ul class="details">
@@ -199,7 +199,7 @@ if ($param["category"] > 0) {
                     <?php if(!is_user_logged_in()):?>
                         <a class="btn popup bundle" data-reveal-id="main-pop" data="gold_posts" href="#">Purchase</a>
                     <?php else:?>
-                        <a class="btn bundle" data="gold_posts" href="#">Purchase</a>
+                        <a class="btn bundle" data="gold_posts" href="http://www.thesalesfloor.co.uk/jobs/employer/membership/purchase/14/">Purchase</a>
                     <?php endif;?>
                     <hr>
                     <ul class="details">

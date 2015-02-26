@@ -40,7 +40,7 @@ function wpjb_pluploader_add_file(file) {
                if(response.result == 1) {
                    jQuery(this).closest("div.wpjb-upload-item").fadeOut(function() {
                        var $this = jQuery(this);
-                       
+                       jQuery("#wpjb-apply-form input[type=file]").removeClass("selected");                       
                        var id = $this.closest(".wpjb-upload-list").attr("id");
                        $this.remove();
                        wpjb_plupload_handle_limit(jQuery("#wpjb-upload-"+id));
@@ -139,8 +139,11 @@ function wpjb_plupload_handle_limit(button) {
         msg.find(".limit-reached").hide();
         msg.find(".limit").show().text(more_left.replace("%d", limit-uploaded));
         button.show();
-        wpjb_plupload_refresh()
+        wpjb_plupload_refresh();
     } else {
+        if(jQuery("#wpjb-apply-form").length){
+          jQuery("#wpjb-apply-form input[type=file]").addClass("selected");
+        }
         msg.find(".limit-reached").show();
         msg.find(".limit").hide();
         button.hide();

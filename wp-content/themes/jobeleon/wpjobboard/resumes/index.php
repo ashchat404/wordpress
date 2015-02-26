@@ -78,7 +78,7 @@ foreach (array("query", "category", "type") as $p) {
     </table>
 
     <div id="wpjb-paginate-links">
-        <?php wpjb_paginate_links($url, $result->pages, $result->page, $query) ?>
+        <?php wpjb_paginate_links($url, $result->pages, $result->page, $query, $format) ?>
     </div>
 
 

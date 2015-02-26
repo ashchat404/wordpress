@@ -49,51 +49,41 @@ if ($param["category"] > 0) {
     }
 }
 ?>
-<section id="banner">
-    <div class="large-6 medium-6 small-6 columns left">
-        <div class="panel">
-            <h1>Find Your New Sales Job Here</h1>
-            <a title="Find a job" class="button" href="<?php echo wpjb_link_to("advsearch")?>" ><?php _e("Find a job", "jobeleon") ?></a>
-        </div>
+<div id="common_banner" class="row">
+    <div class="search_wrapper large-6 medium-6 medium-centered large-centered columns">
+        <div class="">
+            <form action="<?php esc_attr_e($search_url) ?>" method="get">
+                <?php if (!get_option('permalink_structure')): ?>
+                    <input type="hidden" name="page_id" value="<?php echo Wpjb_Project::getInstance()->conf("link_jobs") ?>" />
+                    <input type="hidden" name="job_board" value="find" />
+                <?php endif; ?>
+                <div class="large-6 columns">
+                    <input type="text" name="query" class="wpjb-ls-query" placeholder="<?php _e('Keyword, location, company', 'jobeleon'); ?>" value="<?php esc_attr_e($param["query"]) ?>" />
+                </div>
+                <div class="large-6 columns">
+                    <select id="category" name="category" class="">
+                        <option value=""><?php _e('All categories', 'jobeleon'); ?></option>
+                        <?php
+                        $job_categories = wpjb_form_get_categories();
+                        foreach ($job_categories as $cat) :
+                            ?>
+
+                            <option value="<?php echo $cat['value']; ?>" <?php selected($cat['value'], $param["category"]); ?>><?php echo $cat['description']; ?></option>  
+
+                        <?php endforeach; ?>    
+                    </select>
+                </div>
+                <div style="clear:both"></div>
+                <input type="submit" class="btn" value="<?php _e("Search", "jobeleon") ?>" />
+            </form>
+        </div><!-- /search -->        
     </div>
 
-    <div class="large-6 medium-6 columns small-6 right">
-        <div class="panel">
-            <h1>Advertise Your Sales Job Today</h1>
-           <a title="Post a job" class="button" href="<?php echo wpjb_link_to("step_add") ?>" ><?php _e("Post a job", "jobeleon") ?></a>
-        </div>
-    </div>
-</section>
+</div>
 <div id="content_wrapper" class="<?php echo sanitize_title_with_dashes(get_the_title($ID)); ?>">
 
     <section id="srch" class="large-12 columns">
-        <h2 class="text-center">Oops...Page not found. Try our Home Page.</h2>
-        <div class="row">
-            <div class="large-12 columns">
-                <form action="<?php esc_attr_e($search_url) ?>" method="get">
-                    <?php if (!get_option('permalink_structure')): ?>
-                        <input type="hidden" name="page_id" value="<?php echo Wpjb_Project::getInstance()->conf("link_jobs") ?>" />
-                        <input type="hidden" name="job_board" value="find" />
-                    <?php endif; ?>
-                    <div class="large-6 medium-6 columns">
-                        <input type="text" name="query" class="wpjb-ls-query" placeholder="<?php _e('Keyword', 'jobeleon'); ?>" value="<?php esc_attr_e($param["query"]) ?>" />
-                    </div>
-                    <div class="large-6 medium-6 columns">
-                        <input id="location" placeholder="<?php _e('Location, Postcode', 'jobeleon'); ?>" name="location" type="text">
-                    </div>
-                    <div style="clear:both"></div>
-                    <br>
-                    <div class="large-4 medium-4 columns large-centered medium-centered">
-                        <div class="range">                            
-                        </div>
-                        <div class="rad_drop">
-                        </div>                 
-                    </div>
-                    <div style="clear:both"></div>
-                    <input type="submit" class="btn" value="<?php _e("Search", "jobeleon") ?>" />
-                </form>
-            </div><!-- /search -->
-        </div>
+        <h2 class="text-center">Oops...Page not found. Try our <a href="http://www.thesalesfloor.co.uk/">Home Page</a>.</h2>
     </section>
 
 <script type="text/javascript">

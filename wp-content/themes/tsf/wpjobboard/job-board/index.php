@@ -104,11 +104,13 @@ if ($param["category"] > 0) {
         <tbody>
             <?php $result = wpjb_find_jobs($param) ?>
             <?php if ($result->count) : foreach ($result->job as $job): ?>
+                <?php $tt=$result->total ?>
                     <?php /* @var $job Wpjb_Model_Job */ ?>
                     <?php $this->job = $job; ?>
                     <?php $this->render("index-item.php") ?>
                     <?php
                 endforeach;
+                echo '<p style="text-align:right;color:grey">Total: '. $tt .' job(s) </p>';
             else :
                 ?>
                 <tr>

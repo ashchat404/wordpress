@@ -408,7 +408,7 @@ We are also still considering candidates for a couple...<i>more</i></p>
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
-                                <p class="job-company">"Paymentsense is a leader in the Financial Services and Merchant Provider space. They have clients all over the UK both big and small, and their sales team is heavily field based. They traditionally ...<i>more</i></p>
+                                <p class="job-company">“We’ve been using The Sales Floor since 2014 and their job adverts consistently turn in to hires for us. They’ve helped us reduce our cost-per-hire and I highly recommend them to anyone looking to ...<i>more</i></p>
                             </h3>
                         </div>
 
@@ -450,7 +450,7 @@ Since 2014 Paymentsense have hired multiple Field Sales Executives every single 
                             </div>
                         <div class="row featured_content">
                             <h3 class="job-title">
-                                <p class="job-company">"Journeycall, part of the ESP Group is a contact centre expert in the travel and smartcard industries. Given their expertise within this space, when they do hire, they look for very specific skills and ...<i>more</i></p>
+                                <p class="job-company">“We used The Sales Floor for the first time after struggling to find someone through our usual channels, and it proved immensely effective. Their targeted focus on Social Media provided us with a selection ...<i>more</i></p>
                             </h3>
                         </div>
 
@@ -461,7 +461,93 @@ Since 2014 Paymentsense have hired multiple Field Sales Executives every single 
                         </div>
                     </a>
                 </li> 
+
+                <li class="large-4 columns">
+                    <a class="row block" data-target="channel" href="#">
+                            <div class="featured_logo">
+                                        <img class="cl_logo" alt="channel assist logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/channel.jpg">
+
+                            </div>
+                        <div class="row featured_content">
+                            <h3 class="job-title">
+                                <p class="job-company">“The Sales Floor supported us in a recent recruitment campaign. Their approach to advertising was tailored to our requirements (a refreshing approach!) and their additional ‘behind the scenes’ ...<i>more</i></p>
+                            </h3>
+                        </div>
+
+                        <div class="featured_extra">
+                            <div class="large-12 text-center columns location">
+                                <p class=""><i class="fi-marker"></i>London</p>
+                            </div>
+                        </div>
+                    </a>
+                </li> 
+
+                <li class="large-4 columns">
+                    <a class="row block" data-target="sortrefer" href="#">
+                            <div class="featured_logo">
+                                        <img class="cl_logo" alt="sortrefer logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/sortrefer.jpg">
+
+                            </div>
+                        <div class="row featured_content">
+                            <h3 class="job-title">
+                                <p class="job-company">“I was sceptical of spending the money on The Sales Floor initially but I am glad that I took the chance as we have made an excellent appointment thanks to their services.  Next time we are recruiting we will be  ...<i>more</i></p>
+                            </h3>
+                        </div>
+
+                        <div class="featured_extra">
+                            <div class="large-12 text-center columns location">
+                                <p class=""><i class="fi-marker"></i>London</p>
+                            </div>
+                        </div>
+                    </a>
+                </li> 
+                <li class="large-4 columns">
+                </li> 
             </div>
+
+<div class="full_testimonial sortrefer">
+    <a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img alt="sortrefer logo"  class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/sortrefer.jpg">
+    <div class="clear"></div>
+<b>Background</b>
+SortRefer is a Derby-based company that works with financial advisers and mortgage brokers throughout the UK, helping them meet the evolving needs of a diverse range of clients. Because of the markets they operate in, when they recruit, they require sales people with very specific experience selling into specific markets.<br>
+ 
+<b>What had they tried?</b>
+
+SortRefer were already using a number of other channels to advertise their role, including industry magazines, but needed to improve the volume of quality applications they were receiving, given they were recruiting for a few positions.<br>
+<b>What we provided</b>
+The Sales Floor set up branded campaigns across multiple job boards, aside from our own, and due to the specific nature of the search parameters on our site, were able to set up the role to ensure it was searchable based on the industries that applicants had been selling into- Mortgage Brokers, IFAs and Estate Agents.
+<b>The Result</b>
+SortRefer whittled applications from The Sales Floor down to 3 interviews, 1 of which resulted in a successful hire for them at the start of 2015. <br>
+ 
+<b>What they had to say</b>
+“I was sceptical of spending the money on The Sales Floor initially but I am glad that I took the chance as we have made an excellent appointment thanks to their services.  Next time we are recruiting we will be using them again – very good value.”<br>
+James Boyles, Director
+ 
+</div>
+
+<div class="full_testimonial channel">
+    <a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
+        <img alt="channel assist logo"  class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/channel.jpg">
+    <div class="clear"></div>
+<b>Background</b>
+Channel Assist is a sales and marketing agency with a proven track record of maximising product sales, both in-store and online, for some of the leading technology and consumer electronics brands in the UK. When they recruit they either have to run very high volume campaigns or very specific campaigns around more senior hires.<br>
+<b>What had they tried?</b>
+Due to their high volumes of recruitment throughout the year, Channel Assist do need to utilise a number of different avenues, but given the specific nature of the roles they were trying to fill when we first spoke, their usual channels weren’t proving enough.<br>
+ 
+<b>What we provided</b>
+The Sales Floor set up a branded campaign, run across our own site, partner sites, including LinkedIn, as well as targeted Social Media advertising to sales people within the Field Marketing industry. We ran proactive sourcing for them on all their vacancies, meaning within 24 hours, they had a large number of passive candidates to connect and engage with. <br>
+<b>The Result</b>
+Applications were whittled down to 4 interviews, 1 of which turned into a successful hire for Channel Assist. As an added bonus, through the proactive sourcing work we provided, the Recruitment Manager was left with some very strong candidates he was able to talent pool for future roles.
+ <br>
+ 
+<b>What they had to say</b>
+“The Sales Floor supported us in a recent recruitment campaign. Their approach to advertising was tailored to our requirements (a refreshing approach!) and their additional ‘behind the scenes’ work has meant we can talent-pool individuals for the future. We have already made a hire as a direct result and will certainly use them again!”<br>
+Rob Lipscombe, Recruitment Manager
+ 
+</div>
+
+
 <div class="full_testimonial esp">
     <a class="close" href="#"><img alt="close" src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/close-icon.png"></a>
         <img alt="esp logo"  class="cl_logo"  src="<?php echo get_template_directory_uri(); ?>/wpjobboard/images/esp.png">
@@ -474,7 +560,6 @@ Journeycall had tried posting an advert on LinkedIn, with very little success, a
 <br>
  
 <b>What we provided</b>
-<br>
 Under our Gold Package, Journeycall received a branded advert on The Sales Floor’s own platform, as well as distribution of their job to other key job boards and aggregators in the UK. Within 24 hours, The Sales Floor carried out their proactive sourcing service for Journeycall, returning between 25-30 candidates from social media, hand-picked by our team, for Journeycall to reach out to and engage with directly. We also provided targeted advertising across LinkedIn- Setting up a branded advert only to be shown to Sales people, within London, who had sold into transportation and rail.
  <br>
 <b>The Result</b>
